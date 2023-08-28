@@ -6,25 +6,25 @@
 [ext_resource type="PackedScene" uid="uid://dujr4f4aeiqyv" path="res://scenes/player_b.tscn" id="3_hwprr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nai1x"]
-size = Vector2(2701, 129)
+size = Vector2(7564, 129)
 
 [node name="Nivel" type="Node2D"]
 
 [node name="Fondo" type="Sprite2D" parent="."]
-position = Vector2(901.25, 505.25)
-scale = Vector2(2.15792, 2.07882)
+position = Vector2(793, -189)
+scale = Vector2(4.25292, 3.8742)
 texture = ExtResource("1_uxd8c")
 
 [node name="Suelo" type="StaticBody2D" parent="."]
 position = Vector2(214, 949)
 
 [node name="Sprite2D" type="Sprite2D" parent="Suelo"]
-position = Vector2(614.498, 870.5)
-scale = Vector2(33.3253, 14.6016)
+position = Vector2(630, 3592)
+scale = Vector2(78.3203, 57.125)
 texture = ExtResource("1_mlyay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
-position = Vector2(590.5, 0.5)
+position = Vector2(692, 0.5)
 shape = SubResource("RectangleShape2D_nai1x")
 
 [node name="PlayerA" parent="." instance=ExtResource("2_begkg")]

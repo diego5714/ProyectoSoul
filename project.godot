@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
-window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [input]
@@ -44,3 +43,7 @@ saltar={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
