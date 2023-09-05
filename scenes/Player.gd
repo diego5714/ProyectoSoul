@@ -7,9 +7,12 @@ extends CharacterBody2D
 @export var ACCELERATION = 1500
 @export var JUMP_SPEED = 400
 
+@onready var player_a = $"../PlayerA"
+@onready var player_b = $"../PlayerB"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+
 	pass # Replace with function body.
 
 
@@ -20,12 +23,15 @@ func _physics_process(delta):
 	if not is_on_floor():
 		self.velocity.y += GRAVITY * delta
 		
-	if is_on_floor() and Input.is_action_pressed("saltar"):
-		self.velocity.y -= JUMP_SPEED
-	
+	if player_a.is_on_floor() and player_b.is_on_floor() and Input.is_action_pressed("saltar"):
+		player_a.jump()
+		player_b.jump()
 	
 	
 	self.velocity.x = move_toward(self.velocity.x, SPEED * move_input, ACCELERATION * delta)
 	
 	move_and_slide()
 	pass
+	
+func jump():
+	self.velocity.y -= JUMP_SPEED
