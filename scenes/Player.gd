@@ -36,7 +36,6 @@ func _physics_process(delta):
 		self.velocity.y -= JUMP_SPEED
 		Jump+=1
 	
-	
 	self.velocity.x = move_toward(self.velocity.x, SPEED * move_input, ACCELERATION * delta)
 	
 	move_and_slide()

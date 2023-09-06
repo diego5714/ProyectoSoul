@@ -21,6 +21,14 @@ window/size/viewport_width=1600
 window/size/viewport_height=900
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="ProyectoSoul"
+
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 derecha={
@@ -43,7 +51,13 @@ saltar={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+Exit={
+"deadzone": 0.5,
+"events": []
+}
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/decals/filter=0
+textures/light_projectors/filter=0
