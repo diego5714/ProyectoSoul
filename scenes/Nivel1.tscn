@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://1nujm1uwpxkf"]
+[gd_scene load_steps=8 format=3 uid="uid://1nujm1uwpxkf"]
 
 [ext_resource type="Texture2D" uid="uid://bsj3pw2k58uqi" path="res://icon.svg" id="1_mlyay"]
-[ext_resource type="Texture2D" uid="uid://dgeqlach0ff2l" path="res://Assets/FondoTemporalXD.jpg" id="1_uxd8c"]
 [ext_resource type="PackedScene" uid="uid://bidfeohiuisop" path="res://scenes/player_a.tscn" id="2_begkg"]
-[ext_resource type="PackedScene" uid="uid://dujr4f4aeiqyv" path="res://scenes/player_b.tscn" id="3_hwprr"]
+[ext_resource type="PackedScene" uid="uid://bykfomyutabas" path="res://scenes/player_b.tscn" id="3_hwprr"]
 [ext_resource type="Texture2D" uid="uid://dmgqxji1etbxj" path="res://Assets/cavesofgallet_tiles.png" id="5_t3xi2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nai1x"]
@@ -114,11 +113,6 @@ sources/0 = SubResource("TileSetAtlasSource_xya2w")
 
 [node name="Nivel" type="Node2D"]
 
-[node name="Fondo" type="Sprite2D" parent="."]
-position = Vector2(793, -189)
-scale = Vector2(4.25292, 3.8742)
-texture = ExtResource("1_uxd8c")
-
 [node name="Suelo" type="StaticBody2D" parent="."]
 position = Vector2(214, 949)
 
@@ -132,10 +126,10 @@ position = Vector2(692, 0.5)
 shape = SubResource("RectangleShape2D_nai1x")
 
 [node name="PlayerA" parent="." instance=ExtResource("2_begkg")]
-position = Vector2(293, 699)
+position = Vector2(400, 853)
 
 [node name="PlayerB" parent="." instance=ExtResource("3_hwprr")]
-position = Vector2(1212, 693)
+position = Vector2(1200, 853)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_egkrf")

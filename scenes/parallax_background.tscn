@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://copbhb22dbop5"]
+
+[ext_resource type="Texture2D" uid="uid://dgeqlach0ff2l" path="res://Assets/FondoTemporalXD.jpg" id="1_aueb8"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1800, 942)
+
+[node name="Fondo" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_aueb8")
+centered = false
