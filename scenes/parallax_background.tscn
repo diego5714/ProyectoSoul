@@ -1,6 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://copbhb22dbop5"]
+[gd_scene load_steps=5 format=3 uid="uid://copbhb22dbop5"]
 
 [ext_resource type="Texture2D" uid="uid://dgeqlach0ff2l" path="res://Assets/FondoTemporalXD.jpg" id="1_aueb8"]
+[ext_resource type="Texture2D" uid="uid://dmgqxji1etbxj" path="res://Assets/cavesofgallet_tiles.png" id="2_sas4h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkw5x"]
+texture = ExtResource("2_sas4h")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+1:9/0 = 0
+0:9/0 = 0
+2:9/0 = 0
+2:10/0 = 0
+1:10/0 = 0
+0:10/0 = 0
+3:9/0 = 0
+4:10/0 = 0
+4:9/0 = 0
+4:8/0 = 0
+4:7/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+3:10/0 = 0
+2:8/0 = 0
+3:7/0 = 0
+2:7/0 = 0
+1:7/0 = 0
+0:7/0 = 0
+5:5/0 = 0
+5:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_no11q"]
+tile_size = Vector2i(8, 8)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Fondo"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_vkw5x")
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
@@ -9,6 +54,14 @@ motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1800, 942)
 
 [node name="Fondo" type="Sprite2D" parent="ParallaxLayer"]
+visible = false
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_aueb8")
 centered = false
+
+[node name="TileMap" type="TileMap" parent="ParallaxLayer"]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_no11q")
+cell_quadrant_size = 8
+format = 2
+layer_0/tile_data = PackedInt32Array(524294, 196608, 0, 524295, 196608, 0, 524296, 196608, 0, 589831, 196608, 0, 589832, 196608, 0, 589833, 196608, 0, 655369, 196608, 0, 655368, 196608, 0, 655367, 196608, 0, 655366, 196608, 0, 720904, 196608, 0, 720905, 196608, 0, 720906, 196608, 0, 720907, 196608, 0, 720908, 196608, 0, 786444, 196608, 0, 720909, 196608, 0, 655373, 196608, 0, 655372, 196608, 0, 655371, 196608, 0, 786443, 196608, 0, 851980, 196608, 0, 851981, 196608, 0, 852009, 393216, 0, 852008, 393216, 0, 917544, 393216, 0, 917543, 393216, 0, 917542, 393216, 0, 983078, 393216, 0, 983077, 393216, 0, 983076, 393216, 0, 1048612, 393216, 0, 1048613, 393216, 0, 1048614, 393216, 0, 1048615, 393216, 0, 1114151, 393216, 0, 1114150, 393216, 0, 1179685, 393216, 0, 1179686, 393216, 0, 1179687, 393216, 0, 1179688, 393216, 0, 1114152, 393216, 0, 1114153, 393216, 0, 1048617, 393216, 0, 983082, 393216, 0, 983081, 393216, 0, 983080, 393216, 0, 983079, 393216, 0, 1048616, 393216, 0, 393241, 262144, 0, 458778, 262144, 0, 458777, 262144, 0, 458776, 262144, 0, 524312, 262144, 0, 524311, 262144, 0, 589847, 327680, 0, 524314, 327680, 0, 524313, 327680, 0, 589848, 327680, 0, 589849, 327680, 0, 655385, 327680, 0, 655384, 327680, 0, 655386, 327680, 0, 589850, 327680, 0)

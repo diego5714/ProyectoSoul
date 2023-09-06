@@ -20,9 +20,6 @@ var Jump = 0
 func _ready():
 	animation_tree.active = true
 
-func _process(delta: float) -> void:
-	pass
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	var move_input = PERSONAJE * Input.get_axis("izquierda","derecha")
