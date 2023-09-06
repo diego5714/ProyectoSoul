@@ -1,4 +1,5 @@
 [gd_scene load_steps=6 format=3 uid="uid://1nujm1uwpxkf"]
+
 [ext_resource type="PackedScene" uid="uid://bidfeohiuisop" path="res://scenes/player_a.tscn" id="2_begkg"]
 [ext_resource type="PackedScene" uid="uid://bykfomyutabas" path="res://scenes/player_b.tscn" id="3_hwprr"]
 [ext_resource type="Texture2D" uid="uid://dmgqxji1etbxj" path="res://Assets/cavesofgallet_tiles.png" id="5_t3xi2"]
@@ -453,13 +454,12 @@ terrain_set_0/terrain_0/color = Color(0.419608, 0.482353, 0.223529, 1)
 sources/0 = SubResource("TileSetAtlasSource_xya2w")
 
 [node name="Nivel" type="Node2D"]
-texture_filter = 1
 
 [node name="PlayerA" parent="." instance=ExtResource("2_begkg")]
-position = Vector2(175, 482)
+position = Vector2(200, 400)
 
 [node name="PlayerB" parent="." instance=ExtResource("3_hwprr")]
-position = Vector2(1244, 482)
+position = Vector2(1400, 400)
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(6, 6)

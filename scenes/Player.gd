@@ -4,9 +4,9 @@ extends CharacterBody2D
 #Variables:
 @export var PERSONAJE = 1
 @export var SPEED = 400
-@export var GRAVITY = 750
+@export var GRAVITY = 1000
 @export var ACCELERATION = 1500
-@export var JUMP_SPEED = 350
+@export var JUMP_SPEED = 700
 
 var MaxJump = 2
 var Jump = 0
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		self.velocity.y += GRAVITY * delta
 		
-	if Input.is_action_pressed("saltar") and Jump<MaxJump:
+	if Input.is_action_just_pressed("saltar") and Jump<MaxJump:
 		self.velocity.y -= JUMP_SPEED
 		Jump+=1
 	

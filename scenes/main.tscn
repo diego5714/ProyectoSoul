@@ -26,6 +26,7 @@ layout_mode = 2
 unique_name_in_owner = true
 disable_3d = true
 handle_input_locally = false
+canvas_item_default_texture_filter = 0
 size = Vector2i(800, 900)
 render_target_update_mode = 4
 
@@ -41,6 +42,7 @@ layout_mode = 2
 unique_name_in_owner = true
 disable_3d = true
 handle_input_locally = false
+canvas_item_default_texture_filter = 0
 size = Vector2i(800, 900)
 render_target_update_mode = 4
 
