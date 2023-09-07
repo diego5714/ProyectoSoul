@@ -2,5 +2,5 @@ shader_type canvas_item;
 
 void fragment() {
 	vec4 col = texture(TEXTURE,UV);
-	COLOR = vec4(1.0-col.r,1.0-col.g,1.0-col.b,col.a);
+	COLOR = vec4(col.g,col.g*1.4,col.b*0.7,col.a);
 }
