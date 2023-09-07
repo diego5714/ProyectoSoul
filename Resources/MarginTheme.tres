@@ -1,7 +1,10 @@
-[gd_resource type="Theme" format=3 uid="uid://daupl6k5f3tvs"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://daupl6k5f3tvs"]
+
+[ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Resources/Planes_ValMore.ttf" id="1_d0sij"]
 
 [resource]
-Label/fonts/font = null
+default_font = ExtResource("1_d0sij")
+Label/fonts/font = ExtResource("1_d0sij")
 MarginContainer/constants/margin_bottom = 30
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
