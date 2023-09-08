@@ -1,9 +1,9 @@
 extends MarginContainer
 
-@onready var start = $PanelContainer/MarginContainer/VBoxContainer/Start
-@onready var settings = $PanelContainer/MarginContainer/VBoxContainer/Settings
-@onready var credits = $PanelContainer/MarginContainer/VBoxContainer/Credits
-@onready var exit = $PanelContainer/MarginContainer/VBoxContainer/Exit
+@onready var start = %Start
+@onready var settings = %Settings
+@onready var credits = %Credits
+@onready var exit = %Exit
 
 
 
