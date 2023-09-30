@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4nrbdp0t3ua1"
-path="res://.godot/imported/Dude_Monster_Idle_4.png-00596ee4f806cf726c26ebbccc2d8feb.ctex"
+path="res://.godot/imported/Dude_Monster_Idle_4.png-5cdc81039679010a0174526bdd7988ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3 Dude_Monster/Dude_Monster_Idle_4.png"
-dest_files=["res://.godot/imported/Dude_Monster_Idle_4.png-00596ee4f806cf726c26ebbccc2d8feb.ctex"]
+source_file="res://assets/3 Dude_Monster/Dude_Monster_Idle_4.png"
+dest_files=["res://.godot/imported/Dude_Monster_Idle_4.png-5cdc81039679010a0174526bdd7988ee.ctex"]
 
 [params]
 
