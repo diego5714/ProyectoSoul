@@ -17,6 +17,3 @@ material = SubResource("ShaderMaterial_aoedy")
 
 [node name="Cursor" parent="." index="5"]
 visible = false
-
-[node name="RayCast2D" parent="." index="6"]
-target_position = Vector2(54, 0)
