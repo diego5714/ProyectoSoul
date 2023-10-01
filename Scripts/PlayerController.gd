@@ -60,6 +60,7 @@ func _physics_process(delta):
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, - SPEED * move_input, ACCELERATION * delta)
 			else:
+				PlayerA.parent_input = 0
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * 2 * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * 2 * delta)
 		else: #Selected B
@@ -70,6 +71,7 @@ func _physics_process(delta):
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, - SPEED * move_input, ACCELERATION * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, SPEED * move_input, ACCELERATION * delta)
 			else:
+				PlayerB.parent_input = 0
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * 2 * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * 2 * delta)
 		
@@ -90,7 +92,7 @@ func _physics_process(delta):
 				Jump += 1
 	
 			PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
-		
+			PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * 2 * delta)
 		else:
 			PlayerA.parent_input = 0
 			PlayerB.parent_input = move_input
@@ -102,7 +104,8 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("saltar") and Jump < MaxJump:
 				PlayerB.velocity.y -= JUMP_SPEED
 				Jump += 1
-	
+			
+			PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * 2 * delta)
 			PlayerB.velocity.x = move_toward(PlayerB.velocity.x, SPEED * move_input, ACCELERATION * delta)
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()

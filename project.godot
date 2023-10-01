@@ -25,6 +25,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="ProyectoSoul"
 
+[editor]
+
+movie_writer/movie_file="/var/home/diego/Vídeos/Godot.avi"
+
 [filesystem]
 
 import/blender/enabled=false
