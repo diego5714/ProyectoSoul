@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbontvkvwk0jd"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/MarginTheme.tres" id="1_fsbot"]
-[ext_resource type="Script" path="res://UI/MainScene.gd" id="1_klcmg"]
+[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="2_vo7gc"]
 [ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Resources/Planes_ValMore.ttf" id="3_1mh4p"]
 [ext_resource type="LabelSettings" uid="uid://bcyhc3q1p31q3" path="res://Resources/LabelButton.tres" id="4_ntsie"]
 
@@ -17,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_fsbot")
-script = ExtResource("1_klcmg")
+script = ExtResource("2_vo7gc")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2

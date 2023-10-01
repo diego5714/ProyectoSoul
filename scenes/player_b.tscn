@@ -7,11 +7,16 @@
 shader = ExtResource("2_xaemn")
 
 [node name="PlayerB" instance=ExtResource("1_svn00")]
-PERSONAJE = -1
 
 [node name="Label" parent="." index="0"]
 theme_override_colors/font_color = Color(0, 0.964706, 0, 1)
-text = "Personaje 2"
+text = "Player B"
 
 [node name="Sprite2D" parent="Pivote" index="0"]
 material = SubResource("ShaderMaterial_aoedy")
+
+[node name="Cursor" parent="." index="5"]
+visible = false
+
+[node name="RayCast2D" parent="." index="6"]
+target_position = Vector2(54, 0)

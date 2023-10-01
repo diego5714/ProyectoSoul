@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ci7e2g4xr5ura"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/MarginTheme.tres" id="1_b61e5"]
-[ext_resource type="Script" path="res://UI/Pause_menu.gd" id="2_tlc06"]
+[ext_resource type="Script" path="res://Scripts/Pause_menu.gd" id="2_j4fq6"]
 [ext_resource type="PackedScene" uid="uid://cbontvkvwk0jd" path="res://UI/MainMenu.tscn" id="3_pr4sh"]
 
 [sub_resource type="Theme" id="Theme_pipix"]
@@ -18,7 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_b61e5")
-script = ExtResource("2_tlc06")
+script = ExtResource("2_j4fq6")
 menu_scene = ExtResource("3_pr4sh")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]

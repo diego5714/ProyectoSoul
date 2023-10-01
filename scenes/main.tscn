@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://e8o32vbggt7t"]
 
-[ext_resource type="Script" path="res://scenes/SplitCamera.gd" id="1_ixe0s"]
+[ext_resource type="Script" path="res://Scripts/SplitCamera.gd" id="1_kkymt"]
 [ext_resource type="PackedScene" uid="uid://1nujm1uwpxkf" path="res://scenes/Nivel1.tscn" id="3_3whk7"]
 [ext_resource type="PackedScene" uid="uid://copbhb22dbop5" path="res://scenes/parallax_background.tscn" id="3_nk3f6"]
 [ext_resource type="PackedScene" uid="uid://ci7e2g4xr5ura" path="res://UI/Pause_menu.tscn" id="4_dhhef"]
 
 [node name="Base" type="Node"]
-script = ExtResource("1_ixe0s")
+script = ExtResource("1_kkymt")
 NivelCargado = ExtResource("3_3whk7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -56,3 +56,24 @@ limit_smoothed = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("4_dhhef")]
+
+[node name="Modo" type="Label" parent="CanvasLayer"]
+offset_left = 526.0
+offset_top = 830.0
+offset_right = 704.0
+offset_bottom = 856.0
+text = "Modo (Cambiar con Q):"
+
+[node name="Stamina" type="Label" parent="CanvasLayer"]
+offset_left = 526.0
+offset_top = 854.0
+offset_right = 594.0
+offset_bottom = 880.0
+text = "Stamina:"
+
+[node name="Personaje" type="Label" parent="CanvasLayer"]
+offset_left = 526.0
+offset_top = 807.0
+offset_right = 608.0
+offset_bottom = 833.0
+text = "Personaje:"

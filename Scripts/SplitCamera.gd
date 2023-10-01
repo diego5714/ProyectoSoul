@@ -14,12 +14,12 @@ func _ready():
 	'1': {
 		viewport = get_node("%ViewportA"),
 		camera = get_node("%ViewportA/CamaraA"),
-		player = get_node("%ViewportA/Nivel/PlayerA")
+		player = get_node("%ViewportA/Nivel/CharacterController/PlayerA")
 	},
 	'2': {
 		viewport = get_node("%ViewportB"),
 		camera = get_node("%ViewportB/CamaraB"),
-		player = get_node("%ViewportA/Nivel/PlayerB")
+		player = get_node("%ViewportA/Nivel/CharacterController/PlayerB")
 	}
 }	
 	#Tomamos el mundo 2D que renderiza el viewport A y se lo pasamos tambien al viewport B
@@ -34,3 +34,13 @@ func _ready():
 		nodo.player.add_child(transform)
 		pass
 	pass 
+	
+func _process(delta):
+	$CanvasLayer/Modo.set_text("Sync (Cambiar con Q): " + str(get_node("%ViewportA/Nivel/CharacterController").Sync).to_pascal_case())
+	
+	var Selected_A = get_node("%ViewportA/Nivel/CharacterController").Selected_A
+	if Selected_A:
+		$CanvasLayer/Personaje.set_text("Personaje (Cambiar con E): A")
+	else:
+		$CanvasLayer/Personaje.set_text("Personaje (Cambiar con E): B")
+	pass

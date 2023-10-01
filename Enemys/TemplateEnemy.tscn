@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3g45kyc22pr3"]
 
-[ext_resource type="Script" path="res://Enemys/Enemy.gd" id="1_swd85"]
-[ext_resource type="Texture2D" uid="uid://c4nrbdp0t3ua1" path="res://assets/3 Dude_Monster/Dude_Monster_Idle_4.png" id="1_u4of5"]
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_swd85"]
+[ext_resource type="Texture2D" uid="uid://c4nrbdp0t3ua1" path="res://Assets/3 Dude_Monster/Dude_Monster_Idle_4.png" id="1_u4of5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ouup"]
 size = Vector2(20.4837, 214.675)
