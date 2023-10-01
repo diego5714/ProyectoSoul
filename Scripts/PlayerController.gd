@@ -50,7 +50,7 @@ func _physics_process(delta):
 			Jump += 1
 		
 		chocando = ColisionPared(PlayerA) or ColisionPared(PlayerB)
-		
+		print(chocando)
 		
 		if Selected_A:
 			PlayerA.parent_input = move_input
@@ -60,7 +60,6 @@ func _physics_process(delta):
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, - SPEED * move_input, ACCELERATION * delta)
 			else:
-				PlayerA.parent_input = 0
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * 2 * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * 2 * delta)
 		else: #Selected B
@@ -71,7 +70,6 @@ func _physics_process(delta):
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, - SPEED * move_input, ACCELERATION * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, SPEED * move_input, ACCELERATION * delta)
 			else:
-				PlayerB.parent_input = 0
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * 2 * delta)
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * 2 * delta)
 		
