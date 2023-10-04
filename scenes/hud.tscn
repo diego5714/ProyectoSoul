@@ -1,11 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxx6sy2jmpu80"]
+[gd_scene load_steps=17 format=3 uid="uid://cxx6sy2jmpu80"]
 
 [ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/FullHeart.tres" id="1_sr1g2"]
 [ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="1_tdyqj"]
 [ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/ShaderPlayerB.tres" id="2_maqwr"]
 [ext_resource type="Texture2D" uid="uid://bag08pvbcwuci" path="res://Assets/UI/02.png" id="3_i62vy"]
 [ext_resource type="Texture2D" uid="uid://dspdils22s7ew" path="res://Resources/BarraStamina.tres" id="5_bkyx2"]
+[ext_resource type="Texture2D" uid="uid://d4b3u2v85xvie" path="res://Assets/UI/00.png" id="5_mcev5"]
 [ext_resource type="Texture2D" uid="uid://6wynnebyb5mq" path="res://Assets/UI/BarraStamina.png" id="6_qh55g"]
+[ext_resource type="Script" path="res://Scripts/StaminaBar.gd" id="8_1myoj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xyaa3"]
 atlas = ExtResource("3_i62vy")
@@ -13,7 +15,6 @@ region = Rect2(160, 48, 32, 32)
 
 [sub_resource type="Animation" id="Animation_qsuwt"]
 resource_name = "Box"
-length = 1.0
 loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
@@ -49,6 +50,18 @@ _data = {
 "Box": SubResource("Animation_qsuwt"),
 "RESET": SubResource("Animation_qntko")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unu5m"]
+atlas = ExtResource("5_mcev5")
+region = Rect2(114, 114, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_422ad"]
+atlas = ExtResource("5_mcev5")
+region = Rect2(114, 114, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jesbo"]
+atlas = ExtResource("5_mcev5")
+region = Rect2(114, 114, 12, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p3bn0"]
 atlas = ExtResource("6_qh55g")
@@ -119,17 +132,17 @@ expand_mode = 3
 
 [node name="Corazon2" type="TextureRect" parent="Vida"]
 layout_mode = 2
-texture = ExtResource("1_sr1g2")
+texture = SubResource("AtlasTexture_unu5m")
 expand_mode = 3
 
 [node name="Corazon3" type="TextureRect" parent="Vida"]
 layout_mode = 2
-texture = ExtResource("1_sr1g2")
+texture = SubResource("AtlasTexture_422ad")
 expand_mode = 3
 
 [node name="Corazon4" type="TextureRect" parent="Vida"]
 layout_mode = 2
-texture = ExtResource("1_sr1g2")
+texture = SubResource("AtlasTexture_jesbo")
 expand_mode = 3
 
 [node name="Corazon5" type="TextureRect" parent="Vida"]
@@ -152,3 +165,11 @@ value = 50.0
 texture_under = ExtResource("5_bkyx2")
 texture_progress = SubResource("AtlasTexture_p3bn0")
 texture_progress_offset = Vector2(3, 3)
+script = ExtResource("8_1myoj")
+
+[node name="Label" type="Label" parent="StaminaBar"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 63.0
+offset_bottom = 42.0
+text = "PRUEBA"

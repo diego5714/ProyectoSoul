@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2nygcsbyjbrr"
+path="res://.godot/imported/Datsik & Virtual Riot - Nasty.mp3-ce99d9d469d6d5fde3c8ccb2c20dd086.mp3str"
+
+[deps]
+
+source_file="res://Music/Datsik & Virtual Riot - Nasty.mp3"
+dest_files=["res://.godot/imported/Datsik & Virtual Riot - Nasty.mp3-ce99d9d469d6d5fde3c8ccb2c20dd086.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

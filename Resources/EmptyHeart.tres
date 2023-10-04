@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cikem4k1mp8ow"]
+
+[ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/FullHeart.tres" id="1_3brjw"]
+
+[resource]
+atlas = ExtResource("1_3brjw")
+region = Rect2(82, 114, 12, 12)

@@ -12,8 +12,8 @@ var MaxJump = 2
 var Jump = 0
 var Sync = true #Modo Sync o modo Async
 var Selected_A = true #Que jugador esta seleccionado para controlarlo en modo Async
-var Stamina = 100
 var chocando = false
+var tiempo = 0
 
 func ColisionPared(player):
 	return player.get_node("Pivote/RayCast2D").is_colliding()
@@ -76,6 +76,12 @@ func _physics_process(delta):
 		PlayerB.move_and_slide()
 	
 	else: #Modo desincronizado
+		tiempo += delta
+		
+		if tiempo >= 1 and Variables.Stamina >= 0:
+			Variables.Stamina -= 10
+			tiempo = 0
+		
 		if Selected_A:
 			PlayerA.parent_input = move_input
 			PlayerB.parent_input = 0
