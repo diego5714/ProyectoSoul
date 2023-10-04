@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbontvkvwk0jd"]
+[gd_scene load_steps=7 format=3 uid="uid://cbontvkvwk0jd"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/MarginTheme.tres" id="1_fsbot"]
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="2_vo7gc"]
 [ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Resources/Planes_ValMore.ttf" id="3_1mh4p"]
 [ext_resource type="LabelSettings" uid="uid://bcyhc3q1p31q3" path="res://Resources/LabelButton.tres" id="4_ntsie"]
+[ext_resource type="AudioStream" uid="uid://dpa26d2wed3ol" path="res://Music/Excision - Live Wire.mp3" id="5_3ns8a"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7oetb"]
 font = ExtResource("3_1mh4p")
@@ -139,3 +140,8 @@ text = "Exit
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3ns8a")
+volume_db = -5.0
+autoplay = true
