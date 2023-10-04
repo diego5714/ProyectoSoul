@@ -1,0 +1,154 @@
+[gd_scene load_steps=12 format=3 uid="uid://cxx6sy2jmpu80"]
+
+[ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/FullHeart.tres" id="1_sr1g2"]
+[ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="1_tdyqj"]
+[ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/ShaderPlayerB.tres" id="2_maqwr"]
+[ext_resource type="Texture2D" uid="uid://bag08pvbcwuci" path="res://Assets/UI/02.png" id="3_i62vy"]
+[ext_resource type="Texture2D" uid="uid://dspdils22s7ew" path="res://Resources/BarraStamina.tres" id="5_bkyx2"]
+[ext_resource type="Texture2D" uid="uid://6wynnebyb5mq" path="res://Assets/UI/BarraStamina.png" id="6_qh55g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyaa3"]
+atlas = ExtResource("3_i62vy")
+region = Rect2(160, 48, 32, 32)
+
+[sub_resource type="Animation" id="Animation_qsuwt"]
+resource_name = "Box"
+length = 1.0
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(128, 48, 32, 32), Rect2(160, 48, 32, 32), Rect2(192, 48, 32, 32), Rect2(224, 48, 32, 32), Rect2(128, 48, 32, 32)]
+}
+
+[sub_resource type="Animation" id="Animation_qntko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(160, 48, 32, 32)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjbnq"]
+_data = {
+"Box": SubResource("Animation_qsuwt"),
+"RESET": SubResource("Animation_qntko")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3bn0"]
+atlas = ExtResource("6_qh55g")
+region = Rect2(0, 12, 137, 5)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Personajes" type="Panel" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 100.0
+offset_bottom = 100.0
+
+[node name="CharacterA" type="TextureRect" parent="Personajes"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+offset_left = 23.0
+offset_top = 1.0
+offset_right = 83.0
+offset_bottom = 61.0
+texture = ExtResource("1_tdyqj")
+expand_mode = 3
+
+[node name="CharacterB" type="TextureRect" parent="Personajes"]
+material = ExtResource("2_maqwr")
+layout_mode = 2
+offset_left = -1.0
+offset_top = 6.0
+offset_right = 59.0
+offset_bottom = 66.0
+texture = ExtResource("1_tdyqj")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Personajes"]
+layout_mode = 0
+offset_right = 81.0
+offset_bottom = 79.0
+texture = SubResource("AtlasTexture_xyaa3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Personajes"]
+autoplay = "Box"
+libraries = {
+"": SubResource("AnimationLibrary_rjbnq")
+}
+
+[node name="Vida" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 120.0
+offset_top = 30.0
+offset_right = 368.0
+offset_bottom = 84.0
+
+[node name="Corazon1" type="TextureRect" parent="Vida"]
+layout_mode = 2
+texture = ExtResource("1_sr1g2")
+expand_mode = 3
+
+[node name="Corazon2" type="TextureRect" parent="Vida"]
+layout_mode = 2
+texture = ExtResource("1_sr1g2")
+expand_mode = 3
+
+[node name="Corazon3" type="TextureRect" parent="Vida"]
+layout_mode = 2
+texture = ExtResource("1_sr1g2")
+expand_mode = 3
+
+[node name="Corazon4" type="TextureRect" parent="Vida"]
+layout_mode = 2
+texture = ExtResource("1_sr1g2")
+expand_mode = 3
+
+[node name="Corazon5" type="TextureRect" parent="Vida"]
+layout_mode = 2
+texture = ExtResource("1_sr1g2")
+expand_mode = 3
+
+[node name="StaminaBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -611.0
+offset_top = 34.0
+offset_right = -467.0
+offset_bottom = 45.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+value = 50.0
+texture_under = ExtResource("5_bkyx2")
+texture_progress = SubResource("AtlasTexture_p3bn0")
+texture_progress_offset = Vector2(3, 3)

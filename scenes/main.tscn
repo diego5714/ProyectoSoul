@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://e8o32vbggt7t"]
+[gd_scene load_steps=6 format=3 uid="uid://e8o32vbggt7t"]
 
 [ext_resource type="Script" path="res://Scripts/SplitCamera.gd" id="1_kkymt"]
 [ext_resource type="PackedScene" uid="uid://1nujm1uwpxkf" path="res://scenes/Nivel1.tscn" id="3_3whk7"]
 [ext_resource type="PackedScene" uid="uid://copbhb22dbop5" path="res://scenes/parallax_background.tscn" id="3_nk3f6"]
 [ext_resource type="PackedScene" uid="uid://ci7e2g4xr5ura" path="res://UI/Pause_menu.tscn" id="4_dhhef"]
+[ext_resource type="PackedScene" uid="uid://cxx6sy2jmpu80" path="res://scenes/hud.tscn" id="5_g7dpv"]
 
 [node name="Base" type="Node"]
 script = ExtResource("1_kkymt")
@@ -11,12 +12,16 @@ NivelCargado = ExtResource("3_3whk7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 800.0
-offset_right = 830.0
-offset_bottom = 900.0
+offset_right = 802.0
+offset_bottom = 2000.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 5
 alignment = 1
 
@@ -27,6 +32,7 @@ layout_mode = 2
 unique_name_in_owner = true
 disable_3d = true
 handle_input_locally = false
+msaa_2d = 1
 canvas_item_default_texture_filter = 0
 size = Vector2i(800, 900)
 render_target_update_mode = 4
@@ -77,3 +83,5 @@ offset_top = 807.0
 offset_right = 608.0
 offset_bottom = 833.0
 text = "Personaje:"
+
+[node name="HUD" parent="." instance=ExtResource("5_g7dpv")]

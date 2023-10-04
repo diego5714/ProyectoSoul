@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bykfomyutabas"]
+[gd_scene load_steps=3 format=3 uid="uid://bykfomyutabas"]
 
 [ext_resource type="PackedScene" uid="uid://bidfeohiuisop" path="res://scenes/player_a.tscn" id="1_svn00"]
-[ext_resource type="Shader" path="res://scenes/inverted.gdshader" id="2_xaemn"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_aoedy"]
-shader = ExtResource("2_xaemn")
+[ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/ShaderPlayerB.tres" id="2_xj6a7"]
 
 [node name="PlayerB" instance=ExtResource("1_svn00")]
 
@@ -13,7 +10,7 @@ theme_override_colors/font_color = Color(0, 0.964706, 0, 1)
 text = "Player B"
 
 [node name="Sprite2D" parent="Pivote" index="0"]
-material = SubResource("ShaderMaterial_aoedy")
+material = ExtResource("2_xj6a7")
 
 [node name="Cursor" parent="." index="5"]
 visible = false

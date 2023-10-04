@@ -50,7 +50,6 @@ func _physics_process(delta):
 			Jump += 1
 		
 		chocando = ColisionPared(PlayerA) or ColisionPared(PlayerB)
-		print(chocando)
 		
 		if Selected_A:
 			PlayerA.parent_input = move_input
