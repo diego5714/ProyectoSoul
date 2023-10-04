@@ -144,4 +144,3 @@ vertical_alignment = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3ns8a")
 volume_db = -5.0
-autoplay = true

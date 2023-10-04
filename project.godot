@@ -17,9 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-BgmNasty="*res://scenes/bgm_nasty.tscn"
 Variables="*res://Scripts/variables.gd"
-
 
 [display]
 

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bruvhsjg716ap"]
+
+[ext_resource type="Texture2D" uid="uid://6wynnebyb5mq" path="res://Assets/UI/BarraStamina.png" id="1_yfe4y"]
+
+[resource]
+atlas = ExtResource("1_yfe4y")
+region = Rect2(0, 12, 137, 5)

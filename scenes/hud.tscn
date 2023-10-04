@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cxx6sy2jmpu80"]
+[gd_scene load_steps=16 format=3 uid="uid://cxx6sy2jmpu80"]
 
 [ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/FullHeart.tres" id="1_sr1g2"]
 [ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="1_tdyqj"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bag08pvbcwuci" path="res://Assets/UI/02.png" id="3_i62vy"]
 [ext_resource type="Texture2D" uid="uid://dspdils22s7ew" path="res://Resources/BarraStamina.tres" id="5_bkyx2"]
 [ext_resource type="Texture2D" uid="uid://d4b3u2v85xvie" path="res://Assets/UI/00.png" id="5_mcev5"]
-[ext_resource type="Texture2D" uid="uid://6wynnebyb5mq" path="res://Assets/UI/BarraStamina.png" id="6_qh55g"]
+[ext_resource type="Texture2D" uid="uid://bruvhsjg716ap" path="res://Resources/BarraStaminaInterior.tres" id="7_1qfgv"]
 [ext_resource type="Script" path="res://Scripts/StaminaBar.gd" id="8_1myoj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xyaa3"]
@@ -62,10 +62,6 @@ region = Rect2(114, 114, 12, 12)
 [sub_resource type="AtlasTexture" id="AtlasTexture_jesbo"]
 atlas = ExtResource("5_mcev5")
 region = Rect2(114, 114, 12, 12)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p3bn0"]
-atlas = ExtResource("6_qh55g")
-region = Rect2(0, 12, 137, 5)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -163,7 +159,7 @@ grow_horizontal = 0
 scale = Vector2(4, 4)
 value = 50.0
 texture_under = ExtResource("5_bkyx2")
-texture_progress = SubResource("AtlasTexture_p3bn0")
+texture_progress = ExtResource("7_1qfgv")
 texture_progress_offset = Vector2(3, 3)
 script = ExtResource("8_1myoj")
 
