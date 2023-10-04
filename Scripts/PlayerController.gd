@@ -7,19 +7,20 @@ extends Node2D
 
 @onready var PlayerA = $PlayerA
 @onready var PlayerB = $PlayerB
+@onready var timer = $Timer
 
 var MaxJump = 2
 var Jump = 0
 var Sync = true #Modo Sync o modo Async
 var Selected_A = true #Que jugador esta seleccionado para controlarlo en modo Async
 var chocando = false
-var tiempo = 0
+@export var Stamina = 15
 
 func ColisionPared(player):
 	return player.get_node("Pivote/RayCast2D").is_colliding()
 
 func _ready():
-	pass 
+	Variables.Stamina = Stamina
 
 func _physics_process(delta):
 	var move_input = Input.get_axis("izquierda","derecha")
@@ -30,6 +31,10 @@ func _physics_process(delta):
 		Sync = not Sync
 		PlayerA.get_node("Label").set_text("Sync: " + str(Sync))
 		PlayerB.get_node("Label").set_text("Sync: " + str(Sync))
+		if Sync:
+			timer.stop()
+		else:
+			timer.start()
 		
 	if Input.is_action_just_pressed('select_player'):
 		Selected_A = not Selected_A
@@ -76,12 +81,6 @@ func _physics_process(delta):
 		PlayerB.move_and_slide()
 	
 	else: #Modo desincronizado
-		tiempo += delta
-		
-		if tiempo >= 1 and Variables.Stamina >= 0:
-			Variables.Stamina -= 10
-			tiempo = 0
-		
 		if Selected_A:
 			PlayerA.parent_input = move_input
 			PlayerB.parent_input = 0
@@ -113,3 +112,12 @@ func _physics_process(delta):
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
 	pass
+
+
+func _on_timer_timeout():
+		Variables.Stamina -= 1
+		
+		if Variables.Stamina < 0:
+			Sync = not Sync
+			timer.stop()
+			Variables.Stamina = Stamina

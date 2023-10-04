@@ -1,9 +1,13 @@
 extends TextureProgressBar
 
 @onready var label = $Label
+@onready var timer = $Timer
+@export var MAX: int = 15
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _ready():
+	self.max_value = MAX
+	timer.start()
+	
+func _process(delta):
 	label.set_text(str(Variables.Stamina))
-	pass
+	self.value = Variables.Stamina
