@@ -4,9 +4,9 @@
 
 [resource]
 default_font = ExtResource("1_d0sij")
-Label/font_sizes/font_size = 20
+Label/font_sizes/font_size = 50
 Label/fonts/font = ExtResource("1_d0sij")
-MarginContainer/constants/margin_bottom = 30
+MarginContainer/constants/margin_bottom = 50
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 30

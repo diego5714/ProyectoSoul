@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bue3ckg45udm2"]
+[gd_scene load_steps=9 format=3 uid="uid://bue3ckg45udm2"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/MarginTheme.tres" id="1_hcko2"]
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="2_hshe7"]
@@ -6,10 +6,23 @@
 [ext_resource type="LabelSettings" uid="uid://bcyhc3q1p31q3" path="res://Resources/LabelButton.tres" id="4_t30i3"]
 [ext_resource type="AudioStream" uid="uid://dpa26d2wed3ol" path="res://Sound/Excision - Live Wire.mp3" id="5_m1og6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr50a"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.129412, 0.129412, 0.129412, 0.666667)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="Theme" id="Theme_x6xtb"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_7oetb"]
 font = ExtResource("3_r578f")
-font_size = 50
-font_color = Color(0, 0.717647, 0.0313726, 1)
+font_size = 100
+font_color = Color(0.243137, 0.658824, 0.709804, 1)
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -17,8 +30,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 6
+size_flags_vertical = 6
 theme = ExtResource("1_hcko2")
 script = ExtResource("2_hshe7")
 
@@ -26,33 +39,43 @@ script = ExtResource("2_hshe7")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_wr50a")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme = SubResource("Theme_x6xtb")
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 15
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 200)
 layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
 [node name="Title" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
-texture_filter = 1
+texture_filter = 5
 layout_mode = 2
+size_flags_vertical = 1
 theme = ExtResource("1_hcko2")
-theme_type_variation = &"HeaderLarge"
-text = "Proyect Soul"
+theme_override_font_sizes/font_size = 60
+text = "Proyecto Soul"
 label_settings = SubResource("LabelSettings_7oetb")
 horizontal_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 150)
 layout_mode = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 0
 
 [node name="Start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2"]
 unique_name_in_owner = true
@@ -73,6 +96,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 0
@@ -97,6 +121,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 0
@@ -121,6 +146,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer5" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 0
@@ -141,6 +167,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Exit
 "
+label_settings = ExtResource("4_t30i3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
