@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c08qhxu35mrtt"
+path="res://.godot/imported/MI_SFX 19.wav-d35837bfa24e8863d4ff053ae8917e99.sample"
+
+[deps]
+
+source_file="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 19.wav"
+dest_files=["res://.godot/imported/MI_SFX 19.wav-d35837bfa24e8863d4ff053ae8917e99.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

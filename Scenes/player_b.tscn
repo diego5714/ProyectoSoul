@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5os2o6h41pni"]
+
+[ext_resource type="PackedScene" uid="uid://jfpqks72flrp" path="res://Scenes/player_a.tscn" id="1_34qpa"]
+[ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/ShaderPlayerB.tres" id="2_hgpre"]
+
+[node name="PlayerB" instance=ExtResource("1_34qpa")]
+material = ExtResource("2_hgpre")
+
+[node name="Label" parent="." index="0"]
+theme_override_colors/font_color = Color(0, 0.964706, 0, 1)
+text = "Player B"
+
+[node name="Sprite2D" parent="Pivote" index="0"]
+material = ExtResource("2_hgpre")
+
+[node name="Cursor" parent="." index="5"]
+visible = false
