@@ -614,16 +614,6 @@ animations = [{
 collision_mask = 3
 script = ExtResource("1_n4t8u")
 
-[node name="Label" type="Label" parent="."]
-visible = false
-offset_left = -48.0
-offset_top = 31.0
-offset_right = 46.0
-offset_bottom = 60.0
-theme_override_colors/font_color = Color(1, 0.764706, 0.882353, 1)
-text = "Player A"
-horizontal_alignment = 1
-
 [node name="Pivote" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivote"]

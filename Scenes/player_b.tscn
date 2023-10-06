@@ -6,12 +6,8 @@
 [node name="PlayerB" instance=ExtResource("1_34qpa")]
 material = ExtResource("2_hgpre")
 
-[node name="Label" parent="." index="0"]
-theme_override_colors/font_color = Color(0, 0.964706, 0, 1)
-text = "Player B"
-
 [node name="Sprite2D" parent="Pivote" index="0"]
 material = ExtResource("2_hgpre")
 
-[node name="Cursor" parent="." index="5"]
+[node name="Cursor" parent="." index="4"]
 visible = false

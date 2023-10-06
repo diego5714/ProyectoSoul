@@ -7,6 +7,8 @@ extends Node2D
 
 @onready var PlayerA = $PlayerA
 @onready var PlayerB = $PlayerB
+@onready var last_pos_A = PlayerA.position
+@onready var last_pos_B = PlayerB.position
 @onready var timer = $Timer
 
 var MaxJump = 2
@@ -29,17 +31,23 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed('desync') and StillPlayers:
 		Sync = not Sync
-		PlayerA.get_node("Label").set_text("Sync: " + str(Sync))
-		PlayerB.get_node("Label").set_text("Sync: " + str(Sync))
+		Variables.Sync = not Variables.Sync
+		
+		if Selected_A:
+			last_pos_A = PlayerA.position
+		else:
+			last_pos_B = PlayerB.position
+		
 		if Sync:
 			timer.stop()
 		else:
 			timer.start()
 		
 	if Input.is_action_just_pressed('select_player'):
-		Selected_A = not Selected_A
-		PlayerA.get_node("Cursor").visible = Selected_A
-		PlayerB.get_node("Cursor").visible = not Selected_A
+		if Sync:
+			Selected_A = not Selected_A
+			PlayerA.get_node("Cursor").visible = Selected_A
+			PlayerB.get_node("Cursor").visible = not Selected_A
 		
 	
 	if Sync: #Modo sincronizado
@@ -119,5 +127,12 @@ func _on_timer_timeout():
 		
 		if Variables.Stamina < 0:
 			Sync = not Sync
+			Variables.Sync = not Variables.Sync
 			timer.stop()
 			Variables.Stamina = Stamina
+			
+			#if Selected_A:
+				#var Collision = get_node("PlayerA/CollisionShape2D")
+				#set_deferred('disabled', "true")
+			#else:
+				#PlayerB.get_node("$PlayerB/CollisionShape2D").disabled = true
