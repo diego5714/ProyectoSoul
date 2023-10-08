@@ -35,7 +35,7 @@ func _ready():
 		pass
 	pass 
 	
-func _process(delta):
+func _process(_delta):
 	$CanvasLayer/Modo.set_text("Sync (Cambiar con Q): " + str(get_node("%ViewportA/Nivel/CharacterController").Sync).to_pascal_case())
 	
 	var Selected_A : bool = get_node("%ViewportA/Nivel/CharacterController").Selected_A

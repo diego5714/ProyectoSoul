@@ -12,7 +12,7 @@ var parent_input #input entregado por el CharacterController
 func _ready():
 	animation_tree.active = true
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var move_input = parent_input
 	
 	if move_input != 0:

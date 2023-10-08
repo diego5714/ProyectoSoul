@@ -621,10 +621,14 @@ script = ExtResource("1_n4t8u")
 texture = ExtResource("2_m4f1t")
 hframes = 6
 
-[node name="RayCast2D" type="RayCast2D" parent="Pivote"]
+[node name="RayCastLateral" type="RayCast2D" parent="Pivote"]
 position = Vector2(0, 4)
 scale = Vector2(1, 1.087)
 target_position = Vector2(11, 0)
+collision_mask = 7
+
+[node name="RayCastSuperior" type="RayCast2D" parent="Pivote"]
+target_position = Vector2(0, -12)
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

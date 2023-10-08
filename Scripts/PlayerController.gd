@@ -18,14 +18,18 @@ const MaxJump: int = 2
 var Jump: int = 0
 var Sync := true #Modo Sync o modo Async
 var Selected_A := true #Que jugador esta seleccionado para controlarlo en modo Async
-var chocando := false
+var C_pared := false
+var C_techo := false
 
 @onready var tileset := preload("res://Resources/Tileset.tres")
 @export var Stamina: int = 5
 var retorno: bool = false
 
 func ColisionPared(player):
-	return player.get_node("Pivote/RayCast2D").is_colliding()
+	return player.get_node("Pivote/RayCastLateral").is_colliding()
+	
+func ColisionTecho(player):
+	return player.get_node("Pivote/RayCastSuperior").is_colliding()
 	
 func SetearFantasma(player: CharacterBody2D, estado: bool):
 	player.set_collision_layer_value(1, not estado)
@@ -77,14 +81,20 @@ func _physics_process(delta):
 				PlayerA.velocity.y -= JUMP_SPEED
 				PlayerB.velocity.y -= JUMP_SPEED
 				Jump += 1
+			
+			C_techo = ColisionTecho(PlayerA) or ColisionTecho(PlayerB)
+			
+			if C_techo:
+				PlayerA.velocity.y += JUMP_SPEED * 0.5
+				PlayerB.velocity.y += JUMP_SPEED * 0.5
 		
-			chocando = ColisionPared(PlayerA) or ColisionPared(PlayerB)
-		
+			C_pared = ColisionPared(PlayerA) or ColisionPared(PlayerB)
+			
 			if Selected_A:
 				PlayerA.parent_input = move_input
 				PlayerB.parent_input = - move_input
 			
-				if not chocando:
+				if not C_pared:
 					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
 					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, - SPEED * move_input, ACCELERATION * delta)
 				else:
@@ -94,7 +104,7 @@ func _physics_process(delta):
 				PlayerA.parent_input = - move_input
 				PlayerB.parent_input = move_input
 			
-				if not chocando:
+				if not C_pared:
 					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, - SPEED * move_input, ACCELERATION * delta)
 					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, SPEED * move_input, ACCELERATION * delta)
 				else:
