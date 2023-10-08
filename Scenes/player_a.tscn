@@ -642,7 +642,7 @@ anim_player = NodePath("../AnimationPlayer")
 
 [node name="Cursor" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.223529, 0.780392, 0.823529, 1)
-position = Vector2(0, -60)
+position = Vector2(0, -40)
 scale = Vector2(0.06, 0.108)
 sprite_frames = SubResource("SpriteFrames_tr5ev")
 autoplay = "default"

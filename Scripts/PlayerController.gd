@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var SPEED: int = 400
+@export var WARP_SPEED: int = 800
 @export var GRAVITY: int = 1000
 @export var ACCELERATION: int = 3000
 @export var JUMP_SPEED: int = 500
@@ -19,21 +20,20 @@ var Sync := true #Modo Sync o modo Async
 var Selected_A := true #Que jugador esta seleccionado para controlarlo en modo Async
 var chocando := false
 
+@onready var tileset := preload("res://Resources/Tileset.tres")
 @export var Stamina: int = 5
 var retorno: bool = false
-var tween_finished: bool = false
 
 func ColisionPared(player):
 	return player.get_node("Pivote/RayCast2D").is_colliding()
 	
 func SetearFantasma(player: CharacterBody2D, estado: bool):
 	player.set_collision_layer_value(1, not estado)
-	PlayerA.set_collision_layer_value(6, estado)
 	player.set_collision_mask_value(1, not estado)
 	player.set_collision_mask_value(2, not estado)
 	player.set_collision_mask_value(3, not estado)
 	player.set_collision_mask_value(4, not estado)
-	
+
 
 func _ready():
 	Variables.Stamina = Stamina
@@ -100,24 +100,37 @@ func _physics_process(delta):
 				else:
 					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * delta)
 					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * delta)
-			
-			PlayerA.move_and_slide()
-			PlayerB.move_and_slide()
 		
 		else: #Modo retorno
-			var tween := create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-			tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
-			#tween.set_speed_scale(2.0)
-			tween.connect('finished', on_tween_finished)
-			
 			if Selected_A:
 				SetearFantasma(PlayerA, true)
 				GhostA.visible = false
-				tween.tween_property(PlayerA, 'position', return_pos_A.position - Vector2(0,20), 3.0)
+				#calculamos vector direccion entre el jugador y su anchor point
+				var DirectionTo = PlayerA.position.direction_to(Vector2(return_pos_A.position.x, return_pos_A.position.y - 30))
+				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, DirectionTo.x * WARP_SPEED, ACCELERATION * delta)
+				PlayerA.velocity.y = move_toward(PlayerA.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
+				
+				if PlayerA.position.distance_to(return_pos_A.position) <= 200:
+					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * delta)
+					PlayerA.velocity.y = move_toward(PlayerA.velocity.y, 0, ACCELERATION * delta)
+					SetearFantasma(PlayerA, false)
+					retorno = false
+				
 			else:
 				SetearFantasma(PlayerB, true)
 				GhostB.visible = false
-				tween.tween_property(PlayerB, 'position', return_pos_B.position - Vector2(0, 20), 3.0)
+				var DirectionTo = PlayerB.position.direction_to(Vector2(return_pos_B.position.x, return_pos_B.position.y - 30))
+				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, DirectionTo.x * WARP_SPEED, ACCELERATION * delta)
+				PlayerB.velocity.y = move_toward(PlayerB.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
+				
+				if PlayerB.position.distance_to(return_pos_B.position) <= 200:
+					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * delta)
+					PlayerB.velocity.y = move_toward(PlayerB.velocity.y, 0, ACCELERATION * delta)
+					SetearFantasma(PlayerB, false)
+					retorno = false
+				
+		PlayerA.move_and_slide()
+		PlayerB.move_and_slide()
 	
 	else: #Modo desincronizado
 		if Selected_A:
@@ -151,7 +164,7 @@ func _physics_process(delta):
 		
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
-		
+	Debug.dprint(PlayerA.position.distance_to(return_pos_A.position))
 		
 	if Variables.Stamina < 0:
 			Sync = not Sync
@@ -167,13 +180,4 @@ func _physics_process(delta):
 
 func _on_timer_timeout():
 		Variables.Stamina -= 1
-
 		
-func on_tween_finished():
-	retorno = false
-	if Selected_A:
-		SetearFantasma(PlayerA, false)
-	else:
-		SetearFantasma(PlayerB, false)
-		
-	

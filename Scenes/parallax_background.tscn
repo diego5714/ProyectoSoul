@@ -59,7 +59,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_uu5l6")
 centered = false
 
-[node name="TileMap" type="TileMap" parent="ParallaxLayer"]
+[node name="TileMapFondo" type="TileMap" parent="ParallaxLayer"]
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_no11q")
 cell_quadrant_size = 8
