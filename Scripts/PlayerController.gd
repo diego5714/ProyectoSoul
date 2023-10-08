@@ -100,6 +100,9 @@ func _physics_process(delta):
 				else:
 					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * delta)
 					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * delta)
+			
+			PlayerA.move_and_slide()
+			PlayerB.move_and_slide()
 		
 		else: #Modo retorno
 			var tween := create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
@@ -115,10 +118,6 @@ func _physics_process(delta):
 				SetearFantasma(PlayerB, true)
 				GhostB.visible = false
 				tween.tween_property(PlayerB, 'position', return_pos_B.position - Vector2(0, 20), 3.0)
-			
-			
-		PlayerA.move_and_slide()
-		PlayerB.move_and_slide()
 	
 	else: #Modo desincronizado
 		if Selected_A:
@@ -153,7 +152,6 @@ func _physics_process(delta):
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
 		
-	Debug.dprint(PlayerA.velocity.y == 0.0)
 		
 	if Variables.Stamina < 0:
 			Sync = not Sync
@@ -172,10 +170,10 @@ func _on_timer_timeout():
 
 		
 func on_tween_finished():
-		
+	retorno = false
 	if Selected_A:
 		SetearFantasma(PlayerA, false)
 	else:
 		SetearFantasma(PlayerB, false)
 		
-	retorno = false
+	
