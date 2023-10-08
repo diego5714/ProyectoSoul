@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dreksn2ytdiwd"]
+[gd_scene load_steps=8 format=3 uid="uid://dreksn2ytdiwd"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_ogxao"]
 [ext_resource type="PackedScene" uid="uid://jfpqks72flrp" path="res://Scenes/player_a.tscn" id="2_nyq84"]
 [ext_resource type="PackedScene" uid="uid://b5os2o6h41pni" path="res://Scenes/player_b.tscn" id="3_dy2ic"]
+[ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="3_l4ik2"]
+[ext_resource type="Shader" path="res://Resources/inverted_ghost.gdshader" id="5_wex8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0j7oi"]
+size = Vector2(245.902, 447.974)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1vaxg"]
+shader = ExtResource("5_wex8e")
 
 [node name="CharacterController" type="Node2D"]
 script = ExtResource("1_ogxao")
@@ -10,14 +18,57 @@ SPEED = 500
 ACCELERATION = 1300
 
 [node name="PlayerA" parent="." instance=ExtResource("2_nyq84")]
-position = Vector2(168, 240)
-scale = Vector2(1.3, 1.3)
+position = Vector2(171, 293)
+scale = Vector2(2.6, 2.6)
+collision_layer = 1
+collision_mask = 31
+floor_max_angle = 0.872665
+
+[node name="Return_Pos_A" type="Marker2D" parent="."]
+
+[node name="GhostA" type="Sprite2D" parent="Return_Pos_A"]
+visible = false
+modulate = Color(1, 1, 1, 0.196078)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("3_l4ik2")
+
+[node name="AreaA" type="Area2D" parent="Return_Pos_A"]
+scale = Vector2(-0.305, 1)
+collision_layer = 16
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Return_Pos_A/AreaA"]
+position = Vector2(3.9085e-07, 3.5)
+scale = Vector2(0.24, 0.149562)
+shape = SubResource("RectangleShape2D_0j7oi")
 
 [node name="PlayerB" parent="." instance=ExtResource("3_dy2ic")]
-position = Vector2(1267, 240)
-scale = Vector2(1.3, 1.3)
+position = Vector2(1271, 321)
+scale = Vector2(2.6, 2.6)
+collision_layer = 1
+collision_mask = 31
+floor_max_angle = 0.872665
+
+[node name="Return_Pos_B" type="Marker2D" parent="."]
+
+[node name="GhostB" type="Sprite2D" parent="Return_Pos_B"]
+visible = false
+material = SubResource("ShaderMaterial_1vaxg")
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("3_l4ik2")
+
+[node name="AreaB" type="Area2D" parent="Return_Pos_B"]
+visible = false
+collision_layer = 16
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Return_Pos_B/AreaB"]
+position = Vector2(6.55738, 5.5)
+scale = Vector2(0.24, 0.149562)
+shape = SubResource("RectangleShape2D_0j7oi")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 
+[connection signal="body_entered" from="Return_Pos_A/AreaA" to="." method="_on_area_a_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

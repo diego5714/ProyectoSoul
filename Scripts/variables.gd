@@ -1,4 +1,4 @@
 extends Node2D
 
-var Stamina
-var Sync = true
+var Stamina: int
+

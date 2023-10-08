@@ -2,10 +2,10 @@
 class_name Player
 extends CharacterBody2D
 
-@onready var animation_player = $AnimationPlayer
-@onready var animation_tree = $AnimationTree
+@onready var animation_player := $AnimationPlayer
+@onready var animation_tree := $AnimationTree
 @onready var playback = animation_tree.get("parameters/playback")
-@onready var pivote = $Pivote
+@onready var pivote := $Pivote
 
 var parent_input #input entregado por el CharacterController
 

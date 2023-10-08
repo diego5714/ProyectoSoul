@@ -4,7 +4,7 @@ extends Node
 
 func _ready():
 	#Precargamos el nivel deseado y lo instanciamos
-	var nivel = NivelCargado.instantiate()
+	var nivel := NivelCargado.instantiate()
 	
 	#Añadimos el nivel como hijo del primer viewport
 	get_node("%ViewportA").add_child(nivel)
@@ -38,7 +38,7 @@ func _ready():
 func _process(delta):
 	$CanvasLayer/Modo.set_text("Sync (Cambiar con Q): " + str(get_node("%ViewportA/Nivel/CharacterController").Sync).to_pascal_case())
 	
-	var Selected_A = get_node("%ViewportA/Nivel/CharacterController").Selected_A
+	var Selected_A : bool = get_node("%ViewportA/Nivel/CharacterController").Selected_A
 	if Selected_A:
 		$CanvasLayer/Personaje.set_text("Personaje (Cambiar con E): A")
 	else:
