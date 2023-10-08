@@ -29,6 +29,8 @@ modulate = Color(1, 1, 1, 0.196078)
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("3_l4ik2")
 
+[node name="Area2D" type="Area2D" parent="Return_Pos_A"]
+
 [node name="PlayerB" parent="." instance=ExtResource("3_dy2ic")]
 position = Vector2(1271, 321)
 scale = Vector2(2.6, 2.6)

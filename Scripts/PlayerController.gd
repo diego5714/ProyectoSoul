@@ -110,7 +110,7 @@ func _physics_process(delta):
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, DirectionTo.x * WARP_SPEED, ACCELERATION * delta)
 				PlayerA.velocity.y = move_toward(PlayerA.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
 				
-				if PlayerA.position.distance_to(return_pos_A.position) <= 200:
+				if PlayerA.position.distance_to(return_pos_A.position) <= 100:
 					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * delta)
 					PlayerA.velocity.y = move_toward(PlayerA.velocity.y, 0, ACCELERATION * delta)
 					SetearFantasma(PlayerA, false)
@@ -123,7 +123,7 @@ func _physics_process(delta):
 				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, DirectionTo.x * WARP_SPEED, ACCELERATION * delta)
 				PlayerB.velocity.y = move_toward(PlayerB.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
 				
-				if PlayerB.position.distance_to(return_pos_B.position) <= 200:
+				if PlayerB.position.distance_to(return_pos_B.position) <= 100:
 					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * delta)
 					PlayerB.velocity.y = move_toward(PlayerB.velocity.y, 0, ACCELERATION * delta)
 					SetearFantasma(PlayerB, false)
@@ -164,7 +164,6 @@ func _physics_process(delta):
 		
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
-	Debug.dprint(PlayerA.position.distance_to(return_pos_A.position))
 		
 	if Variables.Stamina < 0:
 			Sync = not Sync
