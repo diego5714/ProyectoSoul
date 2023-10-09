@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://67mjdtvcms5r"]
 
-[ext_resource type="Script" path="res://Puerta.gd" id="1_rtrci"]
+[ext_resource type="Script" path="res://Scripts/Puerta.gd" id="1_rtrci"]
 [ext_resource type="Texture2D" uid="uid://bsj3pw2k58uqi" path="res://icon.svg" id="2_iniw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbd2h"]

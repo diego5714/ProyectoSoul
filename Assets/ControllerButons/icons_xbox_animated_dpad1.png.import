@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyp12idntj1yh"
-path="res://.godot/imported/icons_xbox_animated_dpad1.png-c70eb9ccd38c03c4d1ff22dbef4e343b.ctex"
+path="res://.godot/imported/icons_xbox_animated_dpad1.png-5bb452f18fdf5566a352dc22f7703c88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ControllerButons/icons_xbox_animated_dpad1.png"
-dest_files=["res://.godot/imported/icons_xbox_animated_dpad1.png-c70eb9ccd38c03c4d1ff22dbef4e343b.ctex"]
+source_file="res://Assets/ControllerButons/icons_xbox_animated_dpad1.png"
+dest_files=["res://.godot/imported/icons_xbox_animated_dpad1.png-5bb452f18fdf5566a352dc22f7703c88.ctex"]
 
 [params]
 
