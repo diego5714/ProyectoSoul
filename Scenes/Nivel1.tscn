@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_uwunc"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Enemies/TemplateEnemy.tscn" id="2_rtj56"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="4_hcftc"]
-[ext_resource type="PackedScene" uid="uid://ct0enejc01rdd" path="res://scripts/l_lave.tscn" id="4_xe4qv"]
+[ext_resource type="PackedScene" uid="uid://ct0enejc01rdd" path="res://Scenes/l_lave.tscn" id="4_xe4qv"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/puerta.tscn" id="5_snk40"]
 
 [node name="Nivel" type="Node2D"]
