@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://gklfpx5uo83n"]
+[gd_scene load_steps=4 format=3 uid="uid://gklfpx5uo83n"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_uwunc"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Enemies/TemplateEnemy.tscn" id="2_rtj56"]
-[ext_resource type="AudioStream" uid="uid://c2nygcsbyjbrr" path="res://Sound/Datsik & Virtual Riot - Nasty.mp3" id="3_1s2fg"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="4_hcftc"]
 
 [node name="Nivel" type="Node2D"]
@@ -22,7 +21,6 @@ collision_mask = 6
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
-stream = ExtResource("3_1s2fg")
 volume_db = -5.0
 
 [node name="CharacterController" parent="." instance=ExtResource("4_hcftc")]

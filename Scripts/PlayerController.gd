@@ -2,7 +2,7 @@ extends Node2D
 
 @export var SPEED: int = 400
 @export var WARP_SPEED: int = 800
-@export var GRAVITY: int = 1000
+@export var GRAVITY: int = 1200
 @export var ACCELERATION: int = 3000
 @export var JUMP_SPEED: int = 500
 
@@ -38,7 +38,6 @@ func SetearFantasma(player: CharacterBody2D, estado: bool):
 	player.set_collision_mask_value(3, not estado)
 	player.set_collision_mask_value(4, not estado)
 
-
 func _ready():
 	Variables.Stamina = Stamina
 
@@ -67,16 +66,20 @@ func _physics_process(delta):
 			Selected_A = not Selected_A
 			PlayerA.get_node("Cursor").visible = Selected_A
 			PlayerB.get_node("Cursor").visible = not Selected_A
-		
+	
 	
 	if Sync: #Modo sincronizado
 		if not retorno: 
+			Variables.Stamina = Stamina
+			GhostA.visible = false
+			GhostB.visible = false
+			
 			if PlayerA.is_on_floor() and PlayerB.is_on_floor():
 				Jump = 0
 			else:
 				PlayerA.velocity.y += GRAVITY * delta
 				PlayerB.velocity.y += GRAVITY * delta
-		
+	
 			if Input.is_action_just_pressed("saltar") and Jump < MaxJump:
 				PlayerA.velocity.y -= JUMP_SPEED
 				PlayerB.velocity.y -= JUMP_SPEED
@@ -88,8 +91,7 @@ func _physics_process(delta):
 				PlayerA.velocity.y += JUMP_SPEED * 0.5
 				PlayerB.velocity.y += JUMP_SPEED * 0.5
 		
-			C_pared = ColisionPared(PlayerA) or ColisionPared(PlayerB)
-			
+			C_pared = ColisionPared(PlayerA) or ColisionPared(PlayerB)		
 			if Selected_A:
 				PlayerA.parent_input = move_input
 				PlayerB.parent_input = - move_input
@@ -120,9 +122,11 @@ func _physics_process(delta):
 				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, DirectionTo.x * WARP_SPEED, ACCELERATION * delta)
 				PlayerA.velocity.y = move_toward(PlayerA.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
 				
-				if PlayerA.position.distance_to(return_pos_A.position) <= 100:
-					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * delta)
-					PlayerA.velocity.y = move_toward(PlayerA.velocity.y, 0, ACCELERATION * delta)
+				if PlayerA.position.distance_to(return_pos_A.position) <= 50:
+					#PlayerA.velocity.x = move_toward(PlayerA.velocity.x, 0, ACCELERATION * delta)
+					#PlayerA.velocity.y = move_toward(PlayerA.velocity.y, 0, ACCELERATION * delta)
+					PlayerA.velocity.x = 0
+					PlayerA.velocity.y = 0
 					SetearFantasma(PlayerA, false)
 					retorno = false
 				
@@ -134,8 +138,10 @@ func _physics_process(delta):
 				PlayerB.velocity.y = move_toward(PlayerB.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
 				
 				if PlayerB.position.distance_to(return_pos_B.position) <= 100:
-					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * delta)
-					PlayerB.velocity.y = move_toward(PlayerB.velocity.y, 0, ACCELERATION * delta)
+					#PlayerB.velocity.x = move_toward(PlayerB.velocity.x, 0, ACCELERATION * delta)
+					#PlayerB.velocity.y = move_toward(PlayerB.velocity.y, 0, ACCELERATION * delta)
+					PlayerB.velocity.x = 0
+					PlayerB.velocity.y = 0
 					SetearFantasma(PlayerB, false)
 					retorno = false
 				

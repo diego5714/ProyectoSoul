@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bue3ckg45udm2"]
+[gd_scene load_steps=8 format=3 uid="uid://bue3ckg45udm2"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/MarginTheme.tres" id="1_hcko2"]
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="2_hshe7"]
 [ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Resources/Planes_ValMore.ttf" id="3_r578f"]
 [ext_resource type="LabelSettings" uid="uid://bcyhc3q1p31q3" path="res://Resources/LabelButton.tres" id="4_t30i3"]
-[ext_resource type="AudioStream" uid="uid://dpa26d2wed3ol" path="res://Sound/Excision - Live Wire.mp3" id="5_m1og6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr50a"]
 content_margin_left = 10.0
@@ -172,5 +171,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_m1og6")
 volume_db = -5.0

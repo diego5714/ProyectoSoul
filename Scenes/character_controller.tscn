@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dreksn2ytdiwd"]
+[gd_scene load_steps=9 format=3 uid="uid://dreksn2ytdiwd"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_ogxao"]
 [ext_resource type="PackedScene" uid="uid://jfpqks72flrp" path="res://Scenes/player_a.tscn" id="2_nyq84"]
 [ext_resource type="PackedScene" uid="uid://b5os2o6h41pni" path="res://Scenes/player_b.tscn" id="3_dy2ic"]
 [ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="3_l4ik2"]
 [ext_resource type="Shader" path="res://Resources/inverted_ghost.gdshader" id="5_ouuay"]
+[ext_resource type="AudioStream" uid="uid://cj1grhwf6777h" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 36.wav" id="6_55k0d"]
+[ext_resource type="Script" path="res://Scripts/SFX.gd" id="7_cpa4p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4qvqn"]
 shader = ExtResource("5_ouuay")
@@ -29,8 +31,6 @@ modulate = Color(1, 1, 1, 0.196078)
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("3_l4ik2")
 
-[node name="Area2D" type="Area2D" parent="Return_Pos_A"]
-
 [node name="PlayerB" parent="." instance=ExtResource("3_dy2ic")]
 position = Vector2(1271, 321)
 scale = Vector2(2.6, 2.6)
@@ -48,5 +48,9 @@ texture = ExtResource("3_l4ik2")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_55k0d")
+script = ExtResource("7_cpa4p")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
