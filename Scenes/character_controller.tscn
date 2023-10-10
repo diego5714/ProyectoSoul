@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_ogxao"]
 [ext_resource type="PackedScene" uid="uid://jfpqks72flrp" path="res://Scenes/player_a.tscn" id="2_nyq84"]
 [ext_resource type="PackedScene" uid="uid://b5os2o6h41pni" path="res://Scenes/player_b.tscn" id="3_dy2ic"]
-[ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="3_l4ik2"]
+[ext_resource type="PackedScene" uid="uid://boh6tyu3r8y5b" path="res://Scenes/ghost.tscn" id="3_lsbwl"]
 [ext_resource type="Shader" path="res://Resources/inverted_ghost.gdshader" id="5_ouuay"]
 [ext_resource type="AudioStream" uid="uid://cj1grhwf6777h" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 36.wav" id="6_55k0d"]
 [ext_resource type="Script" path="res://Scripts/SFX.gd" id="7_cpa4p"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4qvqn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l7n4o"]
 shader = ExtResource("5_ouuay")
 
 [node name="CharacterController" type="Node2D"]
@@ -17,34 +17,27 @@ SPEED = 500
 ACCELERATION = 1300
 
 [node name="PlayerA" parent="." instance=ExtResource("2_nyq84")]
-position = Vector2(171, 293)
+position = Vector2(52, 53)
 scale = Vector2(2.6, 2.6)
 collision_layer = 1
 collision_mask = 15
 floor_max_angle = 0.872665
 
-[node name="Return_Pos_A" type="Marker2D" parent="."]
-
-[node name="GhostA" type="Sprite2D" parent="Return_Pos_A"]
+[node name="GhostA" parent="." node_paths=PackedStringArray("belongs_to") instance=ExtResource("3_lsbwl")]
 visible = false
-modulate = Color(1, 1, 1, 0.196078)
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("3_l4ik2")
+belongs_to = NodePath("../PlayerA")
 
 [node name="PlayerB" parent="." instance=ExtResource("3_dy2ic")]
-position = Vector2(1271, 321)
+position = Vector2(115, 53)
 scale = Vector2(2.6, 2.6)
 collision_layer = 1
 collision_mask = 15
 floor_max_angle = 0.872665
 
-[node name="Return_Pos_B" type="Marker2D" parent="."]
-
-[node name="GhostB" type="Sprite2D" parent="Return_Pos_B"]
+[node name="GhostB" parent="." node_paths=PackedStringArray("belongs_to") instance=ExtResource("3_lsbwl")]
 visible = false
-material = SubResource("ShaderMaterial_4qvqn")
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("3_l4ik2")
+material = SubResource("ShaderMaterial_l7n4o")
+belongs_to = NodePath("../PlayerB")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
