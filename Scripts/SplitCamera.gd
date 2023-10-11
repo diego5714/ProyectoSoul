@@ -25,6 +25,7 @@ func _ready():
 	#Tomamos el mundo 2D que renderiza el viewport A y se lo pasamos tambien al viewport B
 	jugadores['2'].viewport.world_2d = jugadores['1'].viewport.world_2d
 	
+	
 	#Iteramos a través de los nodos de cada jugador y mediante un RemoteTransform2D hacemos 
 	#que la camara herede las propiedades del player. (Colocando el RemoteTransform como hijo del
 	#jugador y haciendo que apunte hacia la camara.

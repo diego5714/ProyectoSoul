@@ -15,22 +15,25 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -1.0
-offset_right = 1.0
+offset_right = 4.0
 offset_bottom = 2000.0
 grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(1600, 900)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 5.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 5
 alignment = 1
 
 [node name="ContenedorA" type="SubViewportContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(800, 900)
 layout_mode = 2
+size_flags_horizontal = 2
 
 [node name="ViewportA" type="SubViewport" parent="HBoxContainer/ContenedorA"]
 unique_name_in_owner = true
@@ -49,7 +52,9 @@ process_callback = 0
 position_smoothing_enabled = true
 
 [node name="ContenedorB" type="SubViewportContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(795, 900)
 layout_mode = 2
+size_flags_horizontal = 10
 
 [node name="ViewportB" type="SubViewport" parent="HBoxContainer/ContenedorB"]
 unique_name_in_owner = true
