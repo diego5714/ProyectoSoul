@@ -135,8 +135,8 @@ func _physics_process(delta):
 					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
 					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, - SPEED * move_input, ACCELERATION * delta)
 				else:
-					VelocityToZero(PlayerA, 'x', true, delta)
-					VelocityToZero(PlayerB, 'x', true, delta)
+					VelocityToZero(PlayerA, 'x', false, delta)
+					VelocityToZero(PlayerB, 'x', false, delta)
 			else: #Selected B
 				PlayerA.parent_input = - move_input
 				PlayerB.parent_input = move_input
