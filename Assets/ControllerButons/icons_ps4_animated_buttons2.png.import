@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brxvtxeqw3fdh"
-path="res://.godot/imported/icons_ps4_animated_buttons2.png-03967bd8bdc839fecbc615b9e9283f3f.ctex"
+path="res://.godot/imported/icons_ps4_animated_buttons2.png-f568edbb853d9304510235cd4550984b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ControllerButons/icons_ps4_animated_buttons2.png"
-dest_files=["res://.godot/imported/icons_ps4_animated_buttons2.png-03967bd8bdc839fecbc615b9e9283f3f.ctex"]
+source_file="res://assets/ControllerButons/icons_ps4_animated_buttons2.png"
+dest_files=["res://.godot/imported/icons_ps4_animated_buttons2.png-f568edbb853d9304510235cd4550984b.ctex"]
 
 [params]
 
