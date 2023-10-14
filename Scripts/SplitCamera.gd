@@ -1,6 +1,6 @@
 extends Node
 
-@export var NivelCargado: PackedScene
+var NivelCargado: PackedScene = Variables.NivelCargado
 
 func _ready():
 	#Precargamos el nivel deseado y lo instanciamos

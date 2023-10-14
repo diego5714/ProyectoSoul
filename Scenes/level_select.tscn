@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://u3fd4wboe564"]
+[gd_scene load_steps=6 format=3 uid="uid://u3fd4wboe564"]
 
 [ext_resource type="Script" path="res://Scripts/level_select.gd" id="1_44mqt"]
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/MarginTheme.tres" id="1_yjuko"]
 [ext_resource type="PackedScene" uid="uid://gklfpx5uo83n" path="res://Scenes/Nivel1.tscn" id="2_4eyo6"]
 [ext_resource type="LabelSettings" uid="uid://bcyhc3q1p31q3" path="res://Resources/LabelButton.tres" id="2_gjpcs"]
 [ext_resource type="PackedScene" uid="uid://cw0yn1tnj1e5g" path="res://Scenes/nivel_2.tscn" id="3_fbkvc"]
-[ext_resource type="PackedScene" uid="uid://detb787xddka8" path="res://Scenes/main.tscn" id="6_uwar1"]
 
 [node name="Level_Select" type="Control"]
 layout_mode = 3
@@ -17,7 +16,6 @@ grow_vertical = 2
 script = ExtResource("1_44mqt")
 Nivel1 = ExtResource("2_4eyo6")
 Nivel2 = ExtResource("3_fbkvc")
-Main = ExtResource("6_uwar1")
 
 [node name="Margen" type="MarginContainer" parent="."]
 unique_name_in_owner = true

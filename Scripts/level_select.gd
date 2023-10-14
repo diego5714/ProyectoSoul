@@ -5,8 +5,6 @@ extends Control
 @export var Nivel3: PackedScene
 @export var Nivel4: PackedScene
 
-@export var Main: PackedScene
-
 @onready var Boton1 := %Boton1
 @onready var Boton2 := %Boton2
 @onready var Boton3 := %Boton3
@@ -17,10 +15,14 @@ func _ready():
 	Boton2.pressed.connect(_on_boton_2_pressed)
 
 func _on_boton_1_pressed():
+	Variables.NivelCargado = Nivel1
+	var Main = preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
 	pass
 
 
 func _on_boton_2_pressed():
+	Variables.NivelCargado = Nivel2
+	var Main = preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
 	pass
