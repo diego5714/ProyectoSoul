@@ -17,16 +17,13 @@ metadata/_edit_lock_ = true
 position = Vector2(-736, -176)
 scale = Vector2(2, 2)
 
-[node name="CharacterController" parent="." instance=ExtResource("3_sux4h")]
-visible = false
-Pos_Inicial_A = null
-Pos_Inicial_B = null
+[node name="CharacterController" parent="." node_paths=PackedStringArray("Pos_Inicial_A", "Pos_Inicial_B") instance=ExtResource("3_sux4h")]
+Pos_Inicial_A = NodePath("../Pos_Inicial_A")
+Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 metadata/_edit_lock_ = true
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
-visible = false
 position = Vector2(-461, -169)
 
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
-visible = false
 position = Vector2(-236, -167)
