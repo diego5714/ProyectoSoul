@@ -37,7 +37,7 @@ position = Vector2(1369, 474)
 gizmo_extents = 45.0
 
 [node name="Llave" parent="." instance=ExtResource("4_xe4qv")]
-position = Vector2(512, 200)
+position = Vector2(528, 200)
 scale = Vector2(2, 2)
 
 [node name="Puerta" parent="." instance=ExtResource("5_snk40")]

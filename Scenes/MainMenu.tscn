@@ -5,28 +5,35 @@
 [ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Resources/Planes_ValMore.ttf" id="3_r578f"]
 [ext_resource type="LabelSettings" uid="uid://bcyhc3q1p31q3" path="res://Resources/LabelButton.tres" id="4_t30i3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr50a"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 10.0
-content_margin_bottom = 10.0
-bg_color = Color(0.129412, 0.129412, 0.129412, 0.666667)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfexn"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 0.501961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.333333, 0.333333, 0.333333, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="Theme" id="Theme_x6xtb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7oetb"]
 font = ExtResource("3_r578f")
-font_size = 100
+font_size = 80
 font_color = Color(0.243137, 0.658824, 0.709804, 1)
 
 [node name="MarginContainer" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.0
+offset_top = -439.0
+offset_right = 442.0
+offset_bottom = 439.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -38,10 +45,12 @@ script = ExtResource("2_hshe7")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_wr50a")
+theme_override_styles/panel = SubResource("StyleBoxFlat_xfexn")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = SubResource("Theme_x6xtb")
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
@@ -51,7 +60,10 @@ theme_override_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 7
+size_flags_vertical = 4
+theme = ExtResource("1_hcko2")
+theme_override_constants/separation = 16
+alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(800, 200)
@@ -66,14 +78,16 @@ texture_filter = 5
 layout_mode = 2
 size_flags_vertical = 1
 theme = ExtResource("1_hcko2")
-theme_override_font_sizes/font_size = 60
 text = "Proyecto Soul"
 label_settings = SubResource("LabelSettings_7oetb")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(600, 150)
+custom_minimum_size = Vector2(500, 150)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2"]
 unique_name_in_owner = true
@@ -83,9 +97,15 @@ icon_alignment = 1
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/Start"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -17.0
+offset_right = 35.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Start"
@@ -94,11 +114,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
+custom_minimum_size = Vector2(550, 100)
 layout_mode = 2
-theme_override_constants/margin_left = 100
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 100
+theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 0
 
 [node name="Settings" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer3"]
@@ -119,11 +140,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
+custom_minimum_size = Vector2(550, 100)
 layout_mode = 2
-theme_override_constants/margin_left = 100
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 100
+theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 0
 
 [node name="Credits" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer4"]
@@ -144,11 +167,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer5" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(400, 100)
+custom_minimum_size = Vector2(550, 100)
 layout_mode = 2
-theme_override_constants/margin_left = 100
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 100
+theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 0
 
 [node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer5"]
