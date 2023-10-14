@@ -9,7 +9,7 @@
 [node name="Nivel" type="Node2D"]
 
 [node name="TileMapNivel" type="TileMap" parent="."]
-scale = Vector2(3.9238, 4.1146)
+scale = Vector2(4, 4)
 tile_set = ExtResource("1_uwunc")
 cell_quadrant_size = 8
 format = 2
@@ -23,14 +23,16 @@ collision_mask = 6
 floor_max_angle = 0.872665
 
 [node name="CharacterController" parent="." node_paths=PackedStringArray("Pos_Inicial_A", "Pos_Inicial_B") instance=ExtResource("4_hcftc")]
-Pos_Inicial_A = NodePath("../Pos_Inicial_PlayerA")
-Pos_Inicial_B = NodePath("../Pos_Inicial_PlayerB")
+Pos_Inicial_A = NodePath("../Pos_Inicial_A")
+Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 
-[node name="Pos_Inicial_PlayerA" type="Marker2D" parent="."]
+[node name="Pos_Inicial_A" type="Marker2D" parent="."]
 position = Vector2(26, 421)
+gizmo_extents = 45.0
 
-[node name="Pos_Inicial_PlayerB" type="Marker2D" parent="."]
+[node name="Pos_Inicial_B" type="Marker2D" parent="."]
 position = Vector2(1369, 474)
+gizmo_extents = 45.0
 
 [node name="Llave" parent="." instance=ExtResource("4_xe4qv")]
 position = Vector2(512, 200)
