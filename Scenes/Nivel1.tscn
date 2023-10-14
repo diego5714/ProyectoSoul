@@ -23,9 +23,9 @@ collision_layer = 8
 collision_mask = 6
 floor_max_angle = 0.872665
 
-[node name="CharacterController" parent="." node_paths=PackedStringArray("Pos_Inicial_A", "Pos_Inicial_B") instance=ExtResource("4_hcftc")]
-Pos_Inicial_A = NodePath("../Pos_Inicial_A")
-Pos_Inicial_B = NodePath("../Pos_Inicial_B")
+[node name="CharacterController" parent="." instance=ExtResource("4_hcftc")]
+Pos_Inicial_A = null
+Pos_Inicial_B = null
 metadata/_edit_lock_ = true
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
