@@ -1,16 +1,15 @@
 extends TextureProgressBar
 
-@onready var timer := $Timer
-@export var MAX: int = 5
+@export var MAX: float = 5.0
+var iniciando = true
+
 var valor := MAX:
 	set(valorBruto):
-		var val: int = clamp(valorBruto, 0, MAX)
-		var tween := create_tween()
-		tween.tween_property(self, 'value', float(val), 0.5)
-
+		var val: float = clamp(valorBruto, 0, MAX)
+		value = val
+		
 func _ready():
 	self.max_value = MAX
-	timer.start()
-	
-func _on_timer_timeout():
+
+func _physics_process(_delta):
 	valor = Variables.Stamina

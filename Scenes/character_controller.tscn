@@ -23,6 +23,7 @@ collision_layer = 1
 collision_mask = 15
 floor_constant_speed = true
 floor_max_angle = 0.872665
+floor_snap_length = 20.0
 
 [node name="GhostA" parent="." node_paths=PackedStringArray("belongs_to") instance=ExtResource("3_lsbwl")]
 visible = false
@@ -34,6 +35,7 @@ scale = Vector2(2.6, 2.6)
 collision_layer = 1
 collision_mask = 15
 floor_max_angle = 0.872665
+floor_snap_length = 20.0
 
 [node name="GhostB" parent="." node_paths=PackedStringArray("belongs_to") instance=ExtResource("3_lsbwl")]
 visible = false
@@ -42,6 +44,7 @@ belongs_to = NodePath("../PlayerB")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
+wait_time = 5.0
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_55k0d")

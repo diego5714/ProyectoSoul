@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtrgtmp82ovoa"
-path="res://.godot/imported/Dude_Monster_Walk+Attack_6.png-74725550aa43edc2570fd88327152a7d.ctex"
+path="res://.godot/imported/Dude_Monster_Walk+Attack_6.png-fcaa2fb8065b46fcdb9ed7ab6fa02534.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/3 Dude_Monster/Dude_Monster_Walk+Attack_6.png"
-dest_files=["res://.godot/imported/Dude_Monster_Walk+Attack_6.png-74725550aa43edc2570fd88327152a7d.ctex"]
+source_file="res://Assets/3 Dude_Monster/Dude_Monster_Walk+Attack_6.png"
+dest_files=["res://.godot/imported/Dude_Monster_Walk+Attack_6.png-fcaa2fb8065b46fcdb9ed7ab6fa02534.ctex"]
 
 [params]
 

@@ -22,7 +22,7 @@ var Selected_A := true #Que jugador esta seleccionado para controlarlo en modo A
 var C_pared := false #Colision con paredes simultanea
 var C_techo := false #Colision con techo simultaneo
 
-@export var Stamina: int = 5
+@export var MaxStamina: float = 5.0 #Segundos de duracion 
 var retorno: bool = false
 
 ###################################################################################################
@@ -61,11 +61,30 @@ func VelocityToZero(player: Player, eje: String, interpolado: bool, delta: float
 			player.velocity.y = move_toward(player.velocity.y, 0, ACCELERATION * delta)
 		else:
 			player.velocity = Vector2.ZERO
+			
+func retornar(Player, Ghost):
+	VelocityToZero(Player, 'x,y', false, 1)
+	
+	var ReturnPoint: Vector2 = Ghost.position - Vector2(0, 30)
+	
+	var tween = create_tween()
+	tween.tween_property(Player, 'position', ReturnPoint, 1.2)
+	
+	tween.finished.connect(
+		func():
+		NoColisiones(Player,false)
+		ToggleGhost(Ghost, false)
+		Player.position = ReturnPoint
+		retorno = false
+		)
+	
 
 ###################################################################################################
 
 func _ready():
-	Variables.Stamina = Stamina
+	Variables.Stamina = MaxStamina
+	timer.wait_time = MaxStamina
+	
 	PlayerA.position = Pos_Inicial_A.position
 	PlayerB.position = Pos_Inicial_B.position
 
@@ -75,7 +94,6 @@ func _physics_process(delta):
 	var StillPlayers : bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) and PlayerB.velocity.is_equal_approx(Vector2.ZERO)
 	
 	if Input.is_action_just_pressed('desync'):
-		
 		if Sync:
 			if StillPlayers:
 				Sync = false
@@ -87,14 +105,17 @@ func _physics_process(delta):
 				timer.start()
 		else:
 			Sync = true
-			if Selected_A:
-				ToggleGhost(GhostA, false)
-			else:
-				ToggleGhost(GhostA, false)
-			
 			timer.stop()
+			
 			retorno = true
-		
+			if Selected_A:
+				retornar(PlayerA, GhostA)
+				Debug.dprint("A se devuelve")
+			else:
+				retornar(PlayerB,GhostB)
+				Debug.dprint("B se devuelve")
+			
+			
 	if Input.is_action_just_pressed('select_player'):
 		if Sync:
 			Selected_A = not Selected_A
@@ -104,7 +125,7 @@ func _physics_process(delta):
 	
 	if Sync: #Modo sincronizado
 		if not retorno: 
-			Variables.Stamina = Stamina
+			Variables.Stamina = lerp(Variables.Stamina, MaxStamina, 0.04)
 			ToggleGhost(GhostA, false)
 			ToggleGhost(GhostB, false)
 			
@@ -147,43 +168,14 @@ func _physics_process(delta):
 				else:
 					VelocityToZero(PlayerA, 'x', false, delta)
 					VelocityToZero(PlayerB, 'x', false, delta)
-		
-		else: #Modo retorno
-			if Selected_A:
-				NoColisiones(PlayerA, true)
-				ToggleGhost(GhostA, false)
-				
-				#calculamos vector direccion entre el jugador y su anchor point
-				var ReturnPoint: Vector2 = GhostA.position - Vector2(0, 30)
-				
-				var DirectionTo = PlayerA.position.direction_to(ReturnPoint)
-				PlayerA.velocity.x = move_toward(PlayerA.velocity.x, DirectionTo.x * WARP_SPEED, ACCELERATION * delta)
-				PlayerA.velocity.y = move_toward(PlayerA.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
-				
-				if PlayerA.position.distance_to(ReturnPoint) <= 50:
-					VelocityToZero(PlayerA, 'x,y', false, delta)
-					NoColisiones(PlayerA, false)
-					retorno = false
-				
-			else: #Selected B
-				NoColisiones(PlayerB, true)
-				ToggleGhost(GhostB, false)
-				
-				var ReturnPoint: Vector2 = GhostB.position - Vector2(0, 30)
-				
-				var DirectionTo = PlayerB.position.direction_to(ReturnPoint)
-				PlayerB.velocity.x = move_toward(PlayerB.velocity.x, DirectionTo.x * WARP_SPEED, ACCELERATION * delta)
-				PlayerB.velocity.y = move_toward(PlayerB.velocity.y, DirectionTo.y * WARP_SPEED, ACCELERATION * delta)
-				
-				if PlayerB.position.distance_to(ReturnPoint) <= 50:
-					VelocityToZero(PlayerB, 'x,y', false, delta)
-					NoColisiones(PlayerB, false)
-					retorno = false
 				
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
 	
 	else: #Modo desincronizado
+		
+		Variables.Stamina -= delta
+		
 		if Selected_A:
 			PlayerA.parent_input = move_input
 			PlayerB.parent_input = 0
@@ -197,7 +189,7 @@ func _physics_process(delta):
 				Jump += 1
 	
 			PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
-			VelocityToZero(PlayerB, 'x', true, delta)
+			VelocityToZero(PlayerB, 'x', false, delta)
 		else:
 			PlayerA.parent_input = 0
 			PlayerB.parent_input = move_input
@@ -210,27 +202,23 @@ func _physics_process(delta):
 				PlayerB.velocity.y -= JUMP_SPEED
 				Jump += 1
 			
-			VelocityToZero(PlayerA, 'x', true, delta)
+			VelocityToZero(PlayerA, 'x', false, delta)
 			PlayerB.velocity.x = move_toward(PlayerB.velocity.x, SPEED * move_input, ACCELERATION * delta)
 		
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
-		
-	if Variables.Stamina < 0:
-			Sync = not Sync
-			Variables.Stamina = Stamina
-			timer.stop()
-			
-			if Selected_A:
-				Debug.dprint("A se devuelve")
-				retorno = true
-			else:
-				Debug.dprint("B se devuelve")
-				retorno = true
 
 ####################################################################################################
 #Signals:
 
 func _on_timer_timeout():
-		Variables.Stamina -= 1
+		Sync = true
+		timer.stop()
 		
+		retorno = true
+		if Selected_A:
+			Debug.dprint("A se devuelve")
+			retornar(PlayerA, GhostA)
+		else:
+			Debug.dprint("B se devuelve")
+			retornar(PlayerB,GhostB)
