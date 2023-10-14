@@ -67,7 +67,7 @@ func retornar(Player, Ghost):
 	
 	var ReturnPoint: Vector2 = Ghost.position - Vector2(0, 30)
 	
-	var tween = create_tween()
+	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	tween.tween_property(Player, 'position', ReturnPoint, 1.2)
 	
 	tween.finished.connect(

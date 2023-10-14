@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dup63x863m677"]
 
 [ext_resource type="Texture2D" uid="uid://dmgqxji1etbxj" path="res://Assets/cavesofgallet_tiles.png" id="1_2g20t"]
-[ext_resource type="Texture2D" uid="uid://c3lt1rd3vf526" path="res://Assets/Ladders.png" id="2_s5h28"]
+[ext_resource type="Texture2D" uid="uid://c3lt1rd3vf526" path="res://assets/Ladders.png" id="2_s5h28"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xya2w"]
 resource_name = "TileMap"

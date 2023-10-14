@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7dbbcbdvwdr8"
-path="res://.godot/imported/star coin 4.png-a9507012739a87bc9ce34208fad1758a.ctex"
+path="res://.godot/imported/star coin 4.png-5ac3d49902cda61e74114ffc590e668a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/star coin animation Pack/star coin shine/star coin 4.png"
-dest_files=["res://.godot/imported/star coin 4.png-a9507012739a87bc9ce34208fad1758a.ctex"]
+source_file="res://assets/star coin animation Pack/star coin shine/star coin 4.png"
+dest_files=["res://.godot/imported/star coin 4.png-5ac3d49902cda61e74114ffc590e668a.ctex"]
 
 [params]
 
