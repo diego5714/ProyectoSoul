@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccqeeyt45lkt8"]
+
+[ext_resource type="Texture2D" uid="uid://t6qvg61ashsl" path="res://assets/Enemies (Rocky roads)/wood_stakes.png" id="1_nbcie"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4nqe6"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_nbcie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.00237, 17.6849)
+scale = Vector2(2.61517, 1.34357)
+shape = SubResource("CircleShape2D_4nqe6")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

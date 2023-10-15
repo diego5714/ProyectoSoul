@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://fb8oajx0aodc"]
+
+[ext_resource type="Texture2D" uid="uid://c3lt1rd3vf526" path="res://assets/Ladders.png" id="1_1qcov"]
+[ext_resource type="Script" path="res://Scenes/Escalera.gd" id="1_4d2qo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33vbj"]
+size = Vector2(12.3471, 273.881)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t87pg"]
+texture = ExtResource("1_1qcov")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hqs0r"]
+sources/0 = SubResource("TileSetAtlasSource_t87pg")
+
+[node name="Area2D" type="Area2D" groups=["Escalera"]]
+script = ExtResource("1_4d2qo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-15.3195, -144.633)
+shape = SubResource("RectangleShape2D_33vbj")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-7.34161, -24.0271)
+tile_set = SubResource("TileSet_hqs0r")
+format = 2
+layer_0/tile_data = PackedInt32Array(65535, 0, 0, -65537, 65536, 0, -196609, 65536, 0, -327681, 65536, 0, -458753, 65536, 0, -589825, 65536, 0, -720897, 65536, 0, -851969, 65536, 0, -983041, 131072, 0)

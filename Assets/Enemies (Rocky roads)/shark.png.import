@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bahqy1air4y3b"
-path="res://.godot/imported/shark.png-f9aa28782f71669f2b9a7517a8138a6c.ctex"
+path="res://.godot/imported/shark.png-b48d81de2da657ff9e250c33e7c0d07b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/shark.png"
-dest_files=["res://.godot/imported/shark.png-f9aa28782f71669f2b9a7517a8138a6c.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/shark.png"
+dest_files=["res://.godot/imported/shark.png-b48d81de2da657ff9e250c33e7c0d07b.ctex"]
 
 [params]
 

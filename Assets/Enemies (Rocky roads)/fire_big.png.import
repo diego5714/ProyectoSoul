@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bomf53pgt1ry3"
-path="res://.godot/imported/fire_big.png-2fd041631b8c110a3dc654398271aac9.ctex"
+path="res://.godot/imported/fire_big.png-b15323c957f4fe535c98ddaf8f14a148.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/fire_big.png"
-dest_files=["res://.godot/imported/fire_big.png-2fd041631b8c110a3dc654398271aac9.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/fire_big.png"
+dest_files=["res://.godot/imported/fire_big.png-b15323c957f4fe535c98ddaf8f14a148.ctex"]
 
 [params]
 

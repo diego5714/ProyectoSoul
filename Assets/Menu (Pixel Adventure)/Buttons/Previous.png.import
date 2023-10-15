@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byep7uu4mdhl6"
-path="res://.godot/imported/Previous.png-137b1598217b2fa3b8c8dfef1148a9b7.ctex"
+path="res://.godot/imported/Previous.png-f56128504661cf449dfb3cc2dc494a64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu (Pixel Adventure)/Buttons/Previous.png"
-dest_files=["res://.godot/imported/Previous.png-137b1598217b2fa3b8c8dfef1148a9b7.ctex"]
+source_file="res://assets/Menu (Pixel Adventure)/Buttons/Previous.png"
+dest_files=["res://.godot/imported/Previous.png-f56128504661cf449dfb3cc2dc494a64.ctex"]
 
 [params]
 

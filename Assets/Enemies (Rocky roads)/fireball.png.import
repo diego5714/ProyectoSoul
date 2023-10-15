@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7ixhtpdxhu1c"
-path="res://.godot/imported/fireball.png-8022f00006df8c65585959ed976255c9.ctex"
+path="res://.godot/imported/fireball.png-35ead22473f0116d01f0d208f524e290.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/fireball.png"
-dest_files=["res://.godot/imported/fireball.png-8022f00006df8c65585959ed976255c9.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/fireball.png"
+dest_files=["res://.godot/imported/fireball.png-35ead22473f0116d01f0d208f524e290.ctex"]
 
 [params]
 

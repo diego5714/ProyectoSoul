@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccaaytudkugll"
-path="res://.godot/imported/Yellow.png-577f16ec06f4dce8e898ad194e0cab68.ctex"
+path="res://.godot/imported/Yellow.png-a6e6dfd200fb3849e860dab6f9bb38d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Baldosas (Pixel adventure)/Yellow.png"
-dest_files=["res://.godot/imported/Yellow.png-577f16ec06f4dce8e898ad194e0cab68.ctex"]
+source_file="res://assets/Baldosas (Pixel adventure)/Yellow.png"
+dest_files=["res://.godot/imported/Yellow.png-a6e6dfd200fb3849e860dab6f9bb38d7.ctex"]
 
 [params]
 

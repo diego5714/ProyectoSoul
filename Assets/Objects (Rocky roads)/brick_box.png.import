@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m7d5mj50rixm"
-path="res://.godot/imported/brick_box.png-a8e8fd7a04e993dcc8a473515521d142.ctex"
+path="res://.godot/imported/brick_box.png-df02aa2d56e7c73ad5cd17cf9d8a4898.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects (Rocky roads)/brick_box.png"
-dest_files=["res://.godot/imported/brick_box.png-a8e8fd7a04e993dcc8a473515521d142.ctex"]
+source_file="res://assets/Objects (Rocky roads)/brick_box.png"
+dest_files=["res://.godot/imported/brick_box.png-df02aa2d56e7c73ad5cd17cf9d8a4898.ctex"]
 
 [params]
 
