@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_uwunc"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Enemies/TemplateEnemy.tscn" id="2_rtj56"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="4_hcftc"]
-[ext_resource type="PackedScene" uid="uid://ct0enejc01rdd" path="res://Scenes/llave.tscn" id="4_xe4qv"]
+[ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/llave.tscn" id="4_xe4qv"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/puerta.tscn" id="5_snk40"]
 
 [node name="Nivel" type="Node2D"]
@@ -23,9 +23,9 @@ collision_layer = 8
 collision_mask = 6
 floor_max_angle = 0.872665
 
-[node name="CharacterController" parent="." instance=ExtResource("4_hcftc")]
-Pos_Inicial_A = null
-Pos_Inicial_B = null
+[node name="CharacterController" parent="." node_paths=PackedStringArray("Pos_Inicial_A", "Pos_Inicial_B") instance=ExtResource("4_hcftc")]
+Pos_Inicial_A = NodePath("../Pos_Inicial_A")
+Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 metadata/_edit_lock_ = true
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]

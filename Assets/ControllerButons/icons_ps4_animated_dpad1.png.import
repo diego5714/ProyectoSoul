@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wttf2cxw30bt"
-path="res://.godot/imported/icons_ps4_animated_dpad1.png-8ef4e79262d49598546f7ecaf7afdcec.ctex"
+path="res://.godot/imported/icons_ps4_animated_dpad1.png-32087250517c5e7028927c68455a3ce3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ControllerButons/icons_ps4_animated_dpad1.png"
-dest_files=["res://.godot/imported/icons_ps4_animated_dpad1.png-8ef4e79262d49598546f7ecaf7afdcec.ctex"]
+source_file="res://Assets/ControllerButons/icons_ps4_animated_dpad1.png"
+dest_files=["res://.godot/imported/icons_ps4_animated_dpad1.png-32087250517c5e7028927c68455a3ce3.ctex"]
 
 [params]
 

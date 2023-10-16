@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clofae1sg8po8"
-path="res://.godot/imported/crate.png-81e13d106322f1ba984e9029a79488b1.ctex"
+path="res://.godot/imported/crate.png-433c1e3d3d0ab658f85d1fa2d59725dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objects (Rocky roads)/crate.png"
-dest_files=["res://.godot/imported/crate.png-81e13d106322f1ba984e9029a79488b1.ctex"]
+source_file="res://Assets/Objects (Rocky roads)/crate.png"
+dest_files=["res://.godot/imported/crate.png-433c1e3d3d0ab658f85d1fa2d59725dc.ctex"]
 
 [params]
 
