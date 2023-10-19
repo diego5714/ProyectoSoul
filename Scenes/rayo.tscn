@@ -1,0 +1,149 @@
+[gd_scene load_steps=15 format=3 uid="uid://dsi445w7sbx3m"]
+
+[ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://assets/Enemies (Rocky roads)/lightning.png" id="1_05qw7"]
+[ext_resource type="Script" path="res://Scenes/rayo.gd" id="1_ya6ae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_saa7j"]
+size = Vector2(20, 1)
+
+[sub_resource type="Animation" id="Animation_qu5t2"]
+resource_name = "Rayo"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 3, 1, 5, 6, 7, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(20, 1), Vector2(20, 60), Vector2(20, 96), Vector2(20, 60), Vector2(20, 30), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_owa43"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(2, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ixty0"]
+resource_name = "Cargando"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2i(2, 0), Vector2i(2, 0), Vector2i(4, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wvnwa"]
+resource_name = "vacio"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6v03e"]
+_data = {
+"Cargando": SubResource("Animation_ixty0"),
+"RESET": SubResource("Animation_owa43"),
+"Rayo": SubResource("Animation_qu5t2"),
+"vacio": SubResource("Animation_wvnwa")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_knakr"]
+animation = &"Cargando"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8xkfc"]
+animation = &"Rayo"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v264v"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x74g0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ia1d2"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nq0mc"]
+states/Cargando/node = SubResource("AnimationNodeAnimation_knakr")
+states/Cargando/position = Vector2(301, 45)
+states/Rayo/node = SubResource("AnimationNodeAnimation_8xkfc")
+states/Rayo/position = Vector2(547, 41)
+states/Start/position = Vector2(114, 165)
+transitions = ["Cargando", "Rayo", SubResource("AnimationNodeStateMachineTransition_v264v"), "Start", "Cargando", SubResource("AnimationNodeStateMachineTransition_x74g0"), "Rayo", "Cargando", SubResource("AnimationNodeStateMachineTransition_ia1d2")]
+
+[node name="Rayo" type="StaticBody2D"]
+position = Vector2(402.686, 173.725)
+scale = Vector2(10, 10)
+script = ExtResource("1_ya6ae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_saa7j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_05qw7")
+hframes = 8
+frame = 2
+region_filter_clip_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6v03e")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_nq0mc")
+anim_player = NodePath("../AnimationPlayer")

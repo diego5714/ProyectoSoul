@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1122wmaf3ee5"
-path="res://.godot/imported/Purple.png-e1f1badab09725a2678921367031bb7f.ctex"
+path="res://.godot/imported/Purple.png-e899916255c23cbd5455e1ca77ae5119.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Baldosas (Pixel adventure)/Purple.png"
-dest_files=["res://.godot/imported/Purple.png-e1f1badab09725a2678921367031bb7f.ctex"]
+source_file="res://assets/Baldosas (Pixel adventure)/Purple.png"
+dest_files=["res://.godot/imported/Purple.png-e899916255c23cbd5455e1ca77ae5119.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvvsdcbt0cg7u"
-path="res://.godot/imported/exclamation.png-432f56a9d68d13312f0cad52e99eae13.ctex"
+path="res://.godot/imported/exclamation.png-b9ccf090d61842b60e5aabbc5756cc02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FX (Rocky roads)/exclamation.png"
-dest_files=["res://.godot/imported/exclamation.png-432f56a9d68d13312f0cad52e99eae13.ctex"]
+source_file="res://assets/FX (Rocky roads)/exclamation.png"
+dest_files=["res://.godot/imported/exclamation.png-b9ccf090d61842b60e5aabbc5756cc02.ctex"]
 
 [params]
 

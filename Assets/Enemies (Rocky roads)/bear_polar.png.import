@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvrui3xmvu6fj"
-path="res://.godot/imported/bear_polar.png-967ee52f438dc335cf7c06758c071572.ctex"
+path="res://.godot/imported/bear_polar.png-754f6744cfa13f224b54f3718f605ff5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/bear_polar.png"
-dest_files=["res://.godot/imported/bear_polar.png-967ee52f438dc335cf7c06758c071572.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/bear_polar.png"
+dest_files=["res://.godot/imported/bear_polar.png-754f6744cfa13f224b54f3718f605ff5.ctex"]
 
 [params]
 

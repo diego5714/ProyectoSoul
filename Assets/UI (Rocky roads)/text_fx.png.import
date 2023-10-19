@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://81c47r8egoke"
-path="res://.godot/imported/text_fx.png-5d7306f1ee13585c05715ebb629771a2.ctex"
+path="res://.godot/imported/text_fx.png-c8f3f9204c3a786ecb852387a6c2d03b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI (Rocky roads)/text_fx.png"
-dest_files=["res://.godot/imported/text_fx.png-5d7306f1ee13585c05715ebb629771a2.ctex"]
+source_file="res://assets/UI (Rocky roads)/text_fx.png"
+dest_files=["res://.godot/imported/text_fx.png-c8f3f9204c3a786ecb852387a6c2d03b.ctex"]
 
 [params]
 

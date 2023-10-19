@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rhmmkxpun2pm"
-path="res://.godot/imported/Text (Black) (8x10).png-117c403185dbdc661158ed1fc1b1b5fb.ctex"
+path="res://.godot/imported/Text (Black) (8x10).png-232f2a81a03874b8649f4c78d8a2b4d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu (Pixel Adventure)/Text/Text (Black) (8x10).png"
-dest_files=["res://.godot/imported/Text (Black) (8x10).png-117c403185dbdc661158ed1fc1b1b5fb.ctex"]
+source_file="res://assets/Menu (Pixel Adventure)/Text/Text (Black) (8x10).png"
+dest_files=["res://.godot/imported/Text (Black) (8x10).png-232f2a81a03874b8649f4c78d8a2b4d8.ctex"]
 
 [params]
 

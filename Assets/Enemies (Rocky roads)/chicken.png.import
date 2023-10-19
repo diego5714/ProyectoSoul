@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://umpfahyrlshs"
-path="res://.godot/imported/chicken.png-1946eb1ed3e4ba3ec3402d3b32eb16ea.ctex"
+path="res://.godot/imported/chicken.png-920e70bf63445a0fdfc0c38e3029ef7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/chicken.png"
-dest_files=["res://.godot/imported/chicken.png-1946eb1ed3e4ba3ec3402d3b32eb16ea.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/chicken.png"
+dest_files=["res://.godot/imported/chicken.png-920e70bf63445a0fdfc0c38e3029ef7c.ctex"]
 
 [params]
 
