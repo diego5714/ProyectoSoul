@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://dsi445w7sbx3m"]
 
-[ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://assets/Enemies (Rocky roads)/lightning.png" id="1_05qw7"]
-[ext_resource type="Script" path="res://Scenes/rayo.gd" id="1_ya6ae"]
+[ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://Assets/Enemies (Rocky roads)/lightning.png" id="1_05qw7"]
+[ext_resource type="Script" path="res://Scripts/rayo.gd" id="1_ya6ae"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_saa7j"]
 size = Vector2(20, 1)
