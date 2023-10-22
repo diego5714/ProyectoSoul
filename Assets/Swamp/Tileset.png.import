@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnco6u6rg2n33"
-path="res://.godot/imported/star coin 3.png-f7400433cc92d625e6b8c2c384b12e00.ctex"
+uid="uid://bp0dgsbqicc6t"
+path="res://.godot/imported/Tileset.png-934600adeca7dd4997d08f7958aec110.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/star coin animation Pack/star coin shine/star coin 3.png"
-dest_files=["res://.godot/imported/star coin 3.png-f7400433cc92d625e6b8c2c384b12e00.ctex"]
+source_file="res://Assets/Swamp/Tileset.png"
+dest_files=["res://.godot/imported/Tileset.png-934600adeca7dd4997d08f7958aec110.ctex"]
 
 [params]
 

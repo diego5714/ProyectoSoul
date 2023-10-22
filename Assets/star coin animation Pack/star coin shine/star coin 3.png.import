@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6hgwga41fxxv"
-path="res://.godot/imported/Llave 32x32 cu.png-e79662ab1548b1196b6e9363006e451b.ctex"
+uid="uid://dnco6u6rg2n33"
+path="res://.godot/imported/star coin 3.png-363aa824f29940f48d2244cc4ffd3a04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objects (Rocky roads)/Llave 32x32 cu.png"
-dest_files=["res://.godot/imported/Llave 32x32 cu.png-e79662ab1548b1196b6e9363006e451b.ctex"]
+source_file="res://Assets/star coin animation Pack/star coin shine/star coin 3.png"
+dest_files=["res://.godot/imported/star coin 3.png-363aa824f29940f48d2244cc4ffd3a04.ctex"]
 
 [params]
 

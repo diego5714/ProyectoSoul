@@ -1,13 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://du7x3teefx44e"]
 
-[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_kgt2d"]
+[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Assets/Tileset.tres" id="1_kgt2d"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Enemies/TemplateEnemy.tscn" id="2_lq4tp"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="2_yaopq"]
 [ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/FullHeart.tres" id="3_s4gnb"]
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/llave.tscn" id="4_mi6pw"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/puerta.tscn" id="5_wob0j"]
 [ext_resource type="PackedScene" uid="uid://ccqeeyt45lkt8" path="res://Scenes/WoodObstacle.tscn" id="7_e7voa"]
-[ext_resource type="PackedScene" uid="uid://fb8oajx0aodc" path="res://Scenes/Escalera.tscn" id="8_rjbbp"]
 [ext_resource type="PackedScene" uid="uid://f4jetvabtrk7" path="res://Scenes/Button.tscn" id="9_2i5r0"]
 [ext_resource type="PackedScene" uid="uid://dsi445w7sbx3m" path="res://Scenes/rayo.tscn" id="10_3own3"]
 
@@ -51,12 +50,6 @@ scale = Vector2(1.5, 1.5)
 [node name="Estacas2" parent="Elementos" instance=ExtResource("7_e7voa")]
 position = Vector2(-662.214, 720.7)
 scale = Vector2(1.5, 1.5)
-
-[node name="Escalera" parent="Elementos" instance=ExtResource("8_rjbbp")]
-position = Vector2(-1680, 639.771)
-
-[node name="Escalera2" parent="Elementos/Escalera" instance=ExtResource("8_rjbbp")]
-position = Vector2(3392, 0)
 
 [node name="Button" parent="Elementos" instance=ExtResource("9_2i5r0")]
 position = Vector2(-1579.6, 335.896)

@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3skhvag2kqcc"]
+[gd_scene load_steps=4 format=3 uid="uid://c3skhvag2kqcc"]
 
-[ext_resource type="Texture2D" uid="uid://dgeqlach0ff2l" path="res://Assets/FondoTemporalXD.jpg" id="1_uu5l6"]
 [ext_resource type="Texture2D" uid="uid://dmgqxji1etbxj" path="res://Assets/cavesofgallet_tiles.png" id="2_rq6u1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkw5x"]
@@ -52,12 +51,6 @@ sources/0 = SubResource("TileSetAtlasSource_vkw5x")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1800, 942)
-
-[node name="Fondo" type="Sprite2D" parent="ParallaxLayer"]
-visible = false
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_uu5l6")
-centered = false
 
 [node name="TileMapFondo" type="TileMap" parent="ParallaxLayer"]
 scale = Vector2(4, 4)

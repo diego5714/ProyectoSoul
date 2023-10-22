@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://detb787xddka8"]
+[gd_scene load_steps=9 format=3 uid="uid://detb787xddka8"]
 
 [ext_resource type="Script" path="res://Scripts/SplitCamera.gd" id="1_eybq0"]
 [ext_resource type="PackedScene" uid="uid://c3skhvag2kqcc" path="res://Scenes/parallax_background.tscn" id="3_k3ogy"]
+[ext_resource type="Script" path="res://Scripts/LabelGanaste.gd" id="4_2jxn5"]
 [ext_resource type="PackedScene" uid="uid://40kqhvq10ryq" path="res://Scenes/Pause_menu.tscn" id="4_tmdoi"]
+[ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/MarginTheme.tres" id="4_v1b5t"]
 [ext_resource type="PackedScene" uid="uid://c0jfmc4vjccqg" path="res://Scenes/hud.tscn" id="5_lm11c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcpo6"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 0.666667)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_k4hpf"]
+font_size = 60
 
 [node name="Base" type="Node"]
 script = ExtResource("1_eybq0")
@@ -47,6 +59,7 @@ render_target_update_mode = 4
 [node name="CamaraA" type="Camera2D" parent="HBoxContainer/ContenedorA/ViewportA"]
 offset = Vector2(0, -200)
 process_callback = 0
+limit_bottom = 1200
 position_smoothing_enabled = true
 
 [node name="ContenedorB" type="SubViewportContainer" parent="HBoxContainer"]
@@ -67,12 +80,14 @@ render_target_update_mode = 4
 [node name="CamaraB" type="Camera2D" parent="HBoxContainer/ContenedorB/ViewportB"]
 offset = Vector2(0, -200)
 process_callback = 0
+limit_bottom = 1200
 limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("4_tmdoi")]
+visible = false
 
 [node name="Modo" type="Label" parent="CanvasLayer"]
 offset_left = 1370.0
@@ -87,6 +102,36 @@ offset_top = 47.0
 offset_right = 1450.0
 offset_bottom = 73.0
 text = "Personaje:"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("4_2jxn5")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer"]
+custom_minimum_size = Vector2(370, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_v1b5t")
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcpo6")
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_v1b5t")
+theme_type_variation = &"HeaderLarge"
+text = "GANASTE!!!"
+label_settings = SubResource("LabelSettings_k4hpf")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HUD" parent="." instance=ExtResource("5_lm11c")]
 metadata/_edit_group_ = true

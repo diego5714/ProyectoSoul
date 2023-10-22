@@ -28,6 +28,17 @@ var retorno: bool = false
 ###################################################################################################
 #Definicion de funciones custom:
 
+func CheckDead(player):
+	if player.position.y >= 1250:
+		NoColisiones(PlayerA, true)
+		NoColisiones(PlayerB, true)
+		retorno = true
+		
+		if Selected_A:
+			retornar(player, GhostA, true)
+		else:
+			retornar(player, GhostB, true)
+
 func isRaycastColliding(nodo, direccion: String):
 	return nodo.get_node("Pivote/RayCast" + direccion).is_colliding()
 	
@@ -62,21 +73,35 @@ func VelocityToZero(player: Player, eje: String, interpolado: bool, delta: float
 		else:
 			player.velocity = Vector2.ZERO
 			
-func retornar(Player, Ghost):
+func retornar(Player, Ghost, muerte: bool):
 	VelocityToZero(Player, 'x,y', false, 1)
 	
-	var ReturnPoint: Vector2 = Ghost.position - Vector2(0, 30)
+	if not muerte:
+		var ReturnPoint: Vector2 = Ghost.position - Vector2(0, 30)
 	
-	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-	tween.tween_property(Player, 'position', ReturnPoint, 1.2)
+		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		tween.tween_property(Player, 'position', ReturnPoint, 1.2)
 	
-	tween.finished.connect(
-		func():
-		NoColisiones(Player,false)
-		ToggleGhost(Ghost, false)
-		Player.position = ReturnPoint
-		retorno = false
-		)
+		tween.finished.connect(
+			func():
+			NoColisiones(Player,false)
+			ToggleGhost(Ghost, false)
+			Player.position = ReturnPoint
+			retorno = false
+			)
+	else:
+		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		tween.tween_property(PlayerA, 'position', Pos_Inicial_A.position, 1.2)
+		tween.parallel().tween_property(PlayerB, 'position', Pos_Inicial_B.position, 1.2)
+		
+		tween.finished.connect(
+			func():
+			NoColisiones(PlayerA, false)
+			NoColisiones(PlayerB, false)
+			PlayerA.position = Pos_Inicial_A.position
+			PlayerB.position = Pos_Inicial_B.position
+			retorno = false
+			)
 	
 
 ###################################################################################################
@@ -109,10 +134,10 @@ func _physics_process(delta):
 			
 			retorno = true
 			if Selected_A:
-				retornar(PlayerA, GhostA)
+				retornar(PlayerA, GhostA, false)
 				Debug.dprint("A se devuelve")
 			else:
-				retornar(PlayerB,GhostB)
+				retornar(PlayerB,GhostB, false)
 				Debug.dprint("B se devuelve")
 			
 			
@@ -207,6 +232,8 @@ func _physics_process(delta):
 		
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
+	CheckDead(PlayerA)
+	CheckDead(PlayerB)
 
 ####################################################################################################
 #Signals:
@@ -218,7 +245,7 @@ func _on_timer_timeout():
 		retorno = true
 		if Selected_A:
 			Debug.dprint("A se devuelve")
-			retornar(PlayerA, GhostA)
+			retornar(PlayerA, GhostA, false)
 		else:
 			Debug.dprint("B se devuelve")
-			retornar(PlayerB,GhostB)
+			retornar(PlayerB,GhostB, false)

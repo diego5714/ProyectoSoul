@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqbvmsktnxh20"
-path="res://.godot/imported/Idle.png-4007a9975a0b590ef2c56c4e8339d80e.ctex"
+path="res://.godot/imported/Idle.png-ba6a0597deace84a18041c75b871fa05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Door (Kings and pigs)/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-4007a9975a0b590ef2c56c4e8339d80e.ctex"]
+source_file="res://Assets/Door (Kings and pigs)/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-ba6a0597deace84a18041c75b871fa05.ctex"]
 
 [params]
 

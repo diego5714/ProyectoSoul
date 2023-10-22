@@ -13,6 +13,7 @@ extends Control
 func _ready():
 	Boton1.pressed.connect(_on_boton_1_pressed)
 	Boton2.pressed.connect(_on_boton_2_pressed)
+	Boton4.pressed.connect(_on_boton_4_pressed)
 
 func _on_boton_1_pressed():
 	Variables.NivelCargado = Nivel1
@@ -29,6 +30,11 @@ func _on_boton_2_pressed():
 	
 func _on_boton_3_pressed():
 	Variables.NivelCargado = Nivel3
+	#var Main = preload("res://Scenes/main.tscn")
+	#get_tree().change_scene_to_packed(Main)
+	pass # Replace with function body.
+	
+func _on_boton_4_pressed():
+	Variables.NivelCargado = Nivel4
 	var Main = preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
-	pass # Replace with function body.

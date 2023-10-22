@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iloef1p1tyhb"
-path="res://.godot/imported/star coin 1.png-2f37b57351938196b1727d8052f3a49d.ctex"
+uid="uid://c3lt1rd3vf526"
+path="res://.godot/imported/Ladders.png-e91314c50cd16410151d5946cf6e9546.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/star coin animation Pack/star coin shine/star coin 1.png"
-dest_files=["res://.godot/imported/star coin 1.png-2f37b57351938196b1727d8052f3a49d.ctex"]
+source_file="res://Assets/Ladders.png"
+dest_files=["res://.godot/imported/Ladders.png-e91314c50cd16410151d5946cf6e9546.ctex"]
 
 [params]
 

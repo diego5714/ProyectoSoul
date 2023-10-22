@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cal8ytqtr2hyq"]
 
 [ext_resource type="Script" path="res://Scripts/Llave.gd" id="1_cjv6o"]
-[ext_resource type="Texture2D" uid="uid://b6hgwga41fxxv" path="res://assets/Objects (Rocky roads)/Llave 32x32 cu.png" id="2_cqfqi"]
+[ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objects (Rocky roads)/key.png" id="2_j7b5f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nse5d"]
 size = Vector2(18, 16)
@@ -50,7 +50,7 @@ _data = {
 script = ExtResource("1_cjv6o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_cqfqi")
+texture = ExtResource("2_j7b5f")
 hframes = 5
 region_filter_clip_enabled = true
 

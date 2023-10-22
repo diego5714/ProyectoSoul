@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://btno6hq1dhnnb"]
+
+[ext_resource type="Script" path="res://Scripts/banana.gd" id="1_8ute5"]
+[ext_resource type="Texture2D" uid="uid://ccis55q3c56d3" path="res://Assets/Objects (Rocky roads)/banana.png" id="1_vmbby"]
+
+[node name="Platano0" type="RigidBody2D"]
+script = ExtResource("1_8ute5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_vmbby")

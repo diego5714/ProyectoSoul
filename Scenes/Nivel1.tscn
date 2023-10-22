@@ -23,11 +23,9 @@ collision_layer = 8
 collision_mask = 6
 floor_max_angle = 0.872665
 
-[node name="CharacterController" parent="." instance=ExtResource("4_hcftc")]
-Pos_Inicial_A = Object(Marker2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(26, 421),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"gizmo_extents":45.0,"script":null)
-
-Pos_Inicial_B = Object(Marker2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(1369, 474),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"gizmo_extents":45.0,"script":null)
-
+[node name="CharacterController" parent="." node_paths=PackedStringArray("Pos_Inicial_A", "Pos_Inicial_B") instance=ExtResource("4_hcftc")]
+Pos_Inicial_A = NodePath("../Pos_Inicial_A")
+Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 metadata/_edit_lock_ = true
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
@@ -38,15 +36,26 @@ gizmo_extents = 45.0
 position = Vector2(1369, 474)
 gizmo_extents = 45.0
 
-[node name="Llave" parent="." instance=ExtResource("4_xe4qv")]
+[node name="LlaveFinal" parent="." instance=ExtResource("4_xe4qv")]
 position = Vector2(528, 200)
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 
 [node name="Puerta" parent="." instance=ExtResource("5_snk40")]
 position = Vector2(-912, 288)
+
+[node name="Timer" type="Timer" parent="Puerta"]
+process_callback = 0
+wait_time = 0.3
+
+[node name="PosBanana1" type="Marker2D" parent="Puerta"]
+position = Vector2(-398, 201)
+
+[node name="PosBanana2" type="Marker2D" parent="Puerta"]
+position = Vector2(397, 201)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 volume_db = -5.0
 
-[connection signal="puerta_llave" from="Llave" to="Puerta" method="_on_llave_puerta_llave"]
+[connection signal="puerta_llave" from="LlaveFinal" to="Puerta" method="_on_llave_final_puerta_llave"]
+[connection signal="timeout" from="Puerta/Timer" to="Puerta" method="_on_timer_timeout"]

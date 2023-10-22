@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6wynnebyb5mq"
-path="res://.godot/imported/BarraStamina.png-b1249f9aff3e9d309ce291cd249b8a39.ctex"
+path="res://.godot/imported/BarraStamina.png-44cb023ef82e70a50ece61a1215f17c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/BarraStamina.png"
-dest_files=["res://.godot/imported/BarraStamina.png-b1249f9aff3e9d309ce291cd249b8a39.ctex"]
+source_file="res://Assets/UI/BarraStamina.png"
+dest_files=["res://.godot/imported/BarraStamina.png-44cb023ef82e70a50ece61a1215f17c7.ctex"]
 
 [params]
 

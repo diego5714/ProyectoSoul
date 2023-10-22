@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgeqlach0ff2l"
-path="res://.godot/imported/FondoTemporalXD.jpg-8018127a6eb8b4cb188499ec19b80b9b.ctex"
+uid="uid://b7umooknuo261"
+path="res://.godot/imported/star coin normal.png-dcb49ea10ab2ba1dc7578d281489fb9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FondoTemporalXD.jpg"
-dest_files=["res://.godot/imported/FondoTemporalXD.jpg-8018127a6eb8b4cb188499ec19b80b9b.ctex"]
+source_file="res://Assets/star coin animation Pack/star coin blink/star coin normal.png"
+dest_files=["res://.godot/imported/star coin normal.png-dcb49ea10ab2ba1dc7578d281489fb9d.ctex"]
 
 [params]
 

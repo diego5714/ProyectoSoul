@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp0dgsbqicc6t"
-path="res://.godot/imported/Tileset.png-2dd637ec77a9b76c789878e3374920ca.ctex"
+uid="uid://nhea5tul12yv"
+path="res://.godot/imported/star coin rotate 4.png-f1a3e2982155795a97bf69529e2c1dc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Swamp/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-2dd637ec77a9b76c789878e3374920ca.ctex"]
+source_file="res://Assets/star coin animation Pack/star coin rotate/star coin rotate 4.png"
+dest_files=["res://.godot/imported/star coin rotate 4.png-f1a3e2982155795a97bf69529e2c1dc9.ctex"]
 
 [params]
 
