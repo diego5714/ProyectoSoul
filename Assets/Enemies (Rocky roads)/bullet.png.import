@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://didsa3g7m4mcm"
-path="res://.godot/imported/bullet.png-7027da29dc201c428323d9066869f523.ctex"
+path="res://.godot/imported/bullet.png-d93dcc7a2d798cf5095efa28fac3dc70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/bullet.png"
-dest_files=["res://.godot/imported/bullet.png-7027da29dc201c428323d9066869f523.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/bullet.png"
+dest_files=["res://.godot/imported/bullet.png-d93dcc7a2d798cf5095efa28fac3dc70.ctex"]
 
 [params]
 

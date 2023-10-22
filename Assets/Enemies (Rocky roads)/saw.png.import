@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csslttrm0frh8"
-path="res://.godot/imported/saw.png-b8f8350052ec6baa021b114034a27872.ctex"
+path="res://.godot/imported/saw.png-9685e8120e7e834233c7ffeb8386fa9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/saw.png"
-dest_files=["res://.godot/imported/saw.png-b8f8350052ec6baa021b114034a27872.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/saw.png"
+dest_files=["res://.godot/imported/saw.png-9685e8120e7e834233c7ffeb8386fa9b.ctex"]
 
 [params]
 

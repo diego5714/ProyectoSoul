@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceo8gx57muuw5"
-path="res://.godot/imported/cannon_fire_smoke.png-54360ef10473d43074af96465f3d6cae.ctex"
+path="res://.godot/imported/cannon_fire_smoke.png-5a74651e40c1b6347c85f72cf8e53283.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FX (Rocky roads)/cannon_fire_smoke.png"
-dest_files=["res://.godot/imported/cannon_fire_smoke.png-54360ef10473d43074af96465f3d6cae.ctex"]
+source_file="res://assets/FX (Rocky roads)/cannon_fire_smoke.png"
+dest_files=["res://.godot/imported/cannon_fire_smoke.png-5a74651e40c1b6347c85f72cf8e53283.ctex"]
 
 [params]
 

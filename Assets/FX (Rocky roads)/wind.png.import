@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tgghf5fqmka6"
-path="res://.godot/imported/wind.png-be1775ddd4fb2b136fa29dfb01540b05.ctex"
+path="res://.godot/imported/wind.png-50409c503877495dca8d2cfa6f93f11e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FX (Rocky roads)/wind.png"
-dest_files=["res://.godot/imported/wind.png-be1775ddd4fb2b136fa29dfb01540b05.ctex"]
+source_file="res://assets/FX (Rocky roads)/wind.png"
+dest_files=["res://.godot/imported/wind.png-50409c503877495dca8d2cfa6f93f11e.ctex"]
 
 [params]
 
