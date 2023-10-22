@@ -59,7 +59,7 @@ render_target_update_mode = 4
 [node name="CamaraA" type="Camera2D" parent="HBoxContainer/ContenedorA/ViewportA"]
 offset = Vector2(0, -200)
 process_callback = 0
-limit_bottom = 1200
+limit_bottom = 3000
 position_smoothing_enabled = true
 
 [node name="ContenedorB" type="SubViewportContainer" parent="HBoxContainer"]
@@ -80,7 +80,7 @@ render_target_update_mode = 4
 [node name="CamaraB" type="Camera2D" parent="HBoxContainer/ContenedorB/ViewportB"]
 offset = Vector2(0, -200)
 process_callback = 0
-limit_bottom = 1200
+limit_bottom = 3000
 limit_smoothed = true
 position_smoothing_enabled = true
 

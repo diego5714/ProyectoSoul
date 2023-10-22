@@ -19,20 +19,16 @@ func _on_boton_1_pressed():
 	Variables.NivelCargado = Nivel1
 	var Main = preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
-	pass
-
 
 func _on_boton_2_pressed():
 	Variables.NivelCargado = Nivel2
 	var Main = preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
-	pass
 	
 func _on_boton_3_pressed():
 	Variables.NivelCargado = Nivel3
-	#var Main = preload("res://Scenes/main.tscn")
-	#get_tree().change_scene_to_packed(Main)
-	pass # Replace with function body.
+	var Main = preload("res://Scenes/main.tscn")
+	get_tree().change_scene_to_packed(Main)
 	
 func _on_boton_4_pressed():
 	Variables.NivelCargado = Nivel4
