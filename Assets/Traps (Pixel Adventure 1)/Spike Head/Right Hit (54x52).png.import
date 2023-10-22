@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfowpvp4r316r"
-path="res://.godot/imported/Right Hit (54x52).png-213c9d830da5866db0755b7d7ff06896.ctex"
+path="res://.godot/imported/Right Hit (54x52).png-b83448229950a0323ccdc6faa9f5267e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Traps (Pixel Adventure 1)/Spike Head/Right Hit (54x52).png"
-dest_files=["res://.godot/imported/Right Hit (54x52).png-213c9d830da5866db0755b7d7ff06896.ctex"]
+source_file="res://Assets/Traps (Pixel Adventure 1)/Spike Head/Right Hit (54x52).png"
+dest_files=["res://.godot/imported/Right Hit (54x52).png-b83448229950a0323ccdc6faa9f5267e.ctex"]
 
 [params]
 

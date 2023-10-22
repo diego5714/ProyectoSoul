@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i3376rbg2gl8"
-path="res://.godot/imported/gem.png-c8e9a850fd3d7b53cba43cac1f3478de.ctex"
+path="res://.godot/imported/gem.png-435f73d7a5208b4f552ae1639b581796.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objects (Rocky roads)/gem.png"
-dest_files=["res://.godot/imported/gem.png-c8e9a850fd3d7b53cba43cac1f3478de.ctex"]
+source_file="res://Assets/Objects (Rocky roads)/gem.png"
+dest_files=["res://.godot/imported/gem.png-435f73d7a5208b4f552ae1639b581796.ctex"]
 
 [params]
 

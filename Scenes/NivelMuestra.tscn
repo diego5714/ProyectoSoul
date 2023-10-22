@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://i58bqr5sxwu6"]
 
-[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_k3keu"]
+[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Assets/Tileset.tres" id="1_k3keu"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="2_h73se"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/puerta.tscn" id="3_k5gsj"]
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/llave.tscn" id="4_yoi87"]
 [ext_resource type="Script" path="res://Scripts/Plataforma.gd" id="5_nuvjq"]
-[ext_resource type="Texture2D" uid="uid://dl8q7soh14p5f" path="res://assets/Traps (Pixel Adventure 1)/Platforms/Brown Off.png" id="6_douwm"]
+[ext_resource type="Texture2D" uid="uid://dl8q7soh14p5f" path="res://Assets/Traps (Pixel Adventure 1)/Platforms/Brown Off.png" id="6_douwm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyojj"]
 size = Vector2(192, 42)

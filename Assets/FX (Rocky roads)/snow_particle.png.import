@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dknk24pfq4smn"
-path="res://.godot/imported/snow_particle.png-c19fecfc7a8761a78b53fd54861a99a1.ctex"
+path="res://.godot/imported/snow_particle.png-f7f89ee57cf43384be335333f9e02db7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FX (Rocky roads)/snow_particle.png"
-dest_files=["res://.godot/imported/snow_particle.png-c19fecfc7a8761a78b53fd54861a99a1.ctex"]
+source_file="res://Assets/FX (Rocky roads)/snow_particle.png"
+dest_files=["res://.godot/imported/snow_particle.png-f7f89ee57cf43384be335333f9e02db7.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wp3cfm6wk440"
-path="res://.godot/imported/crab.png-47f5dba69598d77c262fdf27043c6334.ctex"
+path="res://.godot/imported/crab.png-430655e66c4a30580c5112feb56b3f52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemies (Rocky roads)/crab.png"
-dest_files=["res://.godot/imported/crab.png-47f5dba69598d77c262fdf27043c6334.ctex"]
+source_file="res://Assets/Enemies (Rocky roads)/crab.png"
+dest_files=["res://.godot/imported/crab.png-430655e66c4a30580c5112feb56b3f52.ctex"]
 
 [params]
 

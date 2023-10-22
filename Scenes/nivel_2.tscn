@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw0yn1tnj1e5g"]
 
-[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_hnol0"]
+[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Assets/Tileset.tres" id="1_hnol0"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Enemies/TemplateEnemy.tscn" id="2_a85a8"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="3_sux4h"]
 

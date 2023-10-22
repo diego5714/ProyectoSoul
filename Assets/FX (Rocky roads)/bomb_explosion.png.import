@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7w7se4c8du4r"
-path="res://.godot/imported/bomb_explosion.png-6ace570128c0db197f57b0d7e09aff37.ctex"
+path="res://.godot/imported/bomb_explosion.png-a61d497eb3b8b84d6a9647a7d4c52daf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FX (Rocky roads)/bomb_explosion.png"
-dest_files=["res://.godot/imported/bomb_explosion.png-6ace570128c0db197f57b0d7e09aff37.ctex"]
+source_file="res://Assets/FX (Rocky roads)/bomb_explosion.png"
+dest_files=["res://.godot/imported/bomb_explosion.png-a61d497eb3b8b84d6a9647a7d4c52daf.ctex"]
 
 [params]
 

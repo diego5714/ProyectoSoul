@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n12yqcd6hff0"
-path="res://.godot/imported/48.png-f1c29fa9d1f18edd20d68c7f5a645009.ctex"
+path="res://.godot/imported/48.png-76b15b4bda0c561afb65db7c14f14900.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menu (Pixel Adventure)/Levels/48.png"
-dest_files=["res://.godot/imported/48.png-f1c29fa9d1f18edd20d68c7f5a645009.ctex"]
+source_file="res://Assets/Menu (Pixel Adventure)/Levels/48.png"
+dest_files=["res://.godot/imported/48.png-76b15b4bda0c561afb65db7c14f14900.ctex"]
 
 [params]
 
