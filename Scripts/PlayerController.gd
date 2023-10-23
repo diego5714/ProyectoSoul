@@ -232,6 +232,7 @@ func _physics_process(delta):
 		
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
+	
 	CheckDead(PlayerA)
 	CheckDead(PlayerB)
 

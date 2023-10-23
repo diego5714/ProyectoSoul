@@ -1,11 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://i58bqr5sxwu6"]
+[gd_scene load_steps=10 format=3 uid="uid://i58bqr5sxwu6"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Assets/Tileset.tres" id="1_k3keu"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="2_h73se"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/puerta.tscn" id="3_k5gsj"]
+[ext_resource type="Script" path="res://Scripts/KillZone.gd" id="3_k6utb"]
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/llave.tscn" id="4_yoi87"]
 [ext_resource type="Script" path="res://Scripts/Plataforma.gd" id="5_nuvjq"]
 [ext_resource type="Texture2D" uid="uid://dl8q7soh14p5f" path="res://Assets/Traps (Pixel Adventure 1)/Platforms/Brown Off.png" id="6_douwm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhv0y"]
+size = Vector2(9899, 125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyojj"]
 size = Vector2(192, 42)
@@ -28,6 +32,15 @@ position = Vector2(-1503, 770)
 
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
 position = Vector2(1500, 770)
+
+[node name="KillZone" type="Area2D" parent="."]
+position = Vector2(0, 974)
+collision_mask = 3
+script = ExtResource("3_k6utb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(-156.5, 211)
+shape = SubResource("RectangleShape2D_uhv0y")
 
 [node name="Elementos" type="Node" parent="."]
 

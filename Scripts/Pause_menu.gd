@@ -1,8 +1,8 @@
 extends MarginContainer
 
 @onready var resume = %Resume
-@onready var retry = %retry
-@onready var menu = %"Main Menu"
+@onready var retry = %Retry
+@onready var menu = %"MainMenu"
 @onready var exit = %Exit
 
 @export var menu_scene : PackedScene

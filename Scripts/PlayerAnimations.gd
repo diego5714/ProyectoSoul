@@ -20,11 +20,16 @@ func _physics_process(_delta):
 		
 	if is_on_floor():
 		if abs(velocity.x) > 10 or move_input:
-			playback.travel("run")
+			playback.travel("Running")
 		else:
 			playback.travel("Idle")
 	else:
 		if velocity.y < 0:
 			playback.travel("Jump")
 		else:
-			playback.travel("fall")
+			playback.travel("Falling")
+			
+func kill():
+	animation_tree.set("parameters/conditions/dying", true)
+	playback.travel("Dying")
+	animation_tree.set("parameters/conditions/dying", false)
