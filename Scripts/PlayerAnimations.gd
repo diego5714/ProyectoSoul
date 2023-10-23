@@ -30,6 +30,4 @@ func _physics_process(_delta):
 			playback.travel("Falling")
 			
 func kill():
-	animation_tree.set("parameters/conditions/dying", true)
-	playback.travel("Dying")
-	animation_tree.set("parameters/conditions/dying", false)
+	get_parent().ReturnDead(self)

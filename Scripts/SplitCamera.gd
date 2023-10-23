@@ -1,6 +1,7 @@
 extends Node
 
 var NivelCargado: PackedScene = Variables.NivelCargado
+var MaxDepth: int = Variables.MaxDepth
 
 func _ready():
 	#Precargamos el nivel deseado y lo instanciamos
@@ -33,6 +34,7 @@ func _ready():
 		var transform := RemoteTransform2D.new()
 		transform.remote_path = nodo.camera.get_path()
 		nodo.player.add_child(transform)
+		nodo.camera.limit_bottom = Variables.MaxDepth
 		pass
 	pass 
 	

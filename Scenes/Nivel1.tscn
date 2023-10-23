@@ -29,12 +29,12 @@ Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 metadata/_edit_lock_ = true
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
-position = Vector2(26, 421)
-gizmo_extents = 45.0
+position = Vector2(26, 406)
+gizmo_extents = 42.0
 
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
-position = Vector2(1369, 474)
-gizmo_extents = 45.0
+position = Vector2(1369, 470)
+gizmo_extents = 42.0
 
 [node name="LlaveFinal" parent="." instance=ExtResource("4_xe4qv")]
 position = Vector2(528, 200)

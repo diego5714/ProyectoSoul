@@ -28,16 +28,18 @@ var retorno: bool = false
 ###################################################################################################
 #Definicion de funciones custom:
 
-func CheckDead(player):
-	if player.position.y >= 1250:
-		NoColisiones(PlayerA, true)
-		NoColisiones(PlayerB, true)
-		retorno = true
+func ReturnDead(player):
+	VelocityToZero(PlayerA, 'x,y', false, 1)
+	VelocityToZero(PlayerB,'x,y', false, 1)
+	
+	NoColisiones(PlayerA, true)
+	NoColisiones(PlayerB, true)
+	retorno = true
 		
-		if Selected_A:
-			retornar(player, GhostA, true)
-		else:
-			retornar(player, GhostB, true)
+	if Selected_A:
+		retornar(player, GhostA, true)
+	else:
+		retornar(player, GhostB, true)
 
 func isRaycastColliding(nodo, direccion: String):
 	return nodo.get_node("Pivote/RayCast" + direccion).is_colliding()
@@ -116,7 +118,7 @@ func _ready():
 func _physics_process(delta):
 	var move_input := Input.get_axis("izquierda","derecha")
 	
-	var StillPlayers : bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) and PlayerB.velocity.is_equal_approx(Vector2.ZERO)
+	var StillPlayers : bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) and PlayerB.velocity.is_equal_approx(Vector2.ZERO) and not retorno
 	
 	if Input.is_action_just_pressed('desync'):
 		if Sync:
@@ -233,8 +235,8 @@ func _physics_process(delta):
 		PlayerA.move_and_slide()
 		PlayerB.move_and_slide()
 	
-	CheckDead(PlayerA)
-	CheckDead(PlayerB)
+	#CheckDead(PlayerA)
+	#CheckDead(PlayerB)
 
 ####################################################################################################
 #Signals:

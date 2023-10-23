@@ -23,7 +23,9 @@ Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 metadata/_edit_lock_ = true
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
-position = Vector2(-2862, -169)
+position = Vector2(-2862, -170)
+gizmo_extents = 42.0
 
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
-position = Vector2(-617, -167)
+position = Vector2(-617, -171)
+gizmo_extents = 42.0

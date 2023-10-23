@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://du7x3teefx44e"]
 
-[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_xntg6"]
+[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Assets/Tileset.tres" id="1_xntg6"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Enemies/TemplateEnemy.tscn" id="2_lq4tp"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="2_yaopq"]
 [ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/FullHeart.tres" id="3_s4gnb"]
@@ -25,10 +25,12 @@ Pos_Inicial_A = NodePath("../Pos_Inicial_A")
 Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
-position = Vector2(-3875, 1050)
+position = Vector2(-3875, 1045)
+gizmo_extents = 42.0
 
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
-position = Vector2(3875, 1050)
+position = Vector2(3875, 1046)
+gizmo_extents = 42.0
 
 [node name="Enemy" parent="." instance=ExtResource("2_lq4tp")]
 position = Vector2(-435, 1046)

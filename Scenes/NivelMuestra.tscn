@@ -28,10 +28,10 @@ Pos_Inicial_A = NodePath("../Pos_Inicial_A")
 Pos_Inicial_B = NodePath("../Pos_Inicial_B")
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
-position = Vector2(-1503, 770)
+position = Vector2(-1503, 790)
 
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
-position = Vector2(1500, 770)
+position = Vector2(1500, 790)
 
 [node name="KillZone" type="Area2D" parent="."]
 position = Vector2(0, 974)

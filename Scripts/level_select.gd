@@ -20,21 +20,25 @@ func _ready():
 
 func _on_boton_1_pressed():
 	Variables.NivelCargado = Nivel1
+	Variables.MaxDepth = 925
 	var Main := preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
 
 func _on_boton_2_pressed():
 	Variables.NivelCargado = Nivel2
+	Variables.MaxDepth = 1150
 	var Main := preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
 	
 func _on_boton_3_pressed():
 	Variables.NivelCargado = Nivel3
+	Variables.MaxDepth = 1450
 	var Main := preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
 	
 func _on_boton_4_pressed():
 	Variables.NivelCargado = Nivel4
+	Variables.MaxDepth = 1200
 	var Main := preload("res://Scenes/main.tscn")
 	get_tree().change_scene_to_packed(Main)
 	
