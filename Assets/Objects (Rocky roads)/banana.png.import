@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccis55q3c56d3"
-path="res://.godot/imported/banana.png-b276b956606e031700d925cbb0c0651e.ctex"
+path="res://.godot/imported/banana.png-2ed3852fb2687aaf511de8ae6570dde8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects (Rocky roads)/banana.png"
-dest_files=["res://.godot/imported/banana.png-b276b956606e031700d925cbb0c0651e.ctex"]
+source_file="res://assets/Objects (Rocky roads)/banana.png"
+dest_files=["res://.godot/imported/banana.png-2ed3852fb2687aaf511de8ae6570dde8.ctex"]
 
 [params]
 

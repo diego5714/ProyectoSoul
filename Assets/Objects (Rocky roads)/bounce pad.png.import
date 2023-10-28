@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgkicdu1ticwj"
-path="res://.godot/imported/bounce pad.png-5c37499218cbc76280c30c41cf5f4d94.ctex"
+path="res://.godot/imported/bounce pad.png-d065158e9d48ce1c6d9b32548763f37f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects (Rocky roads)/bounce pad.png"
-dest_files=["res://.godot/imported/bounce pad.png-5c37499218cbc76280c30c41cf5f4d94.ctex"]
+source_file="res://assets/Objects (Rocky roads)/bounce pad.png"
+dest_files=["res://.godot/imported/bounce pad.png-d065158e9d48ce1c6d9b32548763f37f.ctex"]
 
 [params]
 

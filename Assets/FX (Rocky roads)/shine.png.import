@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnibyp5ida227"
-path="res://.godot/imported/shine.png-7b4c4b29286b9d8999e36729924f3b1e.ctex"
+path="res://.godot/imported/shine.png-86a2808bd522d77bcccb0fb7ab8df6a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FX (Rocky roads)/shine.png"
-dest_files=["res://.godot/imported/shine.png-7b4c4b29286b9d8999e36729924f3b1e.ctex"]
+source_file="res://assets/FX (Rocky roads)/shine.png"
+dest_files=["res://.godot/imported/shine.png-86a2808bd522d77bcccb0fb7ab8df6a2.ctex"]
 
 [params]
 

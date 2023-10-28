@@ -6,3 +6,7 @@ extends StaticBody2D
 
 func _ready() -> void:
 	animation_tree.active = true
+	
+	
+
+
