@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dj5gaxprk4yxm"
-path="res://.godot/imported/sign_arrow.png-e527bd1fcab5f29d5c4d5f562e5a6ccf.ctex"
+path="res://.godot/imported/sign_arrow.png-4c115051d506e4447a75ca88284997a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objects (Rocky roads)/sign_arrow.png"
-dest_files=["res://.godot/imported/sign_arrow.png-e527bd1fcab5f29d5c4d5f562e5a6ccf.ctex"]
+source_file="res://Assets/Objects (Rocky roads)/sign_arrow.png"
+dest_files=["res://.godot/imported/sign_arrow.png-4c115051d506e4447a75ca88284997a3.ctex"]
 
 [params]
 

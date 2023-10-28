@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvgx0auramrdt"
-path="res://.godot/imported/BaldosasMenu.png-cb6c6784d669c55fb685c4902714873a.ctex"
+path="res://.godot/imported/BaldosasMenu.png-408b0ac55f95aa809cc5fba579fdd680.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Baldosas (Pixel adventure)/BaldosasMenu.png"
-dest_files=["res://.godot/imported/BaldosasMenu.png-cb6c6784d669c55fb685c4902714873a.ctex"]
+source_file="res://assets/Baldosas (Pixel adventure)/BaldosasMenu.png"
+dest_files=["res://.godot/imported/BaldosasMenu.png-408b0ac55f95aa809cc5fba579fdd680.ctex"]
 
 [params]
 

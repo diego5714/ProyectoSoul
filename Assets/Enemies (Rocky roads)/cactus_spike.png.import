@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lyfdr22jh87k"
-path="res://.godot/imported/cactus_spike.png-849e336cea06f599d8178886f862c345.ctex"
+path="res://.godot/imported/cactus_spike.png-40f7fb066a0370b4bc51e0f0922c2728.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemies (Rocky roads)/cactus_spike.png"
-dest_files=["res://.godot/imported/cactus_spike.png-849e336cea06f599d8178886f862c345.ctex"]
+source_file="res://Assets/Enemies (Rocky roads)/cactus_spike.png"
+dest_files=["res://.godot/imported/cactus_spike.png-40f7fb066a0370b4bc51e0f0922c2728.ctex"]
 
 [params]
 

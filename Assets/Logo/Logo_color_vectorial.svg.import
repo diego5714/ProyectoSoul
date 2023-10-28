@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://twjitdawia5p"
-path="res://.godot/imported/Logo_color_vectorial.svg-31e82372de94ef3d6573d1088fd3e2ca.ctex"
+path="res://.godot/imported/Logo_color_vectorial.svg-a636ad35dbf715f52d562484f33dd1ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Logo/Logo_color_vectorial.svg"
-dest_files=["res://.godot/imported/Logo_color_vectorial.svg-31e82372de94ef3d6573d1088fd3e2ca.ctex"]
+source_file="res://Assets/Logo/Logo_color_vectorial.svg"
+dest_files=["res://.godot/imported/Logo_color_vectorial.svg-a636ad35dbf715f52d562484f33dd1ff.ctex"]
 
 [params]
 

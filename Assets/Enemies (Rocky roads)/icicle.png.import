@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp0lt04rmxm3c"
-path="res://.godot/imported/icicle.png-1d059008bc1e12bdf643a68cd2f66373.ctex"
+path="res://.godot/imported/icicle.png-16f7e30f5ac8b4d641d67c1c7f0ab95f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemies (Rocky roads)/icicle.png"
-dest_files=["res://.godot/imported/icicle.png-1d059008bc1e12bdf643a68cd2f66373.ctex"]
+source_file="res://Assets/Enemies (Rocky roads)/icicle.png"
+dest_files=["res://.godot/imported/icicle.png-16f7e30f5ac8b4d641d67c1c7f0ab95f.ctex"]
 
 [params]
 

@@ -103,4 +103,8 @@ scale = Vector2(4, 4)
 z_as_relative = false
 position = Vector2(-1984, 576)
 
+[node name="Lava2" parent="." instance=ExtResource("10_ke8cq")]
+z_as_relative = false
+position = Vector2(1984, 576)
+
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]

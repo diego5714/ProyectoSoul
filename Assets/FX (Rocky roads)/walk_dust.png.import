@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vtx2rsjspgso"
-path="res://.godot/imported/walk_dust.png-49d857d87978f4de0d0ecc8915c8c1f5.ctex"
+path="res://.godot/imported/walk_dust.png-3fe157f63be43f0658d6d391d6c022ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FX (Rocky roads)/walk_dust.png"
-dest_files=["res://.godot/imported/walk_dust.png-49d857d87978f4de0d0ecc8915c8c1f5.ctex"]
+source_file="res://Assets/FX (Rocky roads)/walk_dust.png"
+dest_files=["res://.godot/imported/walk_dust.png-3fe157f63be43f0658d6d391d6c022ce.ctex"]
 
 [params]
 
