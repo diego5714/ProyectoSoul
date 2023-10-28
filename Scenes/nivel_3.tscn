@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://du7x3teefx44e"]
+[gd_scene load_steps=12 format=3 uid="uid://du7x3teefx44e"]
 
-[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://assets/Tileset.tres" id="1_xntg6"]
+[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Assets/Tileset.tres" id="1_xntg6"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Enemies/TemplateEnemy.tscn" id="2_lq4tp"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/character_controller.tscn" id="2_yaopq"]
 [ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/FullHeart.tres" id="3_s4gnb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://f4jetvabtrk7" path="res://Scenes/Button.tscn" id="9_2i5r0"]
 [ext_resource type="PackedScene" uid="uid://dsi445w7sbx3m" path="res://Scenes/rayo.tscn" id="10_3own3"]
 [ext_resource type="PackedScene" uid="uid://dci0xlgx3obdr" path="res://Scenes/Lavatscn.tscn" id="10_ke8cq"]
+[ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/kill_zone.tscn" id="11_isyip"]
 
 [node name="Nivel" type="Node2D"]
 
@@ -99,12 +100,19 @@ script = null
 position = Vector2(-46, 1046)
 scale = Vector2(4, 4)
 
-[node name="Lava" parent="." instance=ExtResource("10_ke8cq")]
+[node name="Escenario" type="Node2D" parent="Elementos"]
+
+[node name="Lava" parent="Elementos/Escenario" instance=ExtResource("10_ke8cq")]
+z_index = -1
 z_as_relative = false
 position = Vector2(-1984, 576)
 
-[node name="Lava2" parent="." instance=ExtResource("10_ke8cq")]
+[node name="Lava2" parent="Elementos/Escenario" instance=ExtResource("10_ke8cq")]
+z_index = -1
 z_as_relative = false
 position = Vector2(1984, 576)
+
+[node name="KillZone" parent="." instance=ExtResource("11_isyip")]
+position = Vector2(0, 1230)
 
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]
