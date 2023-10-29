@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvbvh6sw87ei0"
-path="res://.godot/imported/frog.png-3499e857376f0abc9c6e50b12fab88a7.ctex"
+path="res://.godot/imported/frog.png-1fc891cdcd8166ba1ecfd51871260c81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies (Rocky roads)/frog.png"
-dest_files=["res://.godot/imported/frog.png-3499e857376f0abc9c6e50b12fab88a7.ctex"]
+source_file="res://assets/Enemies (Rocky roads)/frog.png"
+dest_files=["res://.godot/imported/frog.png-1fc891cdcd8166ba1ecfd51871260c81.ctex"]
 
 [params]
 

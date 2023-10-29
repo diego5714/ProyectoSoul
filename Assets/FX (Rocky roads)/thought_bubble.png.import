@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i356i4hbdeng"
-path="res://.godot/imported/thought_bubble.png-cde990de562fdbf8c755fdd74bea52c5.ctex"
+path="res://.godot/imported/thought_bubble.png-0d4ec20ea62965896cd3fff8ab99bfbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FX (Rocky roads)/thought_bubble.png"
-dest_files=["res://.godot/imported/thought_bubble.png-cde990de562fdbf8c755fdd74bea52c5.ctex"]
+source_file="res://assets/FX (Rocky roads)/thought_bubble.png"
+dest_files=["res://.godot/imported/thought_bubble.png-0d4ec20ea62965896cd3fff8ab99bfbc.ctex"]
 
 [params]
 

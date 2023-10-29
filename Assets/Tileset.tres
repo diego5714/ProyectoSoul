@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dup63x863m677"]
 
-[ext_resource type="Texture2D" uid="uid://dmgqxji1etbxj" path="res://Assets/cavesofgallet_tiles.png" id="1_2g20t"]
+[ext_resource type="Texture2D" uid="uid://dmgqxji1etbxj" path="res://assets/cavesofgallet_tiles.png" id="1_2g20t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xya2w"]
 texture = ExtResource("1_2g20t")
@@ -557,7 +557,7 @@ texture_region_size = Vector2i(8, 8)
 4:10/0 = 0
 4:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:10/0/physics_layer_0/angular_velocity = 0.0
-4:11/next_alternative_id = 2
+4:11/next_alternative_id = 4
 4:11/0 = 0
 4:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:11/0/physics_layer_0/angular_velocity = 0.0
@@ -565,6 +565,12 @@ texture_region_size = Vector2i(8, 8)
 4:11/1/flip_v = true
 4:11/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:11/1/physics_layer_0/angular_velocity = 0.0
+4:11/2 = 2
+4:11/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:11/2/physics_layer_0/angular_velocity = 0.0
+4:11/3 = 3
+4:11/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:11/3/physics_layer_0/angular_velocity = 0.0
 5:0/0 = 0
 5:0/0/terrain_set = 0
 5:0/0/terrain = 1
@@ -579,7 +585,7 @@ texture_region_size = Vector2i(8, 8)
 5:0/0/terrains_peering_bit/top_left_corner = 1
 5:0/0/terrains_peering_bit/top_side = 1
 5:0/0/terrains_peering_bit/top_right_corner = 1
-5:1/next_alternative_id = 2
+5:1/next_alternative_id = 4
 5:1/0 = 0
 5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:1/0/physics_layer_0/angular_velocity = 0.0
@@ -587,6 +593,9 @@ texture_region_size = Vector2i(8, 8)
 5:1/1/flip_h = true
 5:1/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:1/1/physics_layer_0/angular_velocity = 0.0
+5:1/2 = 2
+5:1/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/2/physics_layer_0/angular_velocity = 0.0
 5:2/0 = 0
 5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:2/0/physics_layer_0/angular_velocity = 0.0
@@ -621,7 +630,7 @@ texture_region_size = Vector2i(8, 8)
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, -2.9375, -4, -3)
-6:2/next_alternative_id = 2
+6:2/next_alternative_id = 4
 6:2/0 = 0
 6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:2/0/physics_layer_0/angular_velocity = 0.0
@@ -631,6 +640,15 @@ texture_region_size = Vector2i(8, 8)
 6:2/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:2/1/physics_layer_0/angular_velocity = 0.0
 6:2/1/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, -2.5, -2, 4, -4, 4)
+6:2/2 = 2
+6:2/2/flip_h = true
+6:2/2/flip_v = true
+6:2/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/2/physics_layer_0/angular_velocity = 0.0
+6:2/3 = 3
+6:2/3/flip_v = true
+6:2/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/3/physics_layer_0/angular_velocity = 0.0
 6:3/next_alternative_id = 2
 6:3/0 = 0
 6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dci0xlgx3obdr"]
 
-[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Assets/Tileset.tres" id="1_cyfad"]
+[ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://assets/Tileset.tres" id="1_cyfad"]
 [ext_resource type="Script" path="res://Scenes/Lavatscn.gd" id="1_rpvq7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_siluy"]

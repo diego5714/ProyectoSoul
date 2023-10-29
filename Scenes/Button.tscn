@@ -43,7 +43,7 @@ _data = {
 "RESET": SubResource("Animation_4xchf")
 }
 
-[node name="Button" type="Area2D"]
+[node name="Button" type="Area2D" groups=["button"]]
 script = ExtResource("1_ih8we")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -59,3 +59,5 @@ shape = SubResource("RectangleShape2D_kv0vw")
 libraries = {
 "": SubResource("AnimationLibrary_hdyd8")
 }
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

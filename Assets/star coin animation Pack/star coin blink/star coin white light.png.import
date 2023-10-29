@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmqy1f50ovnyg"
-path="res://.godot/imported/star coin white light.png-382545ea43d85e3e1042778512879ed1.ctex"
+path="res://.godot/imported/star coin white light.png-b825608882cd2aa168e7044273021cdf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/star coin animation Pack/star coin blink/star coin white light.png"
-dest_files=["res://.godot/imported/star coin white light.png-382545ea43d85e3e1042778512879ed1.ctex"]
+source_file="res://assets/star coin animation Pack/star coin blink/star coin white light.png"
+dest_files=["res://.godot/imported/star coin white light.png-b825608882cd2aa168e7044273021cdf.ctex"]
 
 [params]
 
