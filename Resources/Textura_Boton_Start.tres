@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dkl64jm87ca2"]
+
+[ext_resource type="Texture2D" uid="uid://bc0oob7226vnd" path="res://Assets/Botón Primario/primario_base.png" id="1_7j03l"]
+
+[resource]
+texture = ExtResource("1_7j03l")
+region_rect = Rect2(30, 50, 580, 210)

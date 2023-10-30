@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bue3ckg45udm2"]
+[gd_scene load_steps=62 format=3 uid="uid://bue3ckg45udm2"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_hcko2"]
 [ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="2_53cwv"]
@@ -29,6 +29,31 @@
 [ext_resource type="Texture2D" uid="uid://c5wxf3u7tka5g" path="res://Assets/Logo/23.png" id="25_yqv4r"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="27_cc3ru"]
 [ext_resource type="PackedScene" uid="uid://1vtcpqi3idl7" path="res://Scenes/Fondo_Menus.tscn" id="28_6nkph"]
+[ext_resource type="AudioStream" uid="uid://cpbpdhw2hkxe8" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 32.wav" id="30_rtj2d"]
+[ext_resource type="Texture2D" uid="uid://5gqvocte4qpr" path="res://Assets/Botón Primario/primario_apretado1.png" id="32_axqdi"]
+[ext_resource type="Texture2D" uid="uid://tpaebulaennb" path="res://Assets/Botón Primario/primario_apretado2.png" id="33_xofwo"]
+[ext_resource type="Texture2D" uid="uid://c26fyyvbkh53u" path="res://Assets/Botón Primario/primario_apretado3.png" id="34_1pxgb"]
+[ext_resource type="Texture2D" uid="uid://dr2tbub8rgaua" path="res://Assets/Botón Primario/primario_apretado4.png" id="35_xs0yy"]
+[ext_resource type="Texture2D" uid="uid://c7rcl85ouhg4k" path="res://Assets/Botón Primario/primario_apretado5.png" id="36_hsy8b"]
+[ext_resource type="Texture2D" uid="uid://csamf8sa7v7gx" path="res://Assets/Botón Primario/primario_apretado6.png" id="37_sstth"]
+[ext_resource type="Texture2D" uid="uid://l2ctove8xquu" path="res://Assets/Botón Primario/primario_apretado7.png" id="38_ldnhb"]
+[ext_resource type="Texture2D" uid="uid://c2ebach3tyo1g" path="res://Assets/Botón Primario/primario_apretado8.png" id="39_48hi2"]
+[ext_resource type="Texture2D" uid="uid://c3a6sqxe8l1sw" path="res://Assets/Botón Primario/primario_apretado9.png" id="40_trct1"]
+[ext_resource type="Texture2D" uid="uid://u4fsa2pvwq4u" path="res://Assets/Botón Primario/primario_apretado10.png" id="41_g06hd"]
+[ext_resource type="Texture2D" uid="uid://1hwrl0ubse4q" path="res://Assets/Botón Primario/primario_apretado11.png" id="42_2swge"]
+[ext_resource type="Texture2D" uid="uid://c8sx3fobetcug" path="res://Assets/Botón Primario/primario_apretado12.png" id="43_8wn4r"]
+[ext_resource type="Texture2D" uid="uid://be6lnsxuvc38h" path="res://Assets/Botón Primario/primario_apretado13.png" id="44_xg81h"]
+[ext_resource type="Texture2D" uid="uid://c28nnhvgifvo" path="res://Assets/Botón Primario/primario_apretado14.png" id="45_iev88"]
+[ext_resource type="Texture2D" uid="uid://b2478dqvg5s1a" path="res://Assets/Botón Primario/primario_apretado15.png" id="46_lh37n"]
+[ext_resource type="Texture2D" uid="uid://cblvsgdawukhm" path="res://Assets/Botón Primario/primario_apretado16.png" id="47_c47l8"]
+[ext_resource type="Texture2D" uid="uid://b0napxe1y2mcn" path="res://Assets/Botón Primario/primario_apretado17.png" id="48_mk71f"]
+[ext_resource type="Texture2D" uid="uid://uk7vdg25remu" path="res://Assets/Botón Primario/primario_apretado18.png" id="49_t8c2l"]
+[ext_resource type="Texture2D" uid="uid://cm5pwoump2pue" path="res://Assets/Botón Primario/primario_apretado19.png" id="50_12yke"]
+[ext_resource type="Texture2D" uid="uid://p1ip3kc1webo" path="res://Assets/Botón Primario/primario_apretado20.png" id="51_0o7ri"]
+[ext_resource type="Texture2D" uid="uid://b8hnvi8ay44e8" path="res://Assets/Botón Primario/primario_apretado21.png" id="52_8c05p"]
+[ext_resource type="Texture2D" uid="uid://c0y0l35d635aj" path="res://Assets/Botón Primario/primario_apretado22.png" id="53_hinex"]
+[ext_resource type="Texture2D" uid="uid://dk5fiylxx3rav" path="res://Assets/Botón Primario/primario_apretado23.png" id="54_r818o"]
+[ext_resource type="Texture2D" uid="uid://bc0oob7226vnd" path="res://Assets/Botón Primario/primario_base.png" id="55_r7usl"]
 
 [sub_resource type="Theme" id="Theme_x6xtb"]
 
@@ -68,6 +93,67 @@ tracks/0/keys = {
 _data = {
 "Logo_start": SubResource("Animation_2civq"),
 "RESET": SubResource("Animation_5ufhy")
+}
+
+[sub_resource type="Animation" id="Animation_ibcb1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Start:theme:MainButton/styles/normal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("55_r7usl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Start:theme:MainButton/styles/normal:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(30, 50, 580, 210)]
+}
+
+[sub_resource type="Animation" id="Animation_y2nrx"]
+resource_name = "Start_Pressed"
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Start:theme:MainButton/styles/normal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("55_r7usl"), ExtResource("55_r7usl"), ExtResource("32_axqdi"), ExtResource("33_xofwo"), ExtResource("34_1pxgb"), ExtResource("35_xs0yy"), ExtResource("36_hsy8b"), ExtResource("37_sstth"), ExtResource("38_ldnhb"), ExtResource("39_48hi2"), ExtResource("40_trct1"), ExtResource("41_g06hd"), ExtResource("42_2swge"), ExtResource("43_8wn4r"), ExtResource("44_xg81h"), ExtResource("45_iev88"), ExtResource("46_lh37n"), ExtResource("47_c47l8"), ExtResource("48_mk71f"), ExtResource("49_t8c2l"), ExtResource("50_12yke"), ExtResource("51_0o7ri"), ExtResource("52_8c05p"), ExtResource("53_hinex"), ExtResource("54_r818o")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Start:theme:MainButton/styles/normal:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0416667, 0.875, 0.916667, 0.958333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(30, 50, 580, 210), Rect2(30, 50, 580, 210), Rect2(30, 50, 580, 210), Rect2(20, 50, 600, 210), Rect2(10, 50, 620, 210), Rect2(0, 50, 640, 210)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hm6sm"]
+_data = {
+"RESET": SubResource("Animation_ibcb1"),
+"Start_Pressed": SubResource("Animation_y2nrx")
 }
 
 [node name="MarginContainer" type="MarginContainer"]
@@ -177,8 +263,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("27_cc3ru")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Settings"
-label_settings = ExtResource("4_t30i3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -203,8 +291,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("27_cc3ru")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Credits"
-label_settings = ExtResource("4_t30i3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -229,13 +319,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("27_cc3ru")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Exit
 "
-label_settings = ExtResource("4_t30i3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FondoMenus" parent="." instance=ExtResource("28_6nkph")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="Node" parent="."]
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+stream = ExtResource("30_rtj2d")
 volume_db = -5.0
+
+[node name="Button_Animations" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_hm6sm")
+}
+next/RESET = &"RESET"
