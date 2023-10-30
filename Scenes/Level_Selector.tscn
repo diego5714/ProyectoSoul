@@ -1,0 +1,143 @@
+[gd_scene load_steps=10 format=3 uid="uid://u3fd4wboe564"]
+
+[ext_resource type="Script" path="res://Scripts/Level_Selector.gd" id="1_44mqt"]
+[ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_yjuko"]
+[ext_resource type="PackedScene" uid="uid://gklfpx5uo83n" path="res://Scenes/Nivel_1.tscn" id="2_4eyo6"]
+[ext_resource type="PackedScene" uid="uid://cw0yn1tnj1e5g" path="res://Scenes/Nivel_2.tscn" id="3_fbkvc"]
+[ext_resource type="PackedScene" uid="uid://du7x3teefx44e" path="res://Scenes/Nivel_3.tscn" id="4_oa4hl"]
+[ext_resource type="PackedScene" uid="uid://i58bqr5sxwu6" path="res://Scenes/Nivel_Muestra.tscn" id="4_t3ona"]
+[ext_resource type="PackedScene" uid="uid://1vtcpqi3idl7" path="res://Scenes/Fondo_Menus.tscn" id="8_i0rhp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgi0q"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 0.501961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.333333, 0.333333, 0.333333, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_6nex5"]
+font_size = 60
+
+[node name="Level_Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_44mqt")
+Nivel1 = ExtResource("2_4eyo6")
+Nivel2 = ExtResource("3_fbkvc")
+Nivel3 = ExtResource("4_oa4hl")
+Nivel4 = ExtResource("4_t3ona")
+
+[node name="Margen" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Margen"]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_sgi0q")
+
+[node name="MarginContainer" type="MarginContainer" parent="Margen/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = 40
+
+[node name="Titulo" type="Label" parent="Margen/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_yjuko")
+text = "Level Selection"
+label_settings = SubResource("LabelSettings_6nex5")
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Margen/PanelContainer"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boton1" type="Button" parent="Margen/PanelContainer/GridContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_yjuko")
+theme_override_font_sizes/font_size = 30
+text = "Level 1"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boton2" type="Button" parent="Margen/PanelContainer/GridContainer/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_yjuko")
+theme_override_font_sizes/font_size = 30
+text = "Level 2"
+
+[node name="MarginContainer3" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boton3" type="Button" parent="Margen/PanelContainer/GridContainer/MarginContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_yjuko")
+theme_override_font_sizes/font_size = 30
+text = "Level 3"
+
+[node name="MarginContainer4" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boton4" type="Button" parent="Margen/PanelContainer/GridContainer/MarginContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_yjuko")
+theme_override_font_sizes/font_size = 30
+text = "Test Level"
+
+[node name="Back" type="MarginContainer" parent="Margen/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 25
+
+[node name="MainMenu" type="Button" parent="Margen/PanelContainer/Back"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme = ExtResource("1_yjuko")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="FondoMenus" parent="." instance=ExtResource("8_i0rhp")]

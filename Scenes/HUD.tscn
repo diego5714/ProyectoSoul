@@ -1,0 +1,198 @@
+[gd_scene load_steps=17 format=3 uid="uid://c0jfmc4vjccqg"]
+
+[ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="1_s8bnh"]
+[ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/Inverted_Player_B.tres" id="2_8haqm"]
+[ext_resource type="Texture2D" uid="uid://bag08pvbcwuci" path="res://Assets/UI/02.png" id="3_op0ct"]
+[ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/Full_Heart.tres" id="4_kw26y"]
+[ext_resource type="Texture2D" uid="uid://d4b3u2v85xvie" path="res://Assets/UI/00.png" id="5_x87et"]
+[ext_resource type="Texture2D" uid="uid://biken7dfo0gn6" path="res://Resources/Barra_Stamina.tres" id="6_iyret"]
+[ext_resource type="Texture2D" uid="uid://bruvhsjg716ap" path="res://Resources/Barra_Stamina_Interior.tres" id="7_mmdtg"]
+[ext_resource type="Script" path="res://Scripts/Stamina_Bar.gd" id="8_myswl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8usy5"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.172833, 0.172833, 0.172833, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyaa3"]
+atlas = ExtResource("3_op0ct")
+region = Rect2(160, 48, 32, 32)
+
+[sub_resource type="Animation" id="Animation_qsuwt"]
+resource_name = "Box"
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marco:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(128, 48, 32, 32), Rect2(160, 48, 32, 32), Rect2(192, 48, 32, 32), Rect2(224, 48, 32, 32), Rect2(128, 48, 32, 32)]
+}
+
+[sub_resource type="Animation" id="Animation_qntko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marco:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(160, 48, 32, 32)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjbnq"]
+_data = {
+"Box": SubResource("Animation_qsuwt"),
+"RESET": SubResource("Animation_qntko")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unu5m"]
+atlas = ExtResource("5_x87et")
+region = Rect2(114, 114, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_422ad"]
+atlas = ExtResource("5_x87et")
+region = Rect2(114, 114, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jesbo"]
+atlas = ExtResource("5_x87et")
+region = Rect2(114, 114, 12, 12)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8usy5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Personajes" type="Panel" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+
+[node name="CharacterA" type="TextureRect" parent="PanelContainer/HBoxContainer/Personajes"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+offset_left = 20.0
+offset_top = 1.0
+offset_right = 70.0
+offset_bottom = 51.0
+texture = ExtResource("1_s8bnh")
+expand_mode = 3
+
+[node name="CharacterB" type="TextureRect" parent="PanelContainer/HBoxContainer/Personajes"]
+material = ExtResource("2_8haqm")
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 56.0
+texture = ExtResource("1_s8bnh")
+expand_mode = 2
+
+[node name="Marco" type="TextureRect" parent="PanelContainer/HBoxContainer/Personajes"]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 65.0
+texture = SubResource("AtlasTexture_xyaa3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/HBoxContainer/Personajes"]
+autoplay = "Box"
+libraries = {
+"": SubResource("AnimationLibrary_rjbnq")
+}
+
+[node name="Vida" type="HBoxContainer" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+
+[node name="Corazon1" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
+layout_mode = 2
+texture = ExtResource("4_kw26y")
+expand_mode = 3
+
+[node name="Corazon2" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_unu5m")
+expand_mode = 3
+
+[node name="Corazon3" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_422ad")
+expand_mode = 3
+
+[node name="Corazon4" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_jesbo")
+expand_mode = 3
+
+[node name="Corazon5" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
+layout_mode = 2
+texture = ExtResource("4_kw26y")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -11.0
+offset_right = 72.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(72, 50)
+
+[node name="StaminaBar" type="TextureProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(144, 11)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 5.0
+step = 0.001
+value = 5.0
+texture_over = ExtResource("6_iyret")
+texture_progress = ExtResource("7_mmdtg")
+texture_progress_offset = Vector2(3, 3)
+tint_under = Color(0.176471, 0.176471, 0.176471, 1)
+script = ExtResource("8_myswl")

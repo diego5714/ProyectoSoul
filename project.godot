@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="ProyectoSoul"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://Scenes/Main_Menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Variables="*res://Scripts/variables.gd"
-Debug="*res://Scripts/debug.gd"
+Variables="*res://Scripts/Variables.gd"
+Debug="*res://Scripts/Debug.gd"
 
 [display]
 

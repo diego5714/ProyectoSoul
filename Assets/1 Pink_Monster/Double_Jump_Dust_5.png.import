@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2yuwsjcuhmul"
-path="res://.godot/imported/Double_Jump_Dust_5.png-b2f6862d458d50270951a01fb68ec432.ctex"
+path="res://.godot/imported/Double_Jump_Dust_5.png-6d487d61029494168ddc564f2a0e4d45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1 Pink_Monster/Double_Jump_Dust_5.png"
-dest_files=["res://.godot/imported/Double_Jump_Dust_5.png-b2f6862d458d50270951a01fb68ec432.ctex"]
+source_file="res://Assets/1 Pink_Monster/Double_Jump_Dust_5.png"
+dest_files=["res://.godot/imported/Double_Jump_Dust_5.png-6d487d61029494168ddc564f2a0e4d45.ctex"]
 
 [params]
 

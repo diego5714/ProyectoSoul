@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvdvqwosis526"
-path="res://.godot/imported/ladder.png-5a5f5d9e7081df5be3b6cfb0bde5759c.ctex"
+path="res://.godot/imported/ladder.png-7679bd307f18ff2837af92ef401624d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objects (Rocky roads)/ladder.png"
-dest_files=["res://.godot/imported/ladder.png-5a5f5d9e7081df5be3b6cfb0bde5759c.ctex"]
+source_file="res://Assets/Objects (Rocky roads)/ladder.png"
+dest_files=["res://.godot/imported/ladder.png-7679bd307f18ff2837af92ef401624d6.ctex"]
 
 [params]
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5os2o6h41pni"]
+
+[ext_resource type="PackedScene" uid="uid://jfpqks72flrp" path="res://Scenes/Player_A.tscn" id="1_34qpa"]
+[ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/Inverted_Player_B.tres" id="2_hgpre"]
+[ext_resource type="Texture2D" uid="uid://07mcgjsf7iiu" path="res://Assets/1 Pink_Monster/Pink_Monster_Idle_4.png" id="3_tfron"]
+
+[node name="PlayerB" instance=ExtResource("1_34qpa")]
+material = ExtResource("2_hgpre")
+
+[node name="Sprite2D" parent="Pivote" index="0"]
+material = ExtResource("2_hgpre")
+texture = ExtResource("3_tfron")
+hframes = 4
+
+[node name="Cursor" parent="." index="4"]
+visible = false
