@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dsi445w7sbx3m" path="res://Scenes/Rayo.tscn" id="10_3own3"]
 [ext_resource type="PackedScene" uid="uid://dci0xlgx3obdr" path="res://Scenes/Lava.tscn" id="10_ke8cq"]
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Kill_Zone.tscn" id="11_isyip"]
-[ext_resource type="Script" path="res://Scripts/PuenteNodo.gd" id="12_w6fi3"]
+[ext_resource type="Script" path="res://Nuevo/PuenteNodo.gd" id="12_igonn"]
 
 [node name="Nivel" type="Node2D"]
 
@@ -117,7 +117,7 @@ position = Vector2(0, 1230)
 
 [node name="Puente2" type="Node2D" parent="."]
 position = Vector2(-1984, 416)
-script = ExtResource("12_w6fi3")
+script = ExtResource("12_igonn")
 
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Puente2" method="_on_button_button_pushed"]
