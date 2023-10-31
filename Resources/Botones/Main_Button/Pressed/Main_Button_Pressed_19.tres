@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b722alofw5wis"]
+
+[ext_resource type="Texture2D" uid="uid://ibqrxb7t25qj" path="res://Assets/Boton_Primario/Primario_Apretado.png" id="1_uiw6p"]
+
+[resource]
+atlas = ExtResource("1_uiw6p")
+region = Rect2(4, 1724, 580, 210)
+filter_clip = true

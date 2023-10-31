@@ -9,6 +9,9 @@ var direction = Vector2.RIGHT
 @onready var floor_ray = $Pivote/FloorRay
 @onready var side_ray = $Pivote/SideRay
 
+func _ready():
+	$Walk_Animation.play("Walk")
+
 
 func _physics_process(delta):
 	velocity.x = move_toward(velocity.x, pivote.scale.x * SPEED, ACCELERATION*delta)

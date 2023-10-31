@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://1vtcpqi3idl7"]
 
-[ext_resource type="Texture2D" uid="uid://dvgx0auramrdt" path="res://Assets/Baldosas (Pixel adventure)/BaldosasMenu.png" id="1_nvixo"]
+[ext_resource type="Texture2D" uid="uid://dvgx0auramrdt" path="res://Assets/Baldosas/BaldosasMenu.png" id="1_nvixo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3r5sx"]
 texture = ExtResource("1_nvixo")

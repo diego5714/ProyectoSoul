@@ -1,0 +1,20 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture2D"
+uid="uid://dfh620npkj8l0"
+path="res://.godot/imported/Gray.png-e4faaab97a6695f92e22df2ab2c5cacc.res"
+group_file="res://Assets/Baldosas (Pixel adventure)/BaldosasMenu.png"
+valid=true
+[deps]
+
+
+source_file="res://Assets/Baldosas/Gray.png"
+dest_files=["res://.godot/imported/Gray.png-e4faaab97a6695f92e22df2ab2c5cacc.res"]
+
+[params]
+
+atlas_file="res://Assets/Baldosas (Pixel adventure)/BaldosasMenu.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true

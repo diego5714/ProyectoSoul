@@ -1,21 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://40kqhvq10ryq"]
+[gd_scene load_steps=5 format=3 uid="uid://40kqhvq10ryq"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_33b7b"]
 [ext_resource type="Script" path="res://Scripts/Pause_Menu.gd" id="2_3cu0c"]
 [ext_resource type="PackedScene" uid="uid://bue3ckg45udm2" path="res://Scenes/Main_Menu.tscn" id="3_wgips"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwouc"]
-bg_color = Color(0.141176, 0.141176, 0.141176, 0.964706)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="Theme" id="Theme_pipix"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_pv0bw"]
-font_size = 50
-font_color = Color(0.0313726, 1, 1, 1)
+[ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="4_ihdjf"]
 
 [node name="Pause_Menu" type="MarginContainer"]
 process_mode = 3
@@ -32,18 +20,19 @@ menu_scene = ExtResource("3_wgips")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_gwouc")
+theme = ExtResource("4_ihdjf")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 custom_minimum_size = Vector2(500, 300)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = SubResource("Theme_pipix")
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = -20
+theme_override_constants/separation = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -56,8 +45,10 @@ theme_override_constants/margin_bottom = 30
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
+theme = ExtResource("4_ihdjf")
+theme_override_colors/font_color = Color(0.494118, 0.898039, 0.239216, 1)
+theme_override_font_sizes/font_size = 60
 text = "Pause"
-label_settings = SubResource("LabelSettings_pv0bw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -68,10 +59,12 @@ size_flags_vertical = 4
 
 [node name="Resume" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(400, 80)
+custom_minimum_size = Vector2(280, 95)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("4_ihdjf")
+theme_type_variation = &"MainButton"
 theme_override_font_sizes/font_size = 30
 text = "Resume
 "
@@ -83,10 +76,13 @@ size_flags_vertical = 4
 
 [node name="Retry" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer3"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(400, 80)
+custom_minimum_size = Vector2(280, 95)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("4_ihdjf")
+theme_type_variation = &"SecondaryButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Retry
 "
@@ -98,10 +94,13 @@ size_flags_vertical = 4
 
 [node name="MainMenu" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer4"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(400, 80)
+custom_minimum_size = Vector2(280, 95)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("4_ihdjf")
+theme_type_variation = &"SecondaryButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Menu"
 
@@ -112,10 +111,13 @@ size_flags_vertical = 4
 
 [node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer5"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(400, 80)
+custom_minimum_size = Vector2(280, 95)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("4_ihdjf")
+theme_type_variation = &"SecondaryButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Exit
 "

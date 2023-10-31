@@ -39,11 +39,11 @@ func _ready():
 	pass 
 	
 func _process(_delta):
-	$CanvasLayer/Modo.set_text("Sync (Cambiar con Q): " + str(get_node("%ViewportA/Nivel/CharacterController").Sync).to_pascal_case())
+	$CanvasLayer/Debug/VBoxContainer/Modo.set_text("Sync Mode (Q): " + str(get_node("%ViewportA/Nivel/CharacterController").Sync).to_pascal_case())
 	
 	var Selected_A : bool = get_node("%ViewportA/Nivel/CharacterController").Selected_A
 	if Selected_A:
-		$CanvasLayer/Personaje.set_text("Personaje (Cambiar con E): A")
+		$CanvasLayer/Debug/VBoxContainer/Personaje.set_text("Player (E): A")
 	else:
-		$CanvasLayer/Personaje.set_text("Personaje (Cambiar con E): B")
+		$CanvasLayer/Debug/VBoxContainer/Personaje.set_text("Player (E): B")
 	pass

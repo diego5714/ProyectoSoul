@@ -1,7 +1,0 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dkl64jm87ca2"]
-
-[ext_resource type="Texture2D" uid="uid://dk5fiylxx3rav" path="res://Assets/Botón Primario/primario_apretado23.png" id="1_6q0em"]
-
-[resource]
-texture = ExtResource("1_6q0em")
-region_rect = Rect2(0, 50, 640, 210)

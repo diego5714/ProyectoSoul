@@ -2,7 +2,7 @@ extends Node2D
 var mostrar = false
 var posicion = Vector2(-1984,416)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (mostrar == true):
 		instanciar_puente()
 		mostrar = false
