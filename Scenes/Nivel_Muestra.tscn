@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Kill_Zone.tscn" id="3_nei6c"]
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Llave.tscn" id="4_yoi87"]
 [ext_resource type="Script" path="res://Scripts/Plataforma_Movil.gd" id="5_nuvjq"]
-[ext_resource type="Texture2D" uid="uid://dl8q7soh14p5f" path="res://Assets/Traps (Pixel Adventure 1)/Platforms/Brown Off.png" id="6_douwm"]
+[ext_resource type="Texture2D" uid="uid://dl8q7soh14p5f" path="res://Assets/Trampas/Platforms/Brown Off.png" id="6_douwm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyojj"]
 size = Vector2(192, 42)

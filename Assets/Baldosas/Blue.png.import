@@ -4,7 +4,7 @@ importer="texture_atlas"
 type="Texture2D"
 uid="uid://danfx0hal8i0b"
 path="res://.godot/imported/Blue.png-ca539be855f15ccb7622f8bc1ad4522a.res"
-group_file="res://Assets/Baldosas (Pixel adventure)/BaldosasMenu.png"
+group_file="res://Assets/Baldosas/BaldosasMenu.png"
 valid=true
 [deps]
 
@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/Blue.png-ca539be855f15ccb7622f8bc1ad4522a.res
 
 [params]
 
-atlas_file="res://Assets/Baldosas (Pixel adventure)/BaldosasMenu.png"
+atlas_file="res://Assets/Baldosas/BaldosasMenu.png"
 import_mode=0
 crop_to_region=false
 trim_alpha_border_from_region=true

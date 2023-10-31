@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://biken7dfo0gn6" path="res://Resources/Barra_Stamina.tres" id="6_iyret"]
 [ext_resource type="Texture2D" uid="uid://bruvhsjg716ap" path="res://Resources/Barra_Stamina_Interior.tres" id="7_mmdtg"]
 [ext_resource type="Script" path="res://Scripts/Stamina_Bar.gd" id="8_myswl"]
-[ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objects (Rocky roads)/key.png" id="9_8nfq3"]
+[ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objetos/key.png" id="9_8nfq3"]
 [ext_resource type="Script" path="res://Scripts/Label_Llaves.gd" id="9_bfojo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8usy5"]

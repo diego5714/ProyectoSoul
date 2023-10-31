@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://f4jetvabtrk7"]
 
 [ext_resource type="Script" path="res://Scripts/Button_Prop.gd" id="1_ih8we"]
-[ext_resource type="Texture2D" uid="uid://d4ioxflml3sv5" path="res://Assets/Objects (Rocky roads)/button.png" id="2_8docr"]
+[ext_resource type="Texture2D" uid="uid://d4ioxflml3sv5" path="res://Assets/Objetos/button.png" id="2_8docr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kv0vw"]
 size = Vector2(16.6677, 8.73071)
