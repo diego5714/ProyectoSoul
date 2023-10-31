@@ -130,69 +130,6 @@ tracks/3/keys = {
 "values": [Vector2(252, 86), Vector2(252, 86)]
 }
 
-[sub_resource type="Animation" id="Animation_euy2e"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Boton_1_Texture:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("10_c2ssv")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Boton_1_Texture:expand_mode")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Boton_1_Texture:stretch_mode")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [5]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Boton_1_Texture:custom_minimum_size")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2(252, 86)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Label:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_ukhel"]
 resource_name = "Pushed"
 step = 0.0434783
@@ -255,6 +192,69 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("11_26qkv"), ExtResource("12_7l2xu"), ExtResource("13_v50ld"), ExtResource("14_rw0i8"), ExtResource("15_8osex"), ExtResource("16_wfeaa"), ExtResource("17_1w4eb"), ExtResource("18_2rvbs"), ExtResource("19_hmgu6"), ExtResource("20_su4qd"), ExtResource("21_3861w"), ExtResource("22_nd8f8"), ExtResource("23_mhk6g"), ExtResource("24_beixe"), ExtResource("25_tatfs"), ExtResource("26_361mf"), ExtResource("27_4uaam"), ExtResource("28_ey48j"), ExtResource("29_dk36m"), ExtResource("30_ltih1"), ExtResource("31_c53gx"), ExtResource("32_xuw8t"), ExtResource("33_agura"), ExtResource("34_rjmvw")]
+}
+
+[sub_resource type="Animation" id="Animation_euy2e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boton_1_Texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_c2ssv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Boton_1_Texture:expand_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Boton_1_Texture:stretch_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boton_1_Texture:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(252, 86)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7hdol"]
@@ -471,70 +471,6 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_io2h5"]
 
-[sub_resource type="Animation" id="Animation_ql2kk"]
-resource_name = "RESET"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Boton_3_Texture:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("10_c2ssv")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Boton_3_Texture:expand_mode")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Boton_3_Texture:stretch_mode")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [5]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Boton_3_Texture:custom_minimum_size")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2(252, 86)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Label:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.001),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_b4ffe"]
 resource_name = "Hover"
 length = 0.25
@@ -653,30 +589,13 @@ tracks/4/keys = {
 "values": [ExtResource("11_26qkv"), ExtResource("12_7l2xu"), ExtResource("13_v50ld"), ExtResource("14_rw0i8"), ExtResource("15_8osex"), ExtResource("16_wfeaa"), ExtResource("17_1w4eb"), ExtResource("18_2rvbs"), ExtResource("19_hmgu6"), ExtResource("20_su4qd"), ExtResource("21_3861w"), ExtResource("22_nd8f8"), ExtResource("23_mhk6g"), ExtResource("24_beixe"), ExtResource("25_tatfs"), ExtResource("26_361mf"), ExtResource("27_4uaam"), ExtResource("28_ey48j"), ExtResource("29_dk36m"), ExtResource("30_ltih1"), ExtResource("31_c53gx"), ExtResource("32_xuw8t"), ExtResource("33_agura"), ExtResource("34_rjmvw")]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7t1ke"]
-_data = {
-"Hover": SubResource("Animation_b4ffe"),
-"Pushed": SubResource("Animation_p8hmf"),
-"RESET": SubResource("Animation_ql2kk")
-}
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj6ee"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmmnr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_to6rt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vd766"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x265c"]
-
-[sub_resource type="Animation" id="Animation_fxr0i"]
+[sub_resource type="Animation" id="Animation_ql2kk"]
 resource_name = "RESET"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Boton_4_Texture:texture")
+tracks/0/path = NodePath("Boton_3_Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -688,7 +607,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Boton_4_Texture:expand_mode")
+tracks/1/path = NodePath("Boton_3_Texture:expand_mode")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -700,7 +619,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Boton_4_Texture:stretch_mode")
+tracks/2/path = NodePath("Boton_3_Texture:stretch_mode")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -712,7 +631,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Boton_4_Texture:custom_minimum_size")
+tracks/3/path = NodePath("Boton_3_Texture:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -733,6 +652,23 @@ tracks/4/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7t1ke"]
+_data = {
+"Hover": SubResource("Animation_b4ffe"),
+"Pushed": SubResource("Animation_p8hmf"),
+"RESET": SubResource("Animation_ql2kk")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj6ee"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmmnr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_to6rt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vd766"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x265c"]
 
 [sub_resource type="Animation" id="Animation_p2vlw"]
 resource_name = "Hover"
@@ -850,6 +786,70 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("11_26qkv"), ExtResource("12_7l2xu"), ExtResource("13_v50ld"), ExtResource("14_rw0i8"), ExtResource("15_8osex"), ExtResource("16_wfeaa"), ExtResource("17_1w4eb"), ExtResource("18_2rvbs"), ExtResource("19_hmgu6"), ExtResource("20_su4qd"), ExtResource("21_3861w"), ExtResource("22_nd8f8"), ExtResource("23_mhk6g"), ExtResource("24_beixe"), ExtResource("25_tatfs"), ExtResource("26_361mf"), ExtResource("27_4uaam"), ExtResource("28_ey48j"), ExtResource("29_dk36m"), ExtResource("30_ltih1"), ExtResource("31_c53gx"), ExtResource("32_xuw8t"), ExtResource("33_agura"), ExtResource("34_rjmvw")]
+}
+
+[sub_resource type="Animation" id="Animation_fxr0i"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boton_4_Texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_c2ssv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Boton_4_Texture:expand_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Boton_4_Texture:stretch_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boton_4_Texture:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(252, 86)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pqyus"]
