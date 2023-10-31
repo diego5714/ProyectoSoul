@@ -8,3 +8,4 @@ var MaxDepth: int
 var Ganaste = false
 var Fuerza_Platano: Vector2
 
+var Llaves_Recogidas = 0

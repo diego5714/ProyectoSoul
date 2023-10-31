@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0jfmc4vjccqg"]
+[gd_scene load_steps=20 format=3 uid="uid://c0jfmc4vjccqg"]
 
 [ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="1_s8bnh"]
 [ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/Inverted_Player_B.tres" id="2_8haqm"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://biken7dfo0gn6" path="res://Resources/Barra_Stamina.tres" id="6_iyret"]
 [ext_resource type="Texture2D" uid="uid://bruvhsjg716ap" path="res://Resources/Barra_Stamina_Interior.tres" id="7_mmdtg"]
 [ext_resource type="Script" path="res://Scripts/Stamina_Bar.gd" id="8_myswl"]
+[ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objects (Rocky roads)/key.png" id="9_8nfq3"]
+[ext_resource type="Script" path="res://Scripts/Label_Llaves.gd" id="9_bfojo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8usy5"]
 content_margin_left = 10.0
@@ -73,6 +75,10 @@ region = Rect2(114, 114, 12, 12)
 [sub_resource type="AtlasTexture" id="AtlasTexture_jesbo"]
 atlas = ExtResource("5_x87et")
 region = Rect2(114, 114, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co1c8"]
+atlas = ExtResource("9_8nfq3")
+region = Rect2(0, 0, 16, 16)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -196,3 +202,29 @@ texture_progress = ExtResource("7_mmdtg")
 texture_progress_offset = Vector2(3, 3)
 tint_under = Color(0.176471, 0.176471, 0.176471, 1)
 script = ExtResource("8_myswl")
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 50.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer2"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+script = ExtResource("9_bfojo")
+
+[node name="Llaves" type="HBoxContainer" parent="PanelContainer2/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Cantidad" type="Label" parent="PanelContainer2/MarginContainer/Llaves"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="IconoLlave" type="TextureRect" parent="PanelContainer2/MarginContainer/Llaves"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_co1c8")
+expand_mode = 2
