@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://8ptk2qmg54e1"]
+
+[ext_resource type="Texture2D" uid="uid://dd6hvvmecyoqp" path="res://Assets/Hostil/slime_red.png" id="1_1cksl"]
+[ext_resource type="Script" path="res://Scripts/Slime.gd" id="1_rbhvf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2syoi"]
+size = Vector2(12, 6)
+
+[node name="Sliime" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_rbhvf")
+
+[node name="Pivote" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivote"]
+texture = ExtResource("1_1cksl")
+hframes = 5
+vframes = 2
+
+[node name="SideRay" type="RayCast2D" parent="Pivote"]
+position = Vector2(0, 5)
+rotation = -1.5708
+target_position = Vector2(4.72069e-05, -13)
+collision_mask = 3
+
+[node name="FloorRay" type="RayCast2D" parent="Pivote"]
+position = Vector2(-10, 6)
+target_position = Vector2(0, 17)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_2syoi")

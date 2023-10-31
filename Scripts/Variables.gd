@@ -9,3 +9,5 @@ var Ganaste = false
 var Fuerza_Platano: Vector2
 
 var Llaves_Recogidas = 0
+
+var Monedas = 0
