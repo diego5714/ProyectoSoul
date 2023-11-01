@@ -2,6 +2,9 @@ extends Node2D
 var mostrar = false
 var posicion = Vector2(-1984,416)
 
+@onready var puente_llama: StaticBody2D = $Puente
+
+
 func _process(_delta: float) -> void:
 	if (mostrar == true):
 		instanciar_puente()
@@ -11,7 +14,9 @@ func _on_button_button_pushed() -> void:
 	mostrar = true
 	
 func instanciar_puente():
-	var puente = load("res://Scenes/Puente_Madera.tscn").instantiate()
+	if puente_llama:
+		puente_llama.queue_free()
+	var puente = load("res://Scenes/Puente_Llama.tscn").instantiate()
 	self.add_child(puente)
 	puente.global_position=posicion
 	puente.scale= Vector2(2,2)

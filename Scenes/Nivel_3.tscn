@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://du7x3teefx44e"]
+[gd_scene load_steps=17 format=3 uid="uid://du7x3teefx44e"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_xntg6"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Scenes/Template_Enemy.tscn" id="2_lq4tp"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Kill_Zone.tscn" id="11_isyip"]
 [ext_resource type="Script" path="res://Nuevo/PuenteNodo.gd" id="12_igonn"]
 [ext_resource type="PackedScene" uid="uid://8ptk2qmg54e1" path="res://Scenes/Slime.tscn" id="13_wj83l"]
+[ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Puente_Madera.tscn" id="15_nlpxa"]
 
 [node name="Nivel" type="Node2D"]
 
@@ -168,6 +169,9 @@ position = Vector2(0, 1230)
 [node name="Puente2" type="Node2D" parent="."]
 position = Vector2(-1984, 416)
 script = ExtResource("12_igonn")
+
+[node name="Puente" parent="Puente2" instance=ExtResource("15_nlpxa")]
+scale = Vector2(2, 2)
 
 [node name="Sliime2" parent="." instance=ExtResource("13_wj83l")]
 position = Vector2(-1156, 1057)
