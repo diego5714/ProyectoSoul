@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ca1f5q7fwrbxa"]
+[gd_scene load_steps=6 format=3 uid="uid://ca1f5q7fwrbxa"]
 
 [ext_resource type="Script" path="res://Scripts/Puente_Madera.gd" id="1_k1tr6"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_w2ovv"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spu5l"]
 size = Vector2(20, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2681b"]
+size = Vector2(408, 220)
 
 [node name="Puente" type="StaticBody2D"]
 collision_layer = 11
@@ -47,3 +50,11 @@ position = Vector2(184, 0)
 
 [node name="Area2D7" parent="Node2D" instance=ExtResource("3_dwend")]
 position = Vector2(156, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 11
+collision_mask = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, -94)
+shape = SubResource("RectangleShape2D_2681b")

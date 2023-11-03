@@ -12,6 +12,7 @@ collision_mask = 3
 script = ExtResource("1_rbhvf")
 
 [node name="Pivote" type="Node2D" parent="."]
+scale = Vector2(0.965, 0.965)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivote"]
 texture = ExtResource("1_1cksl")
