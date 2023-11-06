@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://u3fd4wboe564"]
+[gd_scene load_steps=108 format=3 uid="uid://u3fd4wboe564"]
 
 [ext_resource type="Script" path="res://Scripts/Level_Selector.gd" id="1_44mqt"]
 [ext_resource type="PackedScene" uid="uid://gklfpx5uo83n" path="res://Scenes/Nivel_1.tscn" id="2_4eyo6"]
@@ -271,6 +271,8 @@ _data = {
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ytfpt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_07ol6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_reukk"]
 
 [sub_resource type="Animation" id="Animation_m460p"]
 resource_name = "Hover"
@@ -1197,6 +1199,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_shrk6")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_tnqyk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ytfpt")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_07ol6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_reukk")
 
 [node name="Boton_2_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_2/Boton_2"]
 custom_minimum_size = Vector2(252, 86)
