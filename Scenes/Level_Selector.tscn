@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Level_Selector.gd" id="1_44mqt"]
 [ext_resource type="PackedScene" uid="uid://gklfpx5uo83n" path="res://Scenes/Nivel_1.tscn" id="2_4eyo6"]
-[ext_resource type="PackedScene" uid="uid://cw0yn1tnj1e5g" path="res://Scenes/Nivel_2.tscn" id="3_fbkvc"]
+[ext_resource type="PackedScene" uid="uid://ctuwk84a5m6a4" path="res://Scenes/Tutorial.tscn" id="3_oigh5"]
 [ext_resource type="PackedScene" uid="uid://du7x3teefx44e" path="res://Scenes/Nivel_3.tscn" id="4_oa4hl"]
 [ext_resource type="PackedScene" uid="uid://i58bqr5sxwu6" path="res://Scenes/Nivel_Muestra.tscn" id="4_t3ona"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="6_62sw5"]
@@ -1066,7 +1066,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_44mqt")
 Nivel1 = ExtResource("2_4eyo6")
-Nivel2 = ExtResource("3_fbkvc")
+Nivel2 = ExtResource("3_oigh5")
 Nivel3 = ExtResource("4_oa4hl")
 Nivel4 = ExtResource("4_t3ona")
 

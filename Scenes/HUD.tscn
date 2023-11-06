@@ -202,6 +202,7 @@ texture_progress = ExtResource("7_mmdtg")
 texture_progress_offset = Vector2(3, 3)
 tint_under = Color(0.176471, 0.176471, 0.176471, 1)
 script = ExtResource("8_myswl")
+MAX = 8.0
 
 [node name="PanelContainer2" type="PanelContainer" parent="."]
 layout_mode = 0

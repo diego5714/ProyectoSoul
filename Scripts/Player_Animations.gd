@@ -10,7 +10,9 @@ extends CharacterBody2D
 var parent_input #input entregado por el CharacterController
 
 func _ready():
+	await get_tree().create_timer(0.5).timeout #Fix para el bug de frame out of bounds
 	animation_tree.active = true
+	pass
 
 func _physics_process(_delta):
 	var move_input = parent_input

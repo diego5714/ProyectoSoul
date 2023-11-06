@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpi2w0sgmrlnf"
-path="res://.godot/imported/Caves 16x16.png-345c542b25871cdb6877ab7218b990de.ctex"
+uid="uid://c0arn8vcbcwyo"
+path="res://.godot/imported/banana_custom.png-ac30a127a262a0c849fb7821b87e14b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Caves 16x16.png"
-dest_files=["res://.godot/imported/Caves 16x16.png-345c542b25871cdb6877ab7218b990de.ctex"]
+source_file="res://Assets/Objetos/banana_custom.png"
+dest_files=["res://.godot/imported/banana_custom.png-ac30a127a262a0c849fb7821b87e14b5.ctex"]
 
 [params]
 

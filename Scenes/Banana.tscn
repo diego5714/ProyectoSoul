@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://btno6hq1dhnnb"]
 
 [ext_resource type="Script" path="res://Scripts/Banana.gd" id="1_8ute5"]
-[ext_resource type="Texture2D" uid="uid://ccis55q3c56d3" path="res://Assets/Objetos/banana.png" id="1_vmbby"]
+[ext_resource type="Texture2D" uid="uid://c0arn8vcbcwyo" path="res://Assets/Objetos/banana_custom.png" id="2_1onqg"]
 
 [node name="Platano0" type="RigidBody2D"]
 script = ExtResource("1_8ute5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
-texture = ExtResource("1_vmbby")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1onqg")
