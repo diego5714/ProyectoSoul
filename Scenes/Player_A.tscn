@@ -911,6 +911,7 @@ target_position = Vector2(0, -12)
 collision_mask = 7
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Pivote"]
+emitting = false
 amount = 100
 process_material = SubResource("ParticleProcessMaterial_wgyrj")
 texture = ExtResource("67_7o7u4")

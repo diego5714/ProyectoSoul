@@ -1,9 +1,8 @@
-[gd_scene load_steps=108 format=3 uid="uid://u3fd4wboe564"]
+[gd_scene load_steps=107 format=3 uid="uid://u3fd4wboe564"]
 
 [ext_resource type="Script" path="res://Scripts/Level_Selector.gd" id="1_44mqt"]
-[ext_resource type="PackedScene" uid="uid://gklfpx5uo83n" path="res://Scenes/Nivel_1.tscn" id="2_4eyo6"]
 [ext_resource type="PackedScene" uid="uid://ctuwk84a5m6a4" path="res://Scenes/Tutorial.tscn" id="3_oigh5"]
-[ext_resource type="PackedScene" uid="uid://du7x3teefx44e" path="res://Scenes/Nivel_3.tscn" id="4_oa4hl"]
+[ext_resource type="PackedScene" uid="uid://cw0yn1tnj1e5g" path="res://Scenes/Nivel_2.tscn" id="4_osakx"]
 [ext_resource type="PackedScene" uid="uid://i58bqr5sxwu6" path="res://Scenes/Nivel_Muestra.tscn" id="4_t3ona"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="6_62sw5"]
 [ext_resource type="Texture2D" uid="uid://b8ylvap71fwu6" path="res://Assets/Complete_GUI_Essential_Pack_Free_Version/Sprites/UI_Flat_Banner_01_Downward.png" id="7_m87yf"]
@@ -115,7 +114,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -137,7 +136,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Boton_1_Texture:expand_mode")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
@@ -149,19 +148,19 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Boton_1_Texture:stretch_mode")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Label:modulate")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
@@ -173,10 +172,10 @@ tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Boton_1_Texture:custom_minimum_size")
-tracks/3/interp = 1
+tracks/3/interp = 0
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.0434783, 0.0869565, 0.130435, 0.173913, 0.217391, 0.26087, 0.304348, 0.347826, 0.391304, 0.434783, 0.478261, 0.521739, 0.565217, 0.608696, 0.652174, 0.695652, 0.73913, 0.782609, 0.826087, 0.869565, 0.954545, 1),
+"times": PackedFloat32Array(0, 0.0434783, 0.0869565, 0.130435, 0.173913, 0.217391, 0.26087, 0.304348, 0.347826, 0.391304, 0.434783, 0.478261, 0.521739, 0.565217, 0.608696, 0.652174, 0.695652, 0.73913, 0.782609, 0.826087, 0.869565, 0.913043, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2(252, 86), Vector2(261, 95), Vector2(270, 104), Vector2(279, 113), Vector2(270, 104), Vector2(261, 95), Vector2(252, 86), Vector2(261, 95), Vector2(270, 104), Vector2(279, 113), Vector2(270, 104), Vector2(261, 95), Vector2(252, 86), Vector2(261, 95), Vector2(270, 104), Vector2(279, 113), Vector2(270, 104), Vector2(261, 95), Vector2(252, 86), Vector2(261, 86), Vector2(270, 86), Vector2(279, 86), Vector2(279, 86)]
@@ -185,7 +184,7 @@ tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/path = NodePath("Boton_1_Texture:texture")
-tracks/4/interp = 1
+tracks/4/interp = 0
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.0434783, 0.0869566, 0.130435, 0.173913, 0.217391, 0.26087, 0.304348, 0.347826, 0.391305, 0.434783, 0.478261, 0.52174, 0.565218, 0.608696, 0.652174, 0.695653, 0.739131, 0.782609, 0.826088, 0.869566, 0.913044, 0.956523, 1),
@@ -230,7 +229,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [5]
+"values": [0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -313,7 +312,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -353,7 +352,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -429,7 +428,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [5]
+"values": [0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -512,7 +511,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -552,7 +551,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -628,7 +627,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [5]
+"values": [0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -711,7 +710,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -751,7 +750,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -772,7 +771,7 @@ tracks/3/path = NodePath("Boton_4_Texture:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.0434783, 0.0869565, 0.130435, 0.173913, 0.217391, 0.26087, 0.304348, 0.347826, 0.391304, 0.434783, 0.478261, 0.521739, 0.565217, 0.608696, 0.652174, 0.695652, 0.73913, 0.782609, 0.826087, 0.869565, 0.954545, 1),
+"times": PackedFloat32Array(0, 0.0434783, 0.0869565, 0.130435, 0.173913, 0.217391, 0.26087, 0.304348, 0.347826, 0.391304, 0.434783, 0.478261, 0.521739, 0.565217, 0.608696, 0.652174, 0.695652, 0.73913, 0.782609, 0.826087, 0.869565, 0.913043, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2(252, 86), Vector2(261, 95), Vector2(270, 104), Vector2(279, 113), Vector2(270, 104), Vector2(261, 95), Vector2(252, 86), Vector2(261, 95), Vector2(270, 104), Vector2(279, 113), Vector2(270, 104), Vector2(261, 95), Vector2(252, 86), Vector2(261, 95), Vector2(270, 104), Vector2(279, 113), Vector2(270, 104), Vector2(261, 95), Vector2(252, 86), Vector2(261, 86), Vector2(270, 86), Vector2(279, 86), Vector2(279, 86)]
@@ -827,7 +826,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [5]
+"values": [0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -910,7 +909,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -962,7 +961,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [5, 5]
+"values": [0, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1025,7 +1024,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [5]
+"values": [0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1067,10 +1066,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_44mqt")
-Nivel1 = ExtResource("2_4eyo6")
-Nivel2 = ExtResource("3_oigh5")
-Nivel3 = ExtResource("4_oa4hl")
-Nivel4 = ExtResource("4_t3ona")
+Tutorial = ExtResource("3_oigh5")
+Nivel1 = ExtResource("4_osakx")
+Nivel2 = ExtResource("4_osakx")
+Nivel3 = ExtResource("4_t3ona")
 
 [node name="Margen" type="MarginContainer" parent="."]
 unique_name_in_owner = true
@@ -1128,13 +1127,13 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 2
 
-[node name="Level_1" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 50)
+[node name="Tutorial_Level" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Boton_1" type="Button" parent="Margen/PanelContainer/GridContainer/Level_1"]
+[node name="Boton_1" type="Button" parent="Margen/PanelContainer/GridContainer/Tutorial_Level"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -1146,7 +1145,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_7ddv1")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_6a7m8")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jexlo")
 
-[node name="Boton_1_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_1/Boton_1"]
+[node name="Boton_1_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Tutorial_Level/Boton_1"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 8
@@ -1162,9 +1161,62 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_c2ssv")
 expand_mode = 3
-stretch_mode = 5
 
-[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Level_1/Boton_1"]
+[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Tutorial_Level/Boton_1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_62sw5")
+theme_override_font_sizes/font_size = 30
+text = "Tutorial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Boton_1_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Tutorial_Level/Boton_1"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_7hdol")
+}
+
+[node name="Level_1" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(252, 86)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boton_2" type="Button" parent="Margen/PanelContainer/GridContainer/Level_1"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(252, 86)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_shrk6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tnqyk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ytfpt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_07ol6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_reukk")
+
+[node name="Boton_2_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_1/Boton_2"]
+custom_minimum_size = Vector2(252, 86)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -43.0
+offset_right = 126.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2ssv")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Level_1/Boton_2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1177,10 +1229,10 @@ text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Boton_1_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Level_1/Boton_1"]
+[node name="Boton_2_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Level_1/Boton_2"]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_7hdol")
+"": SubResource("AnimationLibrary_dtf8f")
 }
 
 [node name="Level_2" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
@@ -1189,19 +1241,19 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Boton_2" type="Button" parent="Margen/PanelContainer/GridContainer/Level_2"]
+[node name="Boton_3" type="Button" parent="Margen/PanelContainer/GridContainer/Level_2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxEmpty_shrk6")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_tnqyk")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ytfpt")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_07ol6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_reukk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6h4v4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rsd3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_63c4p")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sshlg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_io2h5")
 
-[node name="Boton_2_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_2/Boton_2"]
+[node name="Boton_3_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_2/Boton_3"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 8
@@ -1217,90 +1269,40 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_c2ssv")
 expand_mode = 3
-stretch_mode = 5
 
-[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Level_2/Boton_2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("6_62sw5")
-theme_override_font_sizes/font_size = 30
-text = "Level 2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Boton_2_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Level_2/Boton_2"]
-unique_name_in_owner = true
-libraries = {
-"": SubResource("AnimationLibrary_dtf8f")
-}
-
-[node name="Level_3" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Boton_3" type="Button" parent="Margen/PanelContainer/GridContainer/Level_3"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(252, 86)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxEmpty_6h4v4")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_rsd3x")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_63c4p")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_sshlg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_io2h5")
-
-[node name="Boton_3_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_3/Boton_3"]
-custom_minimum_size = Vector2(252, 86)
+[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Level_2/Boton_3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.5
-offset_top = -43.0
-offset_right = 139.5
-offset_bottom = 43.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("10_c2ssv")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Level_3/Boton_3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+offset_left = -55.5
+offset_top = -16.5
+offset_right = 55.5
+offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("6_62sw5")
 theme_override_font_sizes/font_size = 30
-text = "Level 3
+text = "Level 2
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Boton_3_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Level_3/Boton_3"]
+[node name="Boton_3_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Level_2/Boton_3"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_7t1ke")
 }
 
-[node name="Level_4" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 50)
+[node name="Level_3" type="MarginContainer" parent="Margen/PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Boton_4" type="Button" parent="Margen/PanelContainer/GridContainer/Level_4"]
+[node name="Boton_4" type="Button" parent="Margen/PanelContainer/GridContainer/Level_3"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -1313,7 +1315,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_to6rt")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vd766")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_x265c")
 
-[node name="Boton_4_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_4/Boton_4"]
+[node name="Boton_4_Texture" type="TextureRect" parent="Margen/PanelContainer/GridContainer/Level_3/Boton_4"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 8
@@ -1321,21 +1323,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.5
+offset_left = -126.0
 offset_top = -43.0
-offset_right = 139.5
+offset_right = 126.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_c2ssv")
 expand_mode = 3
-stretch_mode = 5
 
-[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Level_4/Boton_4"]
+[node name="Label" type="Label" parent="Margen/PanelContainer/GridContainer/Level_3/Boton_4"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -16.5
+offset_right = 79.5
+offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("6_62sw5")
@@ -1344,7 +1351,7 @@ text = "Test Level"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Boton_4_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Level_4/Boton_4"]
+[node name="Boton_4_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/GridContainer/Level_3/Boton_4"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_pqyus")
@@ -1386,7 +1393,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_8c5lk")
 expand_mode = 3
-stretch_mode = 5
 
 [node name="Label" type="Label" parent="Margen/PanelContainer/Back/Back"]
 layout_mode = 1

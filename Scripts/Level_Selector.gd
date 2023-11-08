@@ -1,9 +1,9 @@
 extends Control
 
+@export var Tutorial: PackedScene
 @export var Nivel1: PackedScene
 @export var Nivel2: PackedScene
 @export var Nivel3: PackedScene
-@export var Nivel4: PackedScene
 
 @onready var Boton1 := %Boton_1
 @onready var Boton2 := %Boton_2
@@ -44,7 +44,7 @@ func _on_boton_1_pressed():
 	Click_Animation = true
 	await %Boton_1_Animations.animation_finished
 	
-	Variables.NivelCargado = Nivel1
+	Variables.NivelCargado = Tutorial
 	Variables.MaxDepth = 925
 	var Main := preload("res://Scenes/Split_Camera.tscn")
 	
@@ -56,7 +56,7 @@ func _on_boton_2_pressed():
 	Click_Animation = true
 	await %Boton_2_Animations.animation_finished
 	
-	Variables.NivelCargado = Nivel2
+	Variables.NivelCargado = Nivel1
 	Variables.MaxDepth = 1150
 	var Main := preload("res://Scenes/Split_Camera.tscn")
 	
@@ -68,7 +68,7 @@ func _on_boton_3_pressed():
 	Click_Animation = true
 	await %Boton_3_Animations.animation_finished
 	
-	Variables.NivelCargado = Nivel3
+	Variables.NivelCargado = Nivel2
 	Variables.MaxDepth = 1450
 	var Main := preload("res://Scenes/Split_Camera.tscn")
 	get_tree().change_scene_to_packed(Main)
@@ -79,7 +79,7 @@ func _on_boton_4_pressed():
 	Click_Animation = true
 	await %Boton_4_Animations.animation_finished
 	
-	Variables.NivelCargado = Nivel4
+	Variables.NivelCargado = Nivel3
 	Variables.MaxDepth = 1200
 	var Main := preload("res://Scenes/Split_Camera.tscn")
 	get_tree().change_scene_to_packed(Main)
