@@ -16,5 +16,5 @@ dest_files=["res://.godot/imported/10.png-2ff084148fc854eb930be1c2827e4d5e.res"]
 
 atlas_file="res://Assets/Gato_Coleccionable/Gato_Animacion.png"
 import_mode=0
-crop_to_region=false
-trim_alpha_border_from_region=true
+crop_to_region=true
+trim_alpha_border_from_region=false
