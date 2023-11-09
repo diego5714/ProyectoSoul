@@ -48,7 +48,9 @@ belongs_to = NodePath("../PlayerB")
 process_callback = 0
 wait_time = 5.0
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="Node" parent="."]
+
+[node name="Colliding_Sound" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("6_55k0d")
 script = ExtResource("7_cpa4p")
 
