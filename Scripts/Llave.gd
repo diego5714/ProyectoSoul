@@ -9,6 +9,6 @@ func _ready():
 func _on_body_entered(body: Node2D) -> void:
 	if body.get_name() == "PlayerA" or body.get_name() == "PlayerB":
 		emit_signal("puerta_llave")
-		Variables.Llaves_Recogidas +=1
+		Variables.Llaves_Recogidas += 1
 		Debug.dprint("Llave recogida")
 		queue_free()

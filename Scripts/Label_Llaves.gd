@@ -1,5 +1,5 @@
 extends MarginContainer
-@onready var cantidad = $Llaves/Cantidad
+@onready var label = %Label_Numero
 
 func _process(_delta):
-	cantidad.text = str(Variables.Llaves_Recogidas)
+	label.text = str(Variables.Llaves_Recogidas)

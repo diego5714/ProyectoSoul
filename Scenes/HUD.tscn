@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c0jfmc4vjccqg"]
+[gd_scene load_steps=24 format=3 uid="uid://c0jfmc4vjccqg"]
 
 [ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="1_s8bnh"]
 [ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/Inverted_Player_B.tres" id="2_8haqm"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" path="res://Scripts/Stamina_Bar.gd" id="8_myswl"]
 [ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objetos/key.png" id="9_8nfq3"]
 [ext_resource type="Script" path="res://Scripts/Label_Llaves.gd" id="9_bfojo"]
+[ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="10_4h58x"]
+[ext_resource type="Texture2D" uid="uid://e4r14if7gj6s" path="res://Assets/Gato_Coleccionable/1.png" id="12_j1i28"]
+[ext_resource type="Texture2D" uid="uid://v24ajyrmkkbf" path="res://Assets/Objetos/coin_gold.png" id="13_nsay4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8usy5"]
 content_margin_left = 10.0
@@ -79,6 +82,10 @@ region = Rect2(114, 114, 12, 12)
 [sub_resource type="AtlasTexture" id="AtlasTexture_co1c8"]
 atlas = ExtResource("9_8nfq3")
 region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ven6x"]
+atlas = ExtResource("13_nsay4")
+region = Rect2(18, 2, 12, 12)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -204,28 +211,124 @@ tint_under = Color(0.176471, 0.176471, 0.176471, 1)
 script = ExtResource("8_myswl")
 MAX = 8.0
 
-[node name="PanelContainer2" type="PanelContainer" parent="."]
+[node name="Displays" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 70.0
-offset_bottom = 50.0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Displays"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Panel_Llaves" type="PanelContainer" parent="Displays/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Llaves"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_right = 5
 script = ExtResource("9_bfojo")
 
-[node name="Llaves" type="HBoxContainer" parent="PanelContainer2/MarginContainer"]
+[node name="Llaves" type="HBoxContainer" parent="Displays/HBoxContainer/Panel_Llaves/MarginContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Cantidad" type="Label" parent="PanelContainer2/MarginContainer/Llaves"]
+[node name="Numero" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Llaves/MarginContainer/Llaves"]
 layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 10
+
+[node name="Label_Numero" type="Label" parent="Displays/HBoxContainer/Panel_Llaves/MarginContainer/Llaves/Numero"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("10_4h58x")
+theme_override_font_sizes/font_size = 40
 text = "0"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="IconoLlave" type="TextureRect" parent="PanelContainer2/MarginContainer/Llaves"]
+[node name="Icono" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Llaves/MarginContainer/Llaves"]
+layout_mode = 2
+
+[node name="IconoLlave" type="TextureRect" parent="Displays/HBoxContainer/Panel_Llaves/MarginContainer/Llaves/Icono"]
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture = SubResource("AtlasTexture_co1c8")
-expand_mode = 2
+expand_mode = 3
+
+[node name="Panel_Coleccionables" type="PanelContainer" parent="Displays/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Coleccionables"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_right = 5
+script = ExtResource("9_bfojo")
+
+[node name="Coleccionables" type="HBoxContainer" parent="Displays/HBoxContainer/Panel_Coleccionables/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Coleccionables" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Coleccionables/MarginContainer/Coleccionables"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 10
+
+[node name="Label_Colecccionables" type="Label" parent="Displays/HBoxContainer/Panel_Coleccionables/MarginContainer/Coleccionables/Coleccionables"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("10_4h58x")
+theme_override_font_sizes/font_size = 40
+text = "0"
+vertical_alignment = 1
+
+[node name="Icono" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Coleccionables/MarginContainer/Coleccionables"]
+layout_mode = 2
+
+[node name="IconoColeccionable" type="TextureRect" parent="Displays/HBoxContainer/Panel_Coleccionables/MarginContainer/Coleccionables/Icono"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("12_j1i28")
+expand_mode = 3
+
+[node name="Panel_Monedas" type="PanelContainer" parent="Displays/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Monedas"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_right = 10
+script = ExtResource("9_bfojo")
+
+[node name="Monedas" type="HBoxContainer" parent="Displays/HBoxContainer/Panel_Monedas/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Monedas" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Monedas/MarginContainer/Monedas"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 10
+
+[node name="Label_Monedas" type="Label" parent="Displays/HBoxContainer/Panel_Monedas/MarginContainer/Monedas/Monedas"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("10_4h58x")
+theme_override_font_sizes/font_size = 40
+text = "0"
+vertical_alignment = 1
+
+[node name="Icono" type="MarginContainer" parent="Displays/HBoxContainer/Panel_Monedas/MarginContainer/Monedas"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="IconoMoneda" type="TextureRect" parent="Displays/HBoxContainer/Panel_Monedas/MarginContainer/Monedas/Icono"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_ven6x")
+expand_mode = 3
+flip_h = true

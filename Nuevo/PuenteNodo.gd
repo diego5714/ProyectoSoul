@@ -17,7 +17,7 @@ func _on_button_button_pushed() -> void:
 func instanciar_puente():
 	if puente_llama != null:
 		puente_llama.queue_free()
-	var puente = load("res://Scenes/Puente_Llama.tscn").instantiate()
+	var puente = load("res://Scenes/Puente_Normal.tscn").instantiate()
 	self.add_child(puente)
 	puente.global_position=posicion
 	puente.scale= Vector2(2,2)
