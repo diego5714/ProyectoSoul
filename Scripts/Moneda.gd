@@ -11,6 +11,6 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.get_name() == "PlayerA" or body.get_name() == "PlayerB":
 		
 		Variables.Monedas +=1
-		Debug.dprint("moneda recogida" + str(Variables.Monedas))
+		#Debug.dprint("moneda recogida" + str(Variables.Monedas))
 		queue_free()
 	
