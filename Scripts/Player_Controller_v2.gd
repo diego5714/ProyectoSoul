@@ -1,4 +1,3 @@
-class_name CharacterController
 extends Node2D
 
 @export var SPEED: int = 400
@@ -17,7 +16,6 @@ extends Node2D
 
 const MaxJump: int = 2
 var Jump: int = 0
-var Sync := true #Modo Sync o modo Async
 var Selected_A := true #Que jugador esta seleccionado para controlarlo en modo Async
 var C_pared := false #Colision con paredes simultanea
 var C_techo := false #Colision con techo simultaneo
@@ -116,132 +114,44 @@ func _ready():
 
 func _physics_process(delta):
 	var move_input := Input.get_axis("izquierda","derecha")
+	var Still_Players: bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) \
+							and PlayerB.velocity.is_equal_approx(Vector2.ZERO) \
+							and not Variables.Retorno
 	
-	var StillPlayers : bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) and PlayerB.velocity.is_equal_approx(Vector2.ZERO) and not Variables.Retorno
-	
-	if Input.is_action_just_pressed('desync'):
-		if Sync:
-			if StillPlayers:
-				Sync = false
-				if Selected_A:
-					ToggleGhost(GhostA, true)
-				else:
-					ToggleGhost(GhostB, true)
-				
-				timer.start()
-		else:
-			Sync = true
+	#Primero chequeamos cambio a modo sincronizado
+	if Input.is_action_just_pressed("desync"):
+		if Variables.Sync and Still_Players:
+			Variables.Sync = false
+			
+			timer.start()
+		
+		else: 
+			Variables.Sync = true
 			timer.stop()
 			
 			Variables.Retorno = true
-			if Selected_A:
-				retornar(PlayerA, GhostA, false)
-				Debug.dprint("A se devuelve")
-			else:
-				retornar(PlayerB,GhostB, false)
-				Debug.dprint("B se devuelve")
-			
 			
 	if Input.is_action_just_pressed('select_player'):
-		if Sync:
+		if Variables.Sync:
 			Selected_A = not Selected_A
 			PlayerA.get_node("Cursor").visible = Selected_A
 			PlayerB.get_node("Cursor").visible = not Selected_A
 	
+################################################################################
 	
-	if Sync: #Modo sincronizado
-		if not Variables.Retorno: 
-			Variables.Stamina = lerp(Variables.Stamina, MaxStamina, 0.04)
-			ToggleGhost(GhostA, false)
-			ToggleGhost(GhostB, false)
-			
-			if PlayerA.is_on_floor() and PlayerB.is_on_floor():
-				Jump = 0
-			else:
-				PlayerA.velocity.y += GRAVITY * delta
-				PlayerB.velocity.y += GRAVITY * delta
-	
-			if Input.is_action_just_pressed("saltar") and Jump < MaxJump:
-				PlayerA.velocity.y -= JUMP_SPEED
-				PlayerB.velocity.y -= JUMP_SPEED
-				Jump += 1
-			
-			C_techo = isRaycastColliding(PlayerA, 'Superior') or isRaycastColliding(PlayerB, 'Superior')
-			
-			if C_techo:
-				PlayerA.velocity.y += JUMP_SPEED * 0.5
-				PlayerB.velocity.y += JUMP_SPEED * 0.5
+	if Variables.Sync:
+		if not Variables.Retorno: #Estado Sync
+			pass
 		
-			C_pared = isRaycastColliding(PlayerA, 'Lateral') or isRaycastColliding(PlayerB, 'Lateral')
-			
-			if Selected_A:
-				PlayerA.parent_input = move_input
-				PlayerB.parent_input = - move_input
-			
-				if not C_pared:
-					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
-					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, - SPEED * move_input, ACCELERATION * delta)
-				else:
-					VelocityToZero(PlayerA, 'x', false, delta)
-					VelocityToZero(PlayerB, 'x', false, delta)
-			else: #Selected B
-				PlayerA.parent_input = - move_input
-				PlayerB.parent_input = move_input
-			
-				if not C_pared:
-					PlayerA.velocity.x = move_toward(PlayerA.velocity.x, - SPEED * move_input, ACCELERATION * delta)
-					PlayerB.velocity.x = move_toward(PlayerB.velocity.x, SPEED * move_input, ACCELERATION * delta)
-				else:
-					VelocityToZero(PlayerA, 'x', false, delta)
-					VelocityToZero(PlayerB, 'x', false, delta)
-				
-		PlayerA.move_and_slide()
-		PlayerB.move_and_slide()
-	
-	else: #Modo desincronizado
-		
-		Variables.Stamina -= delta
-		
-		if Selected_A:
-			PlayerA.parent_input = move_input
-			PlayerB.parent_input = 0
-			if PlayerA.is_on_floor():
-				Jump = 0
-			else:
-				PlayerA.velocity.y += GRAVITY * delta
-		
-			if Input.is_action_just_pressed("saltar") and Jump < MaxJump:
-				PlayerA.velocity.y -= JUMP_SPEED
-				Jump += 1
-	
-			PlayerA.velocity.x = move_toward(PlayerA.velocity.x, SPEED * move_input, ACCELERATION * delta)
-			VelocityToZero(PlayerB, 'x', false, delta)
-		else:
-			PlayerA.parent_input = 0
-			PlayerB.parent_input = move_input
-			if PlayerB.is_on_floor():
-				Jump = 0
-			else:
-				PlayerB.velocity.y += GRAVITY * delta
-		
-			if Input.is_action_just_pressed("saltar") and Jump < MaxJump:
-				PlayerB.velocity.y -= JUMP_SPEED
-				Jump += 1
-			
-			VelocityToZero(PlayerA, 'x', false, delta)
-			PlayerB.velocity.x = move_toward(PlayerB.velocity.x, SPEED * move_input, ACCELERATION * delta)
-		
-		PlayerA.move_and_slide()
-		PlayerB.move_and_slide()
-	
-	#CheckDead(PlayerA)
-	#CheckDead(PlayerB)
+	else: #Estado Desync
+		pass
+
 
 ####################################################################################################
 #Signals:
 
 func _on_timer_timeout():
-		Sync = true
+		Variables.Sync = true
 		timer.stop()
 		
 		Variables.Retorno = true
