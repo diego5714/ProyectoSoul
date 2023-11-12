@@ -16,8 +16,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			Variables.Ganaste = true
 			timer.start()
 
-func _on_llave_final_puerta_llave():
-	llave = true
+
 
 func _on_timer_timeout():
 	var Platano = preload("res://Scenes/Banana.tscn")
@@ -37,3 +36,7 @@ func _on_timer_timeout():
 	
 	
 
+
+
+func _on_llave_puerta_llave() -> void:
+	llave = true
