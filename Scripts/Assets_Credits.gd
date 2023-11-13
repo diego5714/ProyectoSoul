@@ -15,7 +15,7 @@ func _on_back_pressed():
 	Click_Animation = true
 	await %Back_Animations.animation_finished
 	
-	get_tree().change_scene_to_file("res://Scenes/Creditos.tscn")
+	get_tree().change_scene_to_file("res://Scenes/UI/Creditos.tscn")
 
 func _on_back_mouse_entered():
 	if not Click_Animation:

@@ -46,7 +46,7 @@ func _on_boton_1_pressed():
 	
 	Variables.NivelCargado = Tutorial
 	Variables.MaxDepth = 925
-	var Main := preload("res://Scenes/Split_Camera.tscn")
+	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
 	
 	get_tree().change_scene_to_packed(Main)
 
@@ -58,7 +58,7 @@ func _on_boton_2_pressed():
 	
 	Variables.NivelCargado = Nivel1
 	Variables.MaxDepth = 1150
-	var Main := preload("res://Scenes/Split_Camera.tscn")
+	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
 	
 	get_tree().change_scene_to_packed(Main)
 	
@@ -70,7 +70,7 @@ func _on_boton_3_pressed():
 	
 	Variables.NivelCargado = Nivel2
 	Variables.MaxDepth = 1450
-	var Main := preload("res://Scenes/Split_Camera.tscn")
+	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
 	get_tree().change_scene_to_packed(Main)
 	
 func _on_boton_4_pressed():
@@ -81,7 +81,7 @@ func _on_boton_4_pressed():
 	
 	Variables.NivelCargado = Nivel3
 	Variables.MaxDepth = 1200
-	var Main := preload("res://Scenes/Split_Camera.tscn")
+	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
 	get_tree().change_scene_to_packed(Main)
 	
 func _on_back_pressed():
@@ -90,7 +90,7 @@ func _on_back_pressed():
 	Click_Animation = true
 	await %Back_Animations.animation_finished
 	
-	var Menu := preload("res://Scenes/Main_Menu.tscn")
+	var Menu := preload("res://Scenes/UI/Main_Menu.tscn")
 	get_tree().change_scene_to_packed(Menu)
 
 ################################################################################

@@ -5,117 +5,67 @@ extends Node2D
 @export var GRAVITY: int = 1200
 @export var ACCELERATION: int = 3000
 @export var JUMP_SPEED: int = 500
-@export var Pos_Inicial_A: Marker2D
-@export var Pos_Inicial_B: Marker2D
 
-@onready var PlayerA := $PlayerA
-@onready var PlayerB := $PlayerB
-@onready var GhostA := $GhostA
-@onready var GhostB := $GhostB
-@onready var timer := $Timer
+@export var pos_inicial_a: Marker2D
+@export var pos_inicial_b: Marker2D
 
-const MaxJump: int = 2
+var Selected_A : bool = true #Que jugador esta seleccionado para controlarlo en modo Async
+@onready var player_a : Player = %Player_A
+@onready var player_b : Player = %Player_B
+@onready var timer : Timer = $Timer
+
+@export var max_jump: int = 2
 var Jump: int = 0
-var Selected_A := true #Que jugador esta seleccionado para controlarlo en modo Async
-var C_pared := false #Colision con paredes simultanea
-var C_techo := false #Colision con techo simultaneo
+
+var C_pared : bool = false #Colision con paredes simultanea
+var C_techo : bool = false #Colision con techo simultaneo
 
 @export var MaxStamina: float = 5.0 #Segundos de duracion 
 
 ###################################################################################################
-#Definicion de funciones custom:
+#Definicion de funciones auxiliares
 
-func ReturnDead(player):
-	VelocityToZero(PlayerA, 'x,y', false, 1)
-	VelocityToZero(PlayerB,'x,y', false, 1)
+func retornar_ambos():
+	player_a.velocity_to_zero('x,y')
+	player_b.velocity_to_zero('x,y')
 	
-	NoColisiones(PlayerA, true)
-	NoColisiones(PlayerB, true)
-	Variables.Retorno = true
+	player_a.no_collisions(true)
+	player_b.no_collisions(true)
+	
+	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	tween.tween_property(player_a, 'position', pos_inicial_a.position, 1.2)
+	tween.parallel().tween_property(player_b, 'position', pos_inicial_b.position, 1.2)
 		
-	if Selected_A:
-		retornar(player, GhostA, true)
-	else:
-		retornar(player, GhostB, true)
-
-func isRaycastColliding(nodo, direccion: String):
-	return nodo.get_node("Pivote/RayCast" + direccion).is_colliding()
-	
-func NoColisiones(player: CharacterBody2D, estado: bool):
-	player.set_collision_layer_value(1, not estado)
-	player.set_collision_mask_value(1, not estado)
-	player.set_collision_mask_value(2, not estado)
-	player.set_collision_mask_value(3, not estado)
-	player.set_collision_mask_value(4, not estado)
-	
-func ToggleGhost(ghost: Ghost, estado: bool):
-		ghost.visible = estado
-		if estado:
-			ghost.position = ghost.belongs_to.position
-		
-func VelocityToZero(player: Player, eje: String, interpolado: bool, delta: float):
-	assert(eje in ['x','y','x,y'], 'Direccion no valida')
-	if eje == 'x':
-		if interpolado:
-			player.velocity.x = move_toward(player.velocity.x, 0, ACCELERATION * delta)
-		else:
-			player.velocity.x = 0
-	elif eje == 'y':
-		if interpolado:
-			player.velocity.y = move_toward(player.velocity.y, 0, ACCELERATION * delta)
-		else:
-			player.velocity.y = 0
-	elif eje == 'x,y':
-		if interpolado:
-			player.velocity.x = move_toward(player.velocity.x, 0, ACCELERATION * delta)
-			player.velocity.y = move_toward(player.velocity.y, 0, ACCELERATION * delta)
-		else:
-			player.velocity = Vector2.ZERO
-			
-func retornar(Player, Ghost, muerte: bool):
-	VelocityToZero(Player, 'x,y', false, 1)
-	
-	if not muerte:
-		var ReturnPoint: Vector2 = Ghost.position - Vector2(0, 30)
-	
-		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-		tween.tween_property(Player, 'position', ReturnPoint, 1.2)
-	
-		tween.finished.connect(
-			func():
-			NoColisiones(Player,false)
-			ToggleGhost(Ghost, false)
-			Player.position = ReturnPoint
+	tween.finished.connect(
+		func():
+			player_a.no_collisions(false)
+			player_b.no_collisions(false)
+			player_a.position = pos_inicial_a.position
+			player_b.position = pos_inicial_b.position
 			Variables.Retorno = false
 			)
-	else:
-		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-		tween.tween_property(PlayerA, 'position', Pos_Inicial_A.position, 1.2)
-		tween.parallel().tween_property(PlayerB, 'position', Pos_Inicial_B.position, 1.2)
-		
-		tween.finished.connect(
-			func():
-			NoColisiones(PlayerA, false)
-			NoColisiones(PlayerB, false)
-			PlayerA.position = Pos_Inicial_A.position
-			PlayerB.position = Pos_Inicial_B.position
-			Variables.Retorno = false
-			)
-	
 
 ###################################################################################################
 
 func _ready():
+	Variables.SPEED = SPEED
+	Variables.ACCELERATION = ACCELERATION
+	Variables.WARP_SPEED = WARP_SPEED
+	Variables.GRAVITY = GRAVITY
+	Variables.JUMP_SPEED = JUMP_SPEED
+	Variables.max_jump = max_jump
+	
+	
 	Variables.Stamina = MaxStamina
 	timer.wait_time = MaxStamina
 	
-	PlayerA.position = Pos_Inicial_A.position
-	PlayerB.position = Pos_Inicial_B.position
+	player_a.position = pos_inicial_a.position
+	player_b.position = pos_inicial_b.position
 
 func _physics_process(delta):
 	var move_input := Input.get_axis("izquierda","derecha")
-	var Still_Players: bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) \
-							and PlayerB.velocity.is_equal_approx(Vector2.ZERO) \
+	var Still_Players: bool = player_a.player.velocity.is_equal_approx(Vector2.ZERO) \
+							and player_b.player.velocity.is_equal_approx(Vector2.ZERO) \
 							and not Variables.Retorno
 	
 	#Primero chequeamos cambio a modo sincronizado
@@ -134,10 +84,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed('select_player'):
 		if Variables.Sync:
 			Selected_A = not Selected_A
-			PlayerA.get_node("Cursor").visible = Selected_A
-			PlayerB.get_node("Cursor").visible = not Selected_A
+			player_a.get_node("Cursor").visible = Selected_A
+			player_b.get_node("Cursor").visible = not Selected_A
 	
-################################################################################
+   #############################################################################
 	
 	if Variables.Sync:
 		if not Variables.Retorno: #Estado Sync
@@ -157,7 +107,7 @@ func _on_timer_timeout():
 		Variables.Retorno = true
 		if Selected_A:
 			Debug.dprint("A se devuelve")
-			retornar(PlayerA, GhostA, false)
+			player_a.retornar()
 		else:
 			Debug.dprint("B se devuelve")
-			retornar(PlayerB,GhostB, false)
+			player_b.retornar()

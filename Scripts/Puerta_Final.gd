@@ -20,7 +20,7 @@ func _on_llave_final_puerta_llave():
 	llave = true
 
 func _on_timer_timeout():
-	var Platano = preload("res://Scenes/Banana.tscn")
+	var Platano = preload("res://Scenes/Props/Banana.tscn")
 	
 	direccion = randi_range(0,1)
 	

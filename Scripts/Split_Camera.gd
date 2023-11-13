@@ -15,12 +15,12 @@ func _ready():
 	'1': {
 		viewport = get_node("%ViewportA"),
 		camera = get_node("%ViewportA/CamaraA"),
-		player = get_node("%ViewportA/Nivel/Player_Controller/PlayerA")
+		player = get_node("%ViewportA/Nivel/Player_Controller/Player_A")
 	},
 	'2': {
 		viewport = get_node("%ViewportB"),
 		camera = get_node("%ViewportB/CamaraB"),
-		player = get_node("%ViewportA/Nivel/Player_Controller/PlayerB")
+		player = get_node("%ViewportA/Nivel/Player_Controller/Player_B")
 	}
 }	
 	#Tomamos el mundo 2D que renderiza el viewport A y se lo pasamos tambien al viewport B
@@ -39,7 +39,7 @@ func _ready():
 	pass 
 	
 func _process(_delta):
-	$CanvasLayer/Debug/VBoxContainer/Modo.set_text("Sync Mode (Q): " + str(get_node("%ViewportA/Nivel/Player_Controller").Sync).to_pascal_case())
+	$CanvasLayer/Debug/VBoxContainer/Modo.set_text("Sync Mode (Q): " + str(Variables.Sync).to_pascal_case())
 	
 	var Selected_A : bool = get_node("%ViewportA/Nivel/Player_Controller").Selected_A
 	if Selected_A:

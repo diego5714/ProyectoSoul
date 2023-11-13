@@ -1,9 +1,9 @@
 [gd_scene load_steps=107 format=3 uid="uid://u3fd4wboe564"]
 
 [ext_resource type="Script" path="res://Scripts/Level_Selector.gd" id="1_44mqt"]
-[ext_resource type="PackedScene" uid="uid://ctuwk84a5m6a4" path="res://Scenes/Tutorial.tscn" id="3_oigh5"]
-[ext_resource type="PackedScene" uid="uid://cw0yn1tnj1e5g" path="res://Scenes/Nivel_2.tscn" id="4_osakx"]
-[ext_resource type="PackedScene" uid="uid://i58bqr5sxwu6" path="res://Scenes/Nivel_Muestra.tscn" id="4_t3ona"]
+[ext_resource type="PackedScene" uid="uid://ctuwk84a5m6a4" path="res://Scenes/Level_Scenes/Tutorial.tscn" id="3_oigh5"]
+[ext_resource type="PackedScene" uid="uid://cw0yn1tnj1e5g" path="res://Scenes/Level_Scenes/Nivel_2.tscn" id="4_osakx"]
+[ext_resource type="PackedScene" uid="uid://i58bqr5sxwu6" path="res://Scenes/Level_Scenes/Nivel_Muestra.tscn" id="4_t3ona"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="6_62sw5"]
 [ext_resource type="Texture2D" uid="uid://b8ylvap71fwu6" path="res://Assets/Complete_GUI_Essential_Pack_Free_Version/Sprites/UI_Flat_Banner_01_Downward.png" id="7_m87yf"]
 [ext_resource type="Texture2D" uid="uid://dcuwq54eetgts" path="res://Resources/Botones/Main_Button/Selected/Main_Button_Selected_1.tres" id="8_07cl1"]

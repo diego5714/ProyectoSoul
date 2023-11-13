@@ -4,6 +4,7 @@ extends MarginContainer
 @onready var settings := %Settings
 @onready var credits := %Credits
 @onready var exit := %Exit
+
 var Click_Animation: bool = false
 
 func _ready() -> void:
@@ -22,7 +23,7 @@ func _on_start_pressed():
 	Click_Animation = true
 	await %Start_Animations.animation_finished
 	
-	get_tree().change_scene_to_file("res://Scenes/Level_Selector.tscn")
+	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
 
 func _on_settings_pressed():
 	pass
@@ -33,7 +34,7 @@ func _on_credits_pressed():
 	Click_Animation = true
 	await %Credits_Animations.animation_finished
 	
-	get_tree().change_scene_to_file("res://Scenes/Creditos.tscn")
+	get_tree().change_scene_to_file("res://Scenes/UI/Creditos.tscn")
 
 func _on_exit_pressed():
 	%ClickSound.play()

@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://dreksn2ytdiwd"]
+
+[ext_resource type="Script" path="res://Scripts/Player_Controller_v2.gd" id="1_7tpjo"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="2_3rfwg"]
+[ext_resource type="PackedScene" uid="uid://jfpqks72flrp" path="res://Scenes/Entities/Player_Related/Player.tscn" id="2_nyq84"]
+[ext_resource type="PackedScene" uid="uid://boh6tyu3r8y5b" path="res://Scenes/Entities/Player_Related/Fantasma.tscn" id="3_lsbwl"]
+[ext_resource type="Shader" path="res://Resources/Inverted.gdshader" id="5_lpxa8"]
+[ext_resource type="AudioStream" uid="uid://cj1grhwf6777h" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 36.wav" id="6_55k0d"]
+[ext_resource type="Script" path="res://Scripts/SFX.gd" id="7_cpa4p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_njn8s"]
+shader = ExtResource("5_lpxa8")
+
+[node name="Player_Controller" type="Node2D"]
+script = ExtResource("1_7tpjo")
+
+[node name="Player_A" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_3rfwg")
+
+[node name="Ghost" parent="Player_A" instance=ExtResource("3_lsbwl")]
+scale = Vector2(2.6, 2.6)
+script = null
+
+[node name="Player" parent="Player_A" instance=ExtResource("2_nyq84")]
+
+[node name="Player_B" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_3rfwg")
+
+[node name="Ghost" parent="Player_B" instance=ExtResource("3_lsbwl")]
+script = null
+
+[node name="Player" parent="Player_B" instance=ExtResource("2_nyq84")]
+material = SubResource("ShaderMaterial_njn8s")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 5.0
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Colliding_Sound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("6_55k0d")
+script = ExtResource("7_cpa4p")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
