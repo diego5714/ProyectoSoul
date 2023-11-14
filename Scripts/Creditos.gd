@@ -21,7 +21,7 @@ func _on_back_pressed():
 	Click_Animation = true
 	await %Back_Animations.animation_finished
 	
-	get_tree().change_scene_to_file("res://Scenes/Main_Menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/UI/Main_Menu.tscn")
 	
 func _on_back_mouse_entered():
 	if not Click_Animation:
@@ -39,7 +39,7 @@ func _on_assets_pressed():
 	Click_Animation = true
 	await %Assets_Animations.animation_finished
 	
-	get_tree().change_scene_to_file("res://Scenes/Assets_Credits.tscn")
+	get_tree().change_scene_to_file("res://Scenes/UI/Assets_Credits.tscn")
 	
 func _on_assets_mouse_entered():
 	if not Click_Animation:

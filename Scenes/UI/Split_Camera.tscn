@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://detb787xddka8"]
 
 [ext_resource type="Script" path="res://Scripts/Split_Camera.gd" id="1_eybq0"]
-[ext_resource type="PackedScene" uid="uid://c3skhvag2kqcc" path="res://Scenes/Parallax_Background.tscn" id="3_k3ogy"]
+[ext_resource type="PackedScene" uid="uid://c3skhvag2kqcc" path="res://Scenes/UI/Parallax_Background.tscn" id="3_k3ogy"]
 [ext_resource type="Script" path="res://Scripts/Label_Ganaste.gd" id="4_2jxn5"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="4_bg7yt"]
-[ext_resource type="PackedScene" uid="uid://40kqhvq10ryq" path="res://Scenes/Pause_Menu.tscn" id="4_tmdoi"]
+[ext_resource type="PackedScene" uid="uid://40kqhvq10ryq" path="res://Scenes/UI/Pause_Menu.tscn" id="4_tmdoi"]
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="4_v1b5t"]
-[ext_resource type="PackedScene" uid="uid://c0jfmc4vjccqg" path="res://Scenes/HUD.tscn" id="5_lm11c"]
+[ext_resource type="PackedScene" uid="uid://c0jfmc4vjccqg" path="res://Scenes/UI/HUD.tscn" id="5_lm11c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcpo6"]
 bg_color = Color(0.180392, 0.180392, 0.180392, 0.666667)

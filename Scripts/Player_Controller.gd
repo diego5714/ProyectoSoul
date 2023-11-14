@@ -23,7 +23,6 @@ var C_pared := false #Colision con paredes simultanea
 var C_techo := false #Colision con techo simultaneo
 
 @export var MaxStamina: float = 5.0 #Segundos de duracion 
-var retorno: bool = false
 
 ###################################################################################################
 #Definicion de funciones custom:
@@ -34,7 +33,7 @@ func ReturnDead(player):
 	
 	NoColisiones(PlayerA, true)
 	NoColisiones(PlayerB, true)
-	retorno = true
+	Variables.Retorno = true
 		
 	if Selected_A:
 		retornar(player, GhostA, true)
@@ -89,7 +88,7 @@ func retornar(Player, Ghost, muerte: bool):
 			NoColisiones(Player,false)
 			ToggleGhost(Ghost, false)
 			Player.position = ReturnPoint
-			retorno = false
+			Variables.Retorno = false
 			)
 	else:
 		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
@@ -102,7 +101,7 @@ func retornar(Player, Ghost, muerte: bool):
 			NoColisiones(PlayerB, false)
 			PlayerA.position = Pos_Inicial_A.position
 			PlayerB.position = Pos_Inicial_B.position
-			retorno = false
+			Variables.Retorno = false
 			)
 	
 
@@ -118,7 +117,7 @@ func _ready():
 func _physics_process(delta):
 	var move_input := Input.get_axis("izquierda","derecha")
 	
-	var StillPlayers : bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) and PlayerB.velocity.is_equal_approx(Vector2.ZERO) and not retorno
+	var StillPlayers : bool = PlayerA.velocity.is_equal_approx(Vector2.ZERO) and PlayerB.velocity.is_equal_approx(Vector2.ZERO) and not Variables.Retorno
 	
 	if Input.is_action_just_pressed('desync'):
 		if Sync:
@@ -134,7 +133,7 @@ func _physics_process(delta):
 			Sync = true
 			timer.stop()
 			
-			retorno = true
+			Variables.Retorno = true
 			if Selected_A:
 				retornar(PlayerA, GhostA, false)
 				Debug.dprint("A se devuelve")
@@ -151,7 +150,7 @@ func _physics_process(delta):
 	
 	
 	if Sync: #Modo sincronizado
-		if not retorno: 
+		if not Variables.Retorno: 
 			Variables.Stamina = lerp(Variables.Stamina, MaxStamina, 0.04)
 			ToggleGhost(GhostA, false)
 			ToggleGhost(GhostB, false)
@@ -245,7 +244,7 @@ func _on_timer_timeout():
 		Sync = true
 		timer.stop()
 		
-		retorno = true
+		Variables.Retorno = true
 		if Selected_A:
 			Debug.dprint("A se devuelve")
 			retornar(PlayerA, GhostA, false)

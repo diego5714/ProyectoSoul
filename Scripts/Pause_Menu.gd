@@ -61,10 +61,8 @@ func _on_menu_pressed():
 	%Menu_Animations.play("Pushed")
 	Click_Animation = true
 	await %Menu_Animations.animation_finished
-	
-	if not menu_scene:
-		return
-	get_tree().change_scene_to_packed(menu_scene)
+
+	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
 	get_tree().paused = false
 	
 func _on_exit_pressed():

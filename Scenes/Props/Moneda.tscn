@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/Moneda.gd" id="1_23jb0"]
 [ext_resource type="Texture2D" uid="uid://v24ajyrmkkbf" path="res://Assets/Objetos/coin_gold.png" id="1_cvqgw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_71f8o"]
-radius = 7.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_6r3ko"]
+radius = 8.0
 
 [sub_resource type="Animation" id="Animation_pgptf"]
 length = 0.001
@@ -37,18 +37,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:shape")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hte36"]
 _data = {
@@ -56,21 +44,19 @@ _data = {
 "giro": SubResource("Animation_5g8dd")
 }
 
-[node name="Moneda" type="Area2D"]
-collision_layer = 64
-collision_mask = 3
+[node name="Moneda" type="Node2D"]
 script = ExtResource("1_23jb0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_cvqgw")
 hframes = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_71f8o")
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_6r3ko")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_hte36")
 }
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
