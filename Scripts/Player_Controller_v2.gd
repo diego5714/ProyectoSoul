@@ -1,100 +1,182 @@
+class_name Player_Controller
 extends Node2D
 
-@export var SPEED: int = 400
+
+@export var SPEED: int = 400 
 @export var WARP_SPEED: int = 800
 @export var GRAVITY: int = 1200
 @export var ACCELERATION: int = 3000
 @export var JUMP_SPEED: int = 500
+@export var MAX_JUMP: int = 2
+var Jump: int = 0
+
+var constants: PackedInt32Array = PackedInt32Array()
+
 
 @export var pos_inicial_a: Marker2D
 @export var pos_inicial_b: Marker2D
 
-var Selected_A : bool = true #Que jugador esta seleccionado para controlarlo en modo Async
-@onready var player_a : Player = %Player_A
-@onready var player_b : Player = %Player_B
+var selected_a : bool = true #Que jugador esta seleccionado para controlarlo en modo Async
+@onready var A: Player = %Player_A
+@onready var B: Player = %Player_B
 @onready var timer : Timer = $Timer
-
-@export var max_jump: int = 2
-var Jump: int = 0
-
-var C_pared : bool = false #Colision con paredes simultanea
-var C_techo : bool = false #Colision con techo simultaneo
 
 @export var MaxStamina: float = 5.0 #Segundos de duracion 
 
 ###################################################################################################
 #Definicion de funciones auxiliares
 
-func retornar_ambos():
-	player_a.velocity_to_zero('x,y')
-	player_b.velocity_to_zero('x,y')
+func animate_pair(move_input: float):
+	if selected_a:
+		if move_input != 0:
+			A.pivote.scale.x = sign(move_input)
+			B.pivote.scale.x = sign(-move_input)
 	
-	player_a.no_collisions(true)
-	player_b.no_collisions(true)
-	
-	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-	tween.tween_property(player_a, 'position', pos_inicial_a.position, 1.2)
-	tween.parallel().tween_property(player_b, 'position', pos_inicial_b.position, 1.2)
+		if A.player.is_on_floor():
+			if abs(A.player.velocity.x) > 10 or move_input:
+				A.playback.travel("Running")
+				B.playback.travel("Running")
+			else:
+				A.playback.travel("Idle")
+				B.playback.travel("Idle")
 		
-	tween.finished.connect(
-		func():
-			player_a.no_collisions(false)
-			player_b.no_collisions(false)
-			player_a.position = pos_inicial_a.position
-			player_b.position = pos_inicial_b.position
-			Variables.Retorno = false
-			)
+		else:
+			if A.player.velocity.y < 0:
+				A.playback.travel("Jump")
+				B.playback.travel("Jump")
+			else:
+				A.playback.travel("Falling")
+				B.playback.travel("Falling")
+	
+	else:
+		if move_input != 0:
+			A.pivote.scale.x = sign(-move_input)
+			B.pivote.scale.x = sign(move_input)
+	
+		if B.player.is_on_floor():
+			if abs(B.player.velocity.x) > 10 or move_input:
+				A.playback.travel("Running")
+				B.playback.travel("Running")
+			else:
+				A.playback.travel("Idle")
+				B.playback.travel("Idle")
+		
+		else:
+			if B.player.velocity.y < 0:
+				A.playback.travel("Jump")
+				B.playback.travel("Jump")
+			else:
+				A.playback.travel("Falling")
+				B.playback.travel("Falling")
+
 
 ###################################################################################################
 
 func _ready():
-	Variables.SPEED = SPEED
-	Variables.ACCELERATION = ACCELERATION
-	Variables.WARP_SPEED = WARP_SPEED
-	Variables.GRAVITY = GRAVITY
-	Variables.JUMP_SPEED = JUMP_SPEED
-	Variables.max_jump = max_jump
-	
-	
+	constants.append(SPEED)
+	constants.append(ACCELERATION)
+	constants.append(WARP_SPEED)
+	constants.append(GRAVITY)
+	constants.append(JUMP_SPEED)
+	constants.append(MAX_JUMP)
+
 	Variables.Stamina = MaxStamina
 	timer.wait_time = MaxStamina
-	
-	player_a.position = pos_inicial_a.position
-	player_b.position = pos_inicial_b.position
+
+	A.player.set_position(pos_inicial_a.position)
+	B.player.set_position(pos_inicial_b.position)
+
+	A.get_cursor().visible = true
+	B.get_cursor().visible = false
 
 func _physics_process(delta):
-	var move_input := Input.get_axis("izquierda","derecha")
-	var Still_Players: bool = player_a.player.velocity.is_equal_approx(Vector2.ZERO) \
-							and player_b.player.velocity.is_equal_approx(Vector2.ZERO) \
+	var move_input: float = Input.get_axis("izquierda","derecha")
+
+	var Still_Players: bool = A.is_velocity_zero() \
+							and B.is_velocity_zero() \
 							and not Variables.Retorno
-	
+
 	#Primero chequeamos cambio a modo sincronizado
 	if Input.is_action_just_pressed("desync"):
-		if Variables.Sync and Still_Players:
-			Variables.Sync = false
-			
-			timer.start()
-		
+		if Variables.Sync:
+			if Still_Players:
+				Variables.Sync = false
+
+				if selected_a:
+					A.toggle_ghost(true)
+				else:
+					B.toggle_ghost(true)
+
+				timer.start()
+
 		else: 
 			Variables.Sync = true
 			timer.stop()
-			
+
 			Variables.Retorno = true
-			
+			if selected_a:
+				Debug.dprint("A se devuelve")
+				A.velocity_to_zero('x,y')
+				A.retornar()
+			else:
+				Debug.dprint("B se devuelve")
+				B.velocity_to_zero('x,y')
+				B.retornar()
+
 	if Input.is_action_just_pressed('select_player'):
 		if Variables.Sync:
-			Selected_A = not Selected_A
-			player_a.get_node("Cursor").visible = Selected_A
-			player_b.get_node("Cursor").visible = not Selected_A
-	
+			selected_a = not selected_a
+			A.get_cursor().visible = selected_a
+			B.get_cursor().visible = not selected_a
+
+
    #############################################################################
 	
 	if Variables.Sync:
+		Variables.Stamina = lerp(Variables.Stamina, MaxStamina, 0.04)
+
 		if not Variables.Retorno: #Estado Sync
-			pass
-		
+			if selected_a:
+				A.horizontal_update(delta, move_input, constants)
+				B.player.position.x = -1 * A.get_current_pos().x
+
+				A.vertical_update(delta, constants)
+				B.vertical_update(delta, constants)
+
+				animate_pair(move_input)
+
+				A.player.move_and_slide()
+				B.player.move_and_slide()
+				B.player.position.x = -1 * A.get_current_pos().x
+
+			else:
+				B.horizontal_update(delta, move_input, constants)
+				A.player.position.x = -1 * B.get_current_pos().x
+				
+				B.vertical_update(delta, constants)
+				A.vertical_update(delta, constants)
+
+				animate_pair(move_input)
+				
+				A.player.move_and_slide()
+				B.player.move_and_slide()
+				A.player.position.x = -1 * B.get_current_pos().x
+			
+			#Debug.dprint(abs(A.player.position.x + B.player.position.x))
+
+
 	else: #Estado Desync
-		pass
+		Variables.Stamina -= delta
+
+		if selected_a:
+			A.animate(move_input)
+			A.full_async_move(delta, move_input, constants)
+			pass
+
+		else:
+			B.animate(move_input)
+			B.full_async_move(delta, move_input, constants)
+			pass
 
 
 ####################################################################################################
@@ -103,11 +185,14 @@ func _physics_process(delta):
 func _on_timer_timeout():
 		Variables.Sync = true
 		timer.stop()
-		
+
 		Variables.Retorno = true
-		if Selected_A:
+		if selected_a:
 			Debug.dprint("A se devuelve")
-			player_a.retornar()
+			A.velocity_to_zero('x,y')
+			A.retornar()
+
 		else:
 			Debug.dprint("B se devuelve")
-			player_b.retornar()
+			B.velocity_to_zero('x,y')
+			B.retornar()

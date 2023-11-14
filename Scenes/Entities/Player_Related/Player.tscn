@@ -66,8 +66,8 @@
 [ext_resource type="Texture2D" uid="uid://bjq3kewwmrw81" path="res://Assets/Cursor/File58.png" id="62_bglqh"]
 [ext_resource type="Texture2D" uid="uid://djbnnwxdok0v" path="res://Assets/Cursor/File59.png" id="63_p5k6e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o246c"]
-size = Vector2(15, 25)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bm7s4"]
+height = 28.3077
 
 [sub_resource type="Animation" id="Animation_4rdk1"]
 resource_name = "Climbing"
@@ -861,8 +861,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2.6, 2.6)
-collision_layer = 0
-collision_mask = 0
+collision_mask = 79
 floor_constant_speed = true
 floor_max_angle = 0.872665
 floor_snap_length = 20.0
@@ -884,8 +883,8 @@ target_position = Vector2(0, -12)
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 2.5)
-shape = SubResource("RectangleShape2D_o246c")
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_bm7s4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_process_mode = 0
@@ -899,6 +898,7 @@ anim_player = NodePath("../AnimationPlayer")
 process_callback = 0
 
 [node name="Cursor" type="AnimatedSprite2D" parent="."]
+visible = false
 modulate = Color(0.917647, 0.839216, 0.443137, 1)
 position = Vector2(0, -36.7)
 scale = Vector2(0.05, 0.12)

@@ -15,10 +15,9 @@ layer_0/tile_data = PackedInt32Array(1900583, 65536, 3, 1835047, 0, 0, 1769511, 
 [node name="Player_Controller" parent="." node_paths=PackedStringArray("pos_inicial_a", "pos_inicial_b") instance=ExtResource("1_rmsta")]
 pos_inicial_a = NodePath("../Pos_Inicial_A")
 pos_inicial_b = NodePath("../Pos_Inicial_B")
-MaxStamina = 8.0
 
 [node name="Pos_Inicial_A" type="Marker2D" parent="."]
-position = Vector2(-500, 520)
+position = Vector2(-500, 440)
 
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
-position = Vector2(500, 520)
+position = Vector2(500, 440)

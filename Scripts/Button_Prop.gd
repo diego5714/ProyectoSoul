@@ -5,7 +5,7 @@ signal button_pushed
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.get_name() == "PlayerA" or body.get_name() == "PlayerB":
+	if body.get_name() == "Player":
 		emit_signal("button_pushed")
 		animation_player.play("Push")
 		print("boton")

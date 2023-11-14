@@ -11,7 +11,7 @@ var MaxPlatano1: int = 0
 var MaxPlatano2: int = 0
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.get_name() == "PlayerA" or body.get_name() == "PlayerB":
+	if body.get_name() == "Player_A" or body.get_name() == "Player_B":
 		if llave == true:
 			Variables.Ganaste = true
 			timer.start()
