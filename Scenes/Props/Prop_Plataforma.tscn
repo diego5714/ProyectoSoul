@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw0xynsmiabjb"]
+
+[ext_resource type="Texture2D" uid="uid://dl8q7soh14p5f" path="res://Assets/Trampas/Platforms/Brown Off.png" id="1_1sgfi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrm1h"]
+size = Vector2(192, 40)
+
+[node name="Plataforma" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_qrm1h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6, 6)
+texture = ExtResource("1_1sgfi")

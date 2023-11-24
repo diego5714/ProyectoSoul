@@ -38,6 +38,9 @@ material = SubResource("ShaderMaterial_xf7j7")
 
 [node name="Player" parent="Player_B" instance=ExtResource("2_nyq84")]
 
+[node name="Pivote" parent="Player_B/Player" index="0"]
+scale = Vector2(-1, 1)
+
 [node name="Sprite2D" parent="Player_B/Player/Pivote" index="0"]
 material = ExtResource("5_snn2j")
 

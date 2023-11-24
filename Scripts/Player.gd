@@ -1,5 +1,5 @@
-class_name Player
 extends Node2D
+class_name Player
 
 @onready var player: CharacterBody2D = $Player
 @onready var ghost: Sprite2D = $Ghost
@@ -109,10 +109,6 @@ func animate(move_input: float):
 			playback.travel("Jump")
 		else:
 			playback.travel("Falling")
-	
-
-func kill():
-	pass
 
 ################################################################################
 

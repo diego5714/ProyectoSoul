@@ -179,15 +179,18 @@ scale = Vector2(3, 3)
 position = Vector2(-1376, 976)
 scale = Vector2(3, 3)
 
-[node name="KillZone" parent="." instance=ExtResource("13_qe46u")]
-position = Vector2(0, 1230)
-
-[node name="Puente2" type="Node2D" parent="."]
+[node name="Puente2" type="Node2D" parent="Elementos"]
 position = Vector2(-1984, 416)
 script = ExtResource("14_lvahe")
 
-[node name="Puente" parent="Puente2" instance=ExtResource("15_conb1")]
+[node name="Puente" parent="Elementos/Puente2" instance=ExtResource("15_conb1")]
 scale = Vector2(2, 2)
+
+[node name="Letrero" parent="Elementos" instance=ExtResource("17_thwrl")]
+position = Vector2(1352, 736)
+
+[node name="KillZone" parent="." instance=ExtResource("13_qe46u")]
+position = Vector2(0, 1230)
 
 [node name="Sliime2" parent="." instance=ExtResource("16_gdk6q")]
 position = Vector2(-1096, 1056)
@@ -197,11 +200,8 @@ scale = Vector2(4, 4)
 position = Vector2(-608, 1056)
 scale = Vector2(4, 4)
 
-[node name="Letrero" parent="." instance=ExtResource("17_thwrl")]
-position = Vector2(1352, 736)
-
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Rayos" method="_on_button_button_pushed"]
-[connection signal="button_pushed" from="Elementos/Botones/Button" to="Puente2" method="_on_button_button_pushed"]
+[connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Puente2" method="_on_button_button_pushed"]
 
 [editable path="Sliime2"]

@@ -16,6 +16,8 @@ var constants: PackedInt32Array = PackedInt32Array()
 @export var pos_inicial_a: Marker2D
 @export var pos_inicial_b: Marker2D
 
+var current_cp: Vector2
+
 var selected_a : bool = true #Que jugador esta seleccionado para controlarlo en modo Async
 @onready var A: Player = %Player_A
 @onready var B: Player = %Player_B
@@ -69,6 +71,12 @@ func animate_pair(move_input: float):
 				A.playback.travel("Falling")
 				B.playback.travel("Falling")
 
+func set_current_cp(cp):
+	current_cp = cp
+	Debug.dprint(current_cp)
+
+func kill():
+	Debug.dprint("Te moristes wey")
 
 ###################################################################################################
 
