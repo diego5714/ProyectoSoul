@@ -51,20 +51,26 @@ func velocity_to_zero(eje: String):
 	elif eje == 'x,y':
 		player.velocity = Vector2.ZERO
 
-func retornar():
-		var ReturnPoint: Vector2 = ghost.position - Vector2(0, 30)
+func retornar(Return_Point: Vector2):
 		no_collisions(true)
 	
 		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-		tween.tween_property(player, 'position', ReturnPoint, 1.2)
+		tween.tween_property(player, 'position', Return_Point, 1.2)
 	
 		tween.finished.connect(
 			func():
 				no_collisions(false)
-				toggle_ghost(false)
-				player.position = ReturnPoint
+				player.position = Return_Point
 				Variables.Retorno = false
 				)
+				
+func retorno_muerte(Return_Point: Vector2):
+	retornar(Return_Point)
+	
+func retorno_ghost():
+	var Return_Point: Vector2 = ghost.position - Vector2(0, 30)
+	retornar(Return_Point)
+	toggle_ghost(false)
 
 func horizontal_update(delta: float, move_input: float, constants: PackedInt32Array):
 	player.velocity.x = move_toward(player.velocity.x, constants[0] * move_input, constants[3] * delta)

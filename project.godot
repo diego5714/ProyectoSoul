@@ -93,6 +93,7 @@ select_player={
 2d_physics/layer_5="Fantasmas"
 2d_physics/layer_6="Jugadores Fantasma"
 2d_physics/layer_7="Recompensas"
+2d_physics/layer_8="Interactuable"
 
 [rendering]
 

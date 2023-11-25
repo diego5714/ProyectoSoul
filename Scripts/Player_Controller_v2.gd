@@ -73,10 +73,14 @@ func animate_pair(move_input: float):
 
 func set_current_cp(cp):
 	current_cp = cp
-	Debug.dprint(current_cp)
 
 func kill():
 	Debug.dprint("Te moristes wey")
+	A.velocity_to_zero('x,y')
+	A.retorno_muerte(current_cp - Vector2(0, 40))
+	
+	B.velocity_to_zero('x,y')
+	B.retorno_muerte((current_cp * Vector2(-1, 1)) - Vector2(0, 40))
 
 ###################################################################################################
 
@@ -125,11 +129,11 @@ func _physics_process(delta):
 			if selected_a:
 				Debug.dprint("A se devuelve")
 				A.velocity_to_zero('x,y')
-				A.retornar()
+				A.retorno_ghost()
 			else:
 				Debug.dprint("B se devuelve")
 				B.velocity_to_zero('x,y')
-				B.retornar()
+				B.retorno_ghost()
 
 	if Input.is_action_just_pressed('select_player'):
 		if Variables.Sync:
@@ -145,8 +149,12 @@ func _physics_process(delta):
 
 		if not Variables.Retorno: #Estado Sync
 			if selected_a:
-				A.horizontal_update(delta, move_input, constants)
-				B.player.position.x = -1 * A.get_current_pos().x
+				if not B.is_raycast_colliding("Lateral"):
+					A.horizontal_update(delta, move_input, constants)
+					
+				else:
+					A.velocity_to_zero('x')
+					B.velocity_to_zero('x')
 
 				A.vertical_update(delta, constants)
 				B.vertical_update(delta, constants)
@@ -158,8 +166,12 @@ func _physics_process(delta):
 				B.player.position.x = -1 * A.get_current_pos().x
 
 			else:
-				B.horizontal_update(delta, move_input, constants)
-				A.player.position.x = -1 * B.get_current_pos().x
+				if not A.is_raycast_colliding("Lateral"):
+					B.horizontal_update(delta, move_input, constants)
+					
+				else:
+					A.velocity_to_zero('x')
+					B.velocity_to_zero('x')
 				
 				B.vertical_update(delta, constants)
 				A.vertical_update(delta, constants)
@@ -198,9 +210,9 @@ func _on_timer_timeout():
 		if selected_a:
 			Debug.dprint("A se devuelve")
 			A.velocity_to_zero('x,y')
-			A.retornar()
+			A.retorno_ghost()
 
 		else:
 			Debug.dprint("B se devuelve")
 			B.velocity_to_zero('x,y')
-			B.retornar()
+			B.retorno_ghost()
