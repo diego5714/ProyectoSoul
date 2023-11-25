@@ -158,7 +158,7 @@ libraries = {
 }
 
 [node name="Boton_1" parent="Elementos" instance=ExtResource("4_s6m2t")]
-position = Vector2(5264, 544)
+position = Vector2(4448, 544)
 scale = Vector2(4, 4)
 
 [node name="Check_Point_Manager" type="Node2D" parent="."]
