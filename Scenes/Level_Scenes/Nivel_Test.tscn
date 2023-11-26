@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://gklfpx5uo83n"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_uwunc"]
-[ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Scenes/Template_Enemy.tscn" id="2_rtj56"]
-[ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Player_Controller.tscn" id="4_hcftc"]
-[ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Llave.tscn" id="4_xe4qv"]
-[ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Puerta_Final.tscn" id="5_snk40"]
-[ext_resource type="PackedScene" uid="uid://8ptk2qmg54e1" path="res://Scenes/Slime.tscn" id="6_vkuh3"]
+[ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Scenes/Entities/Template_Enemy.tscn" id="2_rtj56"]
+[ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="4_hcftc"]
+[ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Props/Llave.tscn" id="4_xe4qv"]
+[ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Puerta_Final.tscn" id="5_snk40"]
+[ext_resource type="PackedScene" uid="uid://8ptk2qmg54e1" path="res://Scenes/Props/Slime.tscn" id="6_vkuh3"]
 
 [node name="Nivel" type="Node2D"]
 
@@ -23,9 +23,7 @@ scale = Vector2(1.3, 1.3)
 collision_layer = 8
 collision_mask = 6
 
-[node name="Player_Controller" parent="." node_paths=PackedStringArray("Pos_Inicial_A", "Pos_Inicial_B") instance=ExtResource("4_hcftc")]
-Pos_Inicial_A = NodePath("../Pos_Inicial_A")
-Pos_Inicial_B = NodePath("../Pos_Inicial_B")
+[node name="Player_Controller" parent="." instance=ExtResource("4_hcftc")]
 MaxStamina = 8.0
 metadata/_edit_lock_ = true
 

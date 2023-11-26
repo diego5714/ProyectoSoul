@@ -24,6 +24,7 @@ var selected_a : bool = true #Que jugador esta seleccionado para controlarlo en 
 @onready var timer : Timer = $Timer
 
 @export var MaxStamina: float = 5.0 #Segundos de duracion 
+@onready var music = $"Music(Provisorio)/Music"
 
 ###################################################################################################
 #Definicion de funciones auxiliares
@@ -85,6 +86,7 @@ func kill():
 ###################################################################################################
 
 func _ready():
+	music.play()
 	constants.append(SPEED)
 	constants.append(ACCELERATION)
 	constants.append(WARP_SPEED)

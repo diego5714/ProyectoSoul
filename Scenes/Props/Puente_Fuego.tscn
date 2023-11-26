@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Puente_Madera.gd" id="1_k1tr6"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_w2ovv"]
-[ext_resource type="PackedScene" uid="uid://ouycwvqua3g3" path="res://Scenes/Llama.tscn" id="3_dwend"]
+[ext_resource type="PackedScene" uid="uid://ouycwvqua3g3" path="res://Scenes/Props/Llama.tscn" id="3_dwend"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spu5l"]
 size = Vector2(20, 10)

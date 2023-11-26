@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cyreuui2d4r40"
+path="res://.godot/imported/Games, Video, Event, Collect Item, Various Positive 01 SND5544.wav-90e33d71c0798b7743a8d0ee5643206b.sample"
+
+[deps]
+
+source_file="res://Sound/Custom Sounds/Games, Video, Event, Collect Item, Various Positive 01 SND5544.wav"
+dest_files=["res://.godot/imported/Games, Video, Event, Collect Item, Various Positive 01 SND5544.wav-90e33d71c0798b7743a8d0ee5643206b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

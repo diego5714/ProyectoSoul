@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cap8egpb50onr"
+path="res://.godot/imported/Coleccionable.wav-ba92edff9a7745ba5e2d6021957d306a.sample"
+
+[deps]
+
+source_file="res://Sound/Custom Sounds/Coleccionable.wav"
+dest_files=["res://.godot/imported/Coleccionable.wav-ba92edff9a7745ba5e2d6021957d306a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

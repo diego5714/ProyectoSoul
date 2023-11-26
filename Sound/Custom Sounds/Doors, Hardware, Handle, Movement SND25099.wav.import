@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7ueiysuogty3"
+path="res://.godot/imported/Doors, Hardware, Handle, Movement SND25099.wav-e2b285091d375d58c62bc23cb3177fc6.sample"
+
+[deps]
+
+source_file="res://Sound/Custom Sounds/Doors, Hardware, Handle, Movement SND25099.wav"
+dest_files=["res://.godot/imported/Doors, Hardware, Handle, Movement SND25099.wav-e2b285091d375d58c62bc23cb3177fc6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

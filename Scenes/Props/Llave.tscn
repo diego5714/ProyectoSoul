@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cal8ytqtr2hyq"]
+[gd_scene load_steps=12 format=3 uid="uid://cal8ytqtr2hyq"]
 
 [ext_resource type="Script" path="res://Scripts/Llave.gd" id="1_cjv6o"]
 [ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objetos/key.png" id="2_j7b5f"]
+[ext_resource type="AudioStream" uid="uid://coab64fagrk5q" path="res://Sound/COLORALPHA 50 Menu Interface SFX/MP3/MI_SFX 05.mp3" id="3_6xakg"]
+[ext_resource type="AudioStream" uid="uid://b7ueiysuogty3" path="res://Sound/Custom Sounds/Doors, Hardware, Handle, Movement SND25099.wav" id="4_84ha1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nse5d"]
 size = Vector2(18, 16)
@@ -177,5 +179,13 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_fo7e3")
 }
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Key_Sound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_6xakg")
+
+[node name="Door_Sound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_84ha1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dreksn2ytdiwd"]
+[gd_scene load_steps=11 format=3 uid="uid://dreksn2ytdiwd"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Controller_v2.gd" id="1_7tpjo"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_3rfwg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Shader" path="res://Resources/Inverted_Ghost.gdshader" id="5_yoi4q"]
 [ext_resource type="AudioStream" uid="uid://cj1grhwf6777h" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 36.wav" id="6_55k0d"]
 [ext_resource type="Script" path="res://Scripts/SFX.gd" id="7_cpa4p"]
+[ext_resource type="AudioStream" uid="uid://deisxx0kjhvl" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Dance_(Battle).wav" id="9_v7gf5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xf7j7"]
 shader = ExtResource("5_yoi4q")
@@ -51,6 +52,13 @@ wait_time = 5.0
 [node name="Colliding_Sound" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("6_55k0d")
 script = ExtResource("7_cpa4p")
+
+[node name="Music(Provisorio)" type="Node" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="Music(Provisorio)"]
+stream = ExtResource("9_v7gf5")
+volume_db = -8.48
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
