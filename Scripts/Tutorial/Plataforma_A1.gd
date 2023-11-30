@@ -4,7 +4,7 @@ extends Node2D
 @onready var plataforma: CharacterBody2D = $Plataforma
 @onready var plataforma_2: CharacterBody2D = $Plataforma2
 
-@onready var boton_1: Area2D = $"../Boton_1"
+@onready var boton: Area2D = $"../Botones/Boton_Puente"
 
 func no_collisions(estado: bool):
 	plataforma.set_collision_layer_value(2, not estado)
@@ -14,7 +14,7 @@ func no_collisions(estado: bool):
 	plataforma_2.set_collision_mask_value(1, not estado)
 
 func _ready():
-	boton_1.button_pushed.connect(_on_boton_entered)
+	boton.button_pushed.connect(_on_boton_entered)
 	no_collisions(false)
 	
 func _on_boton_entered():
