@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bbuerjqx44ywr"]
+[gd_scene load_steps=46 format=3 uid="uid://bbuerjqx44ywr"]
 
 [ext_resource type="Script" path="res://Scripts/Coleccionable.gd" id="1_dvv7s"]
 [ext_resource type="Texture2D" uid="uid://e4r14if7gj6s" path="res://Assets/Gato_Coleccionable/1.png" id="1_xhrxt"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://doqtk0av3523u" path="res://Assets/Gato_Coleccionable/38.png" id="38_23k14"]
 [ext_resource type="Texture2D" uid="uid://b5140a5e4s2bt" path="res://Assets/Gato_Coleccionable/39.png" id="39_lqi46"]
 [ext_resource type="Texture2D" uid="uid://b7qffdb4lrcey" path="res://Assets/Gato_Coleccionable/40.png" id="40_mbrmu"]
+[ext_resource type="AudioStream" uid="uid://dsmy0yo4vpxj" path="res://Sound/Custom Sounds/Coleccionable.wav" id="42_7g821"]
 
 [sub_resource type="Animation" id="Animation_lfu6e"]
 resource_name = "Animacion"
@@ -98,3 +99,6 @@ libraries = {
 shape = SubResource("CircleShape2D_rot2m")
 
 [node name="SFX" type="Node" parent="."]
+
+[node name="Colleccionable_Sound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("42_7g821")
