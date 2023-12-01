@@ -83,8 +83,9 @@ radius = 8.0
 script = ExtResource("1_dvv7s")
 
 [node name="Textura" type="Sprite2D" parent="."]
+position = Vector2(0, 4.3425)
 scale = Vector2(0.22, 0.22)
-texture = ExtResource("1_xhrxt")
+texture = ExtResource("28_bt8o6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Textura"]
 autoplay = "Animacion"

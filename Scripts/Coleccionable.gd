@@ -5,7 +5,7 @@ extends Node2D
 @onready var area_2d = $Area2D
 
 func _ready() -> void:
-	animation_player.play("animacion")
+	animation_player.play("Animacion")
 	Area.body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
