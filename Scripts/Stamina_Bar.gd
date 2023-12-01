@@ -1,6 +1,6 @@
 extends TextureProgressBar
 
-@export var MAX: float = 5.0
+@export var MAX: float = 12.0
 var iniciando = true
 
 var valor := MAX:

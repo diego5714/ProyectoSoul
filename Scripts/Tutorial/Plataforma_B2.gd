@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_player: AnimationPlayer = $Animation_Player_B2
 @onready var plataforma: CharacterBody2D = $Plataforma
 @onready var plataforma_2: CharacterBody2D = $Plataforma2
 
-@onready var boton: Area2D = $"../Botones/Boton_Puente"
+@onready var boton: Area2D = $"../Botones/Boton_Parkour_A"
 
 func no_collisions(estado: bool):
 	plataforma.set_collision_layer_value(2, not estado)
@@ -19,7 +19,7 @@ func _ready():
 	
 func _on_boton_entered():
 	no_collisions(true)
-	animation_player.play("Bridge")
+	animation_player.play("Abrir_Camino_B")
 	await animation_player.animation_finished
 	
 	no_collisions(false)

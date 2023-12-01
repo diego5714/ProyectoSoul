@@ -23,7 +23,7 @@ var selected_a : bool = true #Que jugador esta seleccionado para controlarlo en 
 @onready var B: Player = %Player_B
 @onready var timer : Timer = $Timer
 
-@export var MaxStamina: float = 5.0 #Segundos de duracion 
+@export var MaxStamina: float = 12.0 #Segundos de duracion 
 @onready var music = $"Music(Provisorio)/Music"
 
 ###################################################################################################
@@ -73,6 +73,9 @@ func animate_pair(move_input: float):
 				B.playback.travel("Falling")
 
 func set_current_cp(cp):
+	if cp.x > 0:
+		cp.x = -cp.x
+	
 	current_cp = cp
 
 func kill():

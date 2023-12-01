@@ -187,5 +187,3 @@ stream = ExtResource("3_6xakg")
 
 [node name="Door_Sound" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("4_84ha1")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
