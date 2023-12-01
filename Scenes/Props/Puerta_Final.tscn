@@ -28,4 +28,7 @@ position = Vector2(58, 0)
 scale = Vector2(7.68, 1)
 shape = SubResource("RectangleShape2D_k6bt6")
 
+[node name="Timer_Banana" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

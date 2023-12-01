@@ -4,8 +4,6 @@ signal button_pushed
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape_2d = $CollisionShape2D
 
-@export var persistente: bool = true
-
 
 func _ready():
 	set_deferred("monitoring", true)
@@ -18,5 +16,4 @@ func _on_body_entered(body):
 	
 	if body.get_name() == "Player":
 		emit_signal("button_pushed")
-		Debug.dprint("Presionado")
 		animation_player.play("Push")

@@ -5,8 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://coab64fagrk5q" path="res://Sound/COLORALPHA 50 Menu Interface SFX/MP3/MI_SFX 05.mp3" id="3_6xakg"]
 [ext_resource type="AudioStream" uid="uid://b7ueiysuogty3" path="res://Sound/Custom Sounds/Doors, Hardware, Handle, Movement SND25099.wav" id="4_84ha1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nse5d"]
-size = Vector2(18, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_idocs"]
+radius = 5.01922
 
 [sub_resource type="Animation" id="Animation_s8xjy"]
 length = 0.001
@@ -159,6 +159,8 @@ _data = {
 
 [node name="Llave" type="Area2D"]
 position = Vector2(0, -1.43885)
+collision_layer = 192
+collision_mask = 33
 script = ExtResource("1_cjv6o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -167,15 +169,17 @@ hframes = 5
 region_filter_clip_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_nse5d")
+shape = SubResource("CircleShape2D_idocs")
 
 [node name="Sprite_Animation" type="AnimationPlayer" parent="."]
+autoplay = "Shine"
 speed_scale = 2.0
 libraries = {
 "": SubResource("AnimationLibrary_ppqum")
 }
 
 [node name="Position_Animation" type="AnimationPlayer" parent="."]
+autoplay = "wobble"
 libraries = {
 "": SubResource("AnimationLibrary_fo7e3")
 }

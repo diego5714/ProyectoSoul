@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_player: AnimationPlayer = $Animation_Player_A1
 @onready var plataforma: CharacterBody2D = $Plataforma
 @onready var plataforma_2: CharacterBody2D = $Plataforma2
 
@@ -18,8 +18,9 @@ func _ready():
 	no_collisions(false)
 	
 func _on_boton_entered():
+	Debug.dprint("Boton Puente")
 	no_collisions(true)
-	animation_player.play("Bridge")
+	animation_player.play("Puente")
 	await animation_player.animation_finished
 	
 	no_collisions(false)
