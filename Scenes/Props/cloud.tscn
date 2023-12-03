@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://fxf8ni7v0sj3"]
+
+[ext_resource type="Texture2D" uid="uid://cq3fq0n54640o" path="res://Assets/Backgrounds/Clouds/Clouds11.png" id="1_ldwum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1oei"]
+
+[node name="Cloud" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_j1oei")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(0, 2)
+scale = Vector2(1, 0.988889)
+texture = ExtResource("1_ldwum")

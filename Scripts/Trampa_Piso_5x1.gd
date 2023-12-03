@@ -10,7 +10,7 @@ func Eliminar_Trampa():
 	queue_free()
 	
 #Funcion conectada a Button2B
-func _on_button_2b_button_pushed() -> void:
+func _on_button_2_button_pushed():
 	if (eliminar == false):
 		eliminar = true
 	
