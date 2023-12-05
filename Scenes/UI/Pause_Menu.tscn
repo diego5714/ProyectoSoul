@@ -895,7 +895,7 @@ theme_override_constants/margin_bottom = 30
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme = ExtResource("4_ihdjf")
-theme_override_colors/font_color = Color(0.494118, 0.898039, 0.239216, 1)
+theme_override_colors/font_color = Color(0.298039, 0, 0.360784, 1)
 theme_override_font_sizes/font_size = 60
 text = "Pause"
 horizontal_alignment = 1

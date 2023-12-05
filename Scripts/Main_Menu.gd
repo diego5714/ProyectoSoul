@@ -4,10 +4,13 @@ extends MarginContainer
 @onready var settings := %Settings
 @onready var credits := %Credits
 @onready var exit := %Exit
+@onready var transitioner = $transiciones/Transitioner
+
 
 var Click_Animation: bool = false
 
 func _ready() -> void:
+	transitioner.fadein()
 	start.pressed.connect(_on_start_pressed)
 	settings.pressed.connect(_on_settings_pressed)
 	credits.pressed.connect(_on_credits_pressed)

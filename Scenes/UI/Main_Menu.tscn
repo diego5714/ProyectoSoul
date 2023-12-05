@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=3 uid="uid://bue3ckg45udm2"]
+[gd_scene load_steps=113 format=3 uid="uid://bue3ckg45udm2"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_gclss"]
 [ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="2_6q8iw"]
@@ -81,6 +81,7 @@
 [ext_resource type="Texture2D" uid="uid://o4ce5ckercdo" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_21.tres" id="79_s2vtg"]
 [ext_resource type="PackedScene" uid="uid://1vtcpqi3idl7" path="res://Scenes/UI/Fondo_Menus.tscn" id="80_krqsm"]
 [ext_resource type="AudioStream" uid="uid://cpbpdhw2hkxe8" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 32.wav" id="81_pv04f"]
+[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="82_rfl8k"]
 
 [sub_resource type="Theme" id="Theme_x6xtb"]
 
@@ -1127,6 +1128,10 @@ rendering_quadrant_size = 64
 unique_name_in_owner = true
 stream = ExtResource("81_pv04f")
 volume_db = -5.0
+
+[node name="transiciones" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="transiciones" instance=ExtResource("82_rfl8k")]
 
 [connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_exited"]

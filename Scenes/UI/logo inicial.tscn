@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://malicjvmw17i"]
+
+[ext_resource type="Script" path="res://Scripts/logo.gd" id="1_hxi4b"]
+[ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Assets/Fonts/Planes_ValMore.ttf" id="1_n1bix"]
+[ext_resource type="Texture2D" uid="uid://twjitdawia5p" path="res://Assets/Logo/Logo_color_vectorial.svg" id="2_266oe"]
+[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="3_bgci7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hxi4b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_top = 721.0
+offset_right = 1600.0
+offset_bottom = 772.0
+theme_override_fonts/font = ExtResource("1_n1bix")
+theme_override_font_sizes/font_size = 50
+text = "Disobedient Cat presents"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_top = -35.1314
+offset_right = 1600.0
+offset_bottom = 855.131
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(800, 445.132)
+texture = ExtResource("2_266oe")
+expand_mode = 5
+
+[node name="transiciones" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="transiciones" instance=ExtResource("3_bgci7")]
+
+[node name="Timer" type="Timer" parent="transiciones"]
+
+[connection signal="fadeout_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadeout_finalizado"]
+[connection signal="child_entered_tree" from="transiciones/Timer" to="." method="_on_timer_child_entered_tree"]
+[connection signal="timeout" from="transiciones/Timer" to="." method="_on_timer_timeout"]

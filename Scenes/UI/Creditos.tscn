@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Creditos.gd" id="1_tp88f"]
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_vbemr"]
-[ext_resource type="Texture2D" uid="uid://twjitdawia5p" path="res://Assets/Logo/Logo_color_vectorial.svg" id="2_s4yyv"]
 [ext_resource type="PackedScene" uid="uid://1vtcpqi3idl7" path="res://Scenes/UI/Fondo_Menus.tscn" id="3_hb7ph"]
+[ext_resource type="Texture2D" uid="uid://ca6qk1lhnqgjx" path="res://Assets/Logo/Logo_blanco.png" id="3_y628q"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="5_uo78m"]
 [ext_resource type="Texture2D" uid="uid://whqtxu1n3612" path="res://Resources/Botones/Secondary_Button/Secondary_Button_Default.tres" id="6_1101k"]
 [ext_resource type="Texture2D" uid="uid://dsaon7df61mt" path="res://Resources/Botones/Secondary_Button/Selected/Secondary_Button_Selected_1.tres" id="7_ilul3"]
@@ -498,7 +498,7 @@ theme_override_constants/margin_bottom = 30
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/HSplitContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("2_s4yyv")
+texture = ExtResource("3_y628q")
 expand_mode = 3
 stretch_mode = 5
 
