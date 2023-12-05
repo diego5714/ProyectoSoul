@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://br2371s73ycec"]
+[gd_scene load_steps=25 format=3 uid="uid://br2371s73ycec"]
 
+[ext_resource type="Script" path="res://Scripts/Nivel_3.gd" id="1_8srri"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_yt65w"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="2_fhfmg"]
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Props/Llave.tscn" id="3_tc0gc"]
@@ -19,6 +20,7 @@
 [ext_resource type="Script" path="res://Scripts/Peligro_1B.gd" id="17_f4svl"]
 [ext_resource type="Script" path="res://Scripts/Peligro_2A.gd" id="18_h8x7x"]
 [ext_resource type="PackedScene" uid="uid://fxf8ni7v0sj3" path="res://Scenes/Props/cloud.tscn" id="19_lrsky"]
+[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="21_gr6id"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r20m"]
 size = Vector2(339.251, 949.844)
@@ -30,6 +32,7 @@ size = Vector2(176.582, 1232)
 size = Vector2(1736, 1112)
 
 [node name="Nivel 3" type="Node2D"]
+script = ExtResource("1_8srri")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -193,6 +196,10 @@ scale = Vector2(8, 8)
 position = Vector2(2232, -2904)
 scale = Vector2(8, 8)
 
+[node name="transiciones" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="transiciones" instance=ExtResource("21_gr6id")]
+
 [connection signal="body_entered" from="Botones/Button1A" to="Botones/Button1A" method="_on_body_entered"]
 [connection signal="button_pushed" from="Botones/Button1A" to="Trampas_piso/Trampa_6x1_1B" method="_on_button_1a_button_pushed"]
 [connection signal="body_entered" from="Botones/Button2B" to="Botones/Button2B" method="_on_body_entered"]
@@ -207,3 +214,4 @@ scale = Vector2(8, 8)
 [connection signal="body_entered" from="Areas_Peligro_Sound/Peligro_1A" to="Areas_Peligro_Sound/Peligro_1A" method="_on_body_entered"]
 [connection signal="body_entered" from="Areas_Peligro_Sound/Peligro_1B" to="Areas_Peligro_Sound/Peligro_1B" method="_on_body_entered"]
 [connection signal="body_entered" from="Areas_Peligro_Sound/Peligro_2A" to="Areas_Peligro_Sound/Peligro_2A" method="_on_body_entered"]
+[connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]

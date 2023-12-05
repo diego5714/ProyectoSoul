@@ -52,8 +52,7 @@ func _on_retry_pressed():
 	%Retry_Animations.play("Pushed")
 	Click_Animation = true
 	await %Retry_Animations.animation_finished
-	
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
 	get_tree().paused = false
 	
 func _on_menu_pressed():
@@ -61,9 +60,6 @@ func _on_menu_pressed():
 	%Menu_Animations.play("Pushed")
 	Click_Animation = true
 	await %Menu_Animations.animation_finished
-
-	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
-	get_tree().paused = false
 	
 func _on_exit_pressed():
 	%Click_Sound.play()

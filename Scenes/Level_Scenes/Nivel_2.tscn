@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cw0yn1tnj1e5g"]
+[gd_scene load_steps=21 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_0r8q5"]
+[ext_resource type="Script" path="res://Scripts/Nivel_2.gd" id="1_6m4ei"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="2_f277d"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Scenes/Entities/Template_Enemy.tscn" id="3_qqdcy"]
 [ext_resource type="PackedScene" uid="uid://bbuerjqx44ywr" path="res://Scenes/Props/Gato_Coleccionable.tscn" id="4_qbctn"]
@@ -17,11 +18,13 @@
 [ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Props/Puente_Fuego.tscn" id="15_conb1"]
 [ext_resource type="PackedScene" uid="uid://8ptk2qmg54e1" path="res://Scenes/Props/Slime.tscn" id="16_gdk6q"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Letrero.tscn" id="17_thwrl"]
+[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="19_bk71k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tenop"]
 size = Vector2(124.464, 662)
 
 [node name="Nivel" type="Node2D"]
+script = ExtResource("1_6m4ei")
 
 [node name="TileMapNivel" type="TileMap" parent="."]
 z_index = -2
@@ -210,10 +213,15 @@ scale = Vector2(4, 4)
 position = Vector2(-608, 1056)
 scale = Vector2(4, 4)
 
+[node name="transiciones" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="transiciones" instance=ExtResource("19_bk71k")]
+
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Elementos/Botones/Button" to="Elementos/Botones/Button" method="_on_body_entered"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Rayos" method="_on_button_button_pushed"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Puente2" method="_on_button_button_pushed"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Puente2/Puente" method="_on_button_button_pushed"]
+[connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
 
 [editable path="Sliime2"]

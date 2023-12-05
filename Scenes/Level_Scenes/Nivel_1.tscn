@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw0yn1tnj1e5g"]
+[gd_scene load_steps=6 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_hnol0"]
+[ext_resource type="Script" path="res://Scripts/Nivel_1.gd" id="1_pa3vm"]
 [ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Scenes/Entities/Template_Enemy.tscn" id="2_a85a8"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="3_sux4h"]
+[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="5_e0jri"]
 
 [node name="Nivel" type="Node2D"]
+script = ExtResource("1_pa3vm")
 
 [node name="TileMapNivel" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -30,3 +33,9 @@ gizmo_extents = 42.0
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
 position = Vector2(-617, -171)
 gizmo_extents = 42.0
+
+[node name="transiciones" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="transiciones" instance=ExtResource("5_e0jri")]
+
+[connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]

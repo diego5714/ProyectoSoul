@@ -1130,7 +1130,6 @@ stream = ExtResource("81_pv04f")
 volume_db = -5.0
 
 [node name="transiciones" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("82_rfl8k")]
 
@@ -1142,3 +1141,5 @@ visible = false
 [connection signal="mouse_exited" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_mouse_exited"]
 [connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="mouse_exited" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
+[connection signal="fadeout_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadeout_finalizado"]
