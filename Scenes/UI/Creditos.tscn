@@ -666,6 +666,7 @@ libraries = {
 }
 
 [node name="FondoMenus" parent="." instance=ExtResource("3_hb7ph")]
+rendering_quadrant_size = 64
 
 [node name="SFX" type="Node" parent="."]
 

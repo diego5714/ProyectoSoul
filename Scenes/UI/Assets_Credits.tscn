@@ -249,8 +249,157 @@ grow_vertical = 2
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(1160, 500)
 layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer2"]
+layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Complete GUI Essential Pack - Crusenho"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "50 Menu Interface SFX - ColorAlpha"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Basic Pixel Health bar and Scroll bar - BDragon1727"
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Free Tiny Hero Sprites Pixel Art - Free Game Assets"
+vertical_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Cavernas - Adam Saltsman"
+vertical_alignment = 1
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer6"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Animated Arrows / Cursosr - SpikerMan"
+vertical_alignment = 1
+
+[node name="MarginContainer7" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer7"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Complete GUI Essential Pack - Crusenho"
+vertical_alignment = 1
+
+[node name="MarginContainer8" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer8"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Pixel Adventure - Pixel Frog"
+vertical_alignment = 1
+
+[node name="MarginContainer9" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer9"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Minecraft font"
+vertical_alignment = 1
+
+[node name="MarginContainer10" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer10"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Planes_ValMore font"
+vertical_alignment = 1
+
+[node name="MarginContainer11" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer11"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Rocky Roads - Essssam"
+vertical_alignment = 1
+
+[node name="MarginContainer12" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer12"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Free Summer Pixel Backgrounds - Free Game Assets"
+vertical_alignment = 1
+
+[node name="MarginContainer13" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer2/VBoxContainer/MarginContainer13"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Pixel Art Clouds - Kekaiyo"
+vertical_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
@@ -300,6 +449,7 @@ libraries = {
 }
 
 [node name="FondoMenus" parent="." instance=ExtResource("1_ymd8x")]
+rendering_quadrant_size = 64
 
 [node name="SFX" type="Node" parent="."]
 

@@ -911,11 +911,11 @@ texture = ExtResource("4_8fkfa")
 expand_mode = 5
 
 [node name="Logo_Animation" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/Logo_Texture"]
-autoplay = "Logo_start"
-speed_scale = 24.0
 libraries = {
 "": SubResource("AnimationLibrary_24dc3")
 }
+autoplay = "Logo_start"
+speed_scale = 24.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -1119,6 +1119,7 @@ libraries = {
 }
 
 [node name="FondoMenus" parent="." instance=ExtResource("80_krqsm")]
+rendering_quadrant_size = 64
 
 [node name="SFX" type="Node" parent="."]
 
