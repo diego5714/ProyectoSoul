@@ -68,6 +68,7 @@ grow_vertical = 2
 script = ExtResource("1_sqrn2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 4
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
