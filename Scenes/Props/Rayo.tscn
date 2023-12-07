@@ -126,9 +126,10 @@ states/Start/position = Vector2(114, 165)
 transitions = ["Cargando", "Rayo", SubResource("AnimationNodeStateMachineTransition_v264v"), "Start", "Cargando", SubResource("AnimationNodeStateMachineTransition_x74g0"), "Rayo", "Cargando", SubResource("AnimationNodeStateMachineTransition_ia1d2")]
 graph_offset = Vector2(-69, 1)
 
-[node name="Rayo" type="StaticBody2D"]
+[node name="Rayo" type="Area2D"]
 position = Vector2(402.686, 173.725)
 scale = Vector2(10, 10)
+collision_layer = 0
 script = ExtResource("1_ya6ae")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -146,6 +147,10 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6v03e")
+}
 tree_root = SubResource("AnimationNodeStateMachine_nq0mc")
 anim_player = NodePath("../AnimationPlayer")
-active = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

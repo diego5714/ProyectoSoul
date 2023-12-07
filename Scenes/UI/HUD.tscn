@@ -145,10 +145,10 @@ offset_bottom = 65.0
 texture = SubResource("AtlasTexture_xyaa3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/HBoxContainer/Personajes"]
-autoplay = "Box"
 libraries = {
 "": SubResource("AnimationLibrary_rjbnq")
 }
+autoplay = "Box"
 
 [node name="Vida" type="HBoxContainer" parent="PanelContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 50)
