@@ -52,14 +52,19 @@ func _on_retry_pressed():
 	%Retry_Animations.play("Pushed")
 	Click_Animation = true
 	await %Retry_Animations.animation_finished
-	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
+	
 	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scenes/UI/Split_Camera.tscn")
 	
 func _on_menu_pressed():
 	%Click_Sound.play()
 	%Menu_Animations.play("Pushed")
 	Click_Animation = true
 	await %Menu_Animations.animation_finished
+	
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
+	
 	
 func _on_exit_pressed():
 	%Click_Sound.play()

@@ -172,17 +172,17 @@ region_filter_clip_enabled = true
 shape = SubResource("CircleShape2D_idocs")
 
 [node name="Sprite_Animation" type="AnimationPlayer" parent="."]
-autoplay = "Shine"
-speed_scale = 2.0
 libraries = {
 "": SubResource("AnimationLibrary_ppqum")
 }
+autoplay = "Shine"
+speed_scale = 2.0
 
 [node name="Position_Animation" type="AnimationPlayer" parent="."]
-autoplay = "wobble"
 libraries = {
 "": SubResource("AnimationLibrary_fo7e3")
 }
+autoplay = "wobble"
 
 [node name="SFX" type="Node" parent="."]
 
