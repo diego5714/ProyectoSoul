@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://i8ovm8evus1h"]
 
-[ext_resource type="Script" path="res://Scripts/Puente_Madera.gd" id="1_yrk3b"]
+[ext_resource type="Script" path="res://Scripts/Nivel_1/Puente_Madera.gd" id="1_yrk3b"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="2_66k2x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spu5l"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dsi445w7sbx3m"]
 
 [ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://Assets/Hostil/lightning.png" id="1_05qw7"]
-[ext_resource type="Script" path="res://Scripts/Rayo.gd" id="1_ya6ae"]
+[ext_resource type="Script" path="res://Scripts/Nivel_1/Rayo.gd" id="1_ya6ae"]
 [ext_resource type="AudioStream" uid="uid://6iah6luw77vp" path="res://Assets/Sounds/lightning_short.wav" id="3_px6r7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_saa7j"]

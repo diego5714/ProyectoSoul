@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Props/Kill_Zone.tscn" id="13_qe46u"]
 [ext_resource type="Script" path="res://Nuevo/PuenteNodo.gd" id="14_lvahe"]
 [ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Props/Puente_Fuego.tscn" id="15_conb1"]
-[ext_resource type="Script" path="res://Scripts/Peligro_Nivel1.gd" id="17_ml85g"]
+[ext_resource type="Script" path="res://Scripts/Nivel_1/Peligro_Nivel1.gd" id="17_ml85g"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Letrero.tscn" id="17_thwrl"]
 [ext_resource type="AudioStream" uid="uid://dt7wbmmmq0sqh" path="res://Assets/Sounds/Peligro.wav" id="18_0c2yn"]
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="19_bk71k"]
