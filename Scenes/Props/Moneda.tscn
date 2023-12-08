@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://et3vl3tt3hpg"]
 
-[ext_resource type="Script" path="res://Scripts/Moneda.gd" id="1_23jb0"]
+[ext_resource type="Script" path="res://Scripts/Common_Props/Moneda.gd" id="1_23jb0"]
 [ext_resource type="Texture2D" uid="uid://v24ajyrmkkbf" path="res://Assets/Objetos/coin_gold.png" id="1_cvqgw"]
 [ext_resource type="AudioStream" uid="uid://coab64fagrk5q" path="res://Sound/COLORALPHA 50 Menu Interface SFX/MP3/MI_SFX 05.mp3" id="3_2qg2r"]
 

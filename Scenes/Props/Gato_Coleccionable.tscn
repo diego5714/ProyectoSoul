@@ -1,6 +1,6 @@
 [gd_scene load_steps=46 format=3 uid="uid://bbuerjqx44ywr"]
 
-[ext_resource type="Script" path="res://Scripts/Coleccionable.gd" id="1_dvv7s"]
+[ext_resource type="Script" path="res://Scripts/Common_Props/Coleccionable.gd" id="1_dvv7s"]
 [ext_resource type="Texture2D" uid="uid://e4r14if7gj6s" path="res://Assets/Gato_Coleccionable/1.png" id="1_xhrxt"]
 [ext_resource type="Texture2D" uid="uid://bxuhkwmo0rwsv" path="res://Assets/Gato_Coleccionable/2.png" id="2_d2ji1"]
 [ext_resource type="Texture2D" uid="uid://bufxuu2esof3o" path="res://Assets/Gato_Coleccionable/3.png" id="3_3s3ea"]
