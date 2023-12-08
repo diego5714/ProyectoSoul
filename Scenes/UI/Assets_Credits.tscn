@@ -254,7 +254,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/margin_left = 80
 theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 60
+theme_override_constants/margin_right = 80
 theme_override_constants/margin_bottom = 160
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/PanelContainer/Margen_Scroll"]
