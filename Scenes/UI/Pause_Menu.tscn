@@ -1,7 +1,7 @@
 [gd_scene load_steps=93 format=3 uid="uid://40kqhvq10ryq"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_33b7b"]
-[ext_resource type="Script" path="res://Scripts/UI/Pause_Menu.gd" id="2_3cu0c"]
+[ext_resource type="Script" path="res://Scripts/UI/Pause_Menu.gd" id="2_txr7v"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="4_ihdjf"]
 [ext_resource type="Texture2D" uid="uid://d4iw0p8b7802i" path="res://Resources/Botones/Main_Button/Main_Button_Default.tres" id="5_ynyn1"]
 [ext_resource type="Texture2D" uid="uid://dcuwq54eetgts" path="res://Resources/Botones/Main_Button/Selected/Main_Button_Selected_1.tres" id="6_1l2ci"]
@@ -863,7 +863,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_33b7b")
-script = ExtResource("2_3cu0c")
+script = ExtResource("2_txr7v")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2

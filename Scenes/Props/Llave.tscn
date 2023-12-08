@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cal8ytqtr2hyq"]
 
-[ext_resource type="Script" path="res://Scripts/Common_Props/Llave.gd" id="1_cjv6o"]
+[ext_resource type="Script" path="res://Scripts/Common_Props/Llave.gd" id="1_ksfer"]
 [ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objetos/key.png" id="2_j7b5f"]
 [ext_resource type="AudioStream" uid="uid://coab64fagrk5q" path="res://Sound/COLORALPHA 50 Menu Interface SFX/MP3/MI_SFX 05.mp3" id="3_6xakg"]
 [ext_resource type="AudioStream" uid="uid://b7ueiysuogty3" path="res://Sound/Custom Sounds/Doors, Hardware, Handle, Movement SND25099.wav" id="4_84ha1"]
@@ -161,7 +161,7 @@ _data = {
 position = Vector2(0, -1.43885)
 collision_layer = 192
 collision_mask = 33
-script = ExtResource("1_cjv6o")
+script = ExtResource("1_ksfer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_j7b5f")

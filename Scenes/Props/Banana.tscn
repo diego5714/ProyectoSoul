@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://btno6hq1dhnnb"]
 
-[ext_resource type="Script" path="res://Scripts/Common_Props/Banana.gd" id="1_8ute5"]
+[ext_resource type="Script" path="res://Scripts/Common_Props/Banana.gd" id="1_4xutd"]
 [ext_resource type="Texture2D" uid="uid://c0arn8vcbcwyo" path="res://Assets/Objetos/banana_custom.png" id="2_1onqg"]
 
 [node name="Platano0" type="RigidBody2D"]
-script = ExtResource("1_8ute5")
+script = ExtResource("1_4xutd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)

@@ -7,7 +7,7 @@
 [ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/Inverted_Player_B.tres" id="5_snn2j"]
 [ext_resource type="Shader" path="res://Resources/Inverted_Ghost.gdshader" id="5_yoi4q"]
 [ext_resource type="AudioStream" uid="uid://cj1grhwf6777h" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 36.wav" id="6_55k0d"]
-[ext_resource type="Script" path="res://Scripts/Misc/SFX.gd" id="7_cpa4p"]
+[ext_resource type="Script" path="res://Scripts/Misc/SFX.gd" id="8_gvrxx"]
 [ext_resource type="AudioStream" uid="uid://deisxx0kjhvl" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Dance_(Battle).wav" id="9_v7gf5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xf7j7"]
@@ -51,7 +51,7 @@ wait_time = 5.0
 
 [node name="Colliding_Sound" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("6_55k0d")
-script = ExtResource("7_cpa4p")
+script = ExtResource("8_gvrxx")
 
 [node name="Music(Provisorio)" type="Node" parent="."]
 

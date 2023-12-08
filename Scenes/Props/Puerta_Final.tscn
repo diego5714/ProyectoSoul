@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://67mjdtvcms5r"]
 
-[ext_resource type="Script" path="res://Scripts/Common_Props/Puerta_Final.gd" id="1_rtrci"]
+[ext_resource type="Script" path="res://Scripts/Common_Props/Puerta_Final.gd" id="1_3p180"]
 [ext_resource type="Texture2D" uid="uid://bsj3pw2k58uqi" path="res://icon.svg" id="2_iniw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbd2h"]
@@ -9,7 +9,7 @@ size = Vector2(119, 121)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6bt6"]
 
 [node name="Puerta" type="Node2D"]
-script = ExtResource("1_rtrci")
+script = ExtResource("1_3p180")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
