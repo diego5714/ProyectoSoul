@@ -50,7 +50,7 @@ func _on_boton_L1_pressed():
 	await %Boton_L1_Animations.animation_finished
 	
 	Variables.NivelCargado = Nivel_1
-	Variables.MaxDepth = 1150
+	Variables.MaxDepth = 2000
 	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
 	
 	get_tree().change_scene_to_packed(Main)
@@ -62,7 +62,7 @@ func _on_boton_L2_pressed():
 	await %Boton_L2_Animations.animation_finished
 	
 	Variables.NivelCargado = Nivel_2
-	Variables.MaxDepth = 1450
+	Variables.MaxDepth = 2000
 	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
 	get_tree().change_scene_to_packed(Main)
 	
