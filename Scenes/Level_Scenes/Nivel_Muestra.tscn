@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://i58bqr5sxwu6"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_k3keu"]
-[ext_resource type="Script" path="res://Scripts/Nivel_Muestra.gd" id="1_s5ak1"]
+[ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_Muestra.gd" id="1_s5ak1"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="2_h73se"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Puerta_Final.tscn" id="3_k5gsj"]
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Props/Kill_Zone.tscn" id="3_nei6c"]

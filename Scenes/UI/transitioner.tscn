@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dh1ye75r4ftd1"]
 
-[ext_resource type="Script" path="res://Scripts/transitioner.gd" id="1_sqrn2"]
+[ext_resource type="Script" path="res://Scripts/Transiciones/transitioner.gd" id="1_ax8qt"]
 
 [sub_resource type="Animation" id="Animation_5j6rt"]
 length = 0.001
@@ -65,7 +65,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sqrn2")
+script = ExtResource("1_ax8qt")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 process_mode = 4

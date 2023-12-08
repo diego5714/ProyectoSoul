@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_0r8q5"]
-[ext_resource type="Script" path="res://Scripts/Nivel_2.gd" id="1_6m4ei"]
+[ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_2.gd" id="1_6m4ei"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="2_f277d"]
 [ext_resource type="PackedScene" uid="uid://bbuerjqx44ywr" path="res://Scenes/Props/Gato_Coleccionable.tscn" id="4_qbctn"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Puerta_Final.tscn" id="5_5u8xv"]

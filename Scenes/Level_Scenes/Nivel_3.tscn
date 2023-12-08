@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://br2371s73ycec"]
 
-[ext_resource type="Script" path="res://Scripts/Nivel_3.gd" id="1_8srri"]
+[ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_3.gd" id="1_8srri"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_yt65w"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="2_fhfmg"]
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Props/Llave.tscn" id="3_tc0gc"]

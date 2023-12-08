@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="ProyectoSoul"
-run/main_scene="res://Scenes/UI/logo inicial.tscn"
+run/main_scene="res://Scenes/UI/Logo_Inicial.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.png"
 
 [autoload]
 
-Variables="*res://Scripts/Variables.gd"
-Debug="*res://Scripts/Debug.gd"
+Variables="*res://Scripts/Misc/Variables.gd"
+Debug="*res://Scripts/Misc/Debug.gd"
 
 [display]
 
