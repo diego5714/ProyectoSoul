@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_0r8q5"]
-[ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_2.gd" id="1_6m4ei"]
+[ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_2.gd" id="1_8npgw"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="2_f277d"]
 [ext_resource type="PackedScene" uid="uid://bbuerjqx44ywr" path="res://Scenes/Props/Gato_Coleccionable.tscn" id="4_qbctn"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Puerta_Final.tscn" id="5_5u8xv"]
@@ -20,7 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://dt7wbmmmq0sqh" path="res://Assets/Sounds/Peligro.wav" id="18_0c2yn"]
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="19_bk71k"]
 [ext_resource type="Script" path="res://Scripts/Peligro.gd" id="19_tcej3"]
-[ext_resource type="Script" path="res://Scenes/Level_Scenes/Flowers_Level1.gd" id="21_88xn3"]
+[ext_resource type="Script" path="res://Scripts/Flowers_Level1.gd" id="21_88xn3"]
 [ext_resource type="PackedScene" uid="uid://bamgxhqof1nnw" path="res://Scenes/Props/flower_yellow.tscn" id="22_jl3n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tenop"]
@@ -30,7 +30,7 @@ size = Vector2(124.464, 662)
 size = Vector2(57.6, 20.8)
 
 [node name="Nivel" type="Node2D"]
-script = ExtResource("1_6m4ei")
+script = ExtResource("1_8npgw")
 
 [node name="TileMapNivel" type="TileMap" parent="."]
 z_index = -2
@@ -225,17 +225,14 @@ script = ExtResource("21_88xn3")
 
 [node name="Flower_Yellow" parent="Flowersss" instance=ExtResource("22_jl3n4")]
 position = Vector2(19.6, -0.800012)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flowersss"]
 visible = false
 position = Vector2(17, -0.399986)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5p1fi")
 
 [node name="Flower_Yellow2" parent="Flowersss" instance=ExtResource("22_jl3n4")]
 position = Vector2(10, -0.600012)
-scale = Vector2(1, 1)
 
 [node name="Flower_Yellow3" parent="Flowersss" instance=ExtResource("22_jl3n4")]
 position = Vector2(-0.6, -0.600012)
