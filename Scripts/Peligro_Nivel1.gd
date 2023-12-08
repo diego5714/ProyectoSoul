@@ -1,12 +1,19 @@
 extends Area2D
 
-@onready var Peligro_sound = $AudioStreamPlayer
+@onready var peligro = $Peligro
+
 
 
 
 func _on_body_entered(body):
 	if (body.get_name() == "Player"):
 		Debug.dprint("Warning ahora no permitida")
-		#Peligro_sound.play()
+		peligro.play()
+		
+
 	
 	
+
+
+func _on_body_exited(body):
+	peligro.stop()

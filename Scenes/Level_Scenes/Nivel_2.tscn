@@ -1,9 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://cw0yn1tnj1e5g"]
+[gd_scene load_steps=25 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_0r8q5"]
 [ext_resource type="Script" path="res://Scripts/Nivel_2.gd" id="1_6m4ei"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="2_f277d"]
-[ext_resource type="PackedScene" uid="uid://b3g45kyc22pr3" path="res://Scenes/Entities/Template_Enemy.tscn" id="3_qqdcy"]
 [ext_resource type="PackedScene" uid="uid://bbuerjqx44ywr" path="res://Scenes/Props/Gato_Coleccionable.tscn" id="4_qbctn"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Puerta_Final.tscn" id="5_5u8xv"]
 [ext_resource type="Script" path="res://Scripts/Nodo_Rayos.gd" id="6_dbaxn"]
@@ -16,13 +15,19 @@
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Props/Kill_Zone.tscn" id="13_qe46u"]
 [ext_resource type="Script" path="res://Nuevo/PuenteNodo.gd" id="14_lvahe"]
 [ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Props/Puente_Fuego.tscn" id="15_conb1"]
-[ext_resource type="PackedScene" uid="uid://8ptk2qmg54e1" path="res://Scenes/Props/Slime.tscn" id="16_gdk6q"]
 [ext_resource type="Script" path="res://Scripts/Peligro_Nivel1.gd" id="17_ml85g"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Letrero.tscn" id="17_thwrl"]
+[ext_resource type="AudioStream" uid="uid://dt7wbmmmq0sqh" path="res://Assets/Sounds/Peligro.wav" id="18_0c2yn"]
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="19_bk71k"]
+[ext_resource type="Script" path="res://Scripts/Peligro.gd" id="19_tcej3"]
+[ext_resource type="Script" path="res://Scenes/Level_Scenes/Flowers_Level1.gd" id="21_88xn3"]
+[ext_resource type="PackedScene" uid="uid://bamgxhqof1nnw" path="res://Scenes/Props/flower_yellow.tscn" id="22_jl3n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tenop"]
 size = Vector2(124.464, 662)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p1fi"]
+size = Vector2(57.6, 20.8)
 
 [node name="Nivel" type="Node2D"]
 script = ExtResource("1_6m4ei")
@@ -47,10 +52,6 @@ gizmo_extents = 42.0
 [node name="Pos_Inicial_B" type="Marker2D" parent="."]
 position = Vector2(3875, 1046)
 gizmo_extents = 42.0
-
-[node name="Enemy" parent="." instance=ExtResource("3_qqdcy")]
-position = Vector2(1106, 332)
-scale = Vector2(1.3, 1.3)
 
 [node name="Elementos" type="Node2D" parent="."]
 
@@ -205,22 +206,39 @@ position = Vector2(1820, 851)
 scale = Vector2(9.32, 1)
 shape = SubResource("RectangleShape2D_tenop")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Elementos/Peligro"]
+[node name="Peligro" type="AudioStreamPlayer" parent="Elementos/Peligro"]
+stream = ExtResource("18_0c2yn")
+script = ExtResource("19_tcej3")
 
 [node name="KillZone" parent="." instance=ExtResource("13_qe46u")]
 position = Vector2(0, 1230)
 
-[node name="Sliime2" parent="." instance=ExtResource("16_gdk6q")]
-position = Vector2(-1096, 1056)
-scale = Vector2(4, 4)
-
-[node name="Sliime" parent="." instance=ExtResource("16_gdk6q")]
-position = Vector2(-608, 1056)
-scale = Vector2(4, 4)
-
 [node name="transiciones" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("19_bk71k")]
+
+[node name="Flowersss" type="Area2D" parent="."]
+position = Vector2(3178, 1043)
+scale = Vector2(5, 5)
+script = ExtResource("21_88xn3")
+
+[node name="Flower_Yellow" parent="Flowersss" instance=ExtResource("22_jl3n4")]
+position = Vector2(19.6, -0.800012)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flowersss"]
+visible = false
+position = Vector2(17, -0.399986)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_5p1fi")
+
+[node name="Flower_Yellow2" parent="Flowersss" instance=ExtResource("22_jl3n4")]
+position = Vector2(10, -0.600012)
+scale = Vector2(1, 1)
+
+[node name="Flower_Yellow3" parent="Flowersss" instance=ExtResource("22_jl3n4")]
+position = Vector2(-0.6, -0.600012)
 
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Elementos/Botones/Button" to="Elementos/Botones/Button" method="_on_body_entered"]
@@ -228,8 +246,12 @@ scale = Vector2(4, 4)
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Puente2" method="_on_button_button_pushed"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Puente2/Puente" method="_on_button_button_pushed"]
 [connection signal="body_entered" from="Elementos/Peligro" to="Elementos/Peligro" method="_on_body_entered"]
+[connection signal="body_exited" from="Elementos/Peligro" to="Elementos/Peligro" method="_on_body_exited"]
+[connection signal="finished" from="Elementos/Peligro/Peligro" to="Elementos/Peligro/Peligro" method="_on_finished"]
 [connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
+[connection signal="body_entered" from="Flowersss" to="Flowersss" method="_on_body_entered"]
+[connection signal="grown_now" from="Flowersss" to="Flowersss/Flower_Yellow" method="_on_flowersss_grown_now"]
+[connection signal="grown_now" from="Flowersss" to="Flowersss/Flower_Yellow2" method="_on_flowersss_grown_now"]
+[connection signal="grown_now" from="Flowersss" to="Flowersss/Flower_Yellow3" method="_on_flowersss_grown_now"]
 
-[editable path="Elementos/Botones/Button"]
 [editable path="Elementos/Escenario/Lava"]
-[editable path="Sliime2"]

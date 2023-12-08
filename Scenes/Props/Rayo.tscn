@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsi445w7sbx3m"]
+[gd_scene load_steps=16 format=3 uid="uid://dsi445w7sbx3m"]
 
 [ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://Assets/Hostil/lightning.png" id="1_05qw7"]
 [ext_resource type="Script" path="res://Scripts/Rayo.gd" id="1_ya6ae"]
+[ext_resource type="AudioStream" uid="uid://6iah6luw77vp" path="res://Assets/Sounds/lightning_short.wav" id="3_px6r7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_saa7j"]
 size = Vector2(20, 1)
@@ -88,6 +89,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(20, 1), Vector2(20, 60), Vector2(20, 96), Vector2(20, 60), Vector2(20, 30), Vector2(1, 1), Vector2(1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lightning:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_wvnwa"]
 resource_name = "vacio"
@@ -147,10 +160,16 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 libraries = {
 "": SubResource("AnimationLibrary_6v03e")
 }
 tree_root = SubResource("AnimationNodeStateMachine_nq0mc")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="Lightning" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_px6r7")
+volume_db = -1.051
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
