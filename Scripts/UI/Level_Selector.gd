@@ -3,12 +3,10 @@ extends Control
 @export var Tutorial: PackedScene = preload("res://Scenes/Level_Scenes/Tutorial.tscn")
 @export var Nivel_1: PackedScene = preload("res://Scenes/Level_Scenes/Nivel_1.tscn")
 @export var Nivel_2: PackedScene = preload("res://Scenes/Level_Scenes/Nivel_2.tscn")
-@export var Nivel_3: PackedScene = preload("res://Scenes/Level_Scenes/Nivel_Muestra.tscn")
 
 @onready var Boton_Tutorial := %Boton_Tutorial
 @onready var Boton_L1 := %Boton_L1
 @onready var Boton_L2 := %Boton_L2
-@onready var Boton_L3 := %Boton_L3
 @onready var Back := %Back
 var Click_Animation: bool = false
 
@@ -27,11 +25,6 @@ func _ready():
 	Boton_L2.mouse_entered.connect(_on_boton_L2_mouse_entered)
 	Boton_L2.mouse_exited.connect(_on_boton_L2_mouse_exited)
 	%Boton_L2_Animations.play("RESET")
-	
-	Boton_L3.pressed.connect(_on_boton_L3_pressed)
-	Boton_L3.mouse_entered.connect(_on_boton_L3_mouse_entered)
-	Boton_L3.mouse_exited.connect(_on_boton_L3_mouse_exited)
-	%Boton_L3_Animations.play("RESET")
 	
 	Back.pressed.connect(_on_back_pressed)
 	Back.mouse_entered.connect(_on_back_mouse_entered)
@@ -70,17 +63,6 @@ func _on_boton_L2_pressed():
 	
 	Variables.NivelCargado = Nivel_2
 	Variables.MaxDepth = 1450
-	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
-	get_tree().change_scene_to_packed(Main)
-	
-func _on_boton_L3_pressed():
-	%Click_Sound.play()
-	%Boton_L3_Animations.play("Pushed")
-	Click_Animation = true
-	await %Boton_L3_Animations.animation_finished
-	
-	Variables.NivelCargado = Nivel_3
-	Variables.MaxDepth = 1200
 	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
 	get_tree().change_scene_to_packed(Main)
 	
@@ -135,11 +117,3 @@ func _on_boton_L2_mouse_exited():
 		%Boton_L2_Animations.play("RESET")
 
 ################################################################################
-
-func _on_boton_L3_mouse_entered():
-	if not Click_Animation:
-		%Boton_L3_Animations.play("Hover")
-
-func _on_boton_L3_mouse_exited():
-	if not Click_Animation:
-		%Boton_L3_Animations.play("RESET")

@@ -1,6 +1,6 @@
 extends Control
 
-@onready var Back := $MarginContainer/PanelContainer/MarginContainer/Back
+@onready var Back := $MarginContainer/PanelContainer/Margen_Back/Back
 var Click_Animation: bool = false
 
 func _ready():
