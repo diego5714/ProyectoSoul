@@ -14,7 +14,7 @@ func no_collisions(estado: bool):
 	plataforma_2.set_collision_mask_value(1, not estado)
 
 func _ready():
-	boton.button_pushed.connect(_on_boton_entered)
+	boton.button_pressed.connect(_on_boton_entered)
 	no_collisions(false)
 	
 func _on_boton_entered():

@@ -416,6 +416,17 @@ theme_override_font_sizes/font_size = 40
 text = "25 Spinning planets - Helianthus Games"
 vertical_alignment = 1
 
+[node name="MarginContainer15" type="MarginContainer" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer/MarginContainer15"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "1-bit keyboard/gamepad button icons - ansdor"
+vertical_alignment = 1
+
 [node name="Margen_Back" type="MarginContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4

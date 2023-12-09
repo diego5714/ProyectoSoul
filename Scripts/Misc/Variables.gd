@@ -11,10 +11,14 @@ var Muerte: bool = false
 var NivelCargado: PackedScene
 var MaxDepth: int
 
-var Ganaste = false
+var Ganaste: bool = false
 var Fuerza_Platano: Vector2
 
 var Llaves_Recogidas: int = 0
 
 var Monedas: int = 0
 var Coleccionables: int = 0
+
+var current_tutorial_text: int = 0
+var Textos_Tutorial: Array = []
+
