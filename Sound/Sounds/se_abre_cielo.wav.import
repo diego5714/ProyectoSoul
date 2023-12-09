@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bj3ldgc8we650"
-path="res://.godot/imported/se_abre_cielo.wav-1cc515b5b05a0f788bb7cc4206e00c46.sample"
+path="res://.godot/imported/se_abre_cielo.wav-8c3753d775666705667fa7bc46d45fb3.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/se_abre_cielo.wav"
-dest_files=["res://.godot/imported/se_abre_cielo.wav-1cc515b5b05a0f788bb7cc4206e00c46.sample"]
+source_file="res://Sound/Sounds/se_abre_cielo.wav"
+dest_files=["res://.godot/imported/se_abre_cielo.wav-8c3753d775666705667fa7bc46d45fb3.sample"]
 
 [params]
 

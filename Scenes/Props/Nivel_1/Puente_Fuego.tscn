@@ -1,19 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://ca1f5q7fwrbxa"]
+[gd_scene load_steps=5 format=3 uid="uid://ca1f5q7fwrbxa"]
 
-[ext_resource type="Script" path="res://Scripts/Nivel_1/Puente_Madera.gd" id="1_k1tr6"]
+[ext_resource type="Script" path="res://Scripts/Nivel_1/Puente_Fuego.gd" id="1_6y66m"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_w2ovv"]
 [ext_resource type="PackedScene" uid="uid://ouycwvqua3g3" path="res://Scenes/Props/Nivel_1/Llama.tscn" id="3_dwend"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spu5l"]
 size = Vector2(20, 10)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2681b"]
-size = Vector2(408, 220)
-
 [node name="Puente" type="StaticBody2D"]
-collision_layer = 11
-collision_mask = 11
-script = ExtResource("1_k1tr6")
+collision_layer = 6
+script = ExtResource("1_6y66m")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(2, 2)
@@ -27,34 +23,13 @@ position = Vector2(0, 16.8)
 scale = Vector2(20.76, 3.04)
 shape = SubResource("RectangleShape2D_spu5l")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-184, -32)
+[node name="Llamas" type="Node2D" parent="."]
 scale = Vector2(2, 2)
 
-[node name="Area2D" parent="Node2D" instance=ExtResource("3_dwend")]
+[node name="Llama_1" parent="Llamas" instance=ExtResource("3_dwend")]
+position = Vector2(42, -48)
+scale = Vector2(3, 3)
 
-[node name="Area2D2" parent="Node2D" instance=ExtResource("3_dwend")]
-position = Vector2(29.5, 0)
-
-[node name="Area2D3" parent="Node2D" instance=ExtResource("3_dwend")]
-position = Vector2(60, 0)
-
-[node name="Area2D4" parent="Node2D" instance=ExtResource("3_dwend")]
-position = Vector2(92, 0)
-
-[node name="Area2D5" parent="Node2D" instance=ExtResource("3_dwend")]
-position = Vector2(124, 0)
-
-[node name="Area2D6" parent="Node2D" instance=ExtResource("3_dwend")]
-position = Vector2(184, 0)
-
-[node name="Area2D7" parent="Node2D" instance=ExtResource("3_dwend")]
-position = Vector2(156, 0)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 11
-collision_mask = 11
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, -94)
-shape = SubResource("RectangleShape2D_2681b")
+[node name="Llama_2" parent="Llamas" instance=ExtResource("3_dwend")]
+position = Vector2(-42, -48)
+scale = Vector2(3, 3)

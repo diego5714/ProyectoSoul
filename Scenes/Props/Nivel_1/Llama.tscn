@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://ouycwvqua3g3"]
+[gd_scene load_steps=7 format=3 uid="uid://ouycwvqua3g3"]
 
-[ext_resource type="Script" path="res://Scripts/Llama.gd" id="1_7h585"]
 [ext_resource type="Texture2D" uid="uid://bomf53pgt1ry3" path="res://Assets/Hostil/fire_big.png" id="1_a5tg4"]
+[ext_resource type="Script" path="res://Scripts/Nivel_1/Llama.gd" id="1_uh570"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_envxf"]
-size = Vector2(20, 16)
+size = Vector2(22, 27)
 
 [sub_resource type="Animation" id="Animation_h3gqp"]
 resource_name = "Idle"
-loop_mode = 2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -67,13 +67,12 @@ _data = {
 "RESET": SubResource("Animation_pmurb")
 }
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_4yrxp"]
-
-[node name="Area2D" type="Area2D"]
-script = ExtResource("1_7h585")
+[node name="Llama" type="Area2D"]
+collision_layer = 128
+script = ExtResource("1_uh570")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(1, 2.5)
 shape = SubResource("RectangleShape2D_envxf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -82,10 +81,10 @@ hframes = 6
 region_filter_clip_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+callback_mode_process = 0
 libraries = {
 "": SubResource("AnimationLibrary_u7mys")
 }
+autoplay = "Idle"
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_4yrxp")
-anim_player = NodePath("../AnimationPlayer")
+[node name="Timer" type="Timer" parent="."]

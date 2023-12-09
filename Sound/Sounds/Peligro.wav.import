@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://d1www7ypuylfg"
-path="res://.godot/imported/fire.wav-84f2880ff8b72204edf49c0627b23816.sample"
+uid="uid://dt7wbmmmq0sqh"
+path="res://.godot/imported/Peligro.wav-cbc808b981d02a0cb69baf6cdb78b9fe.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/fire.wav"
-dest_files=["res://.godot/imported/fire.wav-84f2880ff8b72204edf49c0627b23816.sample"]
+source_file="res://Sound/Sounds/Peligro.wav"
+dest_files=["res://.godot/imported/Peligro.wav-cbc808b981d02a0cb69baf6cdb78b9fe.sample"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dijadyjknst2l"
-path="res://.godot/imported/lightning.wav-0c79746e61bfbd3e703c768ad9b1f4a8.sample"
+uid="uid://d1www7ypuylfg"
+path="res://.godot/imported/fire.wav-62934c5e7b2d910e6b25b2a1e82cd5d7.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/lightning.wav"
-dest_files=["res://.godot/imported/lightning.wav-0c79746e61bfbd3e703c768ad9b1f4a8.sample"]
+source_file="res://Sound/Sounds/fire.wav"
+dest_files=["res://.godot/imported/fire.wav-62934c5e7b2d910e6b25b2a1e82cd5d7.sample"]
 
 [params]
 

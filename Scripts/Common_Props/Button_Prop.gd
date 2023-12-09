@@ -1,6 +1,6 @@
 extends Area2D
 
-signal button_pushed
+signal button_pressed
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var click_sound = $AudioStreamPlayer2D
@@ -15,6 +15,7 @@ func _on_body_entered(body):
 	
 	if body.get_name() == "Player":
 		Debug.dprint("boton")
-		emit_signal("button_pushed")
 		click_sound.play()
 		animation_player.play("Push")
+		await animation_player.animation_finished
+		button_pressed.emit()
