@@ -9,3 +9,11 @@ func _on_body_entered(body):
 
 func _on_body_exited(_body):
 	peligro.stop()
+
+
+func _on_button_2b_button_pushed():
+	queue_free()
+
+
+func _on_button_3a_button_pushed():
+	queue_free()

@@ -16,5 +16,5 @@ func _on_body_entered(body):
 	if body.get_name() == "Player":
 		Debug.dprint("boton")
 		emit_signal("button_pushed")
-		$AudioStreamPlayer2D.play()
+		click_sound.play()
 		animation_player.play("Push")
