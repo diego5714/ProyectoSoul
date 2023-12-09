@@ -22,6 +22,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [Vector2i(2, 0), Vector2i(2, 0), Vector2i(4, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05)]
+}
 
 [sub_resource type="Animation" id="Animation_owa43"]
 length = 0.001
@@ -61,6 +73,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(20, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
 
 [sub_resource type="Animation" id="Animation_qu5t2"]
 resource_name = "Rayo"
@@ -87,7 +111,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(20, 1), Vector2(20, 60), Vector2(20, 96), Vector2(20, 60), Vector2(20, 30), Vector2(1, 1), Vector2(1, 1)]
+"values": [Vector2(20, 1), Vector2(20, 60), Vector2(20, 96), Vector2(20, 60), Vector2(20, 30), Vector2(0, 0), Vector2(0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -100,6 +124,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_wvnwa"]
@@ -140,12 +176,12 @@ transitions = ["Cargando", "Rayo", SubResource("AnimationNodeStateMachineTransit
 graph_offset = Vector2(-69, 1)
 
 [node name="Rayo" type="Area2D"]
-position = Vector2(402.686, 173.725)
 scale = Vector2(10, 10)
 collision_layer = 0
 script = ExtResource("1_ya6ae")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_saa7j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -171,5 +207,3 @@ anim_player = NodePath("../AnimationPlayer")
 stream = ExtResource("3_px6r7")
 volume_db = -1.051
 autoplay = true
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

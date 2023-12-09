@@ -114,6 +114,8 @@ func _ready():
 
 	A.player.set_position(pos_inicial_a.position)
 	B.player.set_position(pos_inicial_b.position)
+	
+	current_cp = pos_inicial_a.get_global_position()
 
 	A.get_cursor().visible = true
 	B.get_cursor().visible = false
@@ -254,10 +256,13 @@ func _on_sync_killed():
 	Pair_Animations.play("Dying")
 	await Pair_Animations.animation_finished
 	
-	Pair_Animations.play("RESET")
+	#Pair_Animations.play("RESET")
 	
 	A.animation_tree.set_deferred("active", true)
 	B.animation_tree.set_deferred("active", true)
+	
+	A.velocity_to_zero("x,y")
+	B.velocity_to_zero("x,y")
 	
 	A.player.position = current_cp
 	B.player.position = Vector2(-1, 1) * current_cp
@@ -277,17 +282,19 @@ func _on_async_killed():
 	Pair_Animations.play("Dying")
 	await Pair_Animations.animation_finished
 	
-	Pair_Animations.play("RESET")
+	#Pair_Animations.play("RESET")
 	
 	A.animation_tree.set_deferred("active", true)
 	B.animation_tree.set_deferred("active", true)
 	
 	if selected_a:
 		A.toggle_ghost(false)
+		A.velocity_to_zero("x,y")
 		A.player.position = current_cp
 	
 	else:
 		B.toggle_ghost(false)
+		B.velocity_to_zero("x,y")
 		B.player.position = Vector2(-1, 1) * current_cp
 	
 	timer.stop()

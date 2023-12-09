@@ -18,14 +18,3 @@ func _on_body_entered(body):
 	if body.get_name() == "Player":
 		Debug.dprint("damage")
 		print("damage")
-#func _ready() -> void:
-	##$CollisionShape2D.set_deferred("disabled",true)
-	#animation_tree.active = true
-	#
-	#
-#
-#func _on_body_entered(body):
-	#if (body.get_name()=="Player"):
-		#Debug.log("Damage")
-		#print("damage")
-	#

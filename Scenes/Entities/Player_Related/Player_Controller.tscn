@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dreksn2ytdiwd"]
+[gd_scene load_steps=17 format=3 uid="uid://dreksn2ytdiwd"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player_Controller_v2.gd" id="1_jimru"]
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="2_d5l4m"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://cj1grhwf6777h" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 36.wav" id="6_55k0d"]
 [ext_resource type="Texture2D" uid="uid://dvkkbtqm3chkm" path="res://Assets/1 Pink_Monster/Pink_Monster_Death_8.png" id="7_sty5v"]
 [ext_resource type="Script" path="res://Scripts/Misc/SFX.gd" id="8_gvrxx"]
+[ext_resource type="Texture2D" uid="uid://cvqndbddu7h13" path="res://Assets/1 Pink_Monster/Pink_Monster_Hurt_4.png" id="8_tbti8"]
 [ext_resource type="AudioStream" uid="uid://deisxx0kjhvl" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Dance_(Battle).wav" id="9_v7gf5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xf7j7"]
@@ -212,8 +213,108 @@ tracks/7/keys = {
 "values": [1]
 }
 
+[sub_resource type="Animation" id="Animation_jevto"]
+resource_name = "Damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_A/Player/Pivote/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_A/Player/Pivote/Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_tbti8"), ExtResource("8_tbti8")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_A/Player/Pivote/Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_A/Player/Pivote/Sprite2D:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player_B/Player/Pivote/Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player_B/Player/Pivote/Sprite2D:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_tbti8"), ExtResource("8_tbti8")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player_B/Player/Pivote/Sprite2D:hframes")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 4]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Player_B/Player/Pivote/Sprite2D:vframes")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4m4ut"]
 _data = {
+"Damage": SubResource("Animation_jevto"),
 "Dying": SubResource("Animation_ahvpw"),
 "RESET": SubResource("Animation_jbmqj")
 }

@@ -94,6 +94,10 @@ scale = Vector2(2, 2)
 position = Vector2(-768, 736)
 scale = Vector2(2, 2)
 
+[node name="Estacas3" parent="Elementos/Estacas" instance=ExtResource("8_55ae2")]
+position = Vector2(-4088, 1024)
+scale = Vector2(2, 2)
+
 [node name="Botones" type="Node2D" parent="Elementos"]
 
 [node name="Button" parent="Elementos/Botones" instance=ExtResource("9_cka3p")]
