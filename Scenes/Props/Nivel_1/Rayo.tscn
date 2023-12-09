@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsi445w7sbx3m"]
+[gd_scene load_steps=8 format=3 uid="uid://dsi445w7sbx3m"]
 
 [ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://Assets/Hostil/lightning.png" id="1_05qw7"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Rayo.gd" id="1_ya6ae"]
+[ext_resource type="AudioStream" uid="uid://6iah6luw77vp" path="res://Sound/Sounds/lightning_short.wav" id="3_dnllk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_saa7j"]
 size = Vector2(20, 97.7)
@@ -86,7 +87,6 @@ script = ExtResource("1_ya6ae")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.549999)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_saa7j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -103,4 +103,7 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 1.5
+
+[node name="Sonido_Rayo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dnllk")
+volume_db = -20.0

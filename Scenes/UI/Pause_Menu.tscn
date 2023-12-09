@@ -1,8 +1,9 @@
-[gd_scene load_steps=93 format=3 uid="uid://40kqhvq10ryq"]
+[gd_scene load_steps=94 format=3 uid="uid://40kqhvq10ryq"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_33b7b"]
 [ext_resource type="Script" path="res://Scripts/UI/Pause_Menu.gd" id="2_txr7v"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="4_ihdjf"]
+[ext_resource type="Texture2D" uid="uid://jrc7bge2rpss" path="res://Assets/Menu_Frame/Recuadro rosa.png" id="4_llxym"]
 [ext_resource type="Texture2D" uid="uid://d4iw0p8b7802i" path="res://Resources/Botones/Main_Button/Main_Button_Default.tres" id="5_ynyn1"]
 [ext_resource type="Texture2D" uid="uid://dcuwq54eetgts" path="res://Resources/Botones/Main_Button/Selected/Main_Button_Selected_1.tres" id="6_1l2ci"]
 [ext_resource type="Texture2D" uid="uid://j452avpir60k" path="res://Resources/Botones/Main_Button/Selected/Main_Button_Selected_2.tres" id="7_30r87"]
@@ -865,25 +866,41 @@ grow_vertical = 2
 theme = ExtResource("1_33b7b")
 script = ExtResource("2_txr7v")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("4_ihdjf")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
-custom_minimum_size = Vector2(500, 300)
+[node name="Panel" type="NinePatchRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(525, 600)
 layout_mode = 2
+theme = ExtResource("4_ihdjf")
+texture = ExtResource("4_llxym")
+patch_margin_left = 160
+patch_margin_top = 160
+patch_margin_right = 160
+patch_margin_bottom = 160
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/margin_top = 30
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Margen_Label" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -892,7 +909,7 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 30
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Label"]
 layout_mode = 2
 theme = ExtResource("4_ihdjf")
 theme_override_colors/font_color = Color(0.298039, 0, 0.360784, 1)
@@ -901,13 +918,13 @@ text = "Pause"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Margen_Resume" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Margen_Resume" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Resume" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Resume"]
+[node name="Resume" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Resume"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -921,7 +938,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_c3dp6")
 text = "
 "
 
-[node name="Resume_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Resume/Resume"]
+[node name="Resume_Texture" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Resume/Resume"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 15
@@ -932,7 +949,7 @@ grow_vertical = 2
 texture = ExtResource("5_ynyn1")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Resume/Resume"]
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Resume/Resume"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -945,19 +962,19 @@ text = "Resume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Resume_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Resume/Resume"]
+[node name="Resume_Animations" type="AnimationPlayer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Resume/Resume"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_un0e0")
 }
 
-[node name="Margen_Retry" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Margen_Retry" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Retry" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Retry"]
+[node name="Retry" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Retry"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -973,7 +990,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_dqqjl")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_hjy1v")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ybj2t")
 
-[node name="Retry_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Retry/Retry"]
+[node name="Retry_Texture" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Retry/Retry"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 15
@@ -984,7 +1001,7 @@ grow_vertical = 2
 texture = ExtResource("32_h1lbp")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Retry/Retry"]
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Retry/Retry"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -997,19 +1014,19 @@ text = "Retry"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Retry_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Retry/Retry"]
+[node name="Retry_Animations" type="AnimationPlayer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Retry/Retry"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_c3rag")
 }
 
-[node name="Margen_Main_Menu" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Margen_Main_Menu" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Main_Menu" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Main_Menu"]
+[node name="Main_Menu" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Main_Menu"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -1024,7 +1041,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_bakw4")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ylhj6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o5eby")
 
-[node name="Menu_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Main_Menu/Main_Menu"]
+[node name="Menu_Texture" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Main_Menu/Main_Menu"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 15
@@ -1035,7 +1052,7 @@ grow_vertical = 2
 texture = ExtResource("32_h1lbp")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Main_Menu/Main_Menu"]
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Main_Menu/Main_Menu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1048,19 +1065,19 @@ text = "Level Select"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Menu_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Main_Menu/Main_Menu"]
+[node name="Menu_Animations" type="AnimationPlayer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Main_Menu/Main_Menu"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_2wr47")
 }
 
-[node name="Margen_Exit" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Margen_Exit" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Exit"]
+[node name="Exit" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Exit"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -1074,7 +1091,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_85fqp")
 text = "
 "
 
-[node name="Exit_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Exit/Exit"]
+[node name="Exit_Texture" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Exit/Exit"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 15
@@ -1085,7 +1102,7 @@ grow_vertical = 2
 texture = ExtResource("32_h1lbp")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Exit/Exit"]
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Exit/Exit"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1098,7 +1115,7 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exit_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/Margen_Exit/Exit"]
+[node name="Exit_Animations" type="AnimationPlayer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Margen_Exit/Exit"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_ijmk3")

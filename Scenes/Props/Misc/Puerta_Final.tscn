@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://67mjdtvcms5r"]
 
 [ext_resource type="Script" path="res://Scripts/Common_Props/Puerta_Final.gd" id="1_3p180"]
-[ext_resource type="Texture2D" uid="uid://bsj3pw2k58uqi" path="res://icon.svg" id="2_iniw4"]
+[ext_resource type="Texture2D" uid="uid://bqbvmsktnxh20" path="res://Assets/Puerta/Idle.png" id="2_4iaxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbd2h"]
 size = Vector2(119, 121)
@@ -14,7 +14,8 @@ script = ExtResource("1_3p180")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("2_iniw4")
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_4iaxo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-0.5, -0.5)

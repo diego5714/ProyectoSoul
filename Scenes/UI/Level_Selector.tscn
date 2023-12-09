@@ -872,7 +872,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="NinePatchRect" parent="Margen"]
-custom_minimum_size = Vector2(650, 650)
+custom_minimum_size = Vector2(650, 700)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

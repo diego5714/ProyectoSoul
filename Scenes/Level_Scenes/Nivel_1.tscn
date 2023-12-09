@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cw0yn1tnj1e5g"]
+[gd_scene load_steps=28 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_2.gd" id="1_fyobf"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_hnol0"]
@@ -9,17 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Misc/Puerta_Final.tscn" id="5_eqo63"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Rayo_area.gd" id="7_4145b"]
 [ext_resource type="PackedScene" uid="uid://dsi445w7sbx3m" path="res://Scenes/Props/Nivel_1/Rayo.tscn" id="7_bbgh0"]
-[ext_resource type="AudioStream" uid="uid://6iah6luw77vp" path="res://Sound/Sounds/lightning_short.wav" id="7_f7nfo"]
 [ext_resource type="PackedScene" uid="uid://ccqeeyt45lkt8" path="res://Scenes/Props/Misc/Prop_Estacas.tscn" id="8_55ae2"]
 [ext_resource type="PackedScene" uid="uid://f4jetvabtrk7" path="res://Scenes/Props/Misc/Button_Prop.tscn" id="9_cka3p"]
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Props/Misc/Llave.tscn" id="10_l1e0q"]
 [ext_resource type="PackedScene" uid="uid://dci0xlgx3obdr" path="res://Scenes/Props/Nivel_1/Lava.tscn" id="11_3p2a3"]
 [ext_resource type="PackedScene" uid="uid://et3vl3tt3hpg" path="res://Scenes/Props/Misc/Moneda.tscn" id="12_dfsxj"]
 [ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Props/Nivel_1/Puente_Fuego.tscn" id="14_8vc4t"]
+[ext_resource type="AudioStream" uid="uid://dt7wbmmmq0sqh" path="res://Sound/Sounds/Peligro.wav" id="15_7a4o6"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Misc/Letrero.tscn" id="15_eijmc"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Peligro_Nivel1.gd" id="16_tkuln"]
-[ext_resource type="AudioStream" path="res://Assets/Sounds/Peligro.wav" id="17_q85bb"]
-[ext_resource type="Script" path="res://Scripts/Peligro.gd" id="18_kexm1"]
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Props/Misc/Kill_Zone.tscn" id="19_skjxf"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Flowers_Level_1.gd" id="21_2xlyd"]
 [ext_resource type="AudioStream" uid="uid://e5xqwuu7uejc" path="res://Sound/Sonido_Flores_v3.wav" id="21_invyo"]
@@ -59,7 +57,7 @@ gizmo_extents = 42.0
 position = Vector2(2608, 1007)
 
 [node name="Puerta" parent="Elementos" instance=ExtResource("5_eqo63")]
-position = Vector2(0, 584)
+position = Vector2(0, 570)
 
 [node name="Timer" type="Timer" parent="Elementos/Puerta"]
 process_callback = 0
@@ -95,14 +93,6 @@ script = ExtResource("7_4145b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elementos/Rayos/Area_Sonido"]
 position = Vector2(2, 180.5)
 shape = SubResource("RectangleShape2D_838ql")
-
-[node name="Sonido_Rayos" type="AudioStreamPlayer" parent="Elementos/Rayos/Area_Sonido"]
-stream = ExtResource("7_f7nfo")
-volume_db = -10.0
-
-[node name="Timer" type="Timer" parent="Elementos/Rayos/Area_Sonido"]
-process_callback = 0
-wait_time = 1.5
 
 [node name="Estacas" type="Node2D" parent="Elementos"]
 
@@ -207,9 +197,11 @@ position = Vector2(1820, 851)
 scale = Vector2(9.32, 1)
 shape = SubResource("RectangleShape2D_tenop")
 
-[node name="Peligro" type="AudioStreamPlayer" parent="Elementos/Peligro"]
-stream = ExtResource("17_q85bb")
-script = ExtResource("18_kexm1")
+[node name="Timer" type="Timer" parent="Elementos/Peligro"]
+wait_time = 3.0
+
+[node name="Sonido_Peligro" type="AudioStreamPlayer" parent="Elementos/Peligro"]
+stream = ExtResource("15_7a4o6")
 
 [node name="Puente_Llamas" parent="Elementos" instance=ExtResource("14_8vc4t")]
 z_index = -1
@@ -267,7 +259,7 @@ script = ExtResource("22_bv01b")
 position = Vector2(-2464, 240)
 
 [node name="CP_2" parent="Check_Point_Manager" instance=ExtResource("22_d41cy")]
-position = Vector2(-1472, 648)
+position = Vector2(-632, 653)
 
 [node name="transiciones" type="CanvasLayer" parent="."]
 visible = false
@@ -275,7 +267,4 @@ visible = false
 [node name="Transitioner" parent="transiciones" instance=ExtResource("5_e0jri")]
 
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]
-[connection signal="body_entered" from="Elementos/Peligro" to="Elementos/Peligro" method="_on_body_entered"]
-[connection signal="body_exited" from="Elementos/Peligro" to="Elementos/Peligro" method="_on_body_exited"]
-[connection signal="finished" from="Elementos/Peligro/Peligro" to="Elementos/Peligro/Peligro" method="_on_finished"]
 [connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
