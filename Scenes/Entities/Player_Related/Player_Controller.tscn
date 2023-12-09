@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dreksn2ytdiwd"]
+[gd_scene load_steps=18 format=3 uid="uid://dreksn2ytdiwd"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player_Controller_v2.gd" id="1_jimru"]
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="2_d5l4m"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/Misc/SFX.gd" id="8_gvrxx"]
 [ext_resource type="Texture2D" uid="uid://cvqndbddu7h13" path="res://Assets/1 Pink_Monster/Pink_Monster_Hurt_4.png" id="8_tbti8"]
 [ext_resource type="AudioStream" uid="uid://deisxx0kjhvl" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Dance_(Battle).wav" id="9_v7gf5"]
+[ext_resource type="Script" path="res://Scripts/Player/Music.gd" id="12_o8x2k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xf7j7"]
 shader = ExtResource("5_yoi4q")
@@ -366,12 +367,11 @@ wait_time = 5.0
 stream = ExtResource("6_55k0d")
 script = ExtResource("8_gvrxx")
 
-[node name="Music(Provisorio)" type="Node" parent="."]
-
-[node name="Music" type="AudioStreamPlayer" parent="Music(Provisorio)"]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_v7gf5")
 volume_db = -8.48
 autoplay = true
+script = ExtResource("12_o8x2k")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 

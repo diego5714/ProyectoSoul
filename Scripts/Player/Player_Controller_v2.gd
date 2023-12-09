@@ -29,7 +29,7 @@ var selected_a : bool = true #Que jugador esta seleccionado para controlarlo en 
 @onready var timer : Timer = $Timer
 
 @export var MaxStamina: float = 12.0 #Segundos de duracion 
-@onready var music = $"Music(Provisorio)/Music"
+@onready var music = $Music
 
 ###################################################################################################
 #Definicion de funciones auxiliares
