@@ -23,7 +23,7 @@ func _ready():
 	
 	tutorial_info_label.text = Variables.Textos_Tutorial[Variables.current_tutorial_text]
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Test") and not max_index == Variables.current_tutorial_text:
 		Variables.current_tutorial_text += 1
 	

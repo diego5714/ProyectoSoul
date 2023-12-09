@@ -11,12 +11,14 @@ func _ready():
 	sonido_fuego.finished.connect(_on_sound_finished)
 
 func _on_body_entered(body: Node2D):
-	sonido_fuego.play()
-	player_inside = true
+	if body.get_name() == "Player":
+		sonido_fuego.play()
+		player_inside = true
 
 func _on_body_exited(body: Node2D):
-	sonido_fuego.stop()
-	player_inside = false
+	if body.get_name() == "Player":
+		sonido_fuego.stop()
+		player_inside = false
 
 func _on_sound_finished():
 	if player_inside:
