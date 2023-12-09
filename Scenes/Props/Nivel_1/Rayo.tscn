@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://Assets/Hostil/lightning.png" id="1_05qw7"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Rayo.gd" id="1_ya6ae"]
-[ext_resource type="AudioStream" uid="uid://dijadyjknst2l" path="res://Assets/Sounds/lightning.wav" id="3_xsajj"]
+[ext_resource type="AudioStream" uid="uid://6iah6luw77vp" path="res://Assets/Sounds/lightning_short.wav" id="3_e7puc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_saa7j"]
 size = Vector2(20, 1)
@@ -90,6 +90,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_qu5t2"]
 resource_name = "Rayo"
 length = 0.6
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -117,26 +118,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Lightning:playing")
+tracks/2/path = NodePath("CollisionShape2D:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [true, false]
+"values": [Vector2(1, 1), Vector2(1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("CollisionShape2D:scale")
+tracks/3/enabled = false
+tracks/3/path = NodePath("Lightning:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1)]
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_wvnwa"]
@@ -204,7 +205,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_nq0mc")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="Lightning" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(0.5, 0.5)
-stream = ExtResource("3_xsajj")
+[node name="Lightning" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_e7puc")
 autoplay = true

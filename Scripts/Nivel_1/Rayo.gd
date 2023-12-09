@@ -13,7 +13,7 @@ func _ready():
 	animation_tree.set_deferred("active",true)
 	
 	body_entered.connect(_on_body_entered)
-	lightning.autoplay = true
+	
 
 
 func _on_body_entered(body):

@@ -123,6 +123,8 @@ scale = Vector2(4, 4)
 [node name="Gato_Coleccionable" parent="Elementos/Coleccionables" instance=ExtResource("4_qbctn")]
 position = Vector2(576, -3072)
 
+[node name="Flowerss" type="Node2D" parent="Elementos"]
+
 [node name="Entorno" type="Node2D" parent="."]
 
 [node name="TileMap" type="TileMap" parent="Entorno"]

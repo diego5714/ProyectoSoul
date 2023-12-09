@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b657lbuv0382c"]
 
 [ext_resource type="PackedScene" uid="uid://63v3kdjkmtrq" path="res://Scenes/Props/Nivel_2/Trampa_piso.tscn" id="1_1mlgs"]
-[ext_resource type="Script" path="res://Scripts/Trampa_Piso_4x1_2.gd" id="1_08mt1"]
+[ext_resource type="Script" path="res://Scripts/Nivel_2/Trampa_Piso_4x1_2.gd" id="1_08mt1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ausla"]
 size = Vector2(60, 1)

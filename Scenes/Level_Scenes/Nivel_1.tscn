@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cw0yn1tnj1e5g"]
+[gd_scene load_steps=29 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_2.gd" id="1_fyobf"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_hnol0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="5_e0jri"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Misc/Puerta_Final.tscn" id="5_eqo63"]
 [ext_resource type="Script" path="res://Scripts/Nodo_Rayos.gd" id="6_m8hyn"]
+[ext_resource type="Script" path="res://Scripts/Nivel_1/Rayo_area.gd" id="7_4145b"]
 [ext_resource type="PackedScene" uid="uid://dsi445w7sbx3m" path="res://Scenes/Props/Nivel_1/Rayo.tscn" id="7_bbgh0"]
 [ext_resource type="PackedScene" uid="uid://ccqeeyt45lkt8" path="res://Scenes/Props/Misc/Prop_Estacas.tscn" id="8_55ae2"]
 [ext_resource type="PackedScene" uid="uid://f4jetvabtrk7" path="res://Scenes/Props/Misc/Button_Prop.tscn" id="9_cka3p"]
@@ -24,6 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://bamgxhqof1nnw" path="res://Scenes/Props/Misc/Flor_Amarilla.tscn" id="22_55mwf"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Check_Point_Manager.gd" id="22_bv01b"]
 [ext_resource type="PackedScene" uid="uid://c1kr1wvn0kdky" path="res://Scenes/Props/Misc/Check_Point_Prop.tscn" id="22_d41cy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jaflg"]
+size = Vector2(56.4163, 508)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tenop"]
 size = Vector2(124.464, 662)
@@ -83,6 +87,14 @@ scale = Vector2(2, 2)
 [node name="Rayo4" parent="Elementos/Rayos" instance=ExtResource("7_bbgh0")]
 position = Vector2(1280, 264)
 scale = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="Elementos/Rayos"]
+script = ExtResource("7_4145b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elementos/Rayos/Area2D"]
+position = Vector2(1116, 198)
+scale = Vector2(25.56, 1)
+shape = SubResource("RectangleShape2D_jaflg")
 
 [node name="Estacas" type="Node2D" parent="Elementos"]
 
@@ -251,6 +263,7 @@ visible = false
 [node name="Transitioner" parent="transiciones" instance=ExtResource("5_e0jri")]
 
 [connection signal="timeout" from="Elementos/Puerta/Timer" to="Elementos/Puerta" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Elementos/Rayos/Area2D" to="Elementos/Rayos/Area2D" method="_on_body_entered"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Rayos" method="_on_button_button_pushed"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Puente_Llamas" method="_on_button_button_pushed"]
 [connection signal="button_pushed" from="Elementos/Botones/Button" to="Elementos/Puente_Llamas/Puente" method="_on_button_button_pushed"]
