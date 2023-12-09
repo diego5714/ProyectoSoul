@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bydo5a8a4uf4v" path="res://Assets/Hostil/lightning.png" id="1_05qw7"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Rayo.gd" id="1_ya6ae"]
-[ext_resource type="AudioStream" uid="uid://6iah6luw77vp" path="res://Assets/Sounds/lightning_short.wav" id="3_px6r7"]
+[ext_resource type="AudioStream" uid="uid://dijadyjknst2l" path="res://Assets/Sounds/lightning.wav" id="3_xsajj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_saa7j"]
 size = Vector2(20, 1)
@@ -10,6 +10,7 @@ size = Vector2(20, 1)
 [sub_resource type="Animation" id="Animation_ixty0"]
 resource_name = "Cargando"
 length = 0.5
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -120,10 +121,10 @@ tracks/2/path = NodePath("Lightning:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -156,7 +157,7 @@ animation = &"Cargando"
 animation = &"Rayo"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v264v"]
-switch_mode = 2
+switch_mode = 1
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x74g0"]
@@ -204,6 +205,6 @@ tree_root = SubResource("AnimationNodeStateMachine_nq0mc")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="Lightning" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_px6r7")
-volume_db = -1.051
+position = Vector2(0.5, 0.5)
+stream = ExtResource("3_xsajj")
 autoplay = true

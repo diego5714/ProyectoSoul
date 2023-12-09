@@ -262,5 +262,3 @@ visible = false
 [connection signal="grown_now" from="Entorno/Flores" to="Entorno/Flores/Flower_Yellow2" method="_on_flowersss_grown_now"]
 [connection signal="grown_now" from="Entorno/Flores" to="Entorno/Flores/Flower_Yellow3" method="_on_flowersss_grown_now"]
 [connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
-
-[editable path="Entorno/Lava_1"]

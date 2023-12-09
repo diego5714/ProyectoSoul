@@ -5,16 +5,21 @@ extends Area2D
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var lightning = $Lightning
 
+
 func _ready():
+	
 	set_deferred("monitoring", true)
 	#collision_shape_2d.set_deferred("disabled", false)
+	animation_tree.set_deferred("active",true)
 	
 	body_entered.connect(_on_body_entered)
+	lightning.autoplay = true
 
 
 func _on_body_entered(body):
 	#collision_shape_2d.set_deferred("disabled", true)
 	
 	if body.get_name() == "Player":
+		
 		Debug.dprint("damage")
 		print("damage")

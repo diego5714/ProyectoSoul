@@ -1,15 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bamgxhqof1nnw"]
+[gd_scene load_steps=13 format=3 uid="uid://bamgxhqof1nnw"]
 
 [ext_resource type="Script" path="res://Scripts/Flower_Yellow.gd" id="1_luca2"]
 [ext_resource type="Texture2D" uid="uid://bv5804lxxbufx" path="res://Assets/flowers/063.png" id="2_yvj8m"]
 [ext_resource type="Texture2D" uid="uid://tmc1nu7mu1ud" path="res://Assets/flowers/061.png" id="3_kvgoo"]
+[ext_resource type="Texture2D" uid="uid://bsj3pw2k58uqi" path="res://icon.svg" id="4_cy8a7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fesjt"]
 size = Vector2(20, 18)
 
 [sub_resource type="Animation" id="Animation_sbdya"]
 resource_name = "Growing"
-length = 2.6
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -17,16 +18,48 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("3_kvgoo"), ExtResource("2_yvj8m")]
 }
 
+[sub_resource type="Animation" id="Animation_tpcxx"]
+resource_name = "semilla"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_cy8a7")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ix0vy"]
 _data = {
-"Growing": SubResource("Animation_sbdya")
+"Growing": SubResource("Animation_sbdya"),
+"semilla": SubResource("Animation_tpcxx")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gf0fe"]
+animation = &"Growing"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_07wdo"]
+animation = &"semilla"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q40nl"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_23xtj"]
+states/Growing/node = SubResource("AnimationNodeAnimation_gf0fe")
+states/Growing/position = Vector2(673, 100)
+states/semilla/node = SubResource("AnimationNodeAnimation_07wdo")
+states/semilla/position = Vector2(400, 100)
+transitions = ["semilla", "Growing", SubResource("AnimationNodeStateMachineTransition_q40nl")]
 
 [node name="Flower_Yellow" type="Area2D"]
 script = ExtResource("1_luca2")
@@ -42,4 +75,12 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_yvj8m")
+texture = ExtResource("3_kvgoo")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_ix0vy")
+}
+tree_root = SubResource("AnimationNodeStateMachine_23xtj")
+anim_player = NodePath("../AnimationPlayer")
