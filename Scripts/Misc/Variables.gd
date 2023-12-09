@@ -21,4 +21,5 @@ var Coleccionables: int = 0
 
 var current_tutorial_text: int = 0
 var Textos_Tutorial: Array = []
+var Textos_Visibles: bool = true
 

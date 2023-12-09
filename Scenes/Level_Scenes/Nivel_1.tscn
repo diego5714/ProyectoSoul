@@ -14,10 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Props/Misc/Llave.tscn" id="10_l1e0q"]
 [ext_resource type="PackedScene" uid="uid://dci0xlgx3obdr" path="res://Scenes/Props/Nivel_1/Lava.tscn" id="11_3p2a3"]
 [ext_resource type="PackedScene" uid="uid://et3vl3tt3hpg" path="res://Scenes/Props/Misc/Moneda.tscn" id="12_dfsxj"]
+[ext_resource type="Script" path="res://Scripts/Common_Props/Peligro_Nivel1.gd" id="13_lht84"]
 [ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Props/Nivel_1/Puente_Fuego.tscn" id="14_8vc4t"]
 [ext_resource type="AudioStream" uid="uid://dt7wbmmmq0sqh" path="res://Sound/Sounds/Peligro.wav" id="15_7a4o6"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Misc/Letrero.tscn" id="15_eijmc"]
-[ext_resource type="Script" path="res://Scripts/Nivel_1/Peligro_Nivel1.gd" id="16_tkuln"]
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Props/Misc/Kill_Zone.tscn" id="19_skjxf"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Flowers_Level_1.gd" id="21_2xlyd"]
 [ext_resource type="AudioStream" uid="uid://e5xqwuu7uejc" path="res://Sound/Sonido_Flores_v3.wav" id="21_invyo"]
@@ -190,7 +190,7 @@ scale = Vector2(3, 3)
 position = Vector2(1352, 736)
 
 [node name="Peligro" type="Area2D" parent="Elementos"]
-script = ExtResource("16_tkuln")
+script = ExtResource("13_lht84")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elementos/Peligro"]
 position = Vector2(1820, 851)

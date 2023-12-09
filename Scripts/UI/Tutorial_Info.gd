@@ -23,6 +23,11 @@ func _ready():
 	
 	tutorial_info_label.text = Variables.Textos_Tutorial[Variables.current_tutorial_text]
 	
+	if Variables.Textos_Visibles:
+		self.set_deferred("visible", true)
+	else:
+		self.set_deferred("visible", false)
+	
 func _process(_delta):
 	if Input.is_action_just_pressed("Test") and not max_index == Variables.current_tutorial_text:
 		Variables.current_tutorial_text += 1
