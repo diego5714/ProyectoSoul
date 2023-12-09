@@ -1,9 +1,10 @@
-[gd_scene load_steps=113 format=3 uid="uid://bue3ckg45udm2"]
+[gd_scene load_steps=114 format=3 uid="uid://bue3ckg45udm2"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_gclss"]
 [ext_resource type="Script" path="res://Scripts/UI/Main_Menu.gd" id="2_6q8iw"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="3_pmfsj"]
 [ext_resource type="Texture2D" uid="uid://c75fqvm0hwkbl" path="res://Assets/Logo/1.png" id="4_8fkfa"]
+[ext_resource type="Texture2D" uid="uid://t8piwlxtqvyv" path="res://Assets/Menu_Frame/Recuadro azul.png" id="4_jbqlk"]
 [ext_resource type="Texture2D" uid="uid://ceks5ch0q6xvv" path="res://Assets/Logo/2.png" id="5_dw7q2"]
 [ext_resource type="Texture2D" uid="uid://dp21woh5evf5h" path="res://Assets/Logo/3.png" id="6_62dfn"]
 [ext_resource type="Texture2D" uid="uid://cn6ryc1u8veqx" path="res://Assets/Logo/4.png" id="7_h8fjj"]
@@ -579,7 +580,7 @@ step = 0.0454545
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Credits/Credits_Texture:texture")
+tracks/0/path = NodePath("Credits_Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -591,7 +592,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Credits/Credits_Texture:expand_mode")
+tracks/1/path = NodePath("Credits_Texture:expand_mode")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -603,7 +604,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Credits/Credits_Texture:stretch_mode")
+tracks/2/path = NodePath("Credits_Texture:stretch_mode")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -615,7 +616,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Credits/Credits_Texture:custom_minimum_size")
+tracks/3/path = NodePath("Credits_Texture:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -627,7 +628,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Credits/Label:modulate")
+tracks/4/path = NodePath("Label:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -755,7 +756,7 @@ step = 0.0454545
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Exit/Exit_Texture:texture")
+tracks/0/path = NodePath("Exit_Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -767,7 +768,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Exit/Exit_Texture:expand_mode")
+tracks/1/path = NodePath("Exit_Texture:expand_mode")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -779,7 +780,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Exit/Exit_Texture:stretch_mode")
+tracks/2/path = NodePath("Exit_Texture:stretch_mode")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -791,7 +792,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Exit/Exit_Texture:custom_minimum_size")
+tracks/3/path = NodePath("Exit_Texture:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -803,7 +804,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Exit/Label:modulate")
+tracks/4/path = NodePath("Label:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -882,48 +883,59 @@ size_flags_vertical = 6
 theme = ExtResource("1_gclss")
 script = ExtResource("2_6q8iw")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="9-Patch-Rect" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(750, 880)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("3_pmfsj")
+texture = ExtResource("4_jbqlk")
+patch_margin_left = 160
+patch_margin_top = 160
+patch_margin_right = 160
+patch_margin_bottom = 160
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="9-Patch-Rect"]
 layout_mode = 2
+offset_left = 85.0
+offset_top = 11.0
+offset_right = 665.0
+offset_bottom = 868.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_x6xtb")
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="9-Patch-Rect/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("3_pmfsj")
-theme_override_constants/separation = 10
+theme_override_constants/separation = -15
 alignment = 1
 
-[node name="Logo_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Logo_Texture" type="TextureRect" parent="9-Patch-Rect/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(580, 250)
 layout_mode = 2
 texture = ExtResource("4_8fkfa")
 expand_mode = 5
 
-[node name="Logo_Animation" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/Logo_Texture"]
+[node name="Logo_Animation" type="AnimationPlayer" parent="9-Patch-Rect/MarginContainer/VBoxContainer/Logo_Texture"]
 libraries = {
 "": SubResource("AnimationLibrary_24dc3")
 }
 autoplay = "Logo_start"
 speed_scale = 24.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="9-Patch-Rect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_pmfsj")
 theme_override_constants/separation = 5
 
-[node name="Start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 2
@@ -936,7 +948,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_t7pie")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qqbb5")
 icon_alignment = 1
 
-[node name="Start_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Start"]
+[node name="Start_Texture" type="TextureRect" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/Start"]
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 1
 anchors_preset = 15
@@ -950,7 +962,7 @@ texture = ExtResource("28_ky75q")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Start"]
+[node name="Label" type="Label" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/Start"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -969,17 +981,17 @@ text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Start_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Start"]
+[node name="Start_Animations" type="AnimationPlayer" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/Start"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_oi4s8")
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = -5
 
-[node name="Settings" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
+[node name="Settings" type="Button" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 2
@@ -991,7 +1003,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_h7aj2")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_u1vcr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_22jp3")
 
-[node name="Settings_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings"]
+[node name="Settings_Texture" type="TextureRect" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings"]
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 1
 anchors_preset = 15
@@ -1003,7 +1015,7 @@ texture = ExtResource("55_q3fov")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings"]
+[node name="Label" type="Label" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1023,13 +1035,13 @@ text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Settings_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings"]
+[node name="Settings_Animations" type="AnimationPlayer" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_okreu")
 }
 
-[node name="Credits" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
+[node name="Credits" type="Button" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 2
@@ -1041,7 +1053,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_h7aj2")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_u1vcr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_22jp3")
 
-[node name="Credits_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits"]
+[node name="Credits_Texture" type="TextureRect" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits"]
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 1
 anchors_preset = 15
@@ -1053,7 +1065,7 @@ texture = ExtResource("55_q3fov")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits"]
+[node name="Label" type="Label" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1067,13 +1079,13 @@ text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Credits_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits"]
+[node name="Credits_Animations" type="AnimationPlayer" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_sh2v2")
 }
 
-[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 2
@@ -1085,7 +1097,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_h7aj2")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_u1vcr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_22jp3")
 
-[node name="Exit_Texture" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit"]
+[node name="Exit_Texture" type="TextureRect" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit"]
 custom_minimum_size = Vector2(392, 133)
 layout_mode = 1
 anchors_preset = 15
@@ -1097,7 +1109,7 @@ texture = ExtResource("55_q3fov")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit"]
+[node name="Label" type="Label" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit"]
 modulate = Color(1, 1, 1, 0.818182)
 layout_mode = 1
 anchors_preset = 15
@@ -1113,7 +1125,7 @@ text = "Exit
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exit_Animations" type="AnimationPlayer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit"]
+[node name="Exit_Animations" type="AnimationPlayer" parent="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_bdvus")
@@ -1132,14 +1144,15 @@ volume_db = -5.0
 [node name="transiciones" type="CanvasLayer" parent="."]
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("82_rfl8k")]
+visible = false
 
-[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_mouse_entered"]
-[connection signal="mouse_exited" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_mouse_exited"]
-[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_mouse_entered"]
-[connection signal="mouse_exited" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_mouse_exited"]
-[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_mouse_entered"]
-[connection signal="mouse_exited" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="mouse_entered" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_mouse_exited"]
+[connection signal="mouse_entered" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_mouse_entered"]
+[connection signal="mouse_exited" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_mouse_exited"]
+[connection signal="mouse_entered" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_mouse_exited"]
 [connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
 [connection signal="fadeout_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadeout_finalizado"]

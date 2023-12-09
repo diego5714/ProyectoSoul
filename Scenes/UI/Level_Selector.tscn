@@ -1,7 +1,8 @@
-[gd_scene load_steps=94 format=3 uid="uid://u3fd4wboe564"]
+[gd_scene load_steps=95 format=3 uid="uid://u3fd4wboe564"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Level_Selector.gd" id="1_44mqt"]
 [ext_resource type="Texture2D" uid="uid://bc60f5s141j76" path="res://Assets/pergamino.png" id="3_2o50t"]
+[ext_resource type="Texture2D" uid="uid://t8piwlxtqvyv" path="res://Assets/Menu_Frame/Recuadro azul.png" id="3_nt5p0"]
 [ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="6_62sw5"]
 [ext_resource type="Texture2D" uid="uid://dcuwq54eetgts" path="res://Resources/Botones/Main_Button/Selected/Main_Button_Selected_1.tres" id="8_07cl1"]
 [ext_resource type="Texture2D" uid="uid://whqtxu1n3612" path="res://Resources/Botones/Secondary_Button/Secondary_Button_Default.tres" id="8_8c5lk"]
@@ -870,27 +871,46 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Margen"]
-custom_minimum_size = Vector2(600, 600)
+[node name="Panel" type="NinePatchRect" parent="Margen"]
+custom_minimum_size = Vector2(650, 650)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("6_62sw5")
+texture = ExtResource("3_nt5p0")
+patch_margin_left = 160
+patch_margin_top = 160
+patch_margin_right = 160
+patch_margin_bottom = 160
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Margen/PanelContainer"]
+[node name="Main_Margin" type="MarginContainer" parent="Margen/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margen/Panel/Main_Margin"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Margen/Panel/Main_Margin/VBoxContainer"]
 custom_minimum_size = Vector2(288, 66)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/margin_top = -15
 
-[node name="TextureRect" type="TextureRect" parent="Margen/PanelContainer/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="Margen/Panel/Main_Margin/VBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(480, 110)
 layout_mode = 2
 texture = ExtResource("3_2o50t")
 expand_mode = 5
 
-[node name="Titulo" type="Label" parent="Margen/PanelContainer/MarginContainer/TextureRect"]
+[node name="Titulo" type="Label" parent="Margen/Panel/Main_Margin/VBoxContainer/MarginContainer/TextureRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -909,13 +929,13 @@ theme_override_font_sizes/font_size = 40
 text = "Level Selection"
 horizontal_alignment = 1
 
-[node name="Margen_Botones" type="MarginContainer" parent="Margen/PanelContainer"]
+[node name="Margen_Botones" type="MarginContainer" parent="Margen/Panel/Main_Margin/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/margin_top = 100
 
-[node name="GridContainer" type="GridContainer" parent="Margen/PanelContainer/Margen_Botones"]
+[node name="GridContainer" type="GridContainer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones"]
 custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -924,13 +944,13 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 2
 
-[node name="Tutorial_Level" type="MarginContainer" parent="Margen/PanelContainer/Margen_Botones/GridContainer"]
+[node name="Tutorial_Level" type="MarginContainer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Boton_Tutorial" type="Button" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Tutorial_Level"]
+[node name="Boton_Tutorial" type="Button" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Tutorial_Level"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -942,7 +962,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_7ddv1")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_6a7m8")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jexlo")
 
-[node name="Boton_Tutorial_Texture" type="TextureRect" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Tutorial_Level/Boton_Tutorial"]
+[node name="Boton_Tutorial_Texture" type="TextureRect" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Tutorial_Level/Boton_Tutorial"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 8
@@ -959,7 +979,7 @@ grow_vertical = 2
 texture = ExtResource("10_c2ssv")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Tutorial_Level/Boton_Tutorial"]
+[node name="Label" type="Label" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Tutorial_Level/Boton_Tutorial"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -972,19 +992,19 @@ text = "Tutorial"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Boton_Tutorial_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Tutorial_Level/Boton_Tutorial"]
+[node name="Boton_Tutorial_Animations" type="AnimationPlayer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Tutorial_Level/Boton_Tutorial"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_7hdol")
 }
 
-[node name="Level_1" type="MarginContainer" parent="Margen/PanelContainer/Margen_Botones/GridContainer"]
+[node name="Level_1" type="MarginContainer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Boton_L1" type="Button" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_1"]
+[node name="Boton_L1" type="Button" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_1"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -996,7 +1016,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_ytfpt")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_07ol6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_reukk")
 
-[node name="Boton_L1_Texture" type="TextureRect" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_1/Boton_L1"]
+[node name="Boton_L1_Texture" type="TextureRect" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_1/Boton_L1"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 8
@@ -1013,7 +1033,7 @@ grow_vertical = 2
 texture = ExtResource("10_c2ssv")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_1/Boton_L1"]
+[node name="Label" type="Label" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_1/Boton_L1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1026,19 +1046,19 @@ text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Boton_L1_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_1/Boton_L1"]
+[node name="Boton_L1_Animations" type="AnimationPlayer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_1/Boton_L1"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_dtf8f")
 }
 
-[node name="Level_2" type="MarginContainer" parent="Margen/PanelContainer/Margen_Botones/GridContainer"]
+[node name="Level_2" type="MarginContainer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Boton_L2" type="Button" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_2"]
+[node name="Boton_L2" type="Button" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -1050,7 +1070,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_63c4p")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_sshlg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_io2h5")
 
-[node name="Boton_L2_Texture" type="TextureRect" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_2/Boton_L2"]
+[node name="Boton_L2_Texture" type="TextureRect" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_2/Boton_L2"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 8
@@ -1067,7 +1087,7 @@ grow_vertical = 2
 texture = ExtResource("10_c2ssv")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_2/Boton_L2"]
+[node name="Label" type="Label" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_2/Boton_L2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1087,19 +1107,19 @@ text = "Level 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Boton_L2_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Level_2/Boton_L2"]
+[node name="Boton_L2_Animations" type="AnimationPlayer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Level_2/Boton_L2"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_7t1ke")
 }
 
-[node name="Back" type="MarginContainer" parent="Margen/PanelContainer/Margen_Botones/GridContainer"]
+[node name="Back" type="MarginContainer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Back" type="Button" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Back"]
+[node name="Back" type="Button" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Back"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 2
@@ -1113,7 +1133,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_j108b")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_j4v7s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wokmy")
 
-[node name="Back_Texture" type="TextureRect" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Back/Back"]
+[node name="Back_Texture" type="TextureRect" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Back/Back"]
 custom_minimum_size = Vector2(252, 86)
 layout_mode = 1
 anchors_preset = 8
@@ -1130,7 +1150,7 @@ grow_vertical = 2
 texture = ExtResource("8_8c5lk")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Back/Back"]
+[node name="Label" type="Label" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Back/Back"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1144,7 +1164,7 @@ text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Back_Animations" type="AnimationPlayer" parent="Margen/PanelContainer/Margen_Botones/GridContainer/Back/Back"]
+[node name="Back_Animations" type="AnimationPlayer" parent="Margen/Panel/Main_Margin/VBoxContainer/Margen_Botones/GridContainer/Back/Back"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_dsr8p")
