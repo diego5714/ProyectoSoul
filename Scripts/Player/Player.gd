@@ -68,7 +68,7 @@ func retorno_muerte(Return_Point: Vector2):
 	retornar(Return_Point)
 	
 func retorno_ghost():
-	var Return_Point: Vector2 = ghost.position - Vector2(0, 30)
+	var Return_Point: Vector2 = get_current_pos(true) - Vector2(0, 30)
 	retornar(Return_Point)
 	toggle_ghost(false)
 
@@ -119,8 +119,7 @@ func animate(move_input: float):
 ################################################################################
 
 func _ready():
-	await get_tree().create_timer(0.8).timeout #Fix para el bug de frame out of bounds
-	
+	await get_tree().create_timer(1.0).timeout #Fix para el bug de frame out of bounds
 	no_collisions(false)
 	ghost.visible = false
 	animation_tree.active = true

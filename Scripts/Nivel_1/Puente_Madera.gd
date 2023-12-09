@@ -30,7 +30,7 @@ extends StaticBody2D
 var mostrar = false
 var posicion = Vector2(-1984,416)
 
-@onready var puente_llama: StaticBody2D = $Puente
+@onready var puente_llama: StaticBody2D = self
 
 
 
@@ -44,6 +44,7 @@ func instanciar_puente():
 	if puente_llama != null:
 		puente_llama.queue_free()
 	var puente = load("res://Scenes/Props/Puente_Normal.tscn").instantiate()
+	
 	self.add_child(puente)
 	puente.global_position=posicion
 	puente.scale= Vector2(2,2)

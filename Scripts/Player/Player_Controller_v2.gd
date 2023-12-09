@@ -1,6 +1,10 @@
 class_name Player_Controller
 extends Node2D
 
+signal muerte_sync
+signal muerte_async
+
+@onready var Pair_Animations: AnimationPlayer = $Pair_Animations
 
 @export var SPEED: int = 400 
 @export var WARP_SPEED: int = 800
@@ -19,6 +23,7 @@ var constants: PackedInt32Array = PackedInt32Array()
 var current_cp: Vector2
 
 var selected_a : bool = true #Que jugador esta seleccionado para controlarlo en modo Async
+
 @onready var A: Player = %Player_A
 @onready var B: Player = %Player_B
 @onready var timer : Timer = $Timer
@@ -79,12 +84,16 @@ func set_current_cp(cp):
 	current_cp = cp
 
 func kill():
-	Debug.dprint("Te moristes wey")
-	A.velocity_to_zero('x,y')
-	A.retorno_muerte(current_cp - Vector2(0, 40))
+	Variables.current_health = 0
+	Debug.dprint("KILL-ZONE")
+
+func damage(value):
+	var current = Variables.current_health
+	current -= value
+	if current < 0:
+		current = 0
 	
-	B.velocity_to_zero('x,y')
-	B.retorno_muerte((current_cp * Vector2(-1, 1)) - Vector2(0, 40))
+	Variables.current_health = current
 
 ###################################################################################################
 
@@ -99,6 +108,9 @@ func _ready():
 
 	Variables.Stamina = MaxStamina
 	timer.wait_time = MaxStamina
+	
+	muerte_sync.connect(_on_sync_killed)
+	muerte_async.connect(_on_async_killed)
 
 	A.player.set_position(pos_inicial_a.position)
 	B.player.set_position(pos_inicial_b.position)
@@ -129,14 +141,14 @@ func _physics_process(delta):
 		else: 
 			Variables.Sync = true
 			timer.stop()
-
+			
 			Variables.Retorno = true
+			
 			if selected_a:
-				Debug.dprint("A se devuelve")
 				A.velocity_to_zero('x,y')
 				A.retorno_ghost()
+				
 			else:
-				Debug.dprint("B se devuelve")
 				B.velocity_to_zero('x,y')
 				B.retorno_ghost()
 
@@ -149,10 +161,18 @@ func _physics_process(delta):
 
    #############################################################################
 	
-	if Variables.Sync:
+	if Variables.Sync: #Estado Sync
 		Variables.Stamina = lerp(Variables.Stamina, MaxStamina, 0.04)
-
-		if not Variables.Retorno: #Estado Sync
+		
+		if Variables.current_health == 0:
+			if not Variables.Muerte:
+				Variables.Retorno = true
+				Variables.Muerte = true
+			
+				Debug.dprint("Signal Sync")
+				muerte_sync.emit()
+		
+		if not Variables.Retorno:
 			if selected_a:
 				if not B.is_raycast_colliding("Lateral"):
 					A.horizontal_update(delta, move_input, constants)
@@ -186,22 +206,29 @@ func _physics_process(delta):
 				A.player.move_and_slide()
 				B.player.move_and_slide()
 				A.player.position.x = -1 * B.get_current_pos().x
+
+
+	else: #Estado Async
+		if Variables.current_health == 0:
+			if not Variables.Muerte:
+				Variables.Retorno = true
+				Variables.Muerte = true
 			
-			#Debug.dprint(abs(A.player.position.x + B.player.position.x))
+				Debug.dprint("Signal Async")
+				muerte_async.emit()
+		
+		if not Variables.Retorno:
+			Variables.Stamina -= delta
 
+			if selected_a:
+				A.animate(move_input)
+				A.full_async_move(delta, move_input, constants)
+				pass
 
-	else: #Estado Desync
-		Variables.Stamina -= delta
-
-		if selected_a:
-			A.animate(move_input)
-			A.full_async_move(delta, move_input, constants)
-			pass
-
-		else:
-			B.animate(move_input)
-			B.full_async_move(delta, move_input, constants)
-			pass
+			else:
+				B.animate(move_input)
+				B.full_async_move(delta, move_input, constants)
+				pass
 
 
 ####################################################################################################
@@ -213,11 +240,60 @@ func _on_timer_timeout():
 
 		Variables.Retorno = true
 		if selected_a:
-			Debug.dprint("A se devuelve")
 			A.velocity_to_zero('x,y')
 			A.retorno_ghost()
 
 		else:
-			Debug.dprint("B se devuelve")
 			B.velocity_to_zero('x,y')
 			B.retorno_ghost()
+
+func _on_sync_killed():
+	A.animation_tree.set_deferred("active", false)
+	B.animation_tree.set_deferred("active", false)
+	
+	Pair_Animations.play("Dying")
+	await Pair_Animations.animation_finished
+	
+	Pair_Animations.play("RESET")
+	
+	A.animation_tree.set_deferred("active", true)
+	B.animation_tree.set_deferred("active", true)
+	
+	A.player.position = current_cp
+	B.player.position = Vector2(-1, 1) * current_cp
+	
+	Variables.current_health = 3
+	Variables.Muerte = false
+	
+	Variables.Retorno = false
+	Variables.Sync = true
+	
+	
+
+func _on_async_killed():
+	A.animation_tree.set_deferred("active", false)
+	B.animation_tree.set_deferred("active", false)
+	
+	Pair_Animations.play("Dying")
+	await Pair_Animations.animation_finished
+	
+	Pair_Animations.play("RESET")
+	
+	A.animation_tree.set_deferred("active", true)
+	B.animation_tree.set_deferred("active", true)
+	
+	if selected_a:
+		A.toggle_ghost(false)
+		A.player.position = current_cp
+	
+	else:
+		B.toggle_ghost(false)
+		B.player.position = Vector2(-1, 1) * current_cp
+	
+	timer.stop()
+	
+	Variables.current_health = 3
+	Variables.Muerte = false
+	
+	Variables.Retorno = false
+	Variables.Sync = true

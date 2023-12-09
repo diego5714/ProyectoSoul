@@ -3,9 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://drmod4no1v8f1" path="res://Assets/1 Pink_Monster/Pink_Monster.png" id="1_s8bnh"]
 [ext_resource type="Material" uid="uid://cnrfqrbvcq2lk" path="res://Resources/Inverted_Player_B.tres" id="2_8haqm"]
 [ext_resource type="Texture2D" uid="uid://bag08pvbcwuci" path="res://Assets/UI/02.png" id="3_op0ct"]
+[ext_resource type="Script" path="res://Scripts/UI/Health.gd" id="4_bt2v1"]
 [ext_resource type="Texture2D" uid="uid://dk4l2qwdqvq43" path="res://Resources/Full_Heart.tres" id="4_kw26y"]
 [ext_resource type="Texture2D" uid="uid://d4b3u2v85xvie" path="res://Assets/UI/00.png" id="5_x87et"]
 [ext_resource type="Texture2D" uid="uid://biken7dfo0gn6" path="res://Resources/Barra_Stamina.tres" id="6_iyret"]
+[ext_resource type="Texture2D" uid="uid://cikem4k1mp8ow" path="res://Resources/Empty_Heart.tres" id="7_c1d71"]
 [ext_resource type="Texture2D" uid="uid://bruvhsjg716ap" path="res://Resources/Barra_Stamina_Interior.tres" id="7_mmdtg"]
 [ext_resource type="Script" path="res://Scripts/UI/Stamina_Bar.gd" id="8_myswl"]
 [ext_resource type="Texture2D" uid="uid://c1nalpqbrauea" path="res://Assets/Objetos/key.png" id="9_8nfq3"]
@@ -68,14 +70,6 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_unu5m"]
-atlas = ExtResource("5_x87et")
-region = Rect2(114, 114, 12, 12)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_422ad"]
-atlas = ExtResource("5_x87et")
-region = Rect2(114, 114, 12, 12)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jesbo"]
 atlas = ExtResource("5_x87et")
 region = Rect2(114, 114, 12, 12)
 
@@ -156,6 +150,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 5
+script = ExtResource("4_bt2v1")
 
 [node name="Corazon1" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
 layout_mode = 2
@@ -169,17 +164,7 @@ expand_mode = 3
 
 [node name="Corazon3" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_422ad")
-expand_mode = 3
-
-[node name="Corazon4" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_jesbo")
-expand_mode = 3
-
-[node name="Corazon5" type="TextureRect" parent="PanelContainer/HBoxContainer/Vida"]
-layout_mode = 2
-texture = ExtResource("4_kw26y")
+texture = ExtResource("7_c1d71")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

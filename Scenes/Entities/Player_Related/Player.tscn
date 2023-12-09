@@ -673,7 +673,7 @@ states/Running/node = SubResource("AnimationNodeAnimation_a8pn2")
 states/Running/position = Vector2(673, 135)
 states/Start/position = Vector2(204, 135)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_pwmsl"), "Jump", "Falling", SubResource("AnimationNodeStateMachineTransition_ld0gj"), "Falling", "Landing", SubResource("AnimationNodeStateMachineTransition_dchpp"), "Landing", "Running", SubResource("AnimationNodeStateMachineTransition_7owsb"), "Landing", "Idle", SubResource("AnimationNodeStateMachineTransition_rif0g"), "Idle", "Running", SubResource("AnimationNodeStateMachineTransition_tu2qc"), "Running", "Idle", SubResource("AnimationNodeStateMachineTransition_b2w7b"), "Idle", "Jump_start", SubResource("AnimationNodeStateMachineTransition_cljki"), "Jump_start", "Jump", SubResource("AnimationNodeStateMachineTransition_2t83o"), "Running", "Falling", SubResource("AnimationNodeStateMachineTransition_7yocy")]
-graph_offset = Vector2(-127, -15)
+graph_offset = Vector2(-59, -90.215)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tr5ev"]
 animations = [{
@@ -892,6 +892,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 callback_mode_process = 0
 libraries = {
 "": SubResource("AnimationLibrary_08sr8")

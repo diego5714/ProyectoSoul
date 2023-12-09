@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmqconyfhehus"]
 
-[ext_resource type="PackedScene" uid="uid://63v3kdjkmtrq" path="res://Scenes/Props/Trampa_piso.tscn" id="1_b3rqv"]
+[ext_resource type="PackedScene" uid="uid://63v3kdjkmtrq" path="res://Scenes/Props/Nivel_2/Trampa_piso.tscn" id="1_b3rqv"]
 [ext_resource type="Script" path="res://Scripts/Trampa_Piso_4x1.gd" id="1_mub0q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_me76j"]

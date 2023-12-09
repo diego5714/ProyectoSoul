@@ -6,29 +6,15 @@ signal button_pushed
 @onready var click_sound = $AudioStreamPlayer2D
 
 func _ready():
-	set_deferred("monitoring", true)
-	#collision_shape_2d.set_deferred("disabled", false)
+	collision_shape_2d.set_deferred("disabled", false)
 	
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
-	#collision_shape_2d.set_deferred("disabled", true)
+	collision_shape_2d.set_deferred("disabled", true)
 	
 	if body.get_name() == "Player":
 		Debug.dprint("boton")
 		emit_signal("button_pushed")
 		$AudioStreamPlayer2D.play()
 		animation_player.play("Push")
-
-#func _ready():
-	#set_deferred("monitoring", true)
-	#collision_shape_2d.set_deferred("disabled", false)
-	#
-	#body_entered.connect(_on_body_entered)
-#
-#func _on_body_entered(body):
-	#collision_shape_2d.set_deferred("disabled", true)
-	#
-	#if body.get_name() == "Player":
-		#emit_signal("button_pushed")
-		#animation_player.play("Push")

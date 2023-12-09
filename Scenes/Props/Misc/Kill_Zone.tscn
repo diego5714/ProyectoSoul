@@ -1,13 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://nc00nj5env7q"]
 
-[ext_resource type="Script" path="res://Scripts/Player/Kill_Zone.gd" id="1_e8fph"]
+[ext_resource type="Script" path="res://Scripts/Player/Kill_Zone.gd" id="1_fskke"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhv0y"]
 size = Vector2(19771, 125)
 
 [node name="KillZone" type="Area2D"]
 collision_mask = 3
-script = ExtResource("1_e8fph")
+script = ExtResource("1_fskke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uhv0y")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0

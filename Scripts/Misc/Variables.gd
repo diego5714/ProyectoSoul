@@ -1,10 +1,12 @@
 extends Node2D
 
 var max_jump : int = 2
+var current_health: int = 3
 
 var Stamina: float
-var Sync: bool = true #Estado de sincronizacion de los personajes.
-var Retorno: bool = false #Estado de warp de retorno
+var Sync: bool = true #Estado actual de los personajes (Sync, Async)
+var Retorno: bool = false
+var Muerte: bool = false
 
 var NivelCargado: PackedScene
 var MaxDepth: int
