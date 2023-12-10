@@ -60,13 +60,9 @@ func _on_boton_L1_pressed():
 	%Boton_L1_Animations.play("Pushed")
 	Click_Animation = true
 	await %Boton_L1_Animations.animation_finished
-	
-	Variables.NivelCargado = Nivel_1
-	Variables.Textos_Visibles = false
-	Variables.MaxDepth = 1600
-	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
-	
-	get_tree().change_scene_to_packed(Main)
+	transitioner.fadeout()
+	await transitioner.fadeout_finalizado
+	get_tree().change_scene_to_file("res://Scenes/Cinemática inicial/1.tscn")
 	
 func _on_boton_L2_pressed():
 	Boton_L2.set_deferred("disabled", true)
@@ -75,6 +71,9 @@ func _on_boton_L2_pressed():
 	%Boton_L2_Animations.play("Pushed")
 	Click_Animation = true
 	await %Boton_L2_Animations.animation_finished
+	
+	transitioner.fadeout()
+	await transitioner.fadeout_finalizado
 	
 	Variables.NivelCargado = Nivel_2
 	Variables.Textos_Visibles = false
