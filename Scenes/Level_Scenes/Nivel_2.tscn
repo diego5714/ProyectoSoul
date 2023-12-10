@@ -341,7 +341,6 @@ scale = Vector2(8, 8)
 [node name="transiciones" type="CanvasLayer" parent="."]
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("19_bk71k")]
-visible = false
 
 [connection signal="body_entered" from="Elementos/Botones/Button1A" to="Elementos/Botones/Button1A" method="_on_body_entered"]
 [connection signal="body_entered" from="Elementos/Botones/Button2B" to="Elementos/Botones/Button2B" method="_on_body_entered"]
