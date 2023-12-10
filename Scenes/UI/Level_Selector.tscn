@@ -1183,7 +1183,6 @@ stream = ExtResource("10_oe1ri")
 [node name="transiciones" type="CanvasLayer" parent="."]
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("59_hdhgu")]
-mouse_filter = 2
 
 [connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
 [connection signal="fadeout_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadeout_finalizado"]

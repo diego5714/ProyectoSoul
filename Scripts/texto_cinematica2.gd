@@ -4,7 +4,7 @@ extends Control
 @onready var transitioner = $transiciones/Transitioner
 @export var Nivel_1: PackedScene = preload("res://Scenes/Level_Scenes/Nivel_1.tscn")
 
-var text = 'In ancient times, a fierce battle between two deities shook the firmament'
+var text = 'The result of that confrontation was the separation of the weaker god into two parts'
 var t = Timer.new()
 var vel_text = 0.035
 var listo = false
@@ -26,7 +26,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("saltar") and listo == true:
 		transitioner.fadeout()
 		await transitioner.fadeout_finalizado
-		get_tree().change_scene_to_file("res://Scenes/Cinemática inicial/2.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Cinemática inicial/3.tscn")
 	if Input.is_action_just_pressed("Pause"):
 		transitioner.fadeout()
 		await transitioner.fadeout_finalizado

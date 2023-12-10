@@ -1,15 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7x5mcp38vgqu"]
+[gd_scene load_steps=16 format=3 uid="uid://de5novnrr8r7p"]
 
-[ext_resource type="Script" path="res://Scripts/texto_cinematica.gd" id="1_6jevx"]
-[ext_resource type="Texture2D" uid="uid://tnclox64nc7h" path="res://Assets/Cinemática inicial/comienzo_1.png" id="1_lm0fw"]
-[ext_resource type="FontFile" uid="uid://peds1nja0mrw" path="res://Assets/Fonts/MinecraftRegular-Bmg3.otf" id="2_eei04"]
-[ext_resource type="Shader" path="res://Scenes/1.gdshader" id="3_n4uts"]
-[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="4_duj6d"]
-[ext_resource type="Texture2D" uid="uid://cnh8ltkvnejfd" path="res://Assets/icons-16x16-1bit-ansdor/icons-keyboard-16x16-1bit-ansdor.png" id="6_w5dt7"]
-[ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Assets/Fonts/Planes_ValMore.ttf" id="7_wxuww"]
+[ext_resource type="Script" path="res://Scripts/texto_cinematica2.gd" id="1_kvph7"]
+[ext_resource type="Texture2D" uid="uid://or8bsfxxkdmi" path="res://Assets/Cinemática inicial/comienzo_2.png" id="2_kj2if"]
+[ext_resource type="Shader" path="res://Scenes/1.gdshader" id="3_kk3dw"]
+[ext_resource type="FontFile" uid="uid://peds1nja0mrw" path="res://Assets/Fonts/MinecraftRegular-Bmg3.otf" id="4_cx5ge"]
+[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="5_d12ea"]
+[ext_resource type="Texture2D" uid="uid://cnh8ltkvnejfd" path="res://Assets/icons-16x16-1bit-ansdor/icons-keyboard-16x16-1bit-ansdor.png" id="5_uyc6j"]
+[ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Assets/Fonts/Planes_ValMore.ttf" id="6_4o3tg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h81bx"]
-shader = ExtResource("3_n4uts")
+shader = ExtResource("3_kk3dw")
 shader_parameter/u_amp_flutter = 5.0
 shader_parameter/u_angle_flutter = 90.0
 shader_parameter/u_speed_flutter = 1.0
@@ -23,8 +23,8 @@ shader_parameter/u_x_light = 0.2
 shader_parameter/u_shape_light = 2.0
 shader_parameter/u_width_light = 1.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fvh1k"]
-atlas = ExtResource("6_w5dt7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6iqi"]
+atlas = ExtResource("5_uyc6j")
 region = Rect2(64, 64, 16, 16)
 
 [sub_resource type="Animation" id="Animation_oltpo"]
@@ -94,7 +94,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6jevx")
+script = ExtResource("1_kvph7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -2
@@ -141,7 +141,7 @@ color = Color(0.458824, 0, 0.560784, 1)
 custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
 size_flags_vertical = 4
-texture = ExtResource("1_lm0fw")
+texture = ExtResource("2_kj2if")
 stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VSplitContainer"]
@@ -165,14 +165,14 @@ custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.458824, 0, 0.560784, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_eei04")
+theme_override_fonts/font = ExtResource("4_cx5ge")
 theme_override_font_sizes/font_size = 37
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 1
+layout_mode = 0
 offset_right = 341.0
 offset_bottom = 80.0
 theme_override_constants/margin_left = 20
@@ -188,7 +188,7 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = SubResource("AtlasTexture_fvh1k")
+texture = SubResource("AtlasTexture_g6iqi")
 
 [node name="Icon_Animation" type="AnimationPlayer" parent="MarginContainer2/HSplitContainer/Icon"]
 libraries = {
@@ -202,13 +202,13 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer2/HSplitContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_fonts/font = ExtResource("7_wxuww")
+theme_override_fonts/font = ExtResource("6_4o3tg")
 theme_override_font_sizes/font_size = 25
 text = "Presiona para omitir"
 
 [node name="transiciones" type="CanvasLayer" parent="."]
 
-[node name="Transitioner" parent="transiciones" instance=ExtResource("4_duj6d")]
+[node name="Transitioner" parent="transiciones" instance=ExtResource("5_d12ea")]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -1

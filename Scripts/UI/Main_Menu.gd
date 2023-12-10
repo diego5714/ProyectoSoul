@@ -46,7 +46,6 @@ func _on_exit_pressed():
 	%Exit_Animations.play("Pushed")
 	Click_Animation = true
 	await %Exit_Animations.animation_finished
-	
 	get_tree().quit()
 
 func _on_transitioner_fadein_finalizado():

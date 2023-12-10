@@ -12,6 +12,9 @@ extends Control
 var Click_Animation: bool = false
 
 func _ready():
+	if Variables.selector == true:
+		transitioner.fadein()
+		Variables.selector = false
 	Boton_Tutorial.pressed.connect(_on_boton_tutorial_pressed)
 	Boton_Tutorial.mouse_entered.connect(_on_boton_tutorial_mouse_entered)
 	Boton_Tutorial.mouse_exited.connect(_on_boton_tutorial_mouse_exited)
@@ -52,19 +55,17 @@ func _on_boton_L1_pressed():
 	%Boton_L1_Animations.play("Pushed")
 	Click_Animation = true
 	await %Boton_L1_Animations.animation_finished
-	
-	Variables.NivelCargado = Nivel_1
-	Variables.Textos_Visibles = false
-	Variables.MaxDepth = 1600
-	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
-	
-	get_tree().change_scene_to_packed(Main)
+	transitioner.fadeout()
+	await transitioner.fadeout_finalizado
+	get_tree().change_scene_to_file("res://Scenes/Cinemática inicial/1.tscn")
 	
 func _on_boton_L2_pressed():
 	%Click_Sound.play()
 	%Boton_L2_Animations.play("Pushed")
 	Click_Animation = true
 	await %Boton_L2_Animations.animation_finished
+	transitioner.fadeout()
+	await transitioner.fadeout_finalizado
 	
 	Variables.NivelCargado = Nivel_2
 	Variables.Textos_Visibles = false

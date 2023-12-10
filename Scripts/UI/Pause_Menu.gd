@@ -4,6 +4,7 @@ extends MarginContainer
 @onready var retry = %Retry
 @onready var menu = %Main_Menu
 @onready var exit = %Exit
+@onready var transitioner = $transiciones/Transitioner
 
 @export var menu_scene : PackedScene
 var Click_Animation: bool = false
@@ -54,6 +55,8 @@ func _on_retry_pressed():
 	await %Retry_Animations.animation_finished
 	
 	get_tree().paused = false
+	transitioner.fadeout()
+	await transitioner.fadeout_finalizado
 	get_tree().change_scene_to_file("res://Scenes/UI/Split_Camera.tscn")
 	
 func _on_menu_pressed():
@@ -63,6 +66,8 @@ func _on_menu_pressed():
 	await %Menu_Animations.animation_finished
 	
 	get_tree().paused = false
+	transitioner.fadeout()
+	await transitioner.fadeout_finalizado
 	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
 	
 	
@@ -110,3 +115,9 @@ func _on_exit_mouse_entered():
 func _on_exit_mouse_exited():
 	if not Click_Animation:
 		%Exit_Animations.play("RESET")
+
+func _on_transitioner_fadein_finalizado():
+	pass # Replace with function body.
+
+func _on_transitioner_fadeout_finalizado():
+	pass # Replace with function body.
