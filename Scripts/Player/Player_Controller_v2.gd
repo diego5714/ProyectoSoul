@@ -27,6 +27,8 @@ var selected_a : bool = true #Que jugador esta seleccionado para controlarlo en 
 @onready var A: Player = %Player_A
 @onready var B: Player = %Player_B
 @onready var timer : Timer = $Timer
+@onready var humoA = $Player_A/humoA
+@onready var humoB = $Player_B/humoB
 
 @export var MaxStamina: float = 12.0 #Segundos de duracion 
 @onready var music = $Music
@@ -52,6 +54,11 @@ func animate_pair(move_input: float):
 			if A.player.velocity.y < 0:
 				A.playback.travel("Jump")
 				B.playback.travel("Jump")
+				if Input.is_action_just_pressed('saltar'):
+					humoA.set_position(A.player.position)
+					humoB.set_position(B.player.position)
+					humoA.humo()
+					humoB.humo()
 			else:
 				A.playback.travel("Falling")
 				B.playback.travel("Falling")
@@ -73,6 +80,11 @@ func animate_pair(move_input: float):
 			if B.player.velocity.y < 0:
 				A.playback.travel("Jump")
 				B.playback.travel("Jump")
+				if Input.is_action_just_pressed('saltar'):
+					humoA.set_position(A.player.position)
+					humoB.set_position(B.player.position)
+					humoA.humo()
+					humoB.humo()
 			else:
 				A.playback.travel("Falling")
 				B.playback.travel("Falling")

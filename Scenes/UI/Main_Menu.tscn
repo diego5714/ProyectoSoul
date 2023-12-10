@@ -1142,7 +1142,6 @@ stream = ExtResource("81_pv04f")
 volume_db = -5.0
 
 [node name="transiciones" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("82_rfl8k")]
 

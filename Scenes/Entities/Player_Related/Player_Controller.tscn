@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dreksn2ytdiwd"]
+[gd_scene load_steps=19 format=3 uid="uid://dreksn2ytdiwd"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player_Controller_v2.gd" id="1_jimru"]
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="2_d5l4m"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dvkkbtqm3chkm" path="res://Assets/1 Pink_Monster/Pink_Monster_Death_8.png" id="7_sty5v"]
 [ext_resource type="Script" path="res://Scripts/Misc/SFX.gd" id="8_gvrxx"]
 [ext_resource type="Texture2D" uid="uid://cvqndbddu7h13" path="res://Assets/1 Pink_Monster/Pink_Monster_Hurt_4.png" id="8_tbti8"]
+[ext_resource type="PackedScene" uid="uid://mknt3b4uuaoo" path="res://Scenes/Entities/Player_Related/humo salto.tscn" id="9_o061n"]
 [ext_resource type="AudioStream" uid="uid://deisxx0kjhvl" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Dance_(Battle).wav" id="9_v7gf5"]
 [ext_resource type="Script" path="res://Scripts/Player/Music.gd" id="12_o8x2k"]
 
@@ -334,6 +335,9 @@ scale = Vector2(2.6, 2.6)
 
 [node name="Player" parent="Player_A" instance=ExtResource("2_nyq84")]
 
+[node name="humoA" parent="Player_A" instance=ExtResource("9_o061n")]
+position = Vector2(0, 36)
+
 [node name="Player_B" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_d5l4m")
@@ -351,6 +355,9 @@ scale = Vector2(-1, 1)
 material = ExtResource("5_snn2j")
 texture = ExtResource("7_sty5v")
 hframes = 8
+
+[node name="humoB" parent="Player_B" instance=ExtResource("9_o061n")]
+position = Vector2(0, 36)
 
 [node name="Pair_Animations" type="AnimationPlayer" parent="."]
 libraries = {
