@@ -86,3 +86,7 @@ text = "In ancient times, a fierce battle between two deities shook the firmamen
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="MarginContainer/PanelContainer/VSplitContainer/MarginContainer2/VBoxContainer/MarginContainer"]
+
+[connection signal="timeout" from="MarginContainer/PanelContainer/VSplitContainer/MarginContainer2/VBoxContainer/MarginContainer/Timer" to="." method="_on_timer_timeout"]

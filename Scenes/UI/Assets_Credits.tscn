@@ -427,6 +427,61 @@ theme_override_font_sizes/font_size = 40
 text = "1-bit keyboard/gamepad button icons - ansdor"
 vertical_alignment = 1
 
+[node name="MarginContainer16" type="MarginContainer" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer/MarginContainer16"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "100 hand picked pixel flowers - BTLGames"
+vertical_alignment = 1
+
+[node name="MarginContainer17" type="MarginContainer" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer/MarginContainer17"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Button_Click - TheWilliamSounds"
+vertical_alignment = 1
+
+[node name="MarginContainer18" type="MarginContainer" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer/MarginContainer18"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Lightning (thunderbolt) - DominikBraun"
+vertical_alignment = 1
+
+[node name="MarginContainer19" type="MarginContainer" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer/MarginContainer19"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "caneca.stress.wav - Isabella.Pinzon.Varon"
+vertical_alignment = 1
+
+[node name="MarginContainer20" type="MarginContainer" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer/MarginContainer20"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Vibrations 03, 02 Sec.wav - MATRIXXX_"
+vertical_alignment = 1
+
 [node name="Margen_Back" type="MarginContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
