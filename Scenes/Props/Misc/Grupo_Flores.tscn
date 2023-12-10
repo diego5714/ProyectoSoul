@@ -26,6 +26,7 @@ shape = SubResource("RectangleShape2D_5p1fi")
 
 [node name="Sonido_Flores" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_c1e7x")
+bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0

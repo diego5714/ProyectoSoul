@@ -1179,6 +1179,7 @@ rendering_quadrant_size = 64
 [node name="Click_Sound" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
 stream = ExtResource("10_oe1ri")
+bus = &"SFX"
 
 [node name="transiciones" type="CanvasLayer" parent="."]
 

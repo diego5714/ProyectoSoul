@@ -198,6 +198,7 @@ wait_time = 3.0
 [node name="Sonido_Peligro" type="AudioStreamPlayer" parent="Elementos/Peligro"]
 stream = ExtResource("14_besj6")
 mix_target = 1
+bus = &"SFX"
 
 [node name="Puente_Llamas" parent="Elementos" instance=ExtResource("14_8vc4t")]
 z_index = -1

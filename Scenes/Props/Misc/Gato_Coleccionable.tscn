@@ -87,11 +87,11 @@ scale = Vector2(0.22, 0.22)
 texture = ExtResource("1_xhrxt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Textura"]
-autoplay = "Animacion"
-speed_scale = 0.35
 libraries = {
 "": SubResource("AnimationLibrary_py3xs")
 }
+autoplay = "Animacion"
+speed_scale = 0.35
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -102,3 +102,4 @@ shape = SubResource("CircleShape2D_rot2m")
 
 [node name="Colleccionable_Sound" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("42_7g821")
+bus = &"SFX"

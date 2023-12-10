@@ -230,19 +230,19 @@ theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Tutorial_Info"]
+[node name="Margen_icono" type="MarginContainer" parent="CanvasLayer/Tutorial_Info"]
 layout_mode = 2
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Tutorial_Info/MarginContainer2"]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/Tutorial_Info/Margen_icono"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 texture = SubResource("AtlasTexture_qm4vy")
 
-[node name="Icon_Animation" type="AnimationPlayer" parent="CanvasLayer/Tutorial_Info/MarginContainer2/Icon"]
+[node name="Icon_Animation" type="AnimationPlayer" parent="CanvasLayer/Tutorial_Info/Margen_icono/Icon"]
 libraries = {
 "": SubResource("AnimationLibrary_ac66q")
 }

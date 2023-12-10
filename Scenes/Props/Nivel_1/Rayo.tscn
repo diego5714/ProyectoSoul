@@ -107,3 +107,4 @@ process_callback = 0
 [node name="Sonido_Rayo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dnllk")
 volume_db = -20.0
+bus = &"SFX"
