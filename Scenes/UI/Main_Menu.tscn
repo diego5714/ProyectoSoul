@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://bue3ckg45udm2"]
+[gd_scene load_steps=114 format=3 uid="uid://bue3ckg45udm2"]
 
 [ext_resource type="Theme" uid="uid://daupl6k5f3tvs" path="res://Resources/Margin_Theme.tres" id="1_gclss"]
 [ext_resource type="Script" path="res://Scripts/UI/Main_Menu.gd" id="2_6q8iw"]
@@ -83,7 +83,6 @@
 [ext_resource type="PackedScene" uid="uid://1vtcpqi3idl7" path="res://Scenes/UI/Fondo_Menus.tscn" id="80_krqsm"]
 [ext_resource type="AudioStream" uid="uid://cpbpdhw2hkxe8" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 32.wav" id="81_pv04f"]
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="82_rfl8k"]
-[ext_resource type="AudioStream" uid="uid://mvf3p12v5t2m" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Den_(Regular).wav" id="83_bkkou"]
 
 [sub_resource type="Theme" id="Theme_x6xtb"]
 
@@ -1135,17 +1134,13 @@ libraries = {
 [node name="FondoMenus" parent="." instance=ExtResource("80_krqsm")]
 rendering_quadrant_size = 64
 
-[node name="SFX" type="Node" parent="."]
+[node name="Sound" type="Node" parent="."]
 
-[node name="ClickSound" type="AudioStreamPlayer" parent="SFX"]
+[node name="ClickSound" type="AudioStreamPlayer" parent="Sound"]
 unique_name_in_owner = true
 stream = ExtResource("81_pv04f")
 volume_db = -5.0
 bus = &"SFX"
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("83_bkkou")
-autoplay = true
 
 [node name="transiciones" type="CanvasLayer" parent="."]
 

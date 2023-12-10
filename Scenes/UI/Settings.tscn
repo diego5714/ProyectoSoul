@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://hu4rjuya7iho"]
+[gd_scene load_steps=52 format=3 uid="uid://hu4rjuya7iho"]
 
 [ext_resource type="Texture2D" uid="uid://t8piwlxtqvyv" path="res://Assets/Menu_Frame/Recuadro azul.png" id="1_pkisl"]
 [ext_resource type="PackedScene" uid="uid://1vtcpqi3idl7" path="res://Scenes/UI/Fondo_Menus.tscn" id="1_u1glo"]
@@ -35,7 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://proc1h2oy68g" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_19.tres" id="28_lrilf"]
 [ext_resource type="Texture2D" uid="uid://dubqjhhkxrkhm" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_20.tres" id="29_rcrnf"]
 [ext_resource type="Texture2D" uid="uid://o4ce5ckercdo" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_21.tres" id="30_w2y4y"]
-[ext_resource type="AudioStream" uid="uid://mvf3p12v5t2m" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Den_(Regular).wav" id="35_ayen3"]
 [ext_resource type="AudioStream" uid="uid://cpbpdhw2hkxe8" path="res://Sound/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 32.wav" id="37_xsakv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jiq2i"]
@@ -437,11 +436,7 @@ rendering_quadrant_size = 64
 
 [node name="Sound" type="Node2D" parent="."]
 
-[node name="Music" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("35_ayen3")
-autoplay = true
-bus = &"Music"
-
 [node name="Click_Sound" type="AudioStreamPlayer" parent="Sound"]
 unique_name_in_owner = true
 stream = ExtResource("37_xsakv")
+bus = &"SFX"

@@ -9,6 +9,7 @@ var Retorno: bool = false
 var Muerte: bool = false
 
 var NivelCargado: PackedScene
+var Current_Level: int = -1
 var MaxDepth: int
 
 var Ganaste: bool = false

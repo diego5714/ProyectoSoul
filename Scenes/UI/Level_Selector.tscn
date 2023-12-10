@@ -1174,9 +1174,9 @@ libraries = {
 [node name="FondoMenus" parent="." instance=ExtResource("8_i0rhp")]
 rendering_quadrant_size = 64
 
-[node name="SFX" type="Node" parent="."]
+[node name="Sound" type="Node" parent="."]
 
-[node name="Click_Sound" type="AudioStreamPlayer" parent="SFX"]
+[node name="Click_Sound" type="AudioStreamPlayer" parent="Sound"]
 unique_name_in_owner = true
 stream = ExtResource("10_oe1ri")
 bus = &"SFX"

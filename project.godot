@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 
 Variables="*res://Scripts/Misc/Variables.gd"
 Debug="*res://Scripts/Misc/Debug.gd"
+MenuMusic="*res://Scenes/UI/menu_music.tscn"
 
 [display]
 
