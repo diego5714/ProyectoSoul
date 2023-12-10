@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xck41"]
 size = Vector2(13.4228, 14.2061)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_og34b"]
-radius = 27.1802
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0p3n"]
+size = Vector2(54.9238, 60.9375)
 
 [node name="Estaca" type="StaticBody2D"]
 collision_layer = 128
@@ -27,9 +27,9 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 15)
+position = Vector2(9.53674e-07, 12.5)
 scale = Vector2(1.16525, 0.64)
-shape = SubResource("CircleShape2D_og34b")
+shape = SubResource("RectangleShape2D_v0p3n")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0

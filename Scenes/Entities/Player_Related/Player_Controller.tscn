@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dreksn2ytdiwd"]
+[gd_scene load_steps=18 format=3 uid="uid://dreksn2ytdiwd"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player_Controller_v2.gd" id="1_jimru"]
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="2_d5l4m"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/Misc/SFX.gd" id="8_gvrxx"]
 [ext_resource type="PackedScene" uid="uid://mknt3b4uuaoo" path="res://Scenes/Entities/Player_Related/humo salto.tscn" id="9_o061n"]
 [ext_resource type="AudioStream" uid="uid://deisxx0kjhvl" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Dance_(Battle).wav" id="9_v7gf5"]
+[ext_resource type="AudioStream" uid="uid://c2b05k6ihdwm2" path="res://Sound/Minifantasy_Dungeon_SFX/11_human_damage_2.wav" id="11_rjc6p"]
 [ext_resource type="Script" path="res://Scripts/Player/Music.gd" id="12_o8x2k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xf7j7"]
@@ -272,6 +273,9 @@ wait_time = 5.0
 [node name="Colliding_Sound" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("6_55k0d")
 script = ExtResource("8_gvrxx")
+
+[node name="Damage_Sound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("11_rjc6p")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_v7gf5")
