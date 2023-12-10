@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c18fn4hg5bjr8"]
+[gd_scene load_steps=4 format=3 uid="uid://c18fn4hg5bjr8"]
 
 [ext_resource type="Texture2D" uid="uid://dmxgdw1csiv7k" path="res://Assets/Objetos/sign.png" id="1_0n8im"]
+[ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="2_20n3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewnw3"]
 size = Vector2(61, 76)
@@ -21,4 +22,5 @@ offset_left = -24.0
 offset_top = 8.0
 offset_right = 20.0
 offset_bottom = 34.0
+theme = ExtResource("2_20n3o")
 text = "DEAD"

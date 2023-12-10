@@ -1144,7 +1144,6 @@ volume_db = -5.0
 [node name="transiciones" type="CanvasLayer" parent="."]
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("82_rfl8k")]
-visible = false
 
 [connection signal="mouse_entered" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="9-Patch-Rect/MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_exited"]
