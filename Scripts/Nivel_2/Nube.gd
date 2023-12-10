@@ -8,9 +8,11 @@ func _ready():
 	sprite_2d.set_deferred('modulate', Color(1.0, 1.0, 1.0, 1.0))
 
 func _on_body_entered(body: Node2D):
-	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-	tween.tween_property(sprite_2d, 'modulate', Color(1.0, 1.0, 1.0, 0.19), 1.0)
+	if body.get_name() == "Player":
+		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		tween.tween_property(sprite_2d, 'modulate', Color(1.0, 1.0, 1.0, 0.19), 1.0)
 
 func _on_body_exited(body: Node2D):
-	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-	tween.tween_property(sprite_2d, 'modulate', Color(1.0, 1.0, 1.0, 1.0), 1.0)
+	if body.get_name() == "Player":
+		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		tween.tween_property(sprite_2d, 'modulate', Color(1.0, 1.0, 1.0, 1.0), 1.0)
