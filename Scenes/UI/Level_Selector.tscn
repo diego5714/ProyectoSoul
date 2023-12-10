@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://u3fd4wboe564"]
+[gd_scene load_steps=96 format=3 uid="uid://u3fd4wboe564"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Level_Selector.gd" id="1_44mqt"]
 [ext_resource type="Texture2D" uid="uid://bc60f5s141j76" path="res://Assets/pergamino.png" id="3_2o50t"]
@@ -58,6 +58,7 @@
 [ext_resource type="Texture2D" uid="uid://bmovjbljacmqv" path="res://Resources/Botones/Main_Button/Pressed/Main_Button_Pressed_21.tres" id="32_xuw8t"]
 [ext_resource type="Texture2D" uid="uid://b4pa7bnhpqpjq" path="res://Resources/Botones/Main_Button/Pressed/Main_Button_Pressed_22.tres" id="33_agura"]
 [ext_resource type="Texture2D" uid="uid://c7fut668lfdjf" path="res://Resources/Botones/Main_Button/Pressed/Main_Button_Pressed_23.tres" id="34_rjmvw"]
+[ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="59_hdhgu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oexsr"]
 
@@ -1178,3 +1179,11 @@ rendering_quadrant_size = 64
 [node name="Click_Sound" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
 stream = ExtResource("10_oe1ri")
+
+[node name="transiciones" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="transiciones" instance=ExtResource("59_hdhgu")]
+mouse_filter = 2
+
+[connection signal="fadein_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadein_finalizado"]
+[connection signal="fadeout_finalizado" from="transiciones/Transitioner" to="." method="_on_transitioner_fadeout_finalizado"]

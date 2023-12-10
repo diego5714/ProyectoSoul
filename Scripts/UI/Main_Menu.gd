@@ -9,7 +9,11 @@ extends MarginContainer
 var Click_Animation: bool = false
 
 func _ready() -> void:
-	transitioner.fadein()
+	if not Variables.gamestarted:
+		transitioner.fadein()
+		Variables.gamestarted = true
+	else:
+		transitioner.hide()
 	start.pressed.connect(_on_start_pressed)
 	settings.pressed.connect(_on_settings_pressed)
 	credits.pressed.connect(_on_credits_pressed)

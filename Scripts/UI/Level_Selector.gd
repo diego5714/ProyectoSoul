@@ -3,6 +3,7 @@ extends Control
 @export var Tutorial: PackedScene = preload("res://Scenes/Level_Scenes/Tutorial.tscn")
 @export var Nivel_1: PackedScene = preload("res://Scenes/Level_Scenes/Nivel_1.tscn")
 @export var Nivel_2: PackedScene = preload("res://Scenes/Level_Scenes/Nivel_2.tscn")
+@onready var transitioner = $transiciones/Transitioner
 
 @onready var Boton_Tutorial := %Boton_Tutorial
 @onready var Boton_L1 := %Boton_L1
@@ -36,6 +37,8 @@ func _on_boton_tutorial_pressed():
 	%Boton_Tutorial_Animations.play("Pushed")
 	Click_Animation = true
 	await %Boton_Tutorial_Animations.animation_finished
+	transitioner.fadeout()
+	await transitioner.fadeout_finalizado
 	
 	Variables.NivelCargado = Tutorial
 	Variables.Textos_Visibles = true
@@ -120,3 +123,9 @@ func _on_boton_L2_mouse_exited():
 		%Boton_L2_Animations.play("RESET")
 
 ################################################################################
+
+func _on_transitioner_fadein_finalizado():
+	pass # Replace with function body.
+
+func _on_transitioner_fadeout_finalizado():
+	pass # Replace with function body.

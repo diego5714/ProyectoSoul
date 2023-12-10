@@ -7,6 +7,9 @@ class_name Transitioner
 signal fadeout_finalizado
 signal fadein_finalizado
 
+func _ready():
+	rect.hide()
+
 func fadeout():
 	rect.show()
 	animation_player.play("fade_out")
