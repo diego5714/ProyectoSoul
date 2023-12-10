@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://et3vl3tt3hpg" path="res://Scenes/Props/Misc/Moneda.tscn" id="12_dfsxj"]
 [ext_resource type="Script" path="res://Scripts/Common_Props/Peligro_Nivel1.gd" id="13_lht84"]
 [ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Props/Nivel_1/Puente_Fuego.tscn" id="14_8vc4t"]
-[ext_resource type="AudioStream" uid="uid://c2tv7sapyyew1" path="res://Sound/Sounds/steps_leaves.wav" id="14_v3vm0"]
+[ext_resource type="AudioStream" uid="uid://dip2sd3ymlqjt" path="res://Sound/Sounds/loopVibrations.wav" id="14_besj6"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Misc/Letrero.tscn" id="15_eijmc"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/AreaSonido_Fuego.gd" id="16_bxwaw"]
 [ext_resource type="AudioStream" uid="uid://d1www7ypuylfg" path="res://Sound/Sounds/fire.wav" id="17_21phd"]
@@ -201,7 +201,8 @@ shape = SubResource("RectangleShape2D_tenop")
 wait_time = 3.0
 
 [node name="Sonido_Peligro" type="AudioStreamPlayer" parent="Elementos/Peligro"]
-stream = ExtResource("14_v3vm0")
+stream = ExtResource("14_besj6")
+mix_target = 1
 
 [node name="Puente_Llamas" parent="Elementos" instance=ExtResource("14_8vc4t")]
 z_index = -1
