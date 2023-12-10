@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://br2371s73ycec"]
+[gd_scene load_steps=20 format=3 uid="uid://br2371s73ycec"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_0r8q5"]
 [ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_3.gd" id="1_mayoh"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://et3vl3tt3hpg" path="res://Scenes/Props/Misc/Moneda.tscn" id="12_l4sju"]
 [ext_resource type="PackedScene" uid="uid://qw31bheeadrh" path="res://Scenes/Props/Misc/Grupo_Flores.tscn" id="17_7xy41"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Misc/Letrero.tscn" id="17_thwrl"]
+[ext_resource type="PackedScene" uid="uid://ccpu6w7ms3yxl" path="res://Scenes/Props/Nivel_2/flores_variante.tscn" id="18_vci67"]
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="19_bk71k"]
 [ext_resource type="PackedScene" uid="uid://fxf8ni7v0sj3" path="res://Scenes/Props/Nivel_2/Nube.tscn" id="20_3grtd"]
 
@@ -176,13 +177,17 @@ scale = Vector2(8, 8)
 [node name="Flowers" type="Node2D" parent="Entorno"]
 
 [node name="Flores_A" parent="Entorno/Flowers" instance=ExtResource("17_7xy41")]
-position = Vector2(-1723, -237)
+position = Vector2(-956, -2221)
 
 [node name="Flores_B" parent="Entorno/Flowers" instance=ExtResource("17_7xy41")]
 position = Vector2(1612, -13)
 
 [node name="Flores_C" parent="Entorno/Flowers" instance=ExtResource("17_7xy41")]
 position = Vector2(1181, -1101)
+
+[node name="Flores_Variante" parent="Entorno/Flowers" instance=ExtResource("18_vci67")]
+position = Vector2(-1661, -240)
+scale = Vector2(6, 6)
 
 [node name="transiciones" type="CanvasLayer" parent="."]
 
