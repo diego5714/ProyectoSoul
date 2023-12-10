@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccpu6w7ms3yxl"]
+
+[ext_resource type="Script" path="res://Scripts/Nivel_2/flores_variante.gd" id="1_jd5bv"]
+[ext_resource type="PackedScene" uid="uid://bamgxhqof1nnw" path="res://Scenes/Props/Misc/Flor_Amarilla.tscn" id="1_ka8jt"]
+[ext_resource type="AudioStream" uid="uid://b2tyi7e817rsj" path="res://Sound/Sonido_Flores_Creciendo.wav" id="3_hwm1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umf4a"]
+size = Vector2(29, 18)
+
+[node name="Flores_Variante" type="Area2D"]
+script = ExtResource("1_jd5bv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_umf4a")
+
+[node name="Flower_Yellow" parent="." instance=ExtResource("1_ka8jt")]
+position = Vector2(8, 0)
+
+[node name="Flower_Yellow2" parent="." instance=ExtResource("1_ka8jt")]
+
+[node name="Flower_Yellow3" parent="." instance=ExtResource("1_ka8jt")]
+position = Vector2(-8, 0)
+
+[node name="Sonido_Flor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hwm1p")
