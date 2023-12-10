@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://qw31bheeadrh"]
 
-[ext_resource type="Script" path="res://Scripts/Nivel_1/Flowers_Level_1.gd" id="1_px7oh"]
+[ext_resource type="Script" path="res://Scripts/Common_Props/Flores_General.gd" id="1_hu5l1"]
 [ext_resource type="PackedScene" uid="uid://bamgxhqof1nnw" path="res://Scenes/Props/Misc/Flor_Amarilla.tscn" id="2_3e4hd"]
 [ext_resource type="AudioStream" uid="uid://e5xqwuu7uejc" path="res://Sound/Sonido_Flores_v3.wav" id="3_c1e7x"]
 
@@ -9,7 +9,7 @@ size = Vector2(30.4, 12.2)
 
 [node name="Flores" type="Area2D"]
 scale = Vector2(5, 5)
-script = ExtResource("1_px7oh")
+script = ExtResource("1_hu5l1")
 
 [node name="Flower_1" parent="." instance=ExtResource("2_3e4hd")]
 position = Vector2(20.4, 0.999988)
@@ -26,3 +26,6 @@ shape = SubResource("RectangleShape2D_5p1fi")
 
 [node name="Sonido_Flores" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_c1e7x")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
