@@ -12,27 +12,33 @@ extends Control
 var Click_Animation: bool = false
 
 func _ready():
+	Boton_Tutorial.set_deferred("disabled", false)
 	Boton_Tutorial.pressed.connect(_on_boton_tutorial_pressed)
 	Boton_Tutorial.mouse_entered.connect(_on_boton_tutorial_mouse_entered)
 	Boton_Tutorial.mouse_exited.connect(_on_boton_tutorial_mouse_exited)
 	%Boton_Tutorial_Animations.play("RESET")
 	
+	Boton_L1.set_deferred("disabled", false)
 	Boton_L1.pressed.connect(_on_boton_L1_pressed)
 	Boton_L1.mouse_entered.connect(_on_boton_L1_mouse_entered)
 	Boton_L1.mouse_exited.connect(_on_boton_L1_mouse_exited)
 	%Boton_L1_Animations.play("RESET")
 	
+	Boton_L2.set_deferred("disabled", false)
 	Boton_L2.pressed.connect(_on_boton_L2_pressed)
 	Boton_L2.mouse_entered.connect(_on_boton_L2_mouse_entered)
 	Boton_L2.mouse_exited.connect(_on_boton_L2_mouse_exited)
 	%Boton_L2_Animations.play("RESET")
 	
+	Back.set_deferred("disabled", false)
 	Back.pressed.connect(_on_back_pressed)
 	Back.mouse_entered.connect(_on_back_mouse_entered)
 	Back.mouse_exited.connect(_on_back_mouse_exited)
 	%Back_Animations.play("RESET")
 
 func _on_boton_tutorial_pressed():
+	Boton_Tutorial.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Boton_Tutorial_Animations.play("Pushed")
 	Click_Animation = true
@@ -48,6 +54,8 @@ func _on_boton_tutorial_pressed():
 	get_tree().change_scene_to_packed(Main)
 
 func _on_boton_L1_pressed():
+	Boton_L1.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Boton_L1_Animations.play("Pushed")
 	Click_Animation = true
@@ -61,6 +69,8 @@ func _on_boton_L1_pressed():
 	get_tree().change_scene_to_packed(Main)
 	
 func _on_boton_L2_pressed():
+	Boton_L2.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Boton_L2_Animations.play("Pushed")
 	Click_Animation = true
@@ -73,6 +83,8 @@ func _on_boton_L2_pressed():
 	get_tree().change_scene_to_packed(Main)
 	
 func _on_back_pressed():
+	Back.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Back_Animations.play("Pushed")
 	Click_Animation = true

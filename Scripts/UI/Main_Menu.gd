@@ -14,16 +14,25 @@ func _ready() -> void:
 		Variables.gamestarted = true
 	else:
 		transitioner.hide()
+	
+	start.set_deferred("disabled", false)
+	settings.set_deferred("disabled", false)
+	credits.set_deferred("disabled", false)
+	exit.set_deferred("disabled", false)
+	
 	start.pressed.connect(_on_start_pressed)
 	settings.pressed.connect(_on_settings_pressed)
 	credits.pressed.connect(_on_credits_pressed)
 	exit.pressed.connect(_on_exit_pressed)
+	
 	%Start_Animations.play("RESET")
 	%Settings_Animations.play("RESET")
 	%Credits_Animations.play("RESET")
 	%Exit_Animations.play("RESET")
 
 func _on_start_pressed():
+	start.set_deferred("disabled", true)
+	
 	%ClickSound.play()
 	%Start_Animations.play("Pushed")
 	Click_Animation = true
@@ -34,6 +43,8 @@ func _on_settings_pressed():
 	pass
 
 func _on_credits_pressed():
+	credits.set_deferred("disabled", true)
+	
 	%ClickSound.play()
 	%Credits_Animations.play("Pushed")
 	Click_Animation = true
@@ -42,6 +53,8 @@ func _on_credits_pressed():
 	get_tree().change_scene_to_file("res://Scenes/UI/Creditos.tscn")
 
 func _on_exit_pressed():
+	exit.set_deferred("disabled", true)
+	
 	%ClickSound.play()
 	%Exit_Animations.play("Pushed")
 	Click_Animation = true
