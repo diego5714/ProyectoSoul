@@ -12,6 +12,9 @@ extends Control
 var Click_Animation: bool = false
 
 func _ready():
+	if Variables.selector == true:
+		transitioner.fadein()
+		Variables.selector = false
 	Boton_Tutorial.set_deferred("disabled", false)
 	Boton_Tutorial.pressed.connect(_on_boton_tutorial_pressed)
 	Boton_Tutorial.mouse_entered.connect(_on_boton_tutorial_mouse_entered)
