@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ouycwvqua3g3"]
+[gd_scene load_steps=8 format=3 uid="uid://ouycwvqua3g3"]
 
 [ext_resource type="Texture2D" uid="uid://bomf53pgt1ry3" path="res://Assets/Hostil/fire_big.png" id="1_a5tg4"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Llama.gd" id="1_uh570"]
+[ext_resource type="AudioStream" uid="uid://d1www7ypuylfg" path="res://Sound/Sounds/fire.wav" id="3_4mktv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_envxf"]
 size = Vector2(22, 27)
@@ -88,3 +89,6 @@ libraries = {
 autoplay = "Idle"
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Fuego" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4mktv")

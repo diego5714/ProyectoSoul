@@ -19,6 +19,7 @@ func _on_timer_timeout():
 	
 	if area_sonido.player_inside:
 		sonido_rayo.play()
+		
 	
 	await animaciones_rayo.animation_finished
 	timer.start()
