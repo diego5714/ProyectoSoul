@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmqconyfhehus"]
+
+[ext_resource type="Script" path="res://Scripts/Nivel_2/Trampa_Piso_A.gd" id="1_8shyn"]
+[ext_resource type="PackedScene" uid="uid://63v3kdjkmtrq" path="res://Scenes/Props/Nivel_2/Trampa_piso.tscn" id="1_b3rqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52g3e"]
+size = Vector2(64, 13)
+
+[node name="Trampa_x4" type="Area2D"]
+script = ExtResource("1_8shyn")
+
+[node name="Trampa_1" parent="." instance=ExtResource("1_b3rqv")]
+position = Vector2(-24, 0)
+
+[node name="Trampa_2" parent="." instance=ExtResource("1_b3rqv")]
+position = Vector2(-8, 0)
+
+[node name="Trampa_3" parent="." instance=ExtResource("1_b3rqv")]
+position = Vector2(8, 0)
+
+[node name="Trampa_4" parent="." instance=ExtResource("1_b3rqv")]
+position = Vector2(24, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_52g3e")
+
+[node name="Timer" type="Timer" parent="."]

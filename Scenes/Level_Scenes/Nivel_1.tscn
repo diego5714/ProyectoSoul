@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cw0yn1tnj1e5g"]
+[gd_scene load_steps=25 format=3 uid="uid://cw0yn1tnj1e5g"]
 
 [ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_2.gd" id="1_fyobf"]
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_hnol0"]
@@ -18,10 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://ca1f5q7fwrbxa" path="res://Scenes/Props/Nivel_1/Puente_Fuego.tscn" id="14_8vc4t"]
 [ext_resource type="AudioStream" uid="uid://dt7wbmmmq0sqh" path="res://Sound/Sounds/Peligro.wav" id="15_7a4o6"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Misc/Letrero.tscn" id="15_eijmc"]
+[ext_resource type="PackedScene" uid="uid://qw31bheeadrh" path="res://Scenes/Props/Misc/Grupo_Flores.tscn" id="17_wtuly"]
 [ext_resource type="PackedScene" uid="uid://nc00nj5env7q" path="res://Scenes/Props/Misc/Kill_Zone.tscn" id="19_skjxf"]
-[ext_resource type="Script" path="res://Scripts/Nivel_1/Flowers_Level_1.gd" id="21_2xlyd"]
-[ext_resource type="AudioStream" uid="uid://e5xqwuu7uejc" path="res://Sound/Sonido_Flores_v3.wav" id="21_invyo"]
-[ext_resource type="PackedScene" uid="uid://bamgxhqof1nnw" path="res://Scenes/Props/Misc/Flor_Amarilla.tscn" id="22_55mwf"]
 [ext_resource type="Script" path="res://Scripts/Nivel_1/Check_Point_Manager.gd" id="22_bv01b"]
 [ext_resource type="PackedScene" uid="uid://c1kr1wvn0kdky" path="res://Scenes/Props/Misc/Check_Point_Prop.tscn" id="22_d41cy"]
 
@@ -30,9 +28,6 @@ size = Vector2(998, 381)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tenop"]
 size = Vector2(124.464, 662)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p1fi"]
-size = Vector2(30.4, 12.2)
 
 [node name="Nivel" type="Node2D"]
 script = ExtResource("1_fyobf")
@@ -220,26 +215,7 @@ z_index = -1
 z_as_relative = false
 position = Vector2(1984, 576)
 
-[node name="Flores" type="Area2D" parent="Entorno"]
-position = Vector2(3178, 1043)
-scale = Vector2(5, 5)
-script = ExtResource("21_2xlyd")
-
-[node name="Flower_1" parent="Entorno/Flores" instance=ExtResource("22_55mwf")]
-position = Vector2(20.4, 0.999988)
-
-[node name="Flower_2" parent="Entorno/Flores" instance=ExtResource("22_55mwf")]
-position = Vector2(10.8, 0.999988)
-
-[node name="Flower_3" parent="Entorno/Flores" instance=ExtResource("22_55mwf")]
-position = Vector2(1.2, 0.999988)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entorno/Flores"]
-position = Vector2(10, 3.90002)
-shape = SubResource("RectangleShape2D_5p1fi")
-
-[node name="Sonido_Flores" type="AudioStreamPlayer" parent="Entorno/Flores"]
-stream = ExtResource("21_invyo")
+[node name="Flores" parent="Entorno" instance=ExtResource("17_wtuly")]
 
 [node name="KillZone" parent="Entorno" instance=ExtResource("19_skjxf")]
 position = Vector2(0, 1296)

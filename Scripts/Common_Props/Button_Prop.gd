@@ -7,7 +7,6 @@ signal button_pressed
 
 func _ready():
 	collision_shape_2d.set_deferred("disabled", false)
-	
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
