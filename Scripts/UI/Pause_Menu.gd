@@ -10,21 +10,25 @@ extends MarginContainer
 var Click_Animation: bool = false
 
 func _ready() -> void:
+	resume.set_deferred("disabled", false)
 	resume.pressed.connect(_on_resume_pressed)
 	resume.mouse_entered.connect(_on_resume_mouse_entered)
 	resume.mouse_exited.connect(_on_resume_mouse_exited)
 	%Resume_Animations.play("RESET")
 	
+	retry.set_deferred("disabled", false)
 	retry.pressed.connect(_on_retry_pressed)
 	retry.mouse_entered.connect(_on_retry_mouse_entered)
 	retry.mouse_exited.connect(_on_retry_mouse_exited)
 	%Retry_Animations.play("RESET")
 	
+	menu.set_deferred("disabled", false)
 	menu.pressed.connect(_on_menu_pressed)
 	menu.mouse_entered.connect(_on_menu_mouse_entered)
 	menu.mouse_exited.connect(_on_menu_mouse_exited)
 	%Menu_Animations.play("RESET")
 	
+	exit.set_deferred("disabled", false)
 	exit.pressed.connect(_on_exit_pressed)
 	exit.mouse_entered.connect(_on_exit_mouse_entered)
 	exit.mouse_exited.connect(_on_exit_mouse_exited)
@@ -38,6 +42,8 @@ func _input(event: InputEvent) -> void:
 		get_tree().paused = visible
 
 func _on_resume_pressed():
+	resume.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Resume_Animations.play("Pushed")
 	Click_Animation = true
@@ -49,6 +55,8 @@ func _on_resume_pressed():
 	Click_Animation = false
 	
 func _on_retry_pressed():
+	retry.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Retry_Animations.play("Pushed")
 	Click_Animation = true
@@ -60,6 +68,8 @@ func _on_retry_pressed():
 	get_tree().change_scene_to_file("res://Scenes/UI/Split_Camera.tscn")
 	
 func _on_menu_pressed():
+	menu.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Menu_Animations.play("Pushed")
 	Click_Animation = true
@@ -72,6 +82,8 @@ func _on_menu_pressed():
 	
 	
 func _on_exit_pressed():
+	exit.set_deferred("disabled", true)
+	
 	%Click_Sound.play()
 	%Exit_Animations.play("Pushed")
 	Click_Animation = true

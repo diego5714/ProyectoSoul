@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/texto_cinematica.gd" id="1_6jevx"]
 [ext_resource type="Texture2D" uid="uid://tnclox64nc7h" path="res://Assets/Cinemática inicial/comienzo_1.png" id="1_lm0fw"]
 [ext_resource type="FontFile" uid="uid://peds1nja0mrw" path="res://Assets/Fonts/MinecraftRegular-Bmg3.otf" id="2_eei04"]
-[ext_resource type="Shader" path="res://Scenes/1.gdshader" id="3_n4uts"]
+[ext_resource type="Shader" path="res://Resources/1.gdshader" id="3_n4uts"]
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="4_duj6d"]
 [ext_resource type="Texture2D" uid="uid://cnh8ltkvnejfd" path="res://Assets/icons-16x16-1bit-ansdor/icons-keyboard-16x16-1bit-ansdor.png" id="6_w5dt7"]
 [ext_resource type="FontFile" uid="uid://d2oqpba0alxl7" path="res://Assets/Fonts/Planes_ValMore.ttf" id="7_wxuww"]

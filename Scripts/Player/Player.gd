@@ -2,6 +2,7 @@ extends Node2D
 class_name Player
 
 @onready var player: CharacterBody2D = $Player
+@onready var player_sprite: Sprite2D = $Player/Pivote/Sprite2D
 @onready var ghost: Sprite2D = $Ghost
 
 @onready var animation_player : AnimationPlayer = player.get_node("AnimationPlayer")

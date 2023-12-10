@@ -5,6 +5,8 @@ signal muerte_sync
 signal muerte_async
 
 @onready var Pair_Animations: AnimationPlayer = $Pair_Animations
+@onready var damage_sound = $SFX/Damage_Sound
+
 
 @export var SPEED: int = 400 
 @export var WARP_SPEED: int = 800
@@ -107,15 +109,13 @@ func damage(value):
 	
 	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	
-	tween.tween_property(A.player.sprite_2d, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.15)
-	#tween.parallel().tween_property(B.player.sprite_2d, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.15)
+	tween.tween_property(A.player_sprite, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.15)
+	tween.parallel().tween_property(B.player_sprite, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.15)
 	
-	await tween.finished
-	Debug.dprint("Tween Finished")
+	damage_sound.play()
 	
-	tween.tween_property(A.player.sprite_2d, 'modulate', Color(1.0, 1.0, 1.0, 1.0), 0.2)
-	#tween.parallel().tween_property(B.player.sprite_2d, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.2)
-	
+	tween.tween_property(A.player_sprite, 'modulate', Color(1.0, 1.0, 1.0, 1.0), 0.2)
+	tween.parallel().tween_property(B.player_sprite, 'modulate', Color(1.0, 1.0, 1.0, 0.7), 0.2)
 	
 	Variables.current_health = current
 

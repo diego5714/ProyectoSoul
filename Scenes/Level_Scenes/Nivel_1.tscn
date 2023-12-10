@@ -240,6 +240,7 @@ position = Vector2(-2464, 240)
 position = Vector2(-632, 653)
 
 [node name="transiciones" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Transitioner" parent="transiciones" instance=ExtResource("5_e0jri")]
 
