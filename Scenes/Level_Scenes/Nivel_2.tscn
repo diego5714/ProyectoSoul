@@ -32,10 +32,10 @@ pos_inicial_a = NodePath("../Pos_A")
 pos_inicial_b = NodePath("../Pos_B")
 
 [node name="Pos_A" type="Marker2D" parent="."]
-position = Vector2(-2112, -64)
+position = Vector2(-1296, -2724)
 
 [node name="Pos_B" type="Marker2D" parent="."]
-position = Vector2(2112, -64)
+position = Vector2(1296, -2724)
 
 [node name="Elementos" type="Node2D" parent="."]
 
@@ -135,7 +135,7 @@ layer_1/tile_data = PackedInt32Array(-327733, 65536, 1, -327732, 65536, 1, -3277
 [node name="Nubes" type="Node" parent="Entorno"]
 
 [node name="Cloud" parent="Entorno/Nubes" instance=ExtResource("20_3grtd")]
-position = Vector2(1968, -3112)
+position = Vector2(1832, -3095)
 scale = Vector2(8, 8)
 
 [node name="Cloud11" parent="Entorno/Nubes" instance=ExtResource("20_3grtd")]
