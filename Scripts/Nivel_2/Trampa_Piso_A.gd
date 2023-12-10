@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
-@onready var button_a = $"../../Botones/Button_A"
+@onready var button_a: Area2D = $"../../Botones/Button_A"
 
 
 var player_inside: Node2D

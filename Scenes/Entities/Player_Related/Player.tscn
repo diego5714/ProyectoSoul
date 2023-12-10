@@ -835,6 +835,7 @@ script = ExtResource("1_0vn8n")
 [node name="Pivote" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivote"]
+scale = Vector2(1, 0.996039)
 texture = ExtResource("3_c2qnw")
 hframes = 4
 
@@ -855,6 +856,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 callback_mode_process = 0
 libraries = {
 "": SubResource("AnimationLibrary_08sr8")

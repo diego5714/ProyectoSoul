@@ -105,6 +105,18 @@ func damage(value):
 	if current < 0:
 		current = 0
 	
+	var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	
+	tween.tween_property(A.player.sprite_2d, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.15)
+	#tween.parallel().tween_property(B.player.sprite_2d, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.15)
+	
+	await tween.finished
+	Debug.dprint("Tween Finished")
+	
+	tween.tween_property(A.player.sprite_2d, 'modulate', Color(1.0, 1.0, 1.0, 1.0), 0.2)
+	#tween.parallel().tween_property(B.player.sprite_2d, 'modulate', Color(1.0, 0.0, 0.0, 0.7), 0.2)
+	
+	
 	Variables.current_health = current
 
 ###################################################################################################

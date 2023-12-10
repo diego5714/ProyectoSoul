@@ -482,6 +482,17 @@ theme_override_font_sizes/font_size = 40
 text = "Vibrations 03, 02 Sec.wav - MATRIXXX_"
 vertical_alignment = 1
 
+[node name="MarginContainer21" type="MarginContainer" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Margen_Scroll/ScrollContainer/VBoxContainer/MarginContainer21"]
+layout_mode = 2
+theme = ExtResource("1_ilad0")
+theme_override_font_sizes/font_size = 40
+text = "Minifantasy Dungeon Audio Pack - Leohpaz"
+vertical_alignment = 1
+
 [node name="Margen_Back" type="MarginContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4

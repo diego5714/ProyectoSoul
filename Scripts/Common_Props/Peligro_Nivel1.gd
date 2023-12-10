@@ -10,7 +10,6 @@ func _ready():
 
 func _on_body_entered(body: Node2D):
 	if body.get_name() == "Player":
-		Debug.dprint("ADENTRO")
 		sonido_peligro.play()
 		timer.start()
 
@@ -20,4 +19,3 @@ func _on_body_exited(body: Node2D):
 
 func _on_timer_timeout():
 	sonido_peligro.play()
-	Debug.dprint("TIMER")
