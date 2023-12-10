@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://t6qvg61ashsl" path="res://Assets/Hostil/wood_stakes.png" id="1_nbcie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xck41"]
-size = Vector2(13.4228, 14.2061)
+size = Vector2(13.4228, 17.9784)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0p3n"]
-size = Vector2(54.9238, 60.9375)
+size = Vector2(54.9238, 62.5)
 
 [node name="Estaca" type="StaticBody2D"]
 collision_layer = 128
@@ -18,16 +18,16 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_nbcie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 18)
+position = Vector2(-0.500009, 14.3579)
 rotation = 3.14159
-scale = Vector2(3.35251, -1.97098)
+scale = Vector2(3.35251, -1.93098)
 shape = SubResource("RectangleShape2D_xck41")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(9.53674e-07, 12.5)
+position = Vector2(9.53674e-07, 12)
 scale = Vector2(1.16525, 0.64)
 shape = SubResource("RectangleShape2D_v0p3n")
 
