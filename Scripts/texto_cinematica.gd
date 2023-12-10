@@ -1,30 +1,32 @@
 extends Control
 
 @onready var label = $MarginContainer/PanelContainer/VSplitContainer/MarginContainer2/VBoxContainer/MarginContainer/Label
-@onready var timer = $MarginContainer/PanelContainer/VSplitContainer/MarginContainer2/VBoxContainer/MarginContainer/Timer
+@onready var transitioner = $transiciones/Transitioner
 
-var text = ''
-var letter_index = 0
-var letter_time = 0.03
-var space_time = 0.06
-var punctuation_time = 0.02
+var text = 'In ancient times, a fierce battle between two deities shook the firmament'
+var t = Timer.new()
+var vel_text = 0.035
+var listo = false
 
 func _ready():
+	transitioner.fadein()
 	_display_letter()
 
 func _display_letter():
-	label.text += text[letter_index]
-	letter_index += 1
-	if letter_index >= text.lenght():
-		return
-		
-	match text[letter_index]:
-		"!",".",",","?":
-			timer.start(punctuation_time)
-		" ":
-			timer.start(space_time)
-		_:
-			timer.start(letter_time)
+	for i in text:
+		print(i)
+		label.text += i
+		await get_tree().create_timer(vel_text).timeout
+	listo = true
 
-func _on_timer_timeout():
-	_display_letter()
+func _process(delta):
+	if Input.is_action_just_pressed("saltar"):
+		vel_text = vel_text/10
+	if Input.is_action_just_pressed("saltar") and listo == true:
+		transitioner.fadeout()
+
+func _on_transitioner_fadein_finalizado():
+	pass
+
+func _on_transitioner_fadeout_finalizado():
+	pass
