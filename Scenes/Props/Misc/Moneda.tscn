@@ -66,3 +66,4 @@ libraries = {
 
 [node name="Coin_Sound" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("3_2qg2r")
+bus = &"SFX"

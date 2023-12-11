@@ -50,6 +50,7 @@ func _on_boton_tutorial_pressed():
 	await transitioner.fadeout_finalizado
 	
 	Variables.NivelCargado = Tutorial
+	Variables.Current_Level = 0
 	Variables.Textos_Visibles = true
 	Variables.MaxDepth = 1000 #900 es el ideal
 	var Main := preload("res://Scenes/UI/Split_Camera.tscn")
@@ -62,9 +63,14 @@ func _on_boton_L1_pressed():
 	%Click_Sound.play()
 	%Boton_L1_Animations.play("Pushed")
 	Click_Animation = true
+	
 	await %Boton_L1_Animations.animation_finished
+	
 	transitioner.fadeout()
+	
 	await transitioner.fadeout_finalizado
+	
+	Variables.Current_Level = 1
 	get_tree().change_scene_to_file("res://Scenes/Cinemática inicial/1.tscn")
 	
 func _on_boton_L2_pressed():
@@ -79,6 +85,7 @@ func _on_boton_L2_pressed():
 	await transitioner.fadeout_finalizado
 	
 	Variables.NivelCargado = Nivel_2
+	Variables.Current_Level = 2
 	Variables.Textos_Visibles = false
 	Variables.MaxDepth = 2000
 	var Main := preload("res://Scenes/UI/Split_Camera.tscn")

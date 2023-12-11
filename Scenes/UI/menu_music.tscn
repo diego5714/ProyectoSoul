@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwedhntq057dd"]
+
+[ext_resource type="AudioStream" uid="uid://mvf3p12v5t2m" path="res://Sound/Minifantasy_Dungeon_Music/Music/Goblins_Den_(Regular).wav" id="1_gqdh6"]
+[ext_resource type="Script" path="res://Scripts/UI/Menus_Music.gd" id="2_b31bk"]
+
+[node name="Menu_Music" type="Node2D"]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_gqdh6")
+bus = &"Music"
+script = ExtResource("2_b31bk")

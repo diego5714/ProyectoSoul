@@ -1127,6 +1127,7 @@ libraries = {
 [node name="Click_Sound" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
 stream = ExtResource("57_6s5ix")
+bus = &"SFX"
 
 [node name="transiciones" type="CanvasLayer" parent="."]
 

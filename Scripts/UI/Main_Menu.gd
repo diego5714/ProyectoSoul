@@ -40,7 +40,13 @@ func _on_start_pressed():
 	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
 
 func _on_settings_pressed():
-	pass
+	settings.set_deferred("disabled", true)
+	
+	%ClickSound.play()
+	%Settings_Animations.play("Pushed")
+	Click_Animation = true
+	await %Settings_Animations.animation_finished
+	get_tree().change_scene_to_file("res://Scenes/UI/Settings.tscn")
 
 func _on_credits_pressed():
 	credits.set_deferred("disabled", true)

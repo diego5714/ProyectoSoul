@@ -50,3 +50,4 @@ shape = SubResource("RectangleShape2D_pg31k")
 [node name="Sonido_Fuego" type="AudioStreamPlayer" parent="Llamas"]
 stream = ExtResource("5_8llo6")
 volume_db = -10.0
+bus = &"SFX"

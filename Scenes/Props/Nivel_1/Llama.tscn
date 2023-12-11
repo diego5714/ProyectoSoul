@@ -92,3 +92,4 @@ autoplay = "Idle"
 
 [node name="Fuego" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_4mktv")
+bus = &"SFX"

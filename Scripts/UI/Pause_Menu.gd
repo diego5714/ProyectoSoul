@@ -78,7 +78,9 @@ func _on_menu_pressed():
 	get_tree().paused = false
 	transitioner.fadeout()
 	await transitioner.fadeout_finalizado
+	
 	Variables.selector = true
+	Variables.Current_Level = -1
 	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
 	
 	
