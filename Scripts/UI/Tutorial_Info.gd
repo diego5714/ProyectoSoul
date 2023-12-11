@@ -1,7 +1,7 @@
 extends MarginContainer
 
 @onready var tutorial_info_label = $MarginContainer/PanelContainer/MarginContainer/Tutorial_Info_Label
-var max_index = 14
+var max_index = 16
 
 func _ready():
 	Variables.Textos_Tutorial.append("Welcome to the tutorial level!!, Feel free to move forward.")
@@ -35,4 +35,9 @@ func _process(_delta):
 		Variables.current_tutorial_text += 1
 	
 	tutorial_info_label.text = Variables.Textos_Tutorial[Variables.current_tutorial_text]
+	
+	if Variables.Textos_Visibles:
+		self.set_deferred("visible", true)
+	else:
+		self.set_deferred("visible", false)
 	

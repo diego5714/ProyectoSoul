@@ -830,6 +830,13 @@ position = Vector2(-2504, 536)
 position = Vector2(0, -108)
 shape = SubResource("RectangleShape2D_n7474")
 
+[node name="CP_4" type="Area2D" parent="Check_Point_Manager"]
+position = Vector2(-512, 536)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Check_Point_Manager/CP_4"]
+position = Vector2(0, -108)
+shape = SubResource("RectangleShape2D_n7474")
+
 [node name="Coleccionables" type="Node2D" parent="."]
 
 [node name="Gato_Coleccionable" parent="Coleccionables" instance=ExtResource("14_ihc7c")]
