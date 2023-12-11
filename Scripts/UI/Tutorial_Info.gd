@@ -20,6 +20,8 @@ func _ready():
 	Variables.Textos_Tutorial.append("You can also cancel this mode by just pressing Q again.")
 	Variables.Textos_Tutorial.append("Now, try going Async with your blue character...")
 	Variables.Textos_Tutorial.append("And press the button at the other side of the abyss.")
+	Variables.Textos_Tutorial.append("That's it, try using and combining these two abilities...")
+	Variables.Textos_Tutorial.append("And everything will work out for you")
 	
 	tutorial_info_label.text = Variables.Textos_Tutorial[Variables.current_tutorial_text]
 	

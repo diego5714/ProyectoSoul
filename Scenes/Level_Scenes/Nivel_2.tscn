@@ -90,7 +90,7 @@ scale = Vector2(4, 4)
 
 [node name="Puerta" parent="Elementos" instance=ExtResource("5_5u8xv")]
 position = Vector2(0, -2840)
-llaves_necesarias = 0
+llaves_necesarias = 2
 
 [node name="Pos_Banana_1" type="Marker2D" parent="Elementos/Puerta"]
 position = Vector2(-192, 88)
