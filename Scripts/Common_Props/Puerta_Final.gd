@@ -12,9 +12,13 @@ var MaxPlatano2: int = 0
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.get_name() == "Player":
-		if Variables.Llaves_Recogidas == llaves_necesarias:
-			Variables.Ganaste = true
-			timer.start()
+		if not Variables.Current_Level == 2: #No es nivel 2
+			if Variables.Llaves_Recogidas == llaves_necesarias:
+				Variables.Ganaste = true
+				timer.start()
+		else: #Es nivel 2
+			get_tree().change_scene_to_file("res://Scenes/Cinemática final/4f.tscn")
+	
 
 func _on_timer_timeout():
 	var Platano = preload("res://Scenes/Props/Misc/Banana.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://br2371s73ycec"]
+[gd_scene load_steps=24 format=3 uid="uid://br2371s73ycec"]
 
 [ext_resource type="TileSet" uid="uid://dup63x863m677" path="res://Resources/Tileset.tres" id="1_0r8q5"]
 [ext_resource type="Script" path="res://Scripts/Transiciones/Nivel_3.gd" id="1_mayoh"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cal8ytqtr2hyq" path="res://Scenes/Props/Misc/Llave.tscn" id="10_ist4l"]
 [ext_resource type="PackedScene" uid="uid://f4jetvabtrk7" path="res://Scenes/Props/Misc/Button_Prop.tscn" id="10_nuw2l"]
 [ext_resource type="PackedScene" uid="uid://et3vl3tt3hpg" path="res://Scenes/Props/Misc/Moneda.tscn" id="12_l4sju"]
+[ext_resource type="Theme" uid="uid://3q8g8t8ar2en" path="res://Resources/UI_Main_Menu_theme.tres" id="13_5exi8"]
 [ext_resource type="PackedScene" uid="uid://qw31bheeadrh" path="res://Scenes/Props/Misc/Grupo_Flores.tscn" id="17_7xy41"]
 [ext_resource type="PackedScene" uid="uid://c18fn4hg5bjr8" path="res://Scenes/Props/Misc/Letrero.tscn" id="17_thwrl"]
 [ext_resource type="Script" path="res://Scripts/Nivel_2/Flores_A.gd" id="18_3aae2"]
@@ -32,10 +33,10 @@ pos_inicial_a = NodePath("../Pos_A")
 pos_inicial_b = NodePath("../Pos_B")
 
 [node name="Pos_A" type="Marker2D" parent="."]
-position = Vector2(-1296, -2724)
+position = Vector2(-144, -2840)
 
 [node name="Pos_B" type="Marker2D" parent="."]
-position = Vector2(1296, -2724)
+position = Vector2(144, -2840)
 
 [node name="Elementos" type="Node2D" parent="."]
 
@@ -89,12 +90,21 @@ scale = Vector2(4, 4)
 
 [node name="Puerta" parent="Elementos" instance=ExtResource("5_5u8xv")]
 position = Vector2(0, -2840)
+llaves_necesarias = 0
 
 [node name="Pos_Banana_1" type="Marker2D" parent="Elementos/Puerta"]
 position = Vector2(-192, 88)
 
 [node name="Pos_Banana_2" type="Marker2D" parent="Elementos/Puerta"]
 position = Vector2(192, 88)
+
+[node name="Label2" type="Label" parent="Elementos/Puerta"]
+offset_left = -40.0
+offset_top = -104.0
+offset_right = 40.0
+offset_bottom = -81.0
+theme = ExtResource("13_5exi8")
+text = "2 llaves"
 
 [node name="Botones" type="Node2D" parent="Elementos"]
 
