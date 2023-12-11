@@ -18,7 +18,6 @@ func _ready():
 	no_collisions(false)
 	
 func _on_boton_entered():
-	Debug.dprint("Boton Puente")
 	no_collisions(true)
 	animation_player.play("Puente")
 	await animation_player.animation_finished

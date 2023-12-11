@@ -13,7 +13,6 @@ func _on_body_entered(body):
 	collision_shape_2d.set_deferred("disabled", true)
 	
 	if body.get_name() == "Player":
-		#Debug.dprint("boton")
 		click_sound.play()
 		animation_player.play("Push")
 		await animation_player.animation_finished

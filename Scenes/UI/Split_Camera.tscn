@@ -750,6 +750,7 @@ libraries = {
 }
 
 [node name="Click_Sound" type="AudioStreamPlayer" parent="CanvasLayer/Win_Sign/PanelContainer/VBoxContainer/MarginContainer/Botones_Final"]
+unique_name_in_owner = true
 stream = ExtResource("60_wlvec")
 bus = &"SFX"
 

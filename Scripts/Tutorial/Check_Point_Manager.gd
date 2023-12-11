@@ -18,11 +18,9 @@ func _cp_1_entered(body):
 func _cp_2_entered(body):
 	if body.get_name() == "Player":
 		body.set_current_cp(cp_2.get_global_position())
-		Debug.dprint(cp_2.get_global_position())
 		cp_2.queue_free()
 
 func _cp_3_entered(body):
 	if body.get_name() == "Player":
 		body.set_current_cp(cp_3.get_global_position())
-		Debug.dprint(cp_3.get_global_position())
 		cp_3.queue_free()

@@ -99,7 +99,7 @@ func set_current_cp(cp):
 
 func kill():
 	Variables.current_health = 0
-	Debug.dprint("KILL-ZONE")
+	#Debug.dprint("KILL-ZONE")
 
 func damage(value):
 	var current = Variables.current_health
@@ -195,7 +195,7 @@ func _physics_process(delta):
 				Variables.Retorno = true
 				Variables.Muerte = true
 			
-				Debug.dprint("Signal Sync")
+				#Debug.dprint("Signal Sync")
 				muerte_sync.emit()
 		
 		if not Variables.Retorno:
@@ -240,7 +240,7 @@ func _physics_process(delta):
 				Variables.Retorno = true
 				Variables.Muerte = true
 			
-				Debug.dprint("Signal Async")
+				#Debug.dprint("Signal Async")
 				muerte_async.emit()
 		
 		if not Variables.Retorno:

@@ -98,11 +98,19 @@ position = Vector2(-192, 88)
 [node name="Pos_Banana_2" type="Marker2D" parent="Elementos/Puerta"]
 position = Vector2(192, 88)
 
+[node name="Label" type="Label" parent="Elementos/Puerta"]
+offset_left = -96.0
+offset_top = 80.0
+offset_right = -16.0
+offset_bottom = 103.0
+theme = ExtResource("13_5exi8")
+text = "2 llaves"
+
 [node name="Label2" type="Label" parent="Elementos/Puerta"]
-offset_left = -40.0
-offset_top = -104.0
-offset_right = 40.0
-offset_bottom = -81.0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 96.0
+offset_bottom = 103.0
 theme = ExtResource("13_5exi8")
 text = "2 llaves"
 
