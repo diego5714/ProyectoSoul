@@ -25,7 +25,7 @@ var Textos_Tutorial: Array = []
 var Textos_Visibles: bool = true
 
 var gamestarted = false
-var gatos = 3 #0 por defecto
+var gatos = 0 #0 por defecto
 var selector = false
 
 var nivel_texto 
