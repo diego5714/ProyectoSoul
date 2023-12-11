@@ -53,6 +53,9 @@ func _on_next_pressed():
 	await %Next_Animations.animation_finished
 	
 	Variables.Ganaste = false
+	Variables.Llaves_Recogidas = 0
+	Variables.Monedas = 0
+	
 	
 	if Variables.Current_Level == 0:
 		Variables.Current_Level = 1
