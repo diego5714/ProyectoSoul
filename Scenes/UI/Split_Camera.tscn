@@ -658,14 +658,6 @@ text = "Level completed!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/Win_Sign/PanelContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("4_bg7yt")
-theme_override_font_sizes/font_size = 50
-text = "Score: "
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Win_Sign/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4

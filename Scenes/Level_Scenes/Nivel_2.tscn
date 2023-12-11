@@ -64,7 +64,63 @@ script = ExtResource("8_vo1bh")
 [node name="Monedas" type="Node2D" parent="Elementos"]
 
 [node name="Moneda" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
-position = Vector2(8, -64)
+position = Vector2(-1984, -248)
+scale = Vector2(3, 3)
+
+[node name="Moneda2" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-1232, -376)
+scale = Vector2(3, 3)
+
+[node name="Moneda3" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-848, -512)
+scale = Vector2(3, 3)
+
+[node name="Moneda4" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-456, -632)
+scale = Vector2(3, 3)
+
+[node name="Moneda5" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-456, -888)
+scale = Vector2(3, 3)
+
+[node name="Moneda6" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-848, -1024)
+scale = Vector2(3, 3)
+
+[node name="Moneda7" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(472, -896)
+scale = Vector2(3, 3)
+
+[node name="Moneda8" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(848, -1016)
+scale = Vector2(3, 3)
+
+[node name="Moneda9" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(1304, -2360)
+scale = Vector2(3, 3)
+
+[node name="Moneda10" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(1688, -2480)
+scale = Vector2(3, 3)
+
+[node name="Moneda11" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(1296, -2728)
+scale = Vector2(3, 3)
+
+[node name="Moneda12" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(920, -2728)
+scale = Vector2(3, 3)
+
+[node name="Moneda13" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-1264, -1624)
+scale = Vector2(3, 3)
+
+[node name="Moneda14" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-880, -1744)
+scale = Vector2(3, 3)
+
+[node name="Moneda15" parent="Elementos/Monedas" instance=ExtResource("12_l4sju")]
+position = Vector2(-496, -1872)
 scale = Vector2(3, 3)
 
 [node name="Carteles" type="Node2D" parent="Elementos"]
