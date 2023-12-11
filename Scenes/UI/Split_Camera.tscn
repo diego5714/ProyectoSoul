@@ -1,5 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://detb787xddka8"]
-[gd_scene load_steps=87 format=3 uid="uid://detb787xddka8"]
+[gd_scene load_steps=88 format=3 uid="uid://detb787xddka8"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Split_Camera.gd" id="1_j5hms"]
 [ext_resource type="PackedScene" uid="uid://c3skhvag2kqcc" path="res://Scenes/UI/Parallax_Background.tscn" id="3_k3ogy"]
@@ -13,9 +12,9 @@
 [ext_resource type="Script" path="res://Scripts/UI/Botones_Final.gd" id="7_6dl5h"]
 [ext_resource type="Texture2D" uid="uid://dsaon7df61mt" path="res://Resources/Botones/Secondary_Button/Selected/Secondary_Button_Selected_1.tres" id="8_3crf7"]
 [ext_resource type="Texture2D" uid="uid://cnh8ltkvnejfd" path="res://Assets/icons-16x16-1bit-ansdor/icons-keyboard-16x16-1bit-ansdor.png" id="8_ndoyg"]
-[ext_resource type="PackedScene" uid="uid://cpiwqj0juu84i" path="res://Scenes/UI/nivel_texto.tscn" id="10_wjt2q"]
 [ext_resource type="Texture2D" uid="uid://0xkbmuqr7wq4" path="res://Resources/Botones/Secondary_Button/Selected/Secondary_Button_Selected_2.tres" id="9_luvxb"]
 [ext_resource type="Texture2D" uid="uid://loen4rlts35k" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_0.tres" id="10_hqrjd"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/nivel_texto.tscn" id="10_wjt2q"]
 [ext_resource type="Texture2D" uid="uid://yk81rpl2rhui" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_1.tres" id="11_ofb7x"]
 [ext_resource type="Texture2D" uid="uid://d0t0pmlxeh6pu" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_2.tres" id="12_mwcug"]
 [ext_resource type="Texture2D" uid="uid://bnhgxq3fnlhr3" path="res://Resources/Botones/Secondary_Button/Pressed/Secondary_Button_Pressed_3.tres" id="13_ayjoi"]
