@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ctuwk84a5m6a4"]
+[gd_scene load_steps=26 format=3 uid="uid://ctuwk84a5m6a4"]
 
 [ext_resource type="Script" path="res://Scripts/Transiciones/Tutorial.gd" id="1_p5tgr"]
 [ext_resource type="PackedScene" uid="uid://dreksn2ytdiwd" path="res://Scenes/Entities/Player_Related/Player_Controller.tscn" id="1_rmsta"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://Scripts/Tutorial/Plataforma_C2.gd" id="8_e5qs5"]
 [ext_resource type="PackedScene" uid="uid://67mjdtvcms5r" path="res://Scenes/Props/Misc/Puerta_Final.tscn" id="9_232p1"]
 [ext_resource type="PackedScene" uid="uid://c1kr1wvn0kdky" path="res://Scenes/Props/Misc/Check_Point_Prop.tscn" id="13_7lbh8"]
+[ext_resource type="PackedScene" uid="uid://bbuerjqx44ywr" path="res://Scenes/Props/Misc/Gato_Coleccionable.tscn" id="14_ihc7c"]
 [ext_resource type="PackedScene" uid="uid://dh1ye75r4ftd1" path="res://Scenes/UI/transitioner.tscn" id="15_10a7e"]
 
 [sub_resource type="Animation" id="Animation_gwjmf"]
@@ -828,6 +829,11 @@ position = Vector2(-2504, 536)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check_Point_Manager/CP_3"]
 position = Vector2(0, -108)
 shape = SubResource("RectangleShape2D_n7474")
+
+[node name="Coleccionables" type="Node2D" parent="."]
+
+[node name="Gato_Coleccionable" parent="Coleccionables" instance=ExtResource("14_ihc7c")]
+position = Vector2(4125, -22)
 
 [node name="Entorno" type="Node2D" parent="."]
 
