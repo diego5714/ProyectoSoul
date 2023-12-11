@@ -31,6 +31,7 @@ func _on_back_pressed():
 	await %Back_Animations.animation_finished
 	
 	Variables.Current_Level = -1
+	Variables.Ganaste = false
 	get_tree().change_scene_to_file("res://Scenes/UI/Level_Selector.tscn")
 
 func _on_back_mouse_entered():
@@ -50,6 +51,8 @@ func _on_next_pressed():
 	%Next_Animations.play("Pushed")
 	Click_Animation = true
 	await %Next_Animations.animation_finished
+	
+	Variables.Ganaste = false
 	
 	if Variables.Current_Level == 0:
 		Variables.Current_Level = 1
