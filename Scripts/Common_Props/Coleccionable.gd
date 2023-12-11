@@ -14,6 +14,7 @@ func _ready() -> void:
 func _on_body_entered(body):
 	if body.get_name() == 'Player':
 		Variables.Coleccionables += 1
+		Variables.gatos += 1
 		colleccionable_sound.play()
 		Area.body_entered.disconnect(_on_body_entered)
 		visible = false
