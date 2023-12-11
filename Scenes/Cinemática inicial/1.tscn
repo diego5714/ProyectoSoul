@@ -204,7 +204,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("7_wxuww")
 theme_override_font_sizes/font_size = 25
-text = "Presiona para omitir"
+text = "Press to skip"
 
 [node name="transiciones" type="CanvasLayer" parent="."]
 

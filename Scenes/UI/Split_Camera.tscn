@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://detb787xddka8"]
+[gd_scene load_steps=16 format=3 uid="uid://detb787xddka8"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Split_Camera.gd" id="1_j5hms"]
 [ext_resource type="PackedScene" uid="uid://c3skhvag2kqcc" path="res://Scenes/UI/Parallax_Background.tscn" id="3_k3ogy"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c0jfmc4vjccqg" path="res://Scenes/UI/HUD.tscn" id="5_lm11c"]
 [ext_resource type="Script" path="res://Scripts/UI/Tutorial_Info.gd" id="7_2mwmg"]
 [ext_resource type="Texture2D" uid="uid://cnh8ltkvnejfd" path="res://Assets/icons-16x16-1bit-ansdor/icons-keyboard-16x16-1bit-ansdor.png" id="8_ndoyg"]
+[ext_resource type="PackedScene" uid="uid://cpiwqj0juu84i" path="res://Scenes/UI/nivel_texto.tscn" id="10_wjt2q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcpo6"]
 bg_color = Color(0.180392, 0.180392, 0.180392, 0.666667)
@@ -250,3 +251,5 @@ autoplay = "pulse"
 
 [node name="HUD" parent="." instance=ExtResource("5_lm11c")]
 metadata/_edit_group_ = true
+
+[node name="Nivel" parent="." instance=ExtResource("10_wjt2q")]

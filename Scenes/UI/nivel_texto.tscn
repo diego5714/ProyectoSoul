@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpiwqj0juu84i"]
+
+[ext_resource type="Script" path="res://Scripts/Nivel_nombre.gd" id="1_oi7xu"]
+[ext_resource type="Shader" path="res://Scenes/colorcito.gdshader" id="2_fg8ai"]
+[ext_resource type="Texture2D" uid="uid://bv4y43alkowas" path="res://Assets/Botones nivel 1 y 2/nv0.png" id="2_otc6i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cilnv"]
+shader = ExtResource("2_fg8ai")
+shader_parameter/color = Color(1, 1, 1, 0.2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_somsj"]
+shader = ExtResource("2_fg8ai")
+shader_parameter/color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lqi7t"]
+shader = ExtResource("2_fg8ai")
+shader_parameter/color = Color(1, 1, 1, 0.6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_shhwv"]
+shader = ExtResource("2_fg8ai")
+shader_parameter/color = Color(1, 1, 1, 0.8)
+
+[node name="Nivel" type="Node2D"]
+script = ExtResource("1_oi7xu")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.2)
+material = SubResource("ShaderMaterial_cilnv")
+position = Vector2(-255, 450)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_otc6i")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.4)
+material = SubResource("ShaderMaterial_somsj")
+position = Vector2(-255, 450)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_otc6i")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.6)
+material = SubResource("ShaderMaterial_lqi7t")
+position = Vector2(-255, 450)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_otc6i")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_shhwv")
+position = Vector2(-255, 450)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_otc6i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-255, 450)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_otc6i")

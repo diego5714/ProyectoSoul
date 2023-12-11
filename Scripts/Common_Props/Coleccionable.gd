@@ -5,7 +5,10 @@ extends Node2D
 @onready var area_2d = $Area2D
 
 func _ready() -> void:
-	animation_player.play("Animacion")
+	if randi()%3:
+		animation_player.play("Animacion")
+	else:
+		animation_player.play("Animacion_2")
 	Area.body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
