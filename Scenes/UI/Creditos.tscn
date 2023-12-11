@@ -267,15 +267,15 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bswr"]
 
-[sub_resource type="Animation" id="Animation_008rs"]
+[sub_resource type="Animation" id="Animation_vksqq"]
 resource_name = "Hover"
-length = 0.250025
+length = 0.25
 loop_mode = 2
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Next_Texture:texture")
+tracks/0/path = NodePath("Assets_Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -287,7 +287,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Next_Texture:expand_mode")
+tracks/1/path = NodePath("Assets_Texture:expand_mode")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -299,7 +299,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Next_Texture:stretch_mode")
+tracks/2/path = NodePath("Assets_Texture:stretch_mode")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -311,7 +311,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Next_Texture:custom_minimum_size")
+tracks/3/path = NodePath("Assets_Texture:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -321,13 +321,13 @@ tracks/3/keys = {
 "values": [Vector2(252, 86), Vector2(252, 86)]
 }
 
-[sub_resource type="Animation" id="Animation_yei6t"]
+[sub_resource type="Animation" id="Animation_v51vs"]
 resource_name = "Pushed"
 step = 0.0434783
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Next_Texture:expand_mode")
+tracks/0/path = NodePath("Assets_Texture:expand_mode")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -339,7 +339,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Next_Texture:stretch_mode")
+tracks/1/path = NodePath("Assets_Texture:stretch_mode")
 tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -363,7 +363,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Next_Texture:custom_minimum_size")
+tracks/3/path = NodePath("Assets_Texture:custom_minimum_size")
 tracks/3/interp = 0
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -375,7 +375,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Next_Texture:texture")
+tracks/4/path = NodePath("Assets_Texture:texture")
 tracks/4/interp = 0
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -385,13 +385,12 @@ tracks/4/keys = {
 "values": [ExtResource("34_cdqt0"), ExtResource("35_03t1g"), ExtResource("36_ej87j"), ExtResource("37_0wg5u"), ExtResource("38_q760h"), ExtResource("39_be3a6"), ExtResource("40_2ys4v"), ExtResource("41_4a133"), ExtResource("42_j7m5l"), ExtResource("43_8h8dj"), ExtResource("44_un5p2"), ExtResource("45_1bl1x"), ExtResource("46_vnqw2"), ExtResource("47_08x5p"), ExtResource("48_rmiys"), ExtResource("49_tg81m"), ExtResource("50_3vvnn"), ExtResource("51_nv2ki"), ExtResource("52_i1byl"), ExtResource("53_d1npq"), ExtResource("54_ainng"), ExtResource("55_yj2l0"), ExtResource("56_eoetv"), ExtResource("57_ph6qi")]
 }
 
-[sub_resource type="Animation" id="Animation_xdby5"]
+[sub_resource type="Animation" id="Animation_p8vi3"]
 resource_name = "RESET"
-length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Next_Texture:texture")
+tracks/0/path = NodePath("Assets_Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -403,7 +402,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Next_Texture:expand_mode")
+tracks/1/path = NodePath("Assets_Texture:expand_mode")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -415,7 +414,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Next_Texture:stretch_mode")
+tracks/2/path = NodePath("Assets_Texture:stretch_mode")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -427,7 +426,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Next_Texture:custom_minimum_size")
+tracks/3/path = NodePath("Assets_Texture:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -449,11 +448,11 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_liw8h"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wlcme"]
 _data = {
-"Hover": SubResource("Animation_008rs"),
-"Pushed": SubResource("Animation_yei6t"),
-"RESET": SubResource("Animation_xdby5")
+"Hover": SubResource("Animation_vksqq"),
+"Pushed": SubResource("Animation_v51vs"),
+"RESET": SubResource("Animation_p8vi3")
 }
 
 [node name="Creditos" type="Control"]
@@ -662,7 +661,7 @@ vertical_alignment = 1
 [node name="Assets_Animations" type="AnimationPlayer" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Assets"]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_liw8h")
+"": SubResource("AnimationLibrary_wlcme")
 }
 
 [node name="FondoMenus" parent="." instance=ExtResource("3_hb7ph")]
