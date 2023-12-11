@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://detb787xddka8"]
+[gd_scene load_steps=89 format=3 uid="uid://detb787xddka8"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Split_Camera.gd" id="1_j5hms"]
 [ext_resource type="PackedScene" uid="uid://c3skhvag2kqcc" path="res://Scenes/UI/Parallax_Background.tscn" id="3_k3ogy"]
@@ -469,6 +469,13 @@ _data = {
 "RESET": SubResource("Animation_xdby5")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04pii"]
+bg_color = Color(0.15879, 0.179887, 0.196368, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qm4vy"]
 atlas = ExtResource("8_ndoyg")
 region = Rect2(80, 16, 16, 16)
@@ -773,6 +780,8 @@ layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Tutorial_Info/MarginContainer"]
 layout_mode = 2
+theme = ExtResource("4_bg7yt")
+theme_override_styles/panel = SubResource("StyleBoxFlat_04pii")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Tutorial_Info/MarginContainer/PanelContainer"]
 layout_mode = 2
