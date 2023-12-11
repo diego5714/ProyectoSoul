@@ -26,6 +26,21 @@
 [ext_resource type="Texture2D" uid="uid://c85l65oqfg5i6" path="res://Assets/Cinemática final/final_5.4.png" id="19_jhwwj"]
 [ext_resource type="Texture2D" uid="uid://d08j2fdrh5uts" path="res://Assets/Cinemática final/final_5.5.png" id="20_yimdj"]
 
+[sub_resource type="Animation" id="Animation_xe6kf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_lxvdk")]
+}
+
 [sub_resource type="Animation" id="Animation_3wuoh"]
 resource_name = "cinematica1"
 length = 1.9
@@ -41,21 +56,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("2_lxvdk"), ExtResource("3_f5thj"), ExtResource("4_evxi3"), ExtResource("5_nd3yv"), ExtResource("6_5lku6"), ExtResource("7_l04at"), ExtResource("8_l8060"), ExtResource("9_qy3px"), ExtResource("10_u62a5"), ExtResource("11_uicnq"), ExtResource("12_t3c65"), ExtResource("13_nbnnx"), ExtResource("14_ot210"), ExtResource("15_wy707"), ExtResource("16_n7onr"), ExtResource("17_7vnom"), ExtResource("18_p87kc"), ExtResource("19_jhwwj"), ExtResource("20_yimdj")]
-}
-
-[sub_resource type="Animation" id="Animation_xe6kf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_lxvdk")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xjllb"]

@@ -27,7 +27,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("saltar") and listo == true:
 		transitioner.fadeout()
 		await transitioner.fadeout_finalizado
-		get_tree().change_scene_to_file("res://Scenes/Cinemática final/5f.tscn")
+		if Variables.gatos == 3:
+			get_tree().change_scene_to_file("res://Scenes/Cinemática final/5f.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/UI/Main_Menu.tscn")
 	if Input.is_action_just_pressed("Pause"):
 		transitioner.fadeout()
 		await transitioner.fadeout_finalizado
