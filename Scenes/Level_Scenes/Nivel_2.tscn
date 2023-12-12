@@ -33,10 +33,10 @@ pos_inicial_a = NodePath("../Pos_A")
 pos_inicial_b = NodePath("../Pos_B")
 
 [node name="Pos_A" type="Marker2D" parent="."]
-position = Vector2(-2112, -80)
+position = Vector2(-144, -2840)
 
 [node name="Pos_B" type="Marker2D" parent="."]
-position = Vector2(2112, -80)
+position = Vector2(144, -2840)
 
 [node name="Elementos" type="Node2D" parent="."]
 
@@ -90,7 +90,7 @@ scale = Vector2(4, 4)
 
 [node name="Puerta" parent="Elementos" instance=ExtResource("5_5u8xv")]
 position = Vector2(0, -2840)
-llaves_necesarias = 2
+llaves_necesarias = 0
 
 [node name="Pos_Banana_1" type="Marker2D" parent="Elementos/Puerta"]
 position = Vector2(-192, 88)
